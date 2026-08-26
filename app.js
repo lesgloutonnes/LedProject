@@ -481,9 +481,9 @@
       .join("");
 
     const probes = [
-      { x: 25, y: 50, label: "Bac A", value: sim.trayA },
-      { x: 75, y: 50, label: "Bac B", value: sim.trayB },
-      { x: 50, y: 50, label: "Centre", value: sim.center },
+      { x: 25, y: 42, label: "Bac A", value: sim.trayA },
+      { x: 75, y: 42, label: "Bac B", value: sim.trayB },
+      { x: 50, y: 8, label: "Centre", value: sim.center },
     ];
     document.getElementById("probes").innerHTML = probes
       .map(

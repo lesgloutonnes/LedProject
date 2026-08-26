@@ -305,8 +305,11 @@ input[type="range"] {
   font-size: 0.62rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: oklch(0.97 0.02 95);
-  text-shadow: 0 0 6px oklch(0.2 0.03 155 / 0.8);
+  color: var(--fg);
+  background: oklch(0.985 0.01 100 / 0.92);
+  border-radius: 0.3rem;
+  padding: 0.12rem 0.35rem;
+  box-shadow: 0 0 0 1px oklch(0.24 0.03 155 / 0.12);
 }
 
 .bar-overlay {
