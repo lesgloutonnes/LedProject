@@ -11,7 +11,7 @@ export default function Home() {
         <Planner />
       </main>
       <footer className="relative border-t px-4 py-6 text-center text-xs text-muted-foreground">
-        Tourbière Lab · modèle optique simplifié pour comparer des rampes, pas un certificat
+        Tourbière Lab · LedProject · Les Gloutonnes · modèle optique simplifié pour comparer des rampes, pas un certificat
         de mesure · tarif bleu 0,2001 €/kWh (août 2026)
       </footer>
     </div>

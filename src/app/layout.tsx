@@ -14,9 +14,9 @@ const fraunces = Fraunces({
 });
 
 export const metadata: Metadata = {
-  title: "Tourbière Lab — éclairage tente 120×60",
+  title: "LedProject — Tourbière Lab",
   description:
-    "Simulateur PPFD, DLI et coût électrique pour carnivores sous tente Vivosun 120×60×150.",
+    "Les Gloutonnes · simulateur PPFD, DLI et coût électrique pour carnivores sous tente Vivosun 120×60×150.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

@@ -1,11 +1,13 @@
-# Tourbière Lab
+# LedProject — Les Gloutonnes
 
-Simulateur d’éclairage pour une tente **Vivosun 120 × 60 × 150 cm** (0,72 m²) dédiée aux carnivores : Sarracenia, Drosera, Dionaea.
+Dépôt : [github.com/lesgloutonnes/LedProject](https://github.com/lesgloutonnes/LedProject)
 
-Ce n’est pas un configurateur générique. Il compare des rampes réelles (Cosmorrow, Hortimol, SuperFish Slim, Fecida, FloraStar, SANlight) avec :
+Projet d’éclairage LED pour une pépinière de plantes carnivores (Sarracenia, Drosera, Dionaea) sous tente **Vivosun 120 × 60 × 150 cm** (0,72 m²).
+
+L’app **Tourbière Lab** compare des rampes réelles (Cosmorrow, Hortimol, SuperFish Slim, Fecida, FloraStar, SANlight) avec :
 
 - un budget photonique (PPF, µmol/s) plutôt que le watt ou un PAR constructeur isolé ;
-- une carte PPFD lambertienne dans *ta* tente ;
+- une carte PPFD lambertienne dans la tente ;
 - le DLI à 12 / 14 / 16 h ;
 - le coût annuel au tarif bleu EDF d’août 2026 (0,2001 €/kWh).
 
