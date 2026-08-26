@@ -34,9 +34,6 @@ export interface SimResult {
   lights: LightGeom[];
 }
 
-const SLIM_PEAK_TARGET = 230;
-const SLIM_CAL_HEIGHT = 20;
-
 function placements(fixture: FixtureSetup): LightGeom[] {
   const { count, kind, lengthCm, widthCm, ppfEach } = fixture;
   const lights: LightGeom[] = [];
@@ -128,36 +125,12 @@ function panelContribution(
   return sum;
 }
 
-function peakOfCenteredBar(lengthCm: number, ppf: number, heightCm: number) {
-  const light: LightGeom = {
-    kind: "bar",
-    xCm: TENT.lengthCm / 2,
-    yCm: TENT.depthCm / 2,
-    lengthCm,
-    widthCm: 2.2,
-    ppf,
-  };
-  return barContribution(light.xCm, light.yCm, light, heightCm, 24);
-}
-
-const slimScale = (() => {
-  const peak = peakOfCenteredBar(93, 45, SLIM_CAL_HEIGHT);
-  return peak > 0 ? SLIM_PEAK_TARGET / peak : 1;
-})();
-
-export function scaledPpfEach(fixture: FixtureSetup) {
-  if (fixture.peakPpfdAt20) return fixture.ppfEach * slimScale;
-  return fixture.ppfEach;
-}
-
 export function simulate(options: SimOptions): SimResult {
   const cols = options.cols ?? 32;
   const rows = options.rows ?? 16;
   const cellW = TENT.lengthCm / cols;
   const cellD = TENT.depthCm / rows;
-  const intensity = options.intensity / 100;
-  const ppfScale =
-    options.fixture.peakPpfdAt20 != null ? slimScale * intensity : intensity;
+  const ppfScale = options.intensity / 100;
 
   const lights = placements(options.fixture).map((l) => ({
     ...l,

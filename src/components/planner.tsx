@@ -378,9 +378,10 @@ function CompareTable({ height, hours }: { height: number; hours: number }) {
           </tbody>
         </table>
         <p className="mt-4 text-xs leading-relaxed text-muted-foreground">
-          Fecida à 2,2 µmol/J : ~286 µmol/s, davantage de photons que 2 Slim (~90 µmol/s après
-          calibration PAR). Les Slim redistribuent, mais elles n’égalent pas le budget. 2
-          Cosmorrow 90 cm : 214 µmol/s pour 80 W — le meilleur rapport photons / euros / géométrie.
+          Fecida à 2,2 µmol/J : ~286 µmol/s, davantage de photons que 2 Slim (~182 µmol/s
+          même en calant le pic PAR à 230). Les Slim redistribuent, mais elles n’égalent pas
+          2 Cosmorrow (214 µmol/s, 80 W). 2 Cosmorrow 90 cm : le meilleur rapport photons /
+          euros / géométrie.
         </p>
       </CardContent>
     </Card>
@@ -610,7 +611,7 @@ function Corrections() {
     },
     {
       t: "Les Slim sont de médiocres horticoles au watt",
-      d: "3025 lm à 7000 K, CRI 96 : on est autour de 0,9 µmol/J, contre 2,7 chez Cosmorrow. 102 W de Slim envoient beaucoup moins de photons que 80 W de Cosmorrow. Redistribuer 90 µmol/s ne bat pas 214 µmol/s.",
+      d: "3025 lm à 7000 K, CRI 96 : la conversion lumens donne ~45 µmol/s (~0,9 µmol/J). Pour coller au pic constructeur de 230 à 20 cm, on retient ~91 µmol/s (1,78 µmol/J). Même dans ce cas généreux, 2 Slim (182 µmol/s, 102 W) restent sous 2 Cosmorrow (214 µmol/s, 80 W).",
     },
     {
       t: "La Fecida n’est pas faible — elle est mal adaptée à 120 × 60",
