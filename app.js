@@ -38,6 +38,7 @@
       buy: "2 × COP4065 + alim COM2X40 (parfois notée COM80D). Pas le Full Spectrum 70 cm.",
       notes: "Le job des deux bacs : 202 µmol/s, 80 W, blanc froid, peu de chaleur, 15 cm au-dessus du terreau. Meilleur rapport photons / euros / géométrie.",
       verdict: "recommended",
+      shortlist: true,
     },
     {
       id: "hortimol-2x40-60",
@@ -60,6 +61,7 @@
       buy: "TLED 40 W FSG 60 cm, prise EU. Une barre centrée sur chaque bac 60 × 40.",
       notes: "Le constructeur donne 60 × 60 cm par barre. Ici : une barre = un bac. 184 µmol/s, Osram, 230 V plug & play.",
       verdict: "pertray",
+      shortlist: true,
     },
     {
       id: "hortimol-2x40-120",
@@ -82,6 +84,7 @@
       buy: "TLED 40 W FSG 120 cm. Deux barres sur la profondeur, 15 et 45 cm.",
       notes: "Même budget photonique que le 60 cm × 2, mais toute la longueur est couverte. Un cran au-dessus des Slim, sans le surplus des 60 W.",
       verdict: "good",
+      shortlist: true,
     },
     {
       id: "sanlight-4x20",
@@ -104,6 +107,7 @@
       buy: "4 × FLEX II 20 (AA2002) + driver 150 W (AI2006) + répartiteurs Y + câbles.",
       notes: "Le vrai premium : même ~200 µmol/s que 2 Cosmorrow, IP68, spectre jeunes plants. Pas plus de photons, trois fois le prix, câblage à composer.",
       verdict: "premium",
+      shortlist: true,
     },
     {
       id: "hortimol-2x60",
@@ -126,6 +130,99 @@
       buy: "TLED 60 W FSG 2,3 µmol/J 120 cm. Si tu veux garder Sarracenia adultes dans la même tente ensuite.",
       notes: "276 µmol/s : trop punchy pour germinations à 20 cm (centre ~300 µmol). Monte à 30–35 cm, ou réserve ça à l’après-semis.",
       verdict: "good",
+      shortlist: true,
+    },
+    {
+      id: "florawave-p80",
+      name: "1 × Florawave P80",
+      shortName: "1 Florawave P80",
+      brand: "Florawave / Carnivero",
+      kind: "bar",
+      layout: "spread",
+      count: 1,
+      wattsEach: 80,
+      lengthCm: 120,
+      widthCm: 5.4,
+      ppfEach: 184,
+      ppe: 2.3,
+      spectrum: "Full Spectrum FS2.4, Osram. SKU FS2.6 : 200 µmol/s / 2,6 µmol/J.",
+      dimmable: false,
+      ip: "IP65",
+      priceHint: "≈ 135 $ + UPS/douane · prise CEE 7/7 sur commande",
+      stock: "Carnivero Austin. LM-79, ETL, CE. Seule barre documentée pour genres carnivores.",
+      buy: "P80FS2.4 (184 µmol/s) ou P80FS2.6 (200). Demander le devis fret EU avant de payer.",
+      notes: "80 W, 120 cm, une barre au milieu des deux bacs. Même budget photonique qu’un Cosmorrow en moins de pièces, logistique US.",
+      verdict: "premium",
+      shortlist: true,
+    },
+    {
+      id: "florawave-2xp80",
+      name: "2 × Florawave P80",
+      shortName: "2 Florawave P80",
+      brand: "Florawave / Carnivero",
+      kind: "bar",
+      layout: "spread",
+      count: 2,
+      wattsEach: 80,
+      lengthCm: 120,
+      widthCm: 5.4,
+      ppfEach: 184,
+      ppe: 2.3,
+      spectrum: "Full Spectrum Osram, 2 × 120 cm.",
+      dimmable: false,
+      ip: "IP65",
+      priceHint: "≈ 270 $ + fret · plutôt pour adultes / rouge",
+      stock: "368 µmol/s : fenêtre Sarracenia dressées, pas germoir à 20 cm.",
+      buy: "Seulement si les deux bacs deviennent une pépinière d’adultes dans la même tente.",
+      notes: "Évolution du P80 simple. À 20 cm c’est trop pour des cotylédons : 30–40 cm ou un seul P80 au germoir.",
+      verdict: "good",
+      shortlist: true,
+    },
+    {
+      id: "lumatek-vf120",
+      name: "Lumatek VF120W (4 barres)",
+      shortName: "Lumatek VF120",
+      brand: "Lumatek",
+      kind: "bar",
+      layout: "spread",
+      count: 4,
+      wattsEach: 32.5,
+      lengthCm: 120.7,
+      widthCm: 4,
+      ppfEach: 77,
+      ppe: 2.4,
+      spectrum: "Blanc 4000 K + blanc chaud 3000 K. Conçu clones / semis / bas PPFD.",
+      dimmable: true,
+      ip: "IP65",
+      priceHint: "≈ 299 € cadre + 207 € driver 650 W ≈ 506 €",
+      stock: "Cadre 120,7 × 52,1 cm — quasi le plancher de tente. Driver démesuré (jusqu’à 5 cadres).",
+      buy: "VF120W + driver VF 650 W + dimmer 0–10 V. Descendre à 50–60 % au germoir.",
+      notes: "308 µmol/s dimmable : le seul « pro EU » qui a la géométrie 120 × 52. Tu paies un driver de ferme verticale.",
+      verdict: "good",
+      shortlist: true,
+    },
+    {
+      id: "philips-2xpm120",
+      name: "2 × Philips GreenPower PM 120 cm",
+      shortName: "2 Philips PM 120",
+      brand: "Signify / Philips",
+      kind: "bar",
+      layout: "spread",
+      count: 2,
+      wattsEach: 63,
+      lengthCm: 121,
+      widthCm: 4,
+      ppfEach: 168,
+      ppe: 2.67,
+      spectrum: "Production Module 3.x, DR/W low blue typique jeunes plants. IP66.",
+      dimmable: false,
+      ip: "IP66",
+      priceHint: "≈ 300 €+ / module, via intégrateur horti",
+      stock: "Pas en growshop. 5 ans, Q90 50 000 h. Référence labo du palmarès, pas un SKU Octopus.",
+      buy: "Ne pas chercher chez un revendeur cannabis. Contacter un partenaire Signify Horti.",
+      notes: "336 µmol/s, 126 W : trop pour le germoir en statique, parfait comme étalon de ce que « meilleure marque horti » veut dire.",
+      verdict: "premium",
+      shortlist: true,
     },
     {
       id: "fecida-130",
@@ -148,6 +245,7 @@
       buy: "Ne rien racheter. Appoint sur un bac, jamais comme seule source des deux plateaux.",
       notes: "Assez de photons (~286 µmol/s) mais un hotspot 31 × 21 cm. Sur deux bacs, un plateau grille, l’autre étiole.",
       verdict: "keep",
+      shortlist: false,
     },
     {
       id: "slim-2x93",
@@ -170,6 +268,7 @@
       buy: "Éviter pour ce job. L’IP67 n’achète pas des photons.",
       notes: "182 µmol/s pour 102 W, moins que 2 Cosmorrow à 80 W. Le PAR 230 est un pic, pas un flux à additionner.",
       verdict: "caution",
+      shortlist: false,
     },
     {
       id: "florastar-2x42-6500",
@@ -192,6 +291,7 @@
       buy: "Sans fiche PPF unique, on ne le choisit pas à la place du Cosmorrow.",
       notes: "PPF médian 80 µmol/s. Trop d’incertitude pour deux bacs de semis.",
       verdict: "caution",
+      shortlist: false,
     },
     {
       id: "florastar-2x42-2700",
@@ -214,6 +314,7 @@
       buy: "Ne pas reprendre.",
       notes: "142 µmol/s à deux, spectre floraison. Inutile sur du Sarracenia / Drosera au germoir.",
       verdict: "avoid",
+      shortlist: false,
     },
   ];
 
@@ -495,7 +596,7 @@
 
   function renderFixtures() {
     const host = document.getElementById("fixture-grid");
-    host.innerHTML = FIXTURES.filter((f) => f.verdict !== "avoid")
+    host.innerHTML = FIXTURES.filter((f) => f.shortlist)
       .map((f) => {
         const active = f.id === state.fixtureId ? " is-active" : "";
         return `<button type="button" class="fixture${active}" data-id="${f.id}">
@@ -589,7 +690,7 @@
               .join("")}
           </tbody>
         </table></div>
-        <p class="card-desc">2 Cosmorrow 202 µmol/s / 80 W. 2 Hortimol 40 W : 184 µmol/s. 4 SANlight : 200 µmol/s, trois fois le prix. 2 Slim : 182 µmol/s pour 102 W.</p>
+        <p class="card-desc">Picker = 9 SKU des marques A. Slim / FloraStar restent dans ce tableau comme contre-exemples, pas comme panier.</p>
       </article>`;
   }
 

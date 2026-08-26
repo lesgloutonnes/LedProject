@@ -1,41 +1,36 @@
 # LedProject — Les Gloutonnes
 
-Dépôt : [github.com/lesgloutonnes/LedProject](https://github.com/lesgloutonnes/LedProject)
+Simulateur HTML (sans npm) : **marques d’abord**, puis modèles pour **deux bacs 60 × 40 cm** sous tente Vivosun **120 × 60 × 150**.
 
-Simulateur d’éclairage pour **deux bacs de semis 60 × 40 cm** de carnivores (Sarracenia, Drosera, Dionaea) sous tente **Vivosun 120 × 60 × 150 cm**.
+Ouvre `index.html` ou `python3 -m http.server 8000`.
 
-**HTML + CSS + JavaScript, sans npm.** Double-clique `index.html`.
+## Cahier des charges
 
-## Ouvrir
+Barres 90–120 cm (ou 60 cm × 1 bac), IP65+, PPF publié, blanc 4000–6500 K, 150–250 µmol/m²/s au germoir, 230 V FR/BE.
 
-```bash
-python3 -m http.server 8000
-```
+## Marques A (on pioche un SKU)
 
-Puis http://127.0.0.1:8000
+| Marque | Pourquoi | Frein |
+| --- | --- | --- |
+| **Florawave (Carnivero)** | Seule doc PPFD par genre carnivore, Osram, IP65, LM-79 | Fret Texas |
+| **Signify / Philips GreenPower** | Étalon horti, IP66, 5 ans | Intégrateurs seulement |
+| **SANlight** | FLEX II jeunes plants, IP68, PPF honnête | Câblage + prix |
+| **Hortimol** | Osram TLED, boutures, 230 V | 60 W trop fort au germoir |
+| **Secret Jardin Cosmorrow** | 6500 K, 101 µmol/s, zone 120 × 60 | Pas Full Spectrum 70 cm |
+| **Lumatek VF** (pas Zeus) | Cadre 120 × 52, 4 barres, dimmable | Driver 650 W ~200 € |
 
-## À commander pour ce job
+HLG, Fluence, Gavita, Valoya : marques A/C hors géométrie. Mars Hydro, Barrina, SANSI, Chihiros, SuperFish, BloomLED sans PPF, FloraStar : hors palmarès.
 
-Cible germoir : **150–250 µmol/m²/s** sur le terreau, 14 h, 15–20 cm, IP65 (humidité).
+## Top 9 (après filtre)
 
-1. **Choix n°1 — 2 × Secret Jardin Cosmorrow Growing 90 cm (COP4065) + alim COM2X40**  
-   80 W, **202 µmol/s**, 100 % 6500 K, IP65, fiche 120 × 60 cm. Kit ≈ 130–145 €.  
-   [Datasheet COP](https://www.secretjardin.com/wp-content/uploads/2023/09/20230905-COP-BULBS-DATASHEET.pdf)
+1. **2 × Cosmorrow Growing 90 cm + COM2X40** — à commander (~130–145 €)
+2. 2 × Hortimol TLED 40 W 60 cm
+3. 2 × Hortimol TLED 40 W 120 cm
+4. 4 × SANlight FLEX II 20
+5. 1 × Florawave P80
+6. 2 × Hortimol TLED 60 W 120 cm (après-semis)
+7. Lumatek VF120W + driver
+8. 2 × Florawave P80 (adultes)
+9. 2 × Philips GreenPower PM 120 cm (référence, pas un panier)
 
-2. **1 barre / bac — 2 × Hortimol TLED 40 W 60 cm FSG**  
-   80 W, 184 µmol/s, Osram, 230 V, footprint 60 × 60 par barre. ≈ 178 €.
-
-3. **Premium — 4 × SANlight FLEX II 20 + driver 150 W**  
-   76 W, 200 µmol/s, IP68, spectre jeunes plants. ≈ 350–400 €. Pas plus de photons, beaucoup plus solide.
-
-4. **Garder la Fecida 130 W** en appoint sur un seul bac, jamais comme seule source.
-
-5. **Ne pas prendre 2 Slim 93** : 182 µmol/s / 102 W, PAR 230 = pic.
-
-Hors jeu amateur : Philips GreenPower Production Module, Valoya — excellents, vendus via intégrateurs.
-
-## Fichiers
-
-- `index.html` — page
-- `styles.css` — mise en page
-- `app.js` — rampes, modèle PPFD (lambertien + 25 % mylar), deux bacs
+Sources : [Carnivero PPFD](https://www.carnivero.com/pages/grow-light-ppfd-recommendations), [COP datasheet](https://www.secretjardin.com/wp-content/uploads/2023/09/20230905-COP-BULBS-DATASHEET.pdf), SANlight FLEX II, Hortimol TLED, Lumatek VF120W, Philips GreenPower Production Module.
