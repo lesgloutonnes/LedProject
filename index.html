@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LedProject — Tourbière Lab</title>
+    <meta
+      name="description"
+      content="Simulateur PPFD, DLI et coût électrique pour carnivores sous tente Vivosun 120×60×150. Les Gloutonnes."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="glow" aria-hidden="true"></div>
+    <main class="wrap">
+      <header class="hero">
+        <div>
+          <p class="kicker">Les Gloutonnes · tente Vivosun 120 × 60 × 150 · 0,72 m²</p>
+          <h1>La lumière de ta pépinière, calculée pour de vrai.</h1>
+          <p class="lede">
+            Pas de npm, pas d’installation : cette page compare tes rampes en budget
+            photonique, carte PPFD, DLI et euros — tarif bleu août 2026.
+          </p>
+        </div>
+        <aside class="verdict-card">
+          <p class="muted">Verdict actuel</p>
+          <h2>2 Cosmorrow Growing 90 cm, pas 2 Slim.</h2>
+          <p>
+            Le Growing 90 cm (COP4065) est toujours au catalogue. Octopus n’avait plus le
+            Full Spectrum 90 cm — ce n’est pas la même pièce. Deux Growing + alim COM2X40
+            restent le plan le plus cohérent.
+          </p>
+        </aside>
+      </header>
+
+      <section>
+        <div class="section-head">
+          <h2>Installation à simuler</h2>
+          <p class="hint">Clique une carte — la carte PPFD se recalcule.</p>
+        </div>
+        <div id="fixture-grid" class="fixture-grid"></div>
+      </section>
+
+      <section class="sim-grid">
+        <article class="card">
+          <h3>Carte PPFD au sommet du feuillage</h3>
+          <p class="card-desc">
+            Modèle lambertien 120°, rebonds mylar ≈ 25 %. Outil de comparaison, pas un
+            PAR-mètre.
+          </p>
+          <div class="map-frame" style="aspect-ratio: 120 / 60">
+            <canvas id="heatmap"></canvas>
+            <div id="bars"></div>
+            <div id="probes"></div>
+          </div>
+          <div class="map-meta">
+            <span>120 cm</span>
+            <span id="target-label">cible 250–400 µmol</span>
+            <span>60 cm</span>
+          </div>
+          <div class="legend">
+            <div class="legend-bar"></div>
+            <div class="legend-ticks"><span>0</span><span>150</span><span>250</span><span>400</span><span>550</span></div>
+          </div>
+        </article>
+
+        <div class="side">
+          <article class="card">
+            <h3>Réglages</h3>
+            <p class="card-desc">Hauteur = rampe → sommet des plantes, pas le fond de la tente.</p>
+            <label class="slider">
+              <span>Hauteur <strong id="height-val">25 cm</strong></span>
+              <input id="height" type="range" min="15" max="50" value="25" />
+            </label>
+            <label class="slider">
+              <span>Photopériode <strong id="hours-val">14 h</strong></span>
+              <input id="hours" type="range" min="10" max="16" value="14" />
+            </label>
+            <label class="slider">
+              <span>Intensité <strong id="intensity-val">100 %</strong></span>
+              <input id="intensity" type="range" min="40" max="100" value="100" />
+            </label>
+            <p id="dim-warn" class="warn hidden">
+              Cette rampe n’est pas dimmable d’origine. Le curseur simule un éloignement,
+              pas un vrai contrôleur.
+            </p>
+            <p class="tiny-label">Cible plantes</p>
+            <div id="species" class="chips"></div>
+          </article>
+          <div id="stats" class="stats"></div>
+          <div id="callout" class="callout"></div>
+        </div>
+      </section>
+
+      <nav class="tabs" role="tablist">
+        <button type="button" class="tab is-active" data-tab="comparer">Comparer</button>
+        <button type="button" class="tab" data-tab="poser">Plan de pose</button>
+        <button type="button" class="tab" data-tab="facture">DLI & électricité</button>
+        <button type="button" class="tab" data-tab="protocole">Rouge sans stress</button>
+        <button type="button" class="tab" data-tab="corrections">Corrections</button>
+      </nav>
+
+      <section id="panel-comparer" class="tab-panel"></section>
+      <section id="panel-poser" class="tab-panel hidden"></section>
+      <section id="panel-facture" class="tab-panel hidden"></section>
+      <section id="panel-protocole" class="tab-panel hidden">
+        <article class="card">
+          <h3>Monter le rouge sans griller les urnes</h3>
+          <p class="card-desc">La pigmentation suit le DLI et le génotype, pas un pic 660 nm obligatoire.</p>
+          <dl class="protocol">
+            <div>
+              <dt>Jours 1–7</dt>
+              <dd>14 h, 30 cm au-dessus du sommet, ou 70 % si dimmable. Pas de chasse au rouge.</dd>
+            </div>
+            <div>
+              <dt>Semaines 2–3</dt>
+              <dd>14–16 h, 25 cm. Mucilage sur Drosera, pièges nets sur Dionaea, port compact. Urnes pâles : trop haut trop vite.</dd>
+            </div>
+            <div>
+              <dt>Semaines 4–8</dt>
+              <dd>16 h en saison de croissance, 20–25 cm pour les adultes. Un cultivar peu coloré restera vert même à 500 µmol.</dd>
+            </div>
+            <div>
+              <dt>Signaux d’arrêt</dt>
+              <dd>Blanchiment, urnes croustillantes : monte de 5 cm ou coupe 2 h. Étiolement, mucilage rare : descends ou allonge la journée.</dd>
+            </div>
+            <div>
+              <dt>Dormance tempérée</dt>
+              <dd>Sarracenia et Dionaea : 3–4 mois frais, 8–10 h, intensité réduite.</dd>
+            </div>
+          </dl>
+        </article>
+      </section>
+      <section id="panel-corrections" class="tab-panel hidden">
+        <div class="fix-grid">
+          <article class="card">
+            <h3>230 + 230 ≠ 460</h3>
+            <p>Le PAR 230 est mesuré à 20 cm sous la rampe, identique sur les Slim 24 W à 51 W. C’est un pic local, pas un flux.</p>
+          </article>
+          <article class="card">
+            <h3>Les Slim sont faibles au watt</h3>
+            <p>Même calées sur le pic 230 (~91 µmol/s), 2 Slim font 182 µmol/s pour 102 W, sous 2 Cosmorrow (214 µmol/s, 80 W).</p>
+          </article>
+          <article class="card">
+            <h3>La Fecida n’est pas faible</h3>
+            <p>≈ 286 µmol/s, conçue pour 60 × 60. Dans 120 × 60 le panneau 31 × 21 cm fait un hotspot. Garde-la en appoint.</p>
+          </article>
+          <article class="card">
+            <h3>Le Cosmorrow 90 cm Growing n’est pas mort</h3>
+            <p>COP4065 est encore au catalogue. C’est le Full Spectrum 90 cm qui est passé en 70 cm (COP40FS).</p>
+          </article>
+          <article class="card">
+            <h3>Le 660 nm n’est pas un sésame</h3>
+            <p>Le DLI et l’homogénéité commandent. Un blanc 6500–7000 K tient toute la culture si le PPFD est là.</p>
+          </article>
+          <article class="card">
+            <h3>FloraStar 6500 K : PPF contradictoire</h3>
+            <p>51, 62 ou 98 µmol/s selon les boutiques. Sans fiche unique, on ne le choisit pas à la place du Cosmorrow.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+    <footer>
+      Tourbière Lab · LedProject · Les Gloutonnes · modèle optique simplifié · 0,2001 €/kWh
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>
