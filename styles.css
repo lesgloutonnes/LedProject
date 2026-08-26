@@ -291,6 +291,24 @@ input[type="range"] {
   image-rendering: pixelated;
 }
 
+.tray-overlay {
+  position: absolute;
+  border: 1.5px dashed oklch(0.97 0.02 95 / 0.75);
+  border-radius: 4px;
+  pointer-events: none;
+}
+
+.tray-overlay span {
+  position: absolute;
+  left: 0.35rem;
+  top: 0.25rem;
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: oklch(0.97 0.02 95);
+  text-shadow: 0 0 6px oklch(0.2 0.03 155 / 0.8);
+}
+
 .bar-overlay {
   position: absolute;
   border-radius: 2px;

@@ -1,8 +1,15 @@
 (function () {
   const TENT = { lengthCm: 120, depthCm: 60, areaM2: 0.72 };
   const KWH = 0.2001;
+  // Deux bacs à semis 60 × 40 cm : 60 cm dans le sens de la tente, 40 cm de profondeur, centrés.
+  const TRAYS = [
+    { id: "A", label: "Bac A", xCm: 0, yCm: 10, lengthCm: 60, depthCm: 40 },
+    { id: "B", label: "Bac B", xCm: 60, yCm: 10, lengthCm: 60, depthCm: 40 },
+  ];
   const VERDICT = {
     recommended: "Choix n°1",
+    pertray: "1 barre / bac",
+    premium: "Premium",
     good: "Solide",
     keep: "À garder",
     caution: "Prudence",
@@ -16,82 +23,64 @@
       shortName: "2 Cosmorrow 90",
       brand: "Secret Jardin",
       kind: "bar",
+      layout: "spread",
       count: 2,
       wattsEach: 40,
-      lengthCm: 90,
-      widthCm: 4.5,
-      ppfEach: 107,
+      lengthCm: 87,
+      widthCm: 3.2,
+      ppfEach: 101,
       ppe: 2.7,
-      spectrum: "6500 K (croissance). Réf. officielle COP4065 : 100 % 6500 K.",
+      spectrum: "100 % 6500 K. Fiche COP 2023-09 : 101 µmol/s, 2,7 µmol/J, zone 120 × 60 à 15 cm.",
       dimmable: false,
       ip: "IP65",
-      priceHint: "≈ 42 € × 2 + 27 € d’alim COM2X40 ≈ 110 €",
-      stock: "Toujours au catalogue Secret Jardin (COP4065).",
-      buy: "COP4065 + alimentation COM2X40. COM3X40 pour une 3ᵉ barre plus tard.",
-      notes: "Deux barres de 90 cm, 80 W, 214 µmol/s : le successeur réel du plan initial.",
+      priceHint: "Kit 2 × COP4065 + COM2X40 ≈ 130–145 €",
+      stock: "Catalogue Secret Jardin, livrable (growland, desjop, Octopus).",
+      buy: "2 × COP4065 + alim COM2X40 (parfois notée COM80D). Pas le Full Spectrum 70 cm.",
+      notes: "Le job des deux bacs : 202 µmol/s, 80 W, blanc froid, peu de chaleur, 15 cm au-dessus du terreau. Meilleur rapport photons / euros / géométrie.",
       verdict: "recommended",
     },
     {
-      id: "hortimol-2x60",
-      name: "2 × Hortimol TLED 60 W 120 cm",
-      shortName: "2 Hortimol 120",
+      id: "hortimol-2x40-60",
+      name: "2 × Hortimol TLED 40 W 60 cm",
+      shortName: "2 Hortimol 60 cm",
       brand: "Hortimol",
       kind: "bar",
+      layout: "split",
       count: 2,
-      wattsEach: 60,
-      lengthCm: 120,
+      wattsEach: 40,
+      lengthCm: 60,
       widthCm: 13,
-      ppfEach: 138,
+      ppfEach: 92,
       ppe: 2.3,
-      spectrum: "FSG 4000 K, fort bleu 450 nm + un peu de 660 nm + IR.",
+      spectrum: "FSG 4000 K, fort bleu 450 nm + un peu de 660 nm + IR. Osram LM-80.",
       dimmable: false,
       ip: "IP65",
-      priceHint: "≈ 130 € × 2 ≈ 260 €",
-      stock: "Catalogue constructeur, 3 ans de garantie.",
-      buy: "Hortimol TLED 60 W FSG 120 cm, 230 V, linkable.",
-      notes: "Le constructeur donne déjà 1 barre pour 120 × 60 cm. Deux barres couvrent toute la longueur.",
-      verdict: "good",
+      priceHint: "≈ 89 € × 2 ≈ 178 € (topgrow.be, 230 V, pas d’alim à part)",
+      stock: "Hortimol Belgique, 3 ans, daisy-chain 2 par 2.",
+      buy: "TLED 40 W FSG 60 cm, prise EU. Une barre centrée sur chaque bac 60 × 40.",
+      notes: "Le constructeur donne 60 × 60 cm par barre. Ici : une barre = un bac. 184 µmol/s, Osram, 230 V plug & play.",
+      verdict: "pertray",
     },
     {
-      id: "hortimol-1x60",
-      name: "1 × Hortimol TLED 60 W 120 cm",
-      shortName: "1 Hortimol 120",
+      id: "hortimol-2x40-120",
+      name: "2 × Hortimol TLED 40 W 120 cm",
+      shortName: "2 Hortimol 40 W",
       brand: "Hortimol",
       kind: "bar",
-      count: 1,
-      wattsEach: 60,
+      layout: "spread",
+      count: 2,
+      wattsEach: 40,
       lengthCm: 120,
       widthCm: 13,
-      ppfEach: 138,
+      ppfEach: 92,
       ppe: 2.3,
-      spectrum: "FSG 4000 K",
+      spectrum: "FSG 4000 K, Osram + IR. Conçu boutures / jeunes plantes.",
       dimmable: false,
       ip: "IP65",
-      priceHint: "≈ 130 €",
-      stock: "Disponible chez Hortimol et revendeurs BE/FR.",
-      buy: "Une barre centrée, 20–25 cm. Suffisant pour semis.",
-      notes: "Bon plan économique pour valider, puis doubler.",
-      verdict: "good",
-    },
-    {
-      id: "cosmorrow-3x70fs",
-      name: "3 × Cosmorrow Full Spectrum 70 cm",
-      shortName: "3 Cosmorrow 70 FS",
-      brand: "Secret Jardin",
-      kind: "bar",
-      count: 3,
-      wattsEach: 40,
-      lengthCm: 70,
-      widthCm: 4.5,
-      ppfEach: 114,
-      ppe: 2.85,
-      spectrum: "31 % 660 nm + 23 % 6500 K + 23 % 4000 K + 23 % 2700 K",
-      dimmable: false,
-      ip: "IP65",
-      priceHint: "≈ 50 € × 3 + 40 € d’alim COM3X40 ≈ 190 €",
-      stock: "Successeur officiel du Full Spectrum 90 cm (COP40FS).",
-      buy: "COP40FS + COM3X40. Incompatible électriquement avec les 90 cm.",
-      notes: "Plus de photons, mais 70 cm laissent ~25 cm de chaque bout moins couverts.",
+      priceHint: "≈ 115–130 € × 2 ≈ 250 €",
+      stock: "Fiche hortimol.net : 92 µmol/s, footprint 120 × 45 cm par barre.",
+      buy: "TLED 40 W FSG 120 cm. Deux barres sur la profondeur, 15 et 45 cm.",
+      notes: "Même budget photonique que le 60 cm × 2, mais toute la longueur est couverte. Un cran au-dessus des Slim, sans le surplus des 60 W.",
       verdict: "good",
     },
     {
@@ -100,19 +89,42 @@
       shortName: "4 SANlight Flex",
       brand: "SANlight",
       kind: "bar",
+      layout: "spread",
       count: 4,
       wattsEach: 19,
       lengthCm: 99.5,
       widthCm: 3.3,
       ppfEach: 50,
       ppe: 2.63,
-      spectrum: "Plein spectre 400–780 nm, far-red relevé.",
+      spectrum: "400–780 nm, far-red relevé. Conçu boutures, in-vitro, jeunes plantes.",
       dimmable: false,
       ip: "IP68",
-      priceHint: "≈ 62 € × 4 + alim 150 W ≈ 320–380 €",
-      stock: "Marque autrichienne, 3 ans.",
-      buy: "4 × FLEX II 20 + driver 150 W + répartiteurs Y.",
-      notes: "Meilleure étanchéité et durée de vie. Budget plus élevé.",
+      priceHint: "≈ 62 € × 4 + driver 150 W 57 € + câbles ≈ 350–400 €",
+      stock: "Fiche SANlight : 50 µmol/s, 995 mm, 3 ans, L90 > 100 000 h. Le 25 (1345 mm) est trop long pour 120 cm.",
+      buy: "4 × FLEX II 20 (AA2002) + driver 150 W (AI2006) + répartiteurs Y + câbles.",
+      notes: "Le vrai premium : même ~200 µmol/s que 2 Cosmorrow, IP68, spectre jeunes plants. Pas plus de photons, trois fois le prix, câblage à composer.",
+      verdict: "premium",
+    },
+    {
+      id: "hortimol-2x60",
+      name: "2 × Hortimol TLED 60 W 120 cm",
+      shortName: "2 Hortimol 60 W",
+      brand: "Hortimol",
+      kind: "bar",
+      layout: "spread",
+      count: 2,
+      wattsEach: 60,
+      lengthCm: 120,
+      widthCm: 13,
+      ppfEach: 138,
+      ppe: 2.3,
+      spectrum: "FSG 4000 K, Osram LM-80 + IR.",
+      dimmable: false,
+      ip: "IP65",
+      priceHint: "≈ 115 € × 2 ≈ 230 € (microfluo.be)",
+      stock: "1 barre = footprint constructeur 120 × 60. Version 2,5 µmol/J (150 µmol/s) existe, plus rare.",
+      buy: "TLED 60 W FSG 2,3 µmol/J 120 cm. Si tu veux garder Sarracenia adultes dans la même tente ensuite.",
+      notes: "276 µmol/s : trop punchy pour germinations à 20 cm (centre ~300 µmol). Monte à 30–35 cm, ou réserve ça à l’après-semis.",
       verdict: "good",
     },
     {
@@ -121,6 +133,7 @@
       shortName: "Fecida 130 W",
       brand: "FECiDA",
       kind: "panel",
+      layout: "spread",
       count: 1,
       wattsEach: 130,
       lengthCm: 31,
@@ -132,8 +145,8 @@
       ip: "IP20",
       priceHint: "Déjà achetée — à conserver",
       stock: "CR600, conçue pour 60 × 60 cm, pas 120 × 60.",
-      buy: "Ne rien racheter. Appoint central ou bac gourmand.",
-      notes: "Bon budget photonique (~286 µmol/s), mal réparti sous 31 × 21 cm.",
+      buy: "Ne rien racheter. Appoint sur un bac, jamais comme seule source des deux plateaux.",
+      notes: "Assez de photons (~286 µmol/s) mais un hotspot 31 × 21 cm. Sur deux bacs, un plateau grille, l’autre étiole.",
       verdict: "keep",
     },
     {
@@ -142,6 +155,7 @@
       shortName: "2 Slim 93",
       brand: "SuperFish",
       kind: "bar",
+      layout: "spread",
       count: 2,
       wattsEach: 51,
       lengthCm: 93,
@@ -153,8 +167,8 @@
       ip: "IP67",
       priceHint: "≈ 85–105 € × 2",
       stock: "Fiche actuelle : 51 W / 3025 lm / PAR 230 à 20 cm.",
-      buy: "Seulement si tu tiens à l’IP67 aquarium.",
-      notes: "Le PAR 230 est un pic, identique sur toute la gamme Slim. On n’additionne pas 230 + 230.",
+      buy: "Éviter pour ce job. L’IP67 n’achète pas des photons.",
+      notes: "182 µmol/s pour 102 W, moins que 2 Cosmorrow à 80 W. Le PAR 230 est un pic, pas un flux à additionner.",
       verdict: "caution",
     },
     {
@@ -163,6 +177,7 @@
       shortName: "2 FloraStar 6500 K",
       brand: "FloraStar",
       kind: "bar",
+      layout: "spread",
       count: 2,
       wattsEach: 42,
       lengthCm: 104,
@@ -173,9 +188,9 @@
       dimmable: false,
       ip: "IP65",
       priceHint: "≈ 95–118 € × 2",
-      stock: "LED-FTL042B 104 cm.",
-      buy: "Uniquement si le vendeur confirme un PPF ≥ 90 µmol/s.",
-      notes: "PPF médian simulé à 80 µmol/s. Trop d’incertitude pour commander les yeux fermés.",
+      stock: "LED-FTL042B / LED-FTL042G selon vendeur.",
+      buy: "Sans fiche PPF unique, on ne le choisit pas à la place du Cosmorrow.",
+      notes: "PPF médian 80 µmol/s. Trop d’incertitude pour deux bacs de semis.",
       verdict: "caution",
     },
     {
@@ -184,19 +199,20 @@
       shortName: "2 FloraStar 2700 K",
       brand: "FloraStar",
       kind: "bar",
+      layout: "spread",
       count: 2,
       wattsEach: 42,
       lengthCm: 104,
       widthCm: 4,
       ppfEach: 71,
       ppe: 1.69,
-      spectrum: "2700 K floraison — trop chaud pour semis.",
+      spectrum: "2700 K floraison — trop chaud, étiolement des semis.",
       dimmable: false,
       ip: "IP65",
       priceHint: "Proposition Octopus refusée",
       stock: "1,69 µmol/J.",
       buy: "Ne pas reprendre.",
-      notes: "142 µmol/s à deux, contre 214 chez Cosmorrow, pour 84 W au lieu de 80 W.",
+      notes: "142 µmol/s à deux, spectre floraison. Inutile sur du Sarracenia / Drosera au germoir.",
       verdict: "avoid",
     },
   ];
@@ -211,10 +227,10 @@
 
   const state = {
     fixtureId: "cosmorrow-2x90",
-    height: 25,
+    height: 20,
     hours: 14,
     intensity: 100,
-    speciesId: "sarr-young",
+    speciesId: "seedling",
     tab: "comparer",
   };
 
@@ -243,6 +259,10 @@
     return kwh * KWH;
   }
 
+  function inTray(px, py, tray) {
+    return px >= tray.xCm && px < tray.xCm + tray.lengthCm && py >= tray.yCm && py < tray.yCm + tray.depthCm;
+  }
+
   function placements(fixture) {
     if (fixture.kind === "panel") {
       return [
@@ -257,6 +277,19 @@
       ];
     }
     const lights = [];
+    if (fixture.layout === "split") {
+      for (let i = 0; i < fixture.count; i += 1) {
+        lights.push({
+          kind: "bar",
+          xCm: ((i + 0.5) * TENT.lengthCm) / fixture.count,
+          yCm: TENT.depthCm / 2,
+          lengthCm: fixture.lengthCm,
+          widthCm: fixture.widthCm,
+          ppf: fixture.ppfEach,
+        });
+      }
+      return lights;
+    }
     for (let i = 0; i < fixture.count; i += 1) {
       lights.push({
         kind: "bar",
@@ -352,6 +385,24 @@
       sum += bounceAdd * n;
     }
     const avg = sum / n;
+    const traySums = TRAYS.map(() => ({ sum: 0, n: 0 }));
+    let trayAll = 0;
+    let trayN = 0;
+    for (let row = 0; row < rows; row += 1) {
+      for (let col = 0; col < cols; col += 1) {
+        const px = (col + 0.5) * cellW;
+        const py = (row + 0.5) * cellD;
+        const v = grid[row * cols + col];
+        TRAYS.forEach((tray, i) => {
+          if (inTray(px, py, tray)) {
+            traySums[i].sum += v;
+            traySums[i].n += 1;
+            trayAll += v;
+            trayN += 1;
+          }
+        });
+      }
+    }
     return {
       grid,
       cols,
@@ -359,6 +410,9 @@
       min,
       max,
       avg,
+      trayAvg: trayN ? trayAll / trayN : 0,
+      trayA: traySums[0].n ? traySums[0].sum / traySums[0].n : 0,
+      trayB: traySums[1].n ? traySums[1].sum / traySums[1].n : 0,
       center: sample(grid, cols, rows, 0.5, 0.5),
       edge: 0.5 * (sample(grid, cols, rows, 0.5, 0.08) + sample(grid, cols, rows, 0.5, 0.92)),
       corner: sample(grid, cols, rows, 0.08, 0.08),
@@ -410,6 +464,11 @@
     }
     ctx.putImageData(img, 0, 0);
 
+    document.getElementById("trays").innerHTML = TRAYS.map(
+      (tray) =>
+        `<div class="tray-overlay" style="left:${(tray.xCm / TENT.lengthCm) * 100}%;top:${(tray.yCm / TENT.depthCm) * 100}%;width:${(tray.lengthCm / TENT.lengthCm) * 100}%;height:${(tray.depthCm / TENT.depthCm) * 100}%"><span>${tray.label} 60×40</span></div>`
+    ).join("");
+
     const bars = document.getElementById("bars");
     bars.innerHTML = sim.lights
       .map((light) => {
@@ -422,9 +481,9 @@
       .join("");
 
     const probes = [
+      { x: 25, y: 50, label: "Bac A", value: sim.trayA },
+      { x: 75, y: 50, label: "Bac B", value: sim.trayB },
       { x: 50, y: 50, label: "Centre", value: sim.center },
-      { x: 50, y: 10, label: "Bord", value: sim.edge },
-      { x: 10, y: 14, label: "Coin", value: sim.corner },
     ];
     document.getElementById("probes").innerHTML = probes
       .map(
@@ -468,14 +527,14 @@
   }
 
   function renderStats(sim, fixture, species) {
-    const dliAvg = dli(sim.avg, state.hours);
+    const dliAvg = dli(sim.trayAvg, state.hours);
     const kwh = yearlyKwh(watts(fixture), state.hours, state.intensity);
     const items = [
-      ["PPFD moyen", `${nf0.format(sim.avg)} µmol`, "sur 0,72 m²"],
-      ["PPFD centre", `${nf0.format(sim.center)} µmol`, "hotspot"],
-      ["PPFD bords", `${nf0.format(sim.edge)} µmol`, "milieu des 60 cm"],
-      ["Uniformité", `${nf0.format(sim.uniformity * 100)} %`, "min / moyenne"],
-      ["DLI moyen", `${nf1.format(dliAvg)} mol`, `${state.hours} h / jour`],
+      ["PPFD sur les bacs", `${nf0.format(sim.trayAvg)} µmol`, "moyenne des 2 × 60 × 40"],
+      ["Bac A / Bac B", `${nf0.format(sim.trayA)} / ${nf0.format(sim.trayB)}`, "équilibre gauche-droite"],
+      ["PPFD centre tente", `${nf0.format(sim.center)} µmol`, "hotspot"],
+      ["Uniformité tente", `${nf0.format(sim.uniformity * 100)} %`, "min / moyenne 120 × 60"],
+      ["DLI sur les bacs", `${nf1.format(dliAvg)} mol`, `${state.hours} h / jour`],
       ["Facture an", euro0.format(yearlyCost(kwh)), `${nf1.format(kwh)} kWh`],
     ];
     document.getElementById("stats").innerHTML = items
@@ -485,18 +544,22 @@
       )
       .join("");
 
-    const low = sim.avg < species.ppfd[0];
-    const hot = sim.center > species.ppfd[1] * 1.25;
+    const low = sim.trayAvg < species.ppfd[0];
+    const hot = sim.trayA > species.ppfd[1] * 1.25 || sim.trayB > species.ppfd[1] * 1.25;
+    const skew = Math.abs(sim.trayA - sim.trayB) > 40;
     let title = "Dans la fenêtre utile";
-    let body = `Pour ${species.label}, on vise ${species.ppfd[0]}–${species.ppfd[1]} µmol/m²/s au feuillage.`;
+    let body = `Pour ${species.label}, on vise ${species.ppfd[0]}–${species.ppfd[1]} µmol/m²/s sur les deux bacs, pas au centre de la tente.`;
     if (low) {
-      title = "Un peu juste pour la cible";
-      body = `La moyenne tombe sous ${species.ppfd[0]} µmol. Descends de 5 cm, passe à 16 h, ou prends plus de PPF — pas une 3ᵉ Slim.`;
+      title = "Un peu juste sur les plateaux";
+      body = `La moyenne des bacs tombe sous ${species.ppfd[0]} µmol. Descends de 5 cm, passe à 16 h, ou prends plus de PPF — pas une 3ᵉ Slim.`;
     } else if (hot) {
-      title = "Centre trop intense";
-      body = `Le hotspot dépasse nettement ${species.ppfd[1]} µmol. Monte de 5 cm ou baisse l’intensité, et surveille le blanchiment.`;
+      title = "Un bac trop intense";
+      body = `Un plateau dépasse nettement ${species.ppfd[1]} µmol. Monte de 5 cm, surtout au germoir. Les Hortimol 60 W se pendent plus haut.`;
+    } else if (skew) {
+      title = "Les deux bacs ne reçoivent pas la même chose";
+      body = `Écart A/B trop large. Recentre les barres, ou passe en 1 barre par bac (Hortimol 60 cm).`;
     } else {
-      title = "Bonne fenêtre pour " + species.label;
+      title = "Bonne fenêtre pour " + species.label + " sur les 2 bacs";
     }
     document.getElementById("callout").innerHTML = `<p><strong>${title}</strong></p><p class="hint">${body}</p>`;
     document.getElementById("target-label").textContent = `cible ${species.ppfd[0]}–${species.ppfd[1]} µmol`;
@@ -505,28 +568,28 @@
   function renderCompare(height, hours) {
     const rows = FIXTURES.map((f) => {
       const sim = simulate(f, height, 100, 0.25);
-      return { f, sim, cost: yearlyCost(yearlyKwh(watts(f), hours, 100)), day: dli(sim.avg, hours) };
+      return { f, sim, cost: yearlyCost(yearlyKwh(watts(f), hours, 100)), day: dli(sim.trayAvg, hours) };
     });
     document.getElementById("panel-comparer").innerHTML = `
       <article class="card">
-        <h3>Toutes les options, même hauteur, 100 %</h3>
-        <p class="card-desc">Le bon chiffre n’est pas le watt ni le PAR 230 : c’est le PPF total, puis le PPFD au feuillage.</p>
+        <h3>Les options pour deux bacs 60 × 40, 20 cm, 100 %</h3>
+        <p class="card-desc">Le chiffre qui compte : PPFD moyen <em>sur les plateaux</em>, pas le watt ni le PAR 230.</p>
         <div class="table-wrap"><table>
-          <thead><tr><th>Setup</th><th>W</th><th>PPF</th><th>µmol/J</th><th>PPFD moy.</th><th>Centre / bords</th><th>DLI</th><th>€ / an</th></tr></thead>
+          <thead><tr><th>Setup</th><th>W</th><th>PPF</th><th>µmol/J</th><th>PPFD bacs</th><th>A / B</th><th>DLI bacs</th><th>€ / an</th></tr></thead>
           <tbody>
             ${rows
               .map(
                 ({ f, sim, cost, day }) => `<tr>
                 <td><strong>${f.shortName}</strong><br><span class="muted">${VERDICT[f.verdict]}</span></td>
                 <td>${watts(f)}</td><td>${nf0.format(ppf(f))}</td><td>${nf2.format(f.ppe)}</td>
-                <td>${nf0.format(sim.avg)}</td><td>${nf0.format(sim.center)} / ${nf0.format(sim.edge)}</td>
+                <td>${nf0.format(sim.trayAvg)}</td><td>${nf0.format(sim.trayA)} / ${nf0.format(sim.trayB)}</td>
                 <td>${nf1.format(day)}</td><td>${euro0.format(cost)}</td>
               </tr>`
               )
               .join("")}
           </tbody>
         </table></div>
-        <p class="card-desc">Fecida ~286 µmol/s, 2 Slim ~182, 2 Cosmorrow 214 µmol/s pour 80 W : meilleur rapport photons / euros / géométrie.</p>
+        <p class="card-desc">2 Cosmorrow 202 µmol/s / 80 W. 2 Hortimol 40 W : 184 µmol/s. 4 SANlight : 200 µmol/s, trois fois le prix. 2 Slim : 182 µmol/s pour 102 W.</p>
       </article>`;
   }
 
@@ -549,18 +612,23 @@
     document.getElementById("panel-poser").innerHTML = `
       <div class="pose">
         <article class="card">
-          <h3>Cotes dans la tente</h3>
-          <p class="card-desc">Barres parallèles aux 120 cm, jamais bout à bout sur 60 cm.</p>
+          <h3>Cotes dans la tente — 2 bacs 60 × 40</h3>
+          <p class="card-desc">${fixture.layout === "split" ? "Une barre au-dessus de chaque bac, parallèle aux 120 cm." : "Barres parallèles aux 120 cm, jamais bout à bout sur 60 cm."}</p>
           <svg viewBox="0 0 280 160" width="100%" height="auto">
             <rect x="24" y="18" width="232" height="116" rx="6" fill="#edf3ec" stroke="#1f3d32" stroke-width="1.5"></rect>
+            <rect x="24" y="37" width="116" height="77" fill="none" stroke="#8aa090" stroke-dasharray="3 2"></rect>
+            <rect x="140" y="37" width="116" height="77" fill="none" stroke="#8aa090" stroke-dasharray="3 2"></rect>
             ${rects}
+            <text x="82" y="78" text-anchor="middle" font-size="8" fill="#5c6b62">Bac A</text>
+            <text x="198" y="78" text-anchor="middle" font-size="8" fill="#5c6b62">Bac B</text>
             <text x="140" y="148" text-anchor="middle" font-size="10" fill="#5c6b62">120 cm</text>
             <text x="16" y="76" text-anchor="middle" font-size="10" fill="#5c6b62" transform="rotate(-90 16 76)">60 cm</text>
           </svg>
           <ul>
-            <li>Recul en bout : <strong>${nf1.format(sideGap)} cm</strong> (${nf0.format(cover)} % de longueur couverte).</li>
-            <li>Hauteur de départ : <strong>${height} cm</strong> au-dessus du sommet.</li>
-            <li>Photopériode : programmateur ON/OFF, pas de Controller+ tant que 100 % n’est pas validé.</li>
+            <li>Chaque bac : <strong>60 × 40 cm</strong>, 10 cm de marge sur la profondeur.</li>
+            <li>Recul en bout de barre : <strong>${nf1.format(sideGap)} cm</strong> (${nf0.format(cover)} % de longueur couverte).</li>
+            <li>Hauteur de départ germoir : <strong>${height} cm</strong> au-dessus du terreau (15–20 cm en 6500 K).</li>
+            <li>Photopériode : programmateur ON/OFF 14 h, pas de Controller+ tant que 100 % n’est pas validé.</li>
           </ul>
         </article>
         <article class="card">
@@ -584,13 +652,13 @@
           <h3>DLI selon les heures</h3>
           <p class="card-desc">DLI = PPFD × secondes d’allumage / 1 000 000. C’est ça qui colore les Sarracenia.</p>
           <div class="table-wrap"><table>
-            <thead><tr><th>Heures</th><th>DLI moyen</th><th>DLI centre</th><th>€ / an</th></tr></thead>
+            <thead><tr><th>Heures</th><th>DLI bacs</th><th>DLI centre</th><th>€ / an</th></tr></thead>
             <tbody>
               ${hoursList
                 .map((h) => {
                   const kwh = yearlyKwh(watts(fixture), h, state.intensity);
                   const hl = h === state.hours ? ' style="background:var(--secondary)"' : "";
-                  return `<tr${hl}><td>${h} h</td><td>${nf1.format(dli(sim.avg, h))}</td><td>${nf1.format(dli(sim.center, h))}</td><td>${euro2.format(yearlyCost(kwh))}</td></tr>`;
+                  return `<tr${hl}><td>${h} h</td><td>${nf1.format(dli(sim.trayAvg, h))}</td><td>${nf1.format(dli(sim.center, h))}</td><td>${euro2.format(yearlyCost(kwh))}</td></tr>`;
                 })
                 .join("")}
             </tbody>

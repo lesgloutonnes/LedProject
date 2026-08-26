@@ -21,20 +21,19 @@
     <main class="wrap">
       <header class="hero">
         <div>
-          <p class="kicker">Les Gloutonnes · tente Vivosun 120 × 60 × 150 · 0,72 m²</p>
-          <h1>La lumière de ta pépinière, calculée pour de vrai.</h1>
+          <p class="kicker">Les Gloutonnes · 2 bacs de semis 60 × 40 cm · tente Vivosun 120 × 60 × 150</p>
+          <h1>La lumière de tes deux germoirs, pas d’un salon de floraison.</h1>
           <p class="lede">
-            Pas de npm, pas d’installation : cette page compare tes rampes en budget
-            photonique, carte PPFD, DLI et euros — tarif bleu août 2026.
+            Job : Sarracenia, Drosera, Dionaea au semis, 150–250 µmol/m²/s sur le terreau, 14 h, humidité de tente.
+            Le « top du top » ici, c’est l’homogénéité sur les deux plateaux — pas le panneau le plus cher.
           </p>
         </div>
         <aside class="verdict-card">
-          <p class="muted">Verdict actuel</p>
-          <h2>2 Cosmorrow Growing 90 cm, pas 2 Slim.</h2>
+          <p class="muted">À commander</p>
+          <h2>2 × Cosmorrow Growing 90 cm + COM2X40</h2>
           <p>
-            Le Growing 90 cm (COP4065) est toujours au catalogue. Octopus n’avait plus le
-            Full Spectrum 90 cm — ce n’est pas la même pièce. Deux Growing + alim COM2X40
-            restent le plan le plus cohérent.
+            80 W, 202 µmol/s, 100 % 6500 K, IP65, ~130–145 €. Fiche constructeur écrite pour 120 × 60 cm.
+            Alternative Osram : 2 × Hortimol TLED 40 W 60 cm (une barre par bac). Premium : 4 × SANlight FLEX II 20.
           </p>
         </aside>
       </header>
@@ -49,19 +48,20 @@
 
       <section class="sim-grid">
         <article class="card">
-          <h3>Carte PPFD au sommet du feuillage</h3>
+          <h3>Carte PPFD au sommet du terreau</h3>
           <p class="card-desc">
-            Modèle lambertien 120°, rebonds mylar ≈ 25 %. Outil de comparaison, pas un
-            PAR-mètre.
+            Deux bacs 60 × 40 cm (contours). Modèle lambertien 120°, rebonds mylar ≈ 25 %.
+            Compare les rampes, ce n’est pas un PAR-mètre.
           </p>
           <div class="map-frame" style="aspect-ratio: 120 / 60">
             <canvas id="heatmap"></canvas>
+            <div id="trays"></div>
             <div id="bars"></div>
             <div id="probes"></div>
           </div>
           <div class="map-meta">
             <span>120 cm</span>
-            <span id="target-label">cible 250–400 µmol</span>
+            <span id="target-label">cible 150–250 µmol</span>
             <span>60 cm</span>
           </div>
           <div class="legend">
@@ -75,8 +75,8 @@
             <h3>Réglages</h3>
             <p class="card-desc">Hauteur = rampe → sommet des plantes, pas le fond de la tente.</p>
             <label class="slider">
-              <span>Hauteur <strong id="height-val">25 cm</strong></span>
-              <input id="height" type="range" min="15" max="50" value="25" />
+              <span>Hauteur <strong id="height-val">20 cm</strong></span>
+              <input id="height" type="range" min="15" max="50" value="20" />
             </label>
             <label class="slider">
               <span>Photopériode <strong id="hours-val">14 h</strong></span>
@@ -116,7 +116,7 @@
           <dl class="protocol">
             <div>
               <dt>Jours 1–7</dt>
-              <dd>14 h, 30 cm au-dessus du sommet, ou 70 % si dimmable. Pas de chasse au rouge.</dd>
+              <dd>14 h, 20 cm au-dessus du terreau, ou 70 % si dimmable. Pas de chasse au rouge.</dd>
             </div>
             <div>
               <dt>Semaines 2–3</dt>
@@ -140,28 +140,32 @@
       <section id="panel-corrections" class="tab-panel hidden">
         <div class="fix-grid">
           <article class="card">
+            <h3>Deux bacs, pas toute la tente</h3>
+            <p>Le PPFD utile est la moyenne sur 2 × 60 × 40 cm. Éclairer les 10 cm de marge mylar ne fait pas germer plus de graines.</p>
+          </article>
+          <article class="card">
             <h3>230 + 230 ≠ 460</h3>
             <p>Le PAR 230 est mesuré à 20 cm sous la rampe, identique sur les Slim 24 W à 51 W. C’est un pic local, pas un flux.</p>
           </article>
           <article class="card">
             <h3>Les Slim sont faibles au watt</h3>
-            <p>Même calées sur le pic 230 (~91 µmol/s), 2 Slim font 182 µmol/s pour 102 W, sous 2 Cosmorrow (214 µmol/s, 80 W).</p>
+            <p>Même calées sur le pic 230 (~91 µmol/s), 2 Slim font 182 µmol/s pour 102 W, sous 2 Cosmorrow (202 µmol/s, 80 W).</p>
           </article>
           <article class="card">
             <h3>La Fecida n’est pas faible</h3>
-            <p>≈ 286 µmol/s, conçue pour 60 × 60. Dans 120 × 60 le panneau 31 × 21 cm fait un hotspot. Garde-la en appoint.</p>
+            <p>≈ 286 µmol/s, conçue pour 60 × 60. Sur deux bacs, un plateau prend le hotspot, l’autre reste trop bas. Appoint, pas source unique.</p>
           </article>
           <article class="card">
-            <h3>Le Cosmorrow 90 cm Growing n’est pas mort</h3>
-            <p>COP4065 est encore au catalogue. C’est le Full Spectrum 90 cm qui est passé en 70 cm (COP40FS).</p>
+            <h3>Le Cosmorrow Growing 90 n’est pas mort</h3>
+            <p>COP4065, fiche 2023 : 101 µmol/s, 2,7 µmol/J, 87 cm, zone 120 × 60. Le Full Spectrum 90 cm a été remplacé par le 70 cm (COP40FS).</p>
+          </article>
+          <article class="card">
+            <h3>Philips / Valoya : hors jeu amateur</h3>
+            <p>Un GreenPower Production Module 120 cm fait ~168 µmol/s, IP66, 5 ans — vendu via intégrateurs, ~300 €+ la barre. Excellent, pas achetable comme une Cosmorrow.</p>
           </article>
           <article class="card">
             <h3>Le 660 nm n’est pas un sésame</h3>
-            <p>Le DLI et l’homogénéité commandent. Un blanc 6500–7000 K tient toute la culture si le PPFD est là.</p>
-          </article>
-          <article class="card">
-            <h3>FloraStar 6500 K : PPF contradictoire</h3>
-            <p>51, 62 ou 98 µmol/s selon les boutiques. Sans fiche unique, on ne le choisit pas à la place du Cosmorrow.</p>
+            <p>Au semis, un blanc 6500 K compacte mieux qu’un spectre floraison 2700 K. Le DLI sur les bacs commande la suite.</p>
           </article>
         </div>
       </section>
