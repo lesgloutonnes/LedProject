@@ -7,9 +7,10 @@
     <meta name="description" content="Sept protocoles de tente carnivore sous Cosmorrow : germoir, bouturage, production, colorisation, mixte, tropicale, dormance." />
     <meta name="theme-color" content="#243a32" />
     <meta name="color-scheme" content="dark" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
     <meta
       http-equiv="Content-Security-Policy"
-      content="default-src 'self'; base-uri 'self'; form-action 'none'; frame-ancestors 'none'; object-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'"
+      content="default-src 'self'; base-uri 'self'; form-action 'none'; frame-ancestors 'none'; object-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; upgrade-insecure-requests"
     />
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -17,6 +18,7 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap"
       rel="stylesheet"
+      referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="css/tokens.css" />
     <link rel="stylesheet" href="css/ui.css" />
@@ -30,14 +32,15 @@
           <span class="brand-name">Tourbière</span>
         </a>
         <nav class="nav-primary" aria-label="Principale">
-          <a href="index.html">Accueil</a>
+          <a class="nav-wide" href="index.html">Accueil</a>
           <a href="assistant.html">Assistant</a>
           <a href="cosmorrow.html">Cosmorrow</a>
           <a href="especes.html">Espèces</a>
-          <a href="protocoles.html">Protocoles</a>
+          <a class="nav-wide" href="protocoles.html">Protocoles</a>
           <details class="nav-more">
             <summary>Plus</summary>
             <ul>
+              <li><a href="protocoles.html">Protocoles</a></li>
               <li><a href="tente.html">Tente</a></li>
               <li><a href="nutriments.html">Nutriments</a></li>
               <li><a href="outils.html">Outils</a></li>
@@ -49,6 +52,7 @@
         <a class="btn-primary header-cta" href="assistant.html">Lancer l’assistant</a>
       </div>
     </header>
+    <p id="store-warn" class="callout is-warn wrap store-warn" hidden role="status">Mémoire pleine ou privée : le kit reste sur cet écran seulement.</p>
     <main id="contenu" class="page-main wrap">
 
       <header class="page-hero stack">
@@ -56,13 +60,13 @@
         <h1>Un protocole par job, pas un curseur unique.</h1>
         <p class="lede">Semis, boutures, adultes, rouge, étages, jungle ou hiver : la même Cosmorrow, des hauteurs et des heures différentes.</p>
       </header>
+      <noscript class="callout is-warn"><p>Activez JavaScript pour les protocoles. Le CDC est dans le README.</p></noscript>
       <nav class="anchor-nav" id="protocol-nav" aria-label="Protocoles"></nav>
-      <noscript class="callout is-warn"><p>Activez JavaScript pour les 7 protocoles.</p></noscript>
       <div id="protocol-list"></div>
       <section class="section">
         <h2>Calendrier FR / BE</h2>
         <p class="hint">Hémisphère nord. Les tropicales ignorent ce rythme : 12–14 h toute l’année, tente à part.</p>
-        <div class="month-grid" id="calendar" style="margin-top:1rem"></div>
+        <div class="month-grid mt-s4" id="calendar"></div>
       </section>
 
     </main>
@@ -83,8 +87,8 @@
       </button>
     </nav>
     <dialog id="plus-sheet" aria-labelledby="plus-title">
-      <h2 id="plus-title">Plus</h2>
       <button type="button" class="plus-close" id="plus-close">Fermer</button>
+      <h2 id="plus-title">Plus</h2>
       <nav aria-label="Secondaire">
         <ul>
           <li><a href="protocoles.html">Protocoles</a></li>

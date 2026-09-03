@@ -26,7 +26,7 @@
   }
   if (dialog && closeBtn) {
     closeBtn.addEventListener("click", function () {
-      openBtn && openBtn.setAttribute("aria-expanded", "false");
+      if (openBtn) openBtn.setAttribute("aria-expanded", "false");
       if (typeof dialog.close === "function") dialog.close();
       else dialog.removeAttribute("open");
     });
@@ -40,6 +40,20 @@
     });
   }
 
+  var more = document.querySelector(".nav-more");
+  if (more) {
+    document.addEventListener("click", function (ev) {
+      if (more.open && !more.contains(ev.target)) more.open = false;
+    });
+    document.addEventListener("keydown", function (ev) {
+      if (ev.key === "Escape" && more.open) {
+        more.open = false;
+        var summary = more.querySelector("summary");
+        if (summary) summary.focus();
+      }
+    });
+  }
+
   var cta = document.querySelector(".header-cta");
   if (cta && page === "assistant") {
     var stored = window.TourbiereStore && TourbiereStore.getProject();
@@ -49,5 +63,43 @@
     } else {
       cta.hidden = true;
     }
+  }
+
+  document.querySelectorAll('a[target="_blank"]').forEach(function (a) {
+    var rel = (a.getAttribute("rel") || "").toLowerCase();
+    if (rel.indexOf("noopener") === -1 || rel.indexOf("noreferrer") === -1) {
+      a.setAttribute("rel", "noopener noreferrer");
+    }
+    if (!a.getAttribute("referrerpolicy")) a.setAttribute("referrerpolicy", "no-referrer");
+    if (!a.querySelector(".visually-hidden")) {
+      var s = document.createElement("span");
+      s.className = "visually-hidden";
+      s.textContent = " (nouvelle fenêtre)";
+      a.appendChild(s);
+    }
+  });
+
+  function showStoreWarn() {
+    var el = document.getElementById("store-warn");
+    if (!el) return;
+    el.hidden = false;
+  }
+
+  if (window.TourbiereStore && !TourbiereStore.canStore()) showStoreWarn();
+  window.addEventListener("tourbiere-store", function (ev) {
+    if (ev.detail && ev.detail.ok === false) showStoreWarn();
+  });
+
+  var sticky = document.querySelector(".cta-sticky");
+  var heroCta = document.querySelector(".page-hero .btn-primary");
+  if (sticky && heroCta && "IntersectionObserver" in window) {
+    var io = new IntersectionObserver(
+      function (entries) {
+        var vis = entries[0] && entries[0].isIntersecting;
+        sticky.classList.toggle("is-hidden", Boolean(vis));
+      },
+      { threshold: 0.6 }
+    );
+    io.observe(heroCta);
   }
 })();

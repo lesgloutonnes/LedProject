@@ -99,6 +99,19 @@
   :root {
     --duration: 0.01ms;
   }
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 /* --- Reset léger --- */
@@ -114,6 +127,7 @@ html {
   background: var(--bg);
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
+  scroll-padding-top: 5.5rem;
 }
 
 body {
@@ -233,13 +247,40 @@ h3 {
 }
 
 .wrap {
-  width: min(var(--content), calc(100% - 2 * var(--page-gutter)));
-  margin-inline: auto;
+  width: min(
+    var(--content),
+    calc(
+      100% - max(var(--page-gutter), env(safe-area-inset-left, 0px)) -
+        max(var(--page-gutter), env(safe-area-inset-right, 0px))
+    )
+  );
+  margin-left: max(var(--page-gutter), env(safe-area-inset-left, 0px));
+  margin-right: max(var(--page-gutter), env(safe-area-inset-right, 0px));
+}
+
+.mt-s4 {
+  margin-top: var(--s-4);
+}
+
+.mt-s5 {
+  margin-top: var(--s-5);
+}
+
+.stack-tight {
+  --stack-space: var(--s-3);
+}
+
+.stack-loose {
+  --stack-space: var(--s-5);
 }
 
 /* Réserve pour la barre bas — masquer ≥ 720 px dans ui.css */
 .page-main {
   padding-bottom: var(--bottom-nav-space);
+}
+
+.page-main [id] {
+  scroll-margin-top: 5.5rem;
 }
 
 @media (min-width: 720px) {

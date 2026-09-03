@@ -24,7 +24,6 @@
     });
     list.innerHTML = filtered
       .map(function (s) {
-        var open = hash && (s.id === hash || familyOf(s.id) === hash);
         return (
           '<article class="card stack" id="' +
           e(s.id) +
@@ -65,8 +64,7 @@
           "</p><p><strong>Engrais.</strong> " +
           e(s.fertilizer) +
           "</p>" +
-          (open || true
-            ? "<p><strong>Semis.</strong> " +
+          "<p><strong>Semis.</strong> " +
               e(s.seedlingNotes) +
               "</p><p><strong>Bouture.</strong> " +
               e(s.cuttingNotes) +
@@ -80,8 +78,7 @@
                   return "<li>" + e(w) + "</li>";
                 })
                 .join("") +
-              "</ul>"
-            : "") +
+              "</ul>" +
           '<p class="hint">Source PPFD : Carnivero / Florawave. Cible = bas-milieu de fourchette.</p></article>'
         );
       })

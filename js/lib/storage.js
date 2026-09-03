@@ -38,8 +38,10 @@
   function write(key, value) {
     try {
       localStorage.setItem(PREFIX + key, JSON.stringify(value));
+      window.dispatchEvent(new CustomEvent("tourbiere-store", { detail: { ok: true } }));
       return true;
     } catch (err) {
+      window.dispatchEvent(new CustomEvent("tourbiere-store", { detail: { ok: false } }));
       return false;
     }
   }

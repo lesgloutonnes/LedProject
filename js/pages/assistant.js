@@ -6,8 +6,12 @@
   var state = store.getProject();
   var params = new URLSearchParams(location.search);
   if (params.get("step")) {
-    var q = params.get("step");
-    state.step = q === "result" ? "result" : Number(q) || 1;
+    var q = String(params.get("step") || "");
+    if (q === "result") state.step = "result";
+    else {
+      var nStep = Number(q);
+      state.step = nStep >= 1 && nStep <= 4 ? nStep : 1;
+    }
   }
 
   function firstInvalidStep() {
@@ -179,16 +183,16 @@
       (customOn ? " is-active" : "") +
       '" data-tent="custom"><strong>Autre</strong><span>Saisie L × l × H en cm</span></button></div>' +
       (customOn
-        ? '<div class="card stack" style="--stack-space:0.75rem;margin-top:1rem"><label>Longueur cm <input id="custom-l" type="number" inputmode="numeric" min="40" max="240" value="' +
+        ? '<div class="card stack mt-s4 stack-tight"><label for="custom-l">Longueur cm <input id="custom-l" type="number" inputmode="numeric" pattern="[0-9]*" min="40" max="240" autocomplete="off" enterkeyhint="next" value="' +
           e(state.tente.lengthCm || 120) +
-          '"></label><label>Largeur cm <input id="custom-w" type="number" inputmode="numeric" min="40" max="240" value="' +
+          '"></label><label for="custom-w">Largeur cm <input id="custom-w" type="number" inputmode="numeric" pattern="[0-9]*" min="40" max="240" autocomplete="off" enterkeyhint="next" value="' +
           e(state.tente.widthCm || 60) +
-          '"></label><label>Hauteur cm <input id="custom-h" type="number" inputmode="numeric" min="40" max="240" value="' +
+          '"></label><label for="custom-h">Hauteur cm <input id="custom-h" type="number" inputmode="numeric" pattern="[0-9]*" min="40" max="240" autocomplete="off" enterkeyhint="done" value="' +
           e(state.tente.heightCm || 150) +
           '"></label></div>'
         : "") +
       (state.tente && state.tente.id !== "custom"
-        ? '<p class="hint" style="margin-top:1rem"><button type="button" class="btn-ghost" id="save-fav">Enregistrer comme favorite</button></p>'
+        ? '<p class="hint mt-s4"><button type="button" class="btn-ghost" id="save-fav">Enregistrer comme favorite</button></p>'
         : "")
     );
   }
@@ -221,18 +225,18 @@
         { id: "150-300", label: "150–300 €" },
         { id: "peu-importe", label: "Peu importe" },
       ]) +
-      '</div><p class="kicker" style="margin-top:1.25rem">Hygrométrie visée</p><div class="chips">' +
+      '</div><p class="kicker mt-s5">Hygrométrie visée</p><div class="chips">' +
       group("hygro", [
         { id: "basse", label: "Basse < 50 %" },
         { id: "moyenne", label: "Moyenne 50–70 %" },
         { id: "haute", label: "Haute > 70 %" },
       ]) +
-      '</div><p class="kicker" style="margin-top:1.25rem">Dormance dans cette tente</p><div class="chips">' +
+      '</div><p class="kicker mt-s5">Dormance dans cette tente</p><div class="chips">' +
       group("dormance", [
         { id: "true", label: "Oui" },
         { id: "false", label: "Non" },
       ]) +
-      '</div><div class="callout" style="margin-top:1.25rem"><p>Ne pas mélanger 20 W et 40 W sur la même alim. <a href="cosmorrow.html">Gamme Cosmorrow</a>.</p></div>'
+      '</div><div class="callout mt-s5"><p>Ne pas mélanger 20 W et 40 W sur la même alim. <a href="cosmorrow.html">Gamme Cosmorrow</a>.</p></div>'
     );
   }
 
@@ -329,7 +333,7 @@
       "</p>" +
       '<p class="price">' +
       e(fmt.euro0(kit.estimatedEUR)) +
-      " <span class=\"muted\" style=\"font-size:1rem\">kit LED, hors tente</span></p>" +
+      ' <span class="muted">kit LED, hors tente</span></p>' +
       '<p class="meta-row"><span>' +
       e(kit.totalWatts) +
       " W</span><span>" +
@@ -345,7 +349,7 @@
       '<section class="section"><h2>À ne pas rater</h2><ul class="check-list">' +
       warns +
       "</ul></section></div>" +
-      '<div class="btn-row" style="margin-top:1.5rem">' +
+      '<div class="btn-row mt-s5">' +
       '<button type="button" class="btn-primary" id="print-kit">Imprimer la liste</button>' +
       '<a class="btn-ghost" href="protocoles.html#' +
       e(hash) +
@@ -371,7 +375,7 @@
   }
 
   function renderNav() {
-    var html = '<div class="btn-row wizard-nav" style="margin-top:1.5rem">';
+    var html = '<div class="btn-row wizard-nav mt-s5">';
     if (state.step !== 1 && state.step !== "result") {
       html += '<button type="button" class="btn-ghost" id="back">Retour</button>';
     }
@@ -400,7 +404,8 @@
     else if (state.step === 3) body = renderStep3();
     else if (state.step === 4) body = renderStep4();
     else body = renderStep1();
-    root.innerHTML = renderStepper() + '<div class="stack">' + body + "</div>" + renderNav();
+    root.innerHTML =
+      '<form id="assistant-form">' + renderStepper() + '<div class="stack">' + body + "</div>" + renderNav() + "</form>";
     bind();
   }
 
@@ -466,6 +471,24 @@
         else state.contraintes[field] = val;
         persist();
         render();
+      });
+    });
+    var form = document.getElementById("assistant-form");
+    if (form) {
+      form.addEventListener("submit", function (ev) {
+        ev.preventDefault();
+        var nextBtn = document.getElementById("next");
+        if (nextBtn && !nextBtn.disabled) nextBtn.click();
+      });
+    }
+    ["custom-l", "custom-w", "custom-h"].forEach(function (id) {
+      var el = document.getElementById(id);
+      if (!el) return;
+      el.addEventListener("focus", function () {
+        var nav = document.querySelector(".wizard-nav");
+        if (nav && typeof nav.scrollIntoView === "function") {
+          nav.scrollIntoView({ block: "end", behavior: "auto" });
+        }
       });
     });
     var next = document.getElementById("next");

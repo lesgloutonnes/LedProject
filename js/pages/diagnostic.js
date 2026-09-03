@@ -35,6 +35,7 @@
       current.treeId = tree.id;
       current.nodeId = tree.startId;
       current.stack = [];
+      if (pick) pick.hidden = true;
       renderNode();
     });
   }
@@ -62,7 +63,7 @@
       e(node.question) +
       '</h2><div class="diag-answers">' +
       answers +
-      '</div><p style="margin-top:1rem"><button type="button" class="btn-ghost" id="diag-back">Retour</button></p></article>';
+      '</div><p class="mt-s4"><button type="button" class="btn-ghost" id="diag-back">Retour</button></p></article>';
     panel.querySelectorAll("[data-i]").forEach(function (btn) {
       btn.addEventListener("click", function () {
         var a = node.answers[Number(btn.getAttribute("data-i"))];
@@ -86,6 +87,7 @@
         } else {
           panel.innerHTML = "";
           current.treeId = null;
+          if (pick) pick.hidden = false;
         }
       });
     }

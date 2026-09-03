@@ -11,9 +11,10 @@ HEAD = """<!DOCTYPE html>
     <meta name="description" content="{description}" />
     <meta name="theme-color" content="#243a32" />
     <meta name="color-scheme" content="dark" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
     <meta
       http-equiv="Content-Security-Policy"
-      content="default-src 'self'; base-uri 'self'; form-action 'none'; frame-ancestors 'none'; object-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'"
+      content="default-src 'self'; base-uri 'self'; form-action 'none'; frame-ancestors 'none'; object-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; upgrade-insecure-requests"
     />
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -21,6 +22,7 @@ HEAD = """<!DOCTYPE html>
     <link
       href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap"
       rel="stylesheet"
+      referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="css/tokens.css" />
     <link rel="stylesheet" href="css/ui.css" />
@@ -34,14 +36,15 @@ HEAD = """<!DOCTYPE html>
           <span class="brand-name">Tourbière</span>
         </a>
         <nav class="nav-primary" aria-label="Principale">
-          <a href="index.html">Accueil</a>
+          <a class="nav-wide" href="index.html">Accueil</a>
           <a href="assistant.html">Assistant</a>
           <a href="cosmorrow.html">Cosmorrow</a>
           <a href="especes.html">Espèces</a>
-          <a href="protocoles.html">Protocoles</a>
+          <a class="nav-wide" href="protocoles.html">Protocoles</a>
           <details class="nav-more">
             <summary>Plus</summary>
             <ul>
+              <li><a href="protocoles.html">Protocoles</a></li>
               <li><a href="tente.html">Tente</a></li>
               <li><a href="nutriments.html">Nutriments</a></li>
               <li><a href="outils.html">Outils</a></li>
@@ -53,6 +56,7 @@ HEAD = """<!DOCTYPE html>
         <a class="btn-primary header-cta" href="assistant.html">Lancer l’assistant</a>
       </div>
     </header>
+    <p id="store-warn" class="callout is-warn wrap store-warn" hidden role="status">Mémoire pleine ou privée : le kit reste sur cet écran seulement.</p>
     <main id="contenu" class="page-main wrap">
 {main}
     </main>
@@ -68,13 +72,13 @@ HEAD = """<!DOCTYPE html>
       <a href="assistant.html" data-icon="wiz"><span class="bottom-nav-icon" aria-hidden="true"></span>Assistant</a>
       <a href="cosmorrow.html" data-icon="led"><span class="bottom-nav-icon" aria-hidden="true"></span>LED</a>
       <a href="especes.html" data-icon="leaf"><span class="bottom-nav-icon" aria-hidden="true"></span>Espèces</a>
-      <button type="button" id="plus-open" data-icon="more" aria-haspopup="dialog" aria-controls="plus-sheet">
+      <button type="button" id="plus-open" data-icon="more" aria-haspopup="dialog" aria-controls="plus-sheet" aria-expanded="false">
         <span class="bottom-nav-icon" aria-hidden="true"></span>Plus
       </button>
     </nav>
     <dialog id="plus-sheet" aria-labelledby="plus-title">
-      <h2 id="plus-title">Plus</h2>
       <button type="button" class="plus-close" id="plus-close">Fermer</button>
+      <h2 id="plus-title">Plus</h2>
       <nav aria-label="Secondaire">
         <ul>
           <li><a href="protocoles.html">Protocoles</a></li>
@@ -169,7 +173,7 @@ page(
       <section class="section">
         <h2>Sept métiers en tente</h2>
         <p class="hint">Pas un curseur unique. Un protocole par job.</p>
-        <div class="chips" style="margin-top:1rem">
+        <div class="chips mt-s4">
           <a class="chip" href="protocoles.html#germoir">Germoir</a>
           <a class="chip" href="protocoles.html#bouturage">Bouturage</a>
           <a class="chip" href="protocoles.html#collection">Collection</a>
@@ -184,7 +188,7 @@ page(
         <article class="card">
           <h2>Kit signature</h2>
           <p>Tente 120 × 60, deux bacs 60 × 40, <strong>2 × Cosmorrow Growing 90 cm (COP4065) + COM2X40</strong>. 80 W, 202 µmol/s, blanc 6500 K, IP65, ~130–145 €. C’est le panier Tourbière.</p>
-          <p class="btn-row" style="margin-top:1rem">
+          <p class="btn-row mt-s4">
             <a class="btn-primary" href="cosmorrow.html#kit-germoir-120x60">Détail du kit</a>
             <a class="btn-ghost" href="outils.html?kit=kit-germoir-120x60">Carte PPFD</a>
           </p>
@@ -210,6 +214,7 @@ page(
     "Assistant kit Cosmorrow — Les Gloutonnes · Tourbière",
     "Configure ta tente de carnivores : projet, genres, surface, contraintes. Un kit Secret Jardin Cosmorrow en quatre questions.",
     """
+      <noscript class="callout is-warn"><p>L’assistant a besoin de JavaScript. Le catalogue est sur <a href="cosmorrow.html">Cosmorrow</a>.</p></noscript>
       <div id="assistant-app" class="stack"></div>
 """,
     DATA_CORE
@@ -228,6 +233,7 @@ page(
         <h1>Cosmorrow, et seulement Cosmorrow.</h1>
         <p class="lede">Blanc 6500 K pour germer, Full Spectrum en appoint, alims calibrées 20 W ou 40 W. PPF publié, zone constructeur, pas un PAR 230 de boutique.</p>
       </header>
+      <noscript class="callout is-warn"><p>Activez JavaScript pour le tableau SKU et les kits. Les règles d’or restent lisibles ci-dessus.</p></noscript>
       <section class="section">
         <h2>Règles d’or</h2>
         <div class="card-grid">
@@ -240,7 +246,7 @@ page(
       <section class="section">
         <h2>Barres</h2>
         <div id="sku-table"></div>
-        <div class="card-grid dense" id="fixture-cards" style="margin-top:1.5rem"></div>
+        <div class="card-grid dense mt-s5" id="fixture-cards"></div>
       </section>
       <section class="section">
         <h2>Alimentations</h2>
@@ -249,7 +255,7 @@ page(
       <section class="section">
         <h2>Kits par tente</h2>
         <p class="hint">Prix 2025–2026 growshop FR/BE, barres + alim + programmateur, hors tente. Fourchettes.</p>
-        <div class="stack" id="kit-list" style="margin-top:1rem;--stack-space:1rem"></div>
+        <div class="stack mt-s4" id="kit-list"></div>
       </section>
 """,
     DATA_CORE
@@ -268,8 +274,9 @@ page(
         <h1>Chaque genre a sa fenêtre de photons.</h1>
         <p class="lede">On vise d’abord le bas-milieu de fourchette, puis on monte selon la plante — pas selon un listing 660 nm. Growing 6500 K est la barre de travail.</p>
       </header>
-      <div class="chips" id="species-filter" style="margin:1.5rem 0"></div>
-      <div class="stack" id="species-list" style="--stack-space:1.25rem"></div>
+      <div class="chips mt-s5" id="species-filter"></div>
+      <noscript class="callout is-warn"><p>Activez JavaScript pour les fiches genres. Cibles PPFD : voir Carnivero.</p></noscript>
+      <div class="stack stack-loose" id="species-list"></div>
 """,
     """
     <script src="js/data/species.js" defer></script>
@@ -287,12 +294,13 @@ page(
         <h1>Un protocole par job, pas un curseur unique.</h1>
         <p class="lede">Semis, boutures, adultes, rouge, étages, jungle ou hiver : la même Cosmorrow, des hauteurs et des heures différentes.</p>
       </header>
+      <noscript class="callout is-warn"><p>Activez JavaScript pour les protocoles. Le CDC est dans le README.</p></noscript>
       <nav class="anchor-nav" id="protocol-nav" aria-label="Protocoles"></nav>
       <div id="protocol-list"></div>
       <section class="section">
         <h2>Calendrier FR / BE</h2>
         <p class="hint">Hémisphère nord. Les tropicales ignorent ce rythme : 12–14 h toute l’année, tente à part.</p>
-        <div class="month-grid" id="calendar" style="margin-top:1rem"></div>
+        <div class="month-grid mt-s4" id="calendar"></div>
       </section>
 """,
     DATA_CORE
@@ -342,7 +350,7 @@ page(
       </section>
       <section class="section">
         <h2>Catalogue de tentes</h2>
-        <div class="stack" id="tent-catalog" style="--stack-space:1rem"></div>
+        <div class="stack" id="tent-catalog"></div>
       </section>
 """,
     """
@@ -369,15 +377,15 @@ page(
       <section class="section">
         <h2>Eau interdite</h2>
         <div class="card-grid" id="water-no"></div>
-        <ul class="check-list" id="water-practice" style="margin-top:1rem"></ul>
+        <ul class="check-list mt-s4" id="water-practice"></ul>
       </section>
       <section class="section">
         <h2>Substrats</h2>
-        <div class="stack" id="substrates" style="--stack-space:1rem"></div>
+        <div class="stack" id="substrates"></div>
       </section>
       <section class="section">
         <h2>Engrais</h2>
-        <div class="stack" id="fertilizers" style="--stack-space:1rem"></div>
+        <div class="stack" id="fertilizers"></div>
       </section>
       <section class="section">
         <h2>Proies</h2>
@@ -400,8 +408,9 @@ page(
         <h1>Comparer des kits, pas certifier un DLI.</h1>
         <p class="lede">Carte PPFD simplifiée pour Cosmorrow seulement. Cosmorrow n’est pas dimmable : le curseur d’intensité simule un voile, pas un Controller+.</p>
       </header>
+      <noscript class="callout is-warn"><p>Activez JavaScript pour la carte PPFD. Catalogue : <a href="cosmorrow.html">Cosmorrow</a>.</p></noscript>
       <div class="sim-layout section">
-        <article class="card">
+        <article class="card heatmap-bleed">
           <div class="heatmap" role="img" aria-labelledby="heatmap-title heatmap-stats">
             <h2 id="heatmap-title">Carte PPFD au sommet du terreau</h2>
             <div class="heatmap-frame">
@@ -417,22 +426,27 @@ page(
         <div class="stack">
           <article class="card">
             <h3>Réglages</h3>
-            <label>Kit
+            <label for="kit-select">Kit
               <select id="kit-select"></select>
             </label>
-            <label>Tente
+            <label for="tent-select">Tente
               <select id="tent-select"></select>
             </label>
-            <label class="slider">
+            <label class="slider" for="height">
               <span>Hauteur <strong id="height-val">20 cm</strong></span>
               <input id="height" type="range" min="12" max="50" value="20" />
             </label>
-            <label class="slider">
+            <label class="slider" for="hours">
               <span>Photopériode <strong id="hours-val">14 h</strong></span>
               <input id="hours" type="range" min="8" max="18" value="14" />
             </label>
-            <label>Tarif € / kWh
-              <input id="kwh-eur" type="number" step="0.0001" min="0.05" max="0.80" />
+            <label class="slider" for="intensity">
+              <span>Intensité <strong id="intensity-val">100 %</strong></span>
+              <input id="intensity" type="range" min="40" max="100" value="100" />
+            </label>
+            <p id="dim-warn" class="dim-warn" hidden>Cosmorrow n’est pas dimmable. Ce curseur simule un voile, pas un Controller+.</p>
+            <label for="kwh-eur">Tarif € / kWh
+              <input id="kwh-eur" type="number" inputmode="decimal" step="0.0001" min="0.05" max="0.80" autocomplete="off" />
             </label>
           </article>
           <div id="stats" class="stats"></div>
@@ -457,6 +471,7 @@ page(
         <h1>Ce n’est presque jamais une maladie magique.</h1>
         <p class="lede" id="diag-intro"></p>
       </header>
+      <noscript class="callout is-warn"><p>Activez JavaScript pour l’arbre de décisions. Protocoles : <a href="protocoles.html">ici</a>.</p></noscript>
       <div class="choice-grid tree-pick section" id="tree-pick"></div>
       <div id="tree-panel" class="section"></div>
 """,
@@ -481,9 +496,9 @@ page(
         <p>Secret Jardin (Belgique) publie un PPF en µmol/s, un PPE en µmol/J, une zone, un IP65, du 24 V et du 230 V livrable en FR/BE. Growing 6500 K est le spectre de germoir. Le Full Spectrum est un appoint. On ne tient plus de palmarès multi-marques : le site est un compagnon de pose, pas un comparateur.</p>
         <h2>Sources</h2>
         <ul>
-          <li><a href="https://www.secretjardin.com/wp-content/uploads/2023/09/20230905-COP-BULBS-DATASHEET.pdf" rel="noopener noreferrer" target="_blank">Fiche Cosmorrow COP BULBS 2023-09</a> (Secret Jardin)</li>
-          <li><a href="https://www.secretjardin.com/bulbs-power-supplies/" rel="noopener noreferrer" target="_blank">Barres et alims Cosmorrow</a></li>
-          <li><a href="https://www.carnivero.com/pages/grow-light-ppfd-recommendations" rel="noopener noreferrer" target="_blank">PPFD par genre — Carnivero / Florawave</a></li>
+          <li><a href="https://www.secretjardin.com/wp-content/uploads/2023/09/20230905-COP-BULBS-DATASHEET.pdf" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Fiche Cosmorrow COP BULBS 2023-09</a> (Secret Jardin)</li>
+          <li><a href="https://www.secretjardin.com/bulbs-power-supplies/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Barres et alims Cosmorrow</a></li>
+          <li><a href="https://www.carnivero.com/pages/grow-light-ppfd-recommendations" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">PPFD par genre — Carnivero / Florawave</a></li>
           <li>Adamec, L. (1997). Mineral nutrition of carnivorous plants. <em>Botanical Review</em> 63.</li>
           <li>California Carnivores / Maxsea : foliar ¼ c. à café / gallon, feuilles seulement.</li>
         </ul>

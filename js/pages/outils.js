@@ -6,13 +6,30 @@
   var store = window.TourbiereStore;
   var params = new URLSearchParams(location.search);
 
+  function allowId(raw, list, fallback) {
+    var s = String(raw || "");
+    if (!/^[a-z0-9-]+$/i.test(s)) return fallback;
+    if (list && list.indexOf(s) < 0) return fallback;
+    return s;
+  }
+
+  var kitIds = (window.TOURBIERE_KITS || []).map(function (k) {
+    return k.id;
+  });
+  var tentIds = (window.TOURBIERE_TENTS || []).map(function (t) {
+    return t.id;
+  });
+  var skuIds = (window.TOURBIERE_FIXTURES || []).map(function (f) {
+    return f.sku;
+  });
+
   var state = {
-    kitId: params.get("kit") || "kit-germoir-120x60",
-    sku: params.get("sku") || "",
-    qty: Number(params.get("qty") || 0) || 0,
-    tentId: params.get("tent") || "tent-120x60",
-    height: Number(params.get("h") || 20) || 20,
-    hours: Number(params.get("hours") || 14) || 14,
+    kitId: allowId(params.get("kit"), kitIds, "kit-germoir-120x60"),
+    sku: allowId(params.get("sku"), skuIds, ""),
+    qty: Math.max(0, Math.min(8, Number(params.get("qty") || 0) || 0)),
+    tentId: allowId(params.get("tent"), tentIds, "tent-120x60"),
+    height: Math.max(12, Math.min(50, Number(params.get("h") || 20) || 20)),
+    hours: Math.max(8, Math.min(18, Number(params.get("hours") || 14) || 14)),
     intensity: 100,
   };
 
@@ -20,6 +37,7 @@
   var tentSel = document.getElementById("tent-select");
   var heightEl = document.getElementById("height");
   var hoursEl = document.getElementById("hours");
+  var intensityEl = document.getElementById("intensity");
   var kwhEl = document.getElementById("kwh-eur");
 
   function currentKit() {
@@ -193,6 +211,10 @@
     }
     document.getElementById("height-val").textContent = state.height + " cm";
     document.getElementById("hours-val").textContent = state.hours + " h";
+    var intensityVal = document.getElementById("intensity-val");
+    if (intensityVal) intensityVal.textContent = state.intensity + " %";
+    var dimWarn = document.getElementById("dim-warn");
+    if (dimWarn) dimWarn.hidden = state.intensity === 100;
     var sim;
     if (kit && optics) sim = simulateKitFull(kit, tent, state.height, state.intensity);
     else {
@@ -213,7 +235,7 @@
       draw(sim, tent);
       var dliVal = optics.dli(sim.avg, state.hours);
       var watts = kit ? kit.totalWatts : (fixtureForSim(kit) && fixtureForSim(kit).fixture.watts * (state.qty || 1)) || 0;
-      var kwh = optics.yearlyKwh(watts, state.hours, 100);
+      var kwh = optics.yearlyKwh(watts, state.hours, state.intensity);
       var tariff = store.getPrefs().kwhEur;
       if (statsEl) {
         statsEl.textContent =
@@ -323,8 +345,16 @@
       render();
     });
   }
+  if (intensityEl) {
+    intensityEl.value = String(state.intensity);
+    intensityEl.addEventListener("input", function () {
+      state.intensity = Number(intensityEl.value);
+      render();
+    });
+  }
   if (kwhEl) {
     kwhEl.value = String(store.getPrefs().kwhEur);
+    kwhEl.setAttribute("autocomplete", "off");
     kwhEl.addEventListener("change", function () {
       var v = Math.max(0.05, Math.min(0.8, Number(kwhEl.value) || 0.2016));
       store.setPrefs({ kwhEur: v });
