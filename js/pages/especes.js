@@ -7,6 +7,18 @@
   var species = window.LG_SPECIES || [];
   var active = "all";
 
+  var CLIMATE_FR = {
+    temperate: "Tempérée",
+    "tropical-lowland": "Tropicale de basse altitude",
+    "tropical-highland": "Tropicale de haute altitude",
+    mediterranean: "Méditerranéenne",
+  };
+  var DORM_FR = {
+    required: "Dormance obligatoire",
+    optional: "Repos saisonnier",
+    none: "Pas d’hiver",
+  };
+
   function familyOf(id) {
     if (id.indexOf("sarracenia") === 0) return "sarracenia";
     if (id.indexOf("drosera") === 0) return "drosera";
@@ -28,11 +40,11 @@
           '<article class="card stack" id="' +
           e(s.id) +
           '"><div class="cluster"><span class="badge">' +
-          e(s.climate) +
+          e(CLIMATE_FR[s.climate] || s.climate) +
           '</span><span class="badge ' +
           (s.dormancy === "required" ? "is-warn" : "is-ok") +
-          '">Dormance ' +
-          e(s.dormancy) +
+          '">' +
+          e(DORM_FR[s.dormancy] || s.dormancy) +
           "</span></div><h2>" +
           e(s.common) +
           "</h2><p class=\"muted\"><em>" +

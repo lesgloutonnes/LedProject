@@ -28,7 +28,7 @@ Cosmorrow **Growing 6500 K** (COP2065 / COP4065) est la barre de travail : blanc
 
 Non. Le rouge des carnivores, ce sont surtout des **anthocyanes** dont l’expression dépend du **DLI** (la dose de photons sur 24 h), du **génotype**, et souvent de **nuits un peu fraîches**. Une *Sarracenia flava* typique reste citron sous n’importe quel spectre horticole. Un ‘Red Dragon’ rougit sous du **6500 K** dès que tu lui donnes ~12–16 mol/m²/j et un automne.
 
-Le rouge photosynthétique (autour de 660 nm) **fait partie** de la photosynthèse, et un spectre « full » en contient. Il n’est pas un interrupteur à pigment. Coller une barre « bloom » 2700 K ou un blurple Amazon au germoir, en revanche, **étiole** : trop peu de bleu relatif, mauvais usage.
+Le rouge photosynthétique (autour de 660 nm) **fait partie** de la photosynthèse, et un spectre « full » en contient. Il n’est pas un interrupteur à pigment. Le **rouge lointain** (~730 nm, far-red) est une autre bande : Cosmorrow n’en émet pas. Ce n’est **pas** de l’infra-rouge lointain (chaleur). Coller une barre « bloom » 2700 K ou un blurple Amazon au germoir, en revanche, **étiole** : trop peu de bleu relatif, mauvais usage.
 
 **Pratique Cosmorrow :** Growing 6500 K en base. Si tu veux plus de DLI sans descendre la barre sur les têtes, tu allonges à 16 h ou tu ajoutes un COP20FS **en appoint**, 20–30 cm. Un levier à la fois, 6–8 semaines, on juge les **nouvelles** feuilles. Voir le protocole `coloring`.
 
