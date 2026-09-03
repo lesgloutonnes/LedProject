@@ -70,7 +70,7 @@ window.LG_FIXTURES = [
       channels: [{ id: "w6500", label: "blanc 6500 K", pct: 100, cctK: 6500, peakNm: [450, 555] }],
     },
     spectrumNote:
-      "100 % blanc 6500 K. SKU signature Les Gloutonnes : zone constructeur 120×60 à 15 cm, pile deux bacs 60×40. Surface tiède → on peut coller à ~15 cm du canopée.",
+      "100 % blanc 6500 K. SKU signature Les Gloutonnes : zone constructeur 120×60 à 15 cm, pile deux bacs 60×40. Surface tiède → on peut coller à ~15 cm de la canopée.",
     ip: "IP65",
     voltage: 24,
     currentA: 1.56,
@@ -175,7 +175,7 @@ window.LG_FIXTURES = [
     ],
     priceHintEUR: "45–55 € (barre seule)",
     buyNote:
-      "EAN 5425030267134. Avertissement constructeur : COP40FS cannot be interchanged with the other 40 W due to different lengths. Alim 40 W (COM40 / COM2X40 / COM3X40 / COM5X40). Zone 90×60 à 20 cm.",
+      "EAN 5425030267134. Avertissement constructeur : le COP40FS n’est pas interchangeable avec les autres 40 W (longueurs différentes). Alim 40 W (COM40 / COM2X40 / COM3X40 / COM5X40). Zone 90×60 à 20 cm.",
     weightKg: 0.3,
     lifetimeHours: 50000,
     beamDeg: 120,

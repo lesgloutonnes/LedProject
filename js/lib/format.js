@@ -26,7 +26,7 @@
       id: "ppf",
       term: "PPF",
       unit: UNITS.ppf,
-      body: "Photosynthetic Photon Flux : photons 400–700 nm émis par la barre, par seconde. C’est le réservoir. Deux PPF s’additionnent.",
+      body: "Flux de photons photosynthétiques : photons 400–700 nm émis par la barre, par seconde. C’est le réservoir. Deux PPF s’additionnent. Ce n’est pas des lumens.",
     },
     {
       id: "ppfd",
@@ -50,7 +50,7 @@
       id: "cct",
       term: "CCT",
       unit: UNITS.cct,
-      body: "Blanc Growing 6500 K (froid, germoir). FS ~3500 K (mix 2700/4000/6500 + 660 nm). Les % Cosmorrow sont un mix de diodes, pas une SPD. Le 660 nm est du rouge PAR, pas du rouge lointain 730 nm.",
+      body: "Blanc Growing 6500 K (froid, germoir). FS ~3500 K (mix 2700/4000/6500 + 660 nm). Les % Cosmorrow sont un mix de diodes, pas une courbe spectrale mesurée. Le 660 nm est du rouge PAR, pas du rouge lointain 730 nm.",
     },
   ];
 
