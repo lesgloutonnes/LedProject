@@ -58,7 +58,7 @@
     return unit ? text + " " + unit : text;
   }
 
-  window.TourbiereFmt = {
+  window.LgFmt = {
     n0: function (n) {
       return nf0.format(n);
     },

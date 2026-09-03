@@ -23,15 +23,15 @@ load("js/lib/optics.js");
 load("js/data/nutrients.js");
 
 var assert = require("assert");
-assert.equal(ctx.TourbiereFmt.units.ppfd, "µmol/m²/s");
-assert.equal(ctx.TourbiereFmt.units.dli, "mol/m²/j");
-assert.ok(ctx.TourbiereFmt.ppfd(205).indexOf("µmol/m²/s") >= 0);
-assert.ok(ctx.TourbiereFmt.dli(10.08).indexOf("mol/m²/j") >= 0);
-assert.equal(Math.round(ctx.TOURBIERE_OPTICS.dli(200, 14) * 10) / 10, 10.1);
+assert.equal(ctx.LgFmt.units.ppfd, "µmol/m²/s");
+assert.equal(ctx.LgFmt.units.dli, "mol/m²/j");
+assert.ok(ctx.LgFmt.ppfd(205).indexOf("µmol/m²/s") >= 0);
+assert.ok(ctx.LgFmt.dli(10.08).indexOf("mol/m²/j") >= 0);
+assert.equal(Math.round(ctx.LG_OPTICS.dli(200, 14) * 10) / 10, 10.1);
 
-var fs20 = ctx.TOURBIERE_FIXTURES.find(function (f) { return f.sku === "COP20FS"; });
-var fs40 = ctx.TOURBIERE_FIXTURES.find(function (f) { return f.sku === "COP40FS"; });
-var g40 = ctx.TOURBIERE_FIXTURES.find(function (f) { return f.sku === "COP4065"; });
+var fs20 = ctx.LG_FIXTURES.find(function (f) { return f.sku === "COP20FS"; });
+var fs40 = ctx.LG_FIXTURES.find(function (f) { return f.sku === "COP40FS"; });
+var g40 = ctx.LG_FIXTURES.find(function (f) { return f.sku === "COP4065"; });
 assert.equal(fs20.ppfdAvg, 238);
 assert.equal(fs40.ppfdAvg, 240);
 assert.equal(g40.ppfdAvg, 205);
@@ -39,38 +39,38 @@ assert.equal(fs20.spectrum.kind, "full-spectrum");
 assert.equal(fs20.spectrum.channels.length, 4);
 assert.equal(g40.spectrum.channels[0].pct, 100);
 
-ctx.TOURBIERE_FIXTURES.forEach(function (f) {
+ctx.LG_FIXTURES.forEach(function (f) {
   assert.ok(f.ppf > 0 && f.ppe > 0, "photométrie " + f.sku);
   assert.ok(f.parNm && f.parNm[0] === 400 && f.parNm[1] === 700, "PAR " + f.sku);
   assert.ok(f.spectrum && f.spectrum.channels.length >= 1, "spectre " + f.sku);
 });
-assert.equal(ctx.TOURBIERE_FIXTURES.length, 4);
-assert.equal(ctx.TOURBIERE_PSUS.length, 8);
-assert.ok(ctx.TOURBIERE_KITS.length >= 12);
-assert.ok(ctx.TOURBIERE_SPECIES.length >= 12);
-assert.equal(ctx.TOURBIERE_PROTOCOLS.length, 7);
-assert.equal(ctx.TOURBIERE_PROJECTS.length, 7);
-assert.ok(ctx.TOURBIERE_NUTRIENTS.fertilizers.products.length >= 3);
-assert.ok(ctx.TOURBIERE_NUTRIENTS.pests.items.length >= 4);
+assert.equal(ctx.LG_FIXTURES.length, 4);
+assert.equal(ctx.LG_PSUS.length, 8);
+assert.ok(ctx.LG_KITS.length >= 12);
+assert.ok(ctx.LG_SPECIES.length >= 12);
+assert.equal(ctx.LG_PROTOCOLS.length, 7);
+assert.equal(ctx.LG_PROJECTS.length, 7);
+assert.ok(ctx.LG_NUTRIENTS.fertilizers.products.length >= 3);
+assert.ok(ctx.LG_NUTRIENTS.pests.items.length >= 4);
 assert.ok(
-  ctx.TOURBIERE_DIAGNOSTIC.trees.some(function (t) { return t.id === "ravageurs"; }),
+  ctx.LG_DIAGNOSTIC.trees.some(function (t) { return t.id === "ravageurs"; }),
   "arbre ravageurs"
 );
 assert.ok(
-  ctx.TOURBIERE_DIAGNOSTIC.trees.some(function (t) { return t.id === "hiver-tente"; }),
+  ctx.LG_DIAGNOSTIC.trees.some(function (t) { return t.id === "hiver-tente"; }),
   "arbre dormance manquée"
 );
-assert.equal(ctx.TOURBIERE_PROJECTS.filter(function (p) { return p.id === "collection"; }).length, 1);
-assert.equal(ctx.TOURBIERE_PROJECTS.filter(function (p) { return p.id === "rouge"; }).length, 1);
+assert.equal(ctx.LG_PROJECTS.filter(function (p) { return p.id === "collection"; }).length, 1);
+assert.equal(ctx.LG_PROJECTS.filter(function (p) { return p.id === "rouge"; }).length, 1);
 
-var sarr = ctx.TOURBIERE_SPECIES.find(function (s) { return s.id === "sarracenia-upright"; });
+var sarr = ctx.LG_SPECIES.find(function (s) { return s.id === "sarracenia-upright"; });
 assert.ok(/larges/i.test(sarr.substrate), "Sarracenia : pots larges, pas profonds");
 assert.ok(!/pots profonds 15/.test(sarr.substrate));
 
-var dorm = ctx.TOURBIERE_PROTOCOLS.find(function (p) { return p.id === "dormancy"; });
+var dorm = ctx.LG_PROTOCOLS.find(function (p) { return p.id === "dormancy"; });
 assert.ok(/dehors/i.test(dorm.summary), "dormance : dehors d’abord");
 
-var r = ctx.TourbiereMatch.matchKit({
+var r = ctx.LgMatch.matchKit({
   projet: "germoir",
   tenteId: "tent-120x60",
   budget: "sous-150",
@@ -82,7 +82,7 @@ assert.ok(r.kit, "kit attendu");
 assert.equal(r.kit.id, "kit-germoir-120x60");
 assert.equal(r.protocolId, "seedling");
 
-var trop = ctx.TourbiereMatch.matchKit({
+var trop = ctx.LgMatch.matchKit({
   projet: "tropicale",
   tenteId: "tent-90x60",
   budget: "150-300",
@@ -92,29 +92,29 @@ var trop = ctx.TourbiereMatch.matchKit({
 });
 assert.ok(trop.kit.projectIds.indexOf("tropical") >= 0);
 
-var tent = ctx.TOURBIERE_TENTS.find(function (t) { return t.id === "tent-120x60"; });
-var fx = ctx.TOURBIERE_FIXTURES.find(function (f) { return f.sku === "COP4065"; });
-var sim = ctx.TOURBIERE_OPTICS.simulatePpfd(fx, tent, 15, 100, { layout: "parallel-depth", count: 2, cols: 24, rows: 12 });
+var tent = ctx.LG_TENTS.find(function (t) { return t.id === "tent-120x60"; });
+var fx = ctx.LG_FIXTURES.find(function (f) { return f.sku === "COP4065"; });
+var sim = ctx.LG_OPTICS.simulatePpfd(fx, tent, 15, 100, { layout: "parallel-depth", count: 2, cols: 24, rows: 12 });
 assert.ok(sim.avg > 50 && sim.avg < 800, "PPFD moyen raisonnable: " + sim.avg);
 assert.equal(sim.ppfdUnit, "µmol/m²/s");
 
-var mixte = ctx.TOURBIERE_KITS.find(function (k) { return k.id === "kit-mixte-120x60"; });
+var mixte = ctx.LG_KITS.find(function (k) { return k.id === "kit-mixte-120x60"; });
 assert.ok(mixte);
 var topBar = mixte.bars[0];
-var lightsTop = ctx.TOURBIERE_OPTICS.placements(fx, tent, topBar.layout, topBar.qty, { shelf: topBar.shelf });
+var lightsTop = ctx.LG_OPTICS.placements(fx, tent, topBar.layout, topBar.qty, { shelf: topBar.shelf });
 assert.equal(lightsTop.length, 2, "étage haut = 2 barres, pas un split 1+1");
 assert.ok(lightsTop.every(function (l) { return l.zShelf === 1; }));
-var dualFour = ctx.TOURBIERE_OPTICS.placements(ctx.TOURBIERE_FIXTURES[0], tent, "dual-shelf", 4);
+var dualFour = ctx.LG_OPTICS.placements(ctx.LG_FIXTURES[0], tent, "dual-shelf", 4);
 var dualShelf1 = dualFour.filter(function (l) { return l.zShelf === 1; });
 assert.equal(dualShelf1.length, 2);
 
 var kitIds = {};
-ctx.TOURBIERE_KITS.forEach(function (k) {
+ctx.LG_KITS.forEach(function (k) {
   if (kitIds[k.id]) throw new Error("kit id dupliqué: " + k.id);
   kitIds[k.id] = true;
 });
 
-ctx.TOURBIERE_DIAGNOSTIC.trees.forEach(function (tree) {
+ctx.LG_DIAGNOSTIC.trees.forEach(function (tree) {
   if (!tree.nodes[tree.startId]) {
     throw new Error("startId manquant " + tree.id + " " + tree.startId);
   }
@@ -127,7 +127,7 @@ ctx.TOURBIERE_DIAGNOSTIC.trees.forEach(function (tree) {
   });
 });
 
-var g60 = ctx.TourbiereMatch.matchKit({
+var g60 = ctx.LgMatch.matchKit({
   projet: "germoir",
   tenteId: "tent-60x60",
   budget: "sous-150",
@@ -138,7 +138,7 @@ var g60 = ctx.TourbiereMatch.matchKit({
 assert.ok(g60.kit, "kit 60x60 germoir attendu");
 assert.equal(g60.kit.id, "kit-germoir-60x60");
 
-var t120 = ctx.TourbiereMatch.matchKit({
+var t120 = ctx.LgMatch.matchKit({
   projet: "collection",
   tenteId: "tent-120x120",
   budget: "peu-importe",
@@ -150,7 +150,7 @@ assert.ok(t120.kit, "kit 120x120 attendu");
 assert.equal(t120.kit.tentId, "tent-120x120");
 assert.ok(t120.kit.projectIds.indexOf("production") >= 0);
 
-var tropDorm = ctx.TourbiereMatch.matchKit({
+var tropDorm = ctx.LgMatch.matchKit({
   projet: "tropicale",
   tenteId: "tent-90x60",
   budget: "150-300",

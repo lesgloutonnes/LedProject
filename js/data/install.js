@@ -1,7 +1,7 @@
 /**
  * Pose Cosmorrow dans une tente carnivores — règles, checklist, accroche, climat, élec.
  */
-window.TOURBIERE_INSTALL = {
+window.LG_INSTALL = {
   rules: [
     {
       id: "hauteur-growing",

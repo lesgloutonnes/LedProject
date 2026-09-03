@@ -1,4 +1,4 @@
-# Cahier des charges — Les Gloutonnes · Tourbière
+# Cahier des charges — Les Gloutonnes
 
 Site de référence pour **mettre en place une tente de culture** de plantes carnivores sous **LED Secret Jardin Cosmorrow**.
 

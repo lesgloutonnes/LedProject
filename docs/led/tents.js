@@ -4,7 +4,7 @@
  * Volumes et extracteurs : carnivores (hygro) ≠ cannabis Level III — on sous-dimensionne l’extraction
  * par rapport aux fiches HPS du constructeur de tentes.
  */
-window.TOURBIERE_TENTS = [
+window.LG_TENTS = [
   {
     id: "tent-60x40",
     name: "60 × 40 cm · étagère / propagator",

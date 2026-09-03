@@ -1,6 +1,8 @@
-# Les Gloutonnes · Tourbière
+# Les Gloutonnes — Guide de culture en tente
 
-Site de référence pour **mettre en place une tente de carnivores** sous LED **Secret Jardin Cosmorrow**.
+Application de culture (comme les guides Cephalotus, Darlingtonia et Nepenthes) pour **installer une tente de carnivores** sous LED **Secret Jardin Cosmorrow**.
+
+Hub : [Applications de culture](https://www.lesgloutonnes.be/pages/applications-culture.html)
 
 HTML / CSS / JS vanilla, sans npm. Ouvre `index.html` ou :
 
@@ -33,3 +35,7 @@ Tente 120 × 60, deux bacs 60 × 40 : **2 × COP4065 Growing 90 cm + COM2X40**.
 - Foliar 0,3 g/L (orchidée ¼ FR/BE ; Maxsea = recette US équivalente)
 
 Cahier des charges : `docs/CAHIER_DES_CHARGES.md`.
+
+## Intégration Shopify
+
+Texte prêt à coller : `docs/FICHE_APPLICATION.md`.

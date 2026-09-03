@@ -1,8 +1,8 @@
 (function () {
   var e = escapeHtml;
-  var store = window.TourbiereStore;
-  var match = window.TourbiereMatch;
-  var fmt = window.TourbiereFmt;
+  var store = window.LgStore;
+  var match = window.LgMatch;
+  var fmt = window.LgFmt;
   var state = store.getProject();
   var params = new URLSearchParams(location.search);
   if (params.get("step")) {
@@ -93,7 +93,7 @@
   }
 
   function renderStep1() {
-    var cards = (window.TOURBIERE_PROJECTS || [])
+    var cards = (window.LG_PROJECTS || [])
       .map(function (p) {
         var active = state.projet === p.id ? " is-active" : "";
         return (
@@ -121,7 +121,7 @@
 
   function renderStep2() {
     var notes = match.genreWarnings(state.projet, state.genres);
-    var chips = (window.TOURBIERE_GENRES || [])
+    var chips = (window.LG_GENRES || [])
       .map(function (g) {
         var on = state.genres.indexOf(g.id) >= 0;
         return (
@@ -149,7 +149,7 @@
 
   function renderStep3() {
     var fav = store.getPrefs().tenteFavorite;
-    var tents = window.TOURBIERE_TENTS || [];
+    var tents = window.LG_TENTS || [];
     var cards = tents
       .map(function (t) {
         var active = state.tente && state.tente.id === t.id ? " is-active" : "";
@@ -176,7 +176,7 @@
       .join("");
     var customOn = state.tente && state.tente.id === "custom";
     return (
-      "<h1>Quelle surface ?</h1><p class=\"lede\">Deux bacs 60 × 40 rentrent dans 120 × 60 — c’est le format signature Tourbière.</p>" +
+      "<h1>Quelle surface ?</h1><p class=\"lede\">Deux bacs 60 × 40 rentrent dans 120 × 60 — c’est le format signature 120 × 60.</p>" +
       '<div class="choice-grid">' +
       cards +
       '<button type="button" class="choice' +
@@ -308,7 +308,7 @@
         );
       })
       .join("");
-    var hashMap = window.TOURBIERE_PROTOCOL_HASH || {};
+    var hashMap = window.LG_PROTOCOL_HASH || {};
     var hash = hashMap[result.protocolId] || result.protocolId;
     return (
       '<div id="kit-print">' +
@@ -515,7 +515,7 @@
     var printBtn = document.getElementById("print-kit");
     if (printBtn) {
       printBtn.addEventListener("click", function () {
-        TourbierePrint.printZone("#kit-print");
+        LgPrint.printZone("#kit-print");
       });
     }
   }

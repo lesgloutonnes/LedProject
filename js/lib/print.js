@@ -15,5 +15,5 @@
     window.print();
   }
 
-  window.TourbierePrint = { printZone: printZone };
+  window.LgPrint = { printZone: printZone };
 })();

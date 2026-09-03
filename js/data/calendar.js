@@ -1,8 +1,8 @@
 /**
- * Calendrier hémisphère nord (FR / BE) — Les Gloutonnes · Tourbière
+ * Calendrier hémisphère nord (FR / BE) — Les Gloutonnes
  * Photopériodes de tente sous Cosmorrow, pas un calendrier de jardin de pleine terre.
  */
-window.TOURBIERE_CALENDAR = {
+window.LG_CALENDAR = {
   hemisphere: "north",
   region: "FR/BE",
   note: "Les tropicales ignorent ce rythme : 12–14 h toute l’année, tente à part. Les dates bougent d’un mois selon que ta pièce est déjà froide en octobre.",

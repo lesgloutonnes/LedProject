@@ -1,4 +1,4 @@
-# Accessibilité & sécurité — Les Gloutonnes · Tourbière
+# Accessibilité & sécurité — Les Gloutonnes
 
 Site **statique**, tout client-side. On ne « sécurise » pas un backend : on évite XSS, fuites, tracking, et on reste utilisable au pouce dans une serre.
 
@@ -15,7 +15,7 @@ Copier le squelette `html-shell.html`. Ne jamais livrer une page sans :
 | `html lang="fr"` | Toujours `fr`. Pas de `lang` vide. |
 | `charset utf-8` | Premier meta. |
 | `viewport` | `width=device-width, initial-scale=1`. **Pas** `user-scalable=no`, **pas** `maximum-scale=1`. |
-| `title` unique | Pattern `Tâche — Les Gloutonnes · Tourbière`. Accueil : `Tente carnivores + LED Cosmorrow — Les Gloutonnes · Tourbière`. Jamais deux pages le même title. |
+| `title` unique | Pattern `Tâche — Les Gloutonnes`. Accueil : `Tente carnivores + LED Cosmorrow — Les Gloutonnes`. Jamais deux pages le même title. |
 | `meta name="description"` | 1 phrase, unique, ≤ 160 gl. Inclure Cosmorrow / carnivores / tente selon la page. |
 | `theme-color` | `#243a32` (fond forêt). `media="(prefers-color-scheme: dark)"` optionnel, on est dark-only. |
 | CSS | `css/tokens.css` puis `css/ui.css`. Chemins relatifs. |
@@ -26,16 +26,16 @@ Titres proposés :
 
 | Fichier | `<title>` |
 | --- | --- |
-| `index.html` | Tente carnivores + LED Cosmorrow — Les Gloutonnes · Tourbière |
-| `assistant.html` | Assistant kit Cosmorrow — Les Gloutonnes · Tourbière |
-| `cosmorrow.html` | Barres et alims Cosmorrow — Les Gloutonnes · Tourbière |
-| `especes.html` | PPFD par genre carnivore — Les Gloutonnes · Tourbière |
-| `protocoles.html` | Protocoles semis à dormance — Les Gloutonnes · Tourbière |
-| `tente.html` | Pose et hygro en tente — Les Gloutonnes · Tourbière |
-| `nutriments.html` | Eau, tourbe, Maxsea — Les Gloutonnes · Tourbière |
-| `outils.html` | PPFD, DLI, électricité — Les Gloutonnes · Tourbière |
-| `diagnostic.html` | Diagnostic étiolement / brûlure — Les Gloutonnes · Tourbière |
-| `a-propos.html` | Sources et méthode — Les Gloutonnes · Tourbière |
+| `index.html` | Tente carnivores + LED Cosmorrow — Les Gloutonnes |
+| `assistant.html` | Assistant kit Cosmorrow — Les Gloutonnes |
+| `cosmorrow.html` | Barres et alims Cosmorrow — Les Gloutonnes |
+| `especes.html` | PPFD par genre carnivore — Les Gloutonnes |
+| `protocoles.html` | Protocoles semis à dormance — Les Gloutonnes |
+| `tente.html` | Pose et hygro en tente — Les Gloutonnes |
+| `nutriments.html` | Eau, tourbe, Maxsea — Les Gloutonnes |
+| `outils.html` | PPFD, DLI, électricité — Les Gloutonnes |
+| `diagnostic.html` | Diagnostic étiolement / brûlure — Les Gloutonnes |
+| `a-propos.html` | Sources et méthode — Les Gloutonnes |
 
 ---
 
@@ -96,7 +96,7 @@ Règle dure : **données** (SKU, storage, query string, labels genres) → `text
 
 Interdit :
 
-- `el.innerHTML = tourbiere.project.…`
+- `el.innerHTML = lg.tente.project.…`
 - `innerHTML` d’un `location.search`
 - `innerHTML` d’un champ tarif kWh
 - `eval`, `new Function`, `document.write`
@@ -122,7 +122,7 @@ export function escapeHtml(value) {
 }
 ```
 
-Sans modules ES (file:// capricieux) : même fonction en IIFE globale `window.Tourbiere.escapeHtml`.
+Sans modules ES (file:// capricieux) : même fonction en IIFE globale `window.Lg.escapeHtml`.
 
 Attributs : échapper **aussi** les quotes. Ne pas interpoler dans `style="left:${user}%"` sans `Number()` borné.
 
@@ -200,8 +200,8 @@ Si on droppe Google Fonts : retirer `fonts.googleapis.com` / `fonts.gstatic.com`
 
 ```js
 const KEYS = {
-  project: "tourbiere.project",
-  prefs: "tourbiere.prefs",
+  project: "lg.tente.project",
+  prefs: "lg.tente.prefs",
 };
 
 function readJson(key, fallback) {

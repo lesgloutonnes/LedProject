@@ -1,4 +1,4 @@
-# Copy long — Les Gloutonnes · Tourbière
+# Copy long — Les Gloutonnes
 
 Textes francophones, tutoiement professionnel. LED du site : **Secret Jardin Cosmorrow**. Fourchettes, pas de dogme.
 
@@ -8,7 +8,7 @@ Textes francophones, tutoiement professionnel. LED du site : **Secret Jardin Cos
 
 Une tente de carnivores n’est pas un paludarium Instagram ni un clone de grow cannabis. C’est un **petit climat artificiel** : des photons blancs mesurables, de l’eau pauvre, un substrat qui ne nourrit pas, et — pour une partie des genres — un hiver que tu dois **organiser**, pas oublier.
 
-Les Gloutonnes · Tourbière classe les plantes par **ce qu’elles demandent sous Cosmorrow**, pas par la beauté des catalogues.
+Les Gloutonnes classe les plantes par **ce qu’elles demandent sous Cosmorrow**, pas par la beauté des catalogues.
 
 **Les tempérées à dormance obligatoire** — *Dionaea muscipula*, les *Sarracenia*, les *Drosera* d’hémisphère nord, les *Pinguicula* tempérées, *Darlingtonia* — poussent fort 7–8 mois, puis elles ont besoin de **3–4 mois à 0–10 °C**, 8–10 h de lumière faible, substrat juste humide. En FR/BE, un châssis ou un garage hors gel fait mieux qu’une tente à 20 °C. Sans ça, elles « marchent » encore une saison et s’épuisent. Ce n’est pas du folklore de forum : c’est leur phénologie.
 

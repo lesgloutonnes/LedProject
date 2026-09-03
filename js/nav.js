@@ -56,7 +56,7 @@
 
   var cta = document.querySelector(".header-cta");
   if (cta && page === "assistant") {
-    var stored = window.TourbiereStore && TourbiereStore.getProject();
+    var stored = window.LgStore && LgStore.getProject();
     if (stored && stored.projet) {
       cta.textContent = "Reprendre";
       cta.setAttribute("href", "assistant.html");
@@ -85,8 +85,8 @@
     el.hidden = false;
   }
 
-  if (window.TourbiereStore && !TourbiereStore.canStore()) showStoreWarn();
-  window.addEventListener("tourbiere-store", function (ev) {
+  if (window.LgStore && !LgStore.canStore()) showStoreWarn();
+  window.addEventListener("lg-tente-store", function (ev) {
     if (ev.detail && ev.detail.ok === false) showStoreWarn();
   });
 

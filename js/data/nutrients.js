@@ -1,9 +1,9 @@
 /**
- * Eau, substrats, engrais, proies — Les Gloutonnes · Tourbière
+ * Eau, substrats, engrais, proies — Les Gloutonnes
  * Engrais : 0,3 g/L foliar (orchidée ¼ FR/BE, Maxsea US). Jamais Miracle-Gro.
  * Jamais Miracle-Gro, jamais terreau fertilisé.
  */
-window.TOURBIERE_NUTRIENTS = {
+window.LG_NUTRIENTS = {
   water: {
     title: "Eau pauvre, non négociable",
     tdsMaxPpm: 50,

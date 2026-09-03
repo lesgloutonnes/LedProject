@@ -1,8 +1,8 @@
 /**
- * Arbres de diagnostic — Les Gloutonnes · Tourbière
+ * Arbres de diagnostic — Les Gloutonnes
  * Chaque arbre : question → answers[{label, nextId | result{title, fix[]}}]
  */
-window.TOURBIERE_DIAGNOSTIC = {
+window.LG_DIAGNOSTIC = {
   intro:
     "Un symptôme, une question à la fois. Les carnivores en tente se trompent rarement de maladie magique : c’est presque toujours lumière, eau, HR ou saison. Cosmorrow se règle à la hauteur et aux heures, pas au spectre « urgence 660 ».",
   trees: [

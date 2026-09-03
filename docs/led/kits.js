@@ -8,7 +8,7 @@
  *
  * Prix : fourchettes growshop FR/BE 2025-2026, barres + alim + programmateur, hors tente.
  */
-window.TOURBIERE_KITS = [
+window.LG_KITS = [
   {
     id: "kit-germoir-60x40",
     name: "Germoir étagère 60×40",
@@ -42,7 +42,7 @@ window.TOURBIERE_KITS = [
     psu: "COM2X40",
     totalWatts: 80,
     totalPpf: 202,
-    why: "Le panier Tourbière : 2 × Growing 90 cm + COM2X40. Zone constructeur 120×60, 202 µmol/s, 80 W, peu de chaleur. Deux barres sur la profondeur, parallèles au grand côté, au-dessus de deux bacs 60×40.",
+    why: "Le kit Les Gloutonnes : 2 × Growing 90 cm + COM2X40. Zone constructeur 120×60, 202 µmol/s, 80 W, peu de chaleur. Deux barres sur la profondeur, parallèles au grand côté, au-dessus de deux bacs 60×40.",
     hangCm: 15,
     hours: 14,
     shopping: [

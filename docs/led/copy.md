@@ -1,6 +1,6 @@
 # Copy — Cosmorrow dans la tourbière
 
-Textes FR pour le site Les Gloutonnes · Tourbière. Ton : expert de tente, pas vendeur de growshop. Une seule marque LED : Secret Jardin Cosmorrow (Belgique).
+Textes FR pour le site Les Gloutonnes. Ton : expert de tente, pas vendeur de growshop. Une seule marque LED : Secret Jardin Cosmorrow (Belgique).
 
 ---
 
@@ -25,7 +25,7 @@ Secret Jardin est belge, prise 230 V, stock growshop FR/BE. On achète une barre
 | | Growing (COP2065 / COP4065) | Full Spectrum (COP20FS / COP40FS) |
 | --- | --- | --- |
 | Spectre | 100 % 6500 K | 2700 / 4000 / 6500 K + 660 nm |
-| Usage Tourbière | Germoir, boutures, nappe principale | Appoint colorisation, adultes, tropical doux |
+| Usage tente carnivores | Germoir, boutures, nappe principale | Appoint colorisation, adultes, tropical doux |
 | Hauteur fiche | 15 cm | 15 cm (20 W) / **20 cm (40 W)** |
 | Longueur 40 W | **87 cm** | **70 cm** — pas interchangeable |
 

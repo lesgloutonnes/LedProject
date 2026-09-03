@@ -6,7 +6,7 @@
  * Anciennes refs boutique : COM2X20 ≈ COM40D, COM2X40 ≈ COM80D.
  * COM3X* = 2 ou 3 barres ; COM5X* = 4 ou 5 barres (ports vides acceptés).
  */
-window.TOURBIERE_PSUS = [
+window.LG_PSUS = [
   {
     id: "com20",
     sku: "COM20",
@@ -53,7 +53,7 @@ window.TOURBIERE_PSUS = [
     compatibleBarWatts: 40,
     ip: "IP65",
     notes:
-      "Alim du kit signature Tourbière (2 × COP4065). Ancienne ref COM80D. Accepte 2 × COP40FS ou 1 Growing 40 W + 1 FS 40 W (wattage identique, longueurs 87 vs 70 cm à caler). Jamais de 20 W.",
+      "Alim du kit signature Les Gloutonnes (2 × COP4065). Ancienne ref COM80D. Accepte 2 × COP40FS ou 1 Growing 40 W + 1 FS 40 W (wattage identique, longueurs 87 vs 70 cm à caler). Jamais de 20 W.",
   },
   {
     id: "com3x20",

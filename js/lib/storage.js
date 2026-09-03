@@ -1,5 +1,5 @@
 (function () {
-  var PREFIX = "tourbiere.";
+  var PREFIX = "lg.tente.";
   var PREFS_DEFAULT = { v: 1, kwhEur: 0.2016, tenteFavorite: "tent-120x60" };
   var PROJECT_DEFAULT = {
     v: 1,
@@ -12,6 +12,19 @@
     kit: null,
   };
 
+  function migrateLegacy() {
+    try {
+      ["project", "prefs"].forEach(function (key) {
+        if (!localStorage.getItem(PREFIX + key)) {
+          var old = localStorage.getItem("tourbiere." + key);
+          if (old) localStorage.setItem(PREFIX + key, old);
+        }
+      });
+    } catch (err) {
+      /* mode privé / quota */
+    }
+  }
+
   function canStore() {
     try {
       var k = PREFIX + "__t";
@@ -22,6 +35,8 @@
       return false;
     }
   }
+
+  migrateLegacy();
 
   function read(key, fallback) {
     try {
@@ -38,10 +53,10 @@
   function write(key, value) {
     try {
       localStorage.setItem(PREFIX + key, JSON.stringify(value));
-      window.dispatchEvent(new CustomEvent("tourbiere-store", { detail: { ok: true } }));
+      window.dispatchEvent(new CustomEvent("lg-tente-store", { detail: { ok: true } }));
       return true;
     } catch (err) {
-      window.dispatchEvent(new CustomEvent("tourbiere-store", { detail: { ok: false } }));
+      window.dispatchEvent(new CustomEvent("lg-tente-store", { detail: { ok: false } }));
       return false;
     }
   }
@@ -88,7 +103,7 @@
     return blank;
   }
 
-  window.TourbiereStore = {
+  window.LgStore = {
     canStore: canStore,
     getPrefs: getPrefs,
     setPrefs: setPrefs,

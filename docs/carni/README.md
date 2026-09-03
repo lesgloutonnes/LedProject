@@ -1,4 +1,4 @@
-# Contenu horticole — Les Gloutonnes · Tourbière
+# Contenu horticole — Les Gloutonnes
 
 Données et copy francophones pour le site tente + **LED Secret Jardin Cosmorrow**.  
 Ce dossier n’est **pas** le site : pas de HTML ici. Le front lira ces fichiers (ou une copie dans `js/data/`).
@@ -7,11 +7,11 @@ Ce dossier n’est **pas** le site : pas de HTML ici. Le front lira ces fichiers
 
 | Fichier | Variable globale | Rôle |
 | --- | --- | --- |
-| `species.js` | `window.TOURBIERE_SPECIES` | Fiches genres / sous-groupes (PPFD, DLI, eau, tente, projets) |
-| `protocols.js` | `window.TOURBIERE_PROTOCOLS` | 7 protocoles : semis, bouturage, production, colorisation, mixte, tropical, dormance |
-| `nutrients.js` | `window.TOURBIERE_NUTRIENTS` | Eau, substrats, engrais, proies |
-| `diagnostic.js` | `window.TOURBIERE_DIAGNOSTIC` | Arbres de décision (symptôme → questions → gestes) |
-| `calendar.js` | `window.TOURBIERE_CALENDAR` | Calendrier mensuel FR/BE (hémisphère nord) |
+| `species.js` | `window.LG_SPECIES` | Fiches genres / sous-groupes (PPFD, DLI, eau, tente, projets) |
+| `protocols.js` | `window.LG_PROTOCOLS` | 7 protocoles : semis, bouturage, production, colorisation, mixte, tropical, dormance |
+| `nutrients.js` | `window.LG_NUTRIENTS` | Eau, substrats, engrais, proies |
+| `diagnostic.js` | `window.LG_DIAGNOSTIC` | Arbres de décision (symptôme → questions → gestes) |
+| `calendar.js` | `window.LG_CALENDAR` | Calendrier mensuel FR/BE (hémisphère nord) |
 | `copy.md` | — | Intro espèces, mythes, glossaire PPFD / DLI / photopériode |
 | `README.md` | — | Le présent fichier |
 
