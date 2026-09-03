@@ -327,7 +327,7 @@
         e(kit.name) +
         "</strong> — " +
         e(kit.why) +
-        '</p><p class="hint">Modèle lambertien 120° + mylar 0,25. PPFD en ' +
+        '</p><p class="hint">Estimation 120° + rebond mylar. PPFD en ' +
         e(fmt.units.ppfd) +
         ", DLI en " +
         e(fmt.units.dli) +

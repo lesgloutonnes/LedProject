@@ -32,7 +32,7 @@
       id: "ppfd",
       term: "PPFD",
       unit: UNITS.ppfd,
-      body: "Densité au canopée. Sans zone + distance, le chiffre ne veut rien dire. Fiche SJ : µmol/s/m² = µmol/m²/s.",
+      body: "Densité à la canopée. Sans zone + distance, le chiffre ne veut rien dire. Fiche SJ : µmol/s/m² = µmol/m²/s.",
     },
     {
       id: "ppe",
@@ -50,7 +50,7 @@
       id: "cct",
       term: "CCT",
       unit: UNITS.cct,
-      body: "Blanc Growing 6500 K (froid, germoir). FS ~3500 K (mix 2700/4000/6500 + 660 nm). Les % Cosmorrow sont un mix de diodes, pas une SPD. Le 660 nm est du rouge PAR, pas du far-red 730 nm.",
+      body: "Blanc Growing 6500 K (froid, germoir). FS ~3500 K (mix 2700/4000/6500 + 660 nm). Les % Cosmorrow sont un mix de diodes, pas une SPD. Le 660 nm est du rouge PAR, pas du rouge lointain 730 nm.",
     },
   ];
 

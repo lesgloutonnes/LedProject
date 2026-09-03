@@ -143,46 +143,47 @@ page(
         <p class="kicker">Application de culture</p>
         <h1>Guide de culture en tente</h1>
         <p class="lede">
-          Un outil Les Gloutonnes, comme les guides Cephalotus, Darlingtonia et Nepenthes :
-          installer ta tente sous LED Cosmorrow — semis, bouturage, production, tropicale ou dormance.
+          Installe ta tente de carnivores sous LED Secret Jardin Cosmorrow :
+          semis, bouturage, production, chambre tropicale ou dormance.
+          Gratuit, comme les guides Cephalotus, Darlingtonia et Nepenthes.
         </p>
         <p class="btn-row">
           <a class="btn-primary" href="assistant.html">Lancer l’assistant</a>
           <a class="btn-ghost" href="cosmorrow.html">Voir la gamme Cosmorrow</a>
         </p>
         <p class="hint">
-          Dans les
+          Les autres
           <a href="https://www.lesgloutonnes.be/pages/applications-culture.html" rel="noopener noreferrer">applications de culture</a>
-          : Cephalotus · Darlingtonia · Nepenthes · <strong>tente &amp; LED</strong>
+          : Cephalotus · Darlingtonia · Nepenthes
         </p>
       </header>
 
       <section class="section" aria-label="Trois chemins">
         <div class="path-grid">
           <a class="card path-card" href="assistant.html">
-            <p class="kicker">Par où commencer</p>
+            <p class="kicker">Pour démarrer</p>
             <h2>Assistant</h2>
             <p>Quatre questions. Un kit Cosmorrow, une liste d’achat, un protocole.</p>
             <span class="go">Configurer ma tente →</span>
           </a>
           <a class="card path-card" href="cosmorrow.html">
-            <p class="kicker">Quelle barre, quelle alim</p>
+            <p class="kicker">Barres et alims</p>
             <h2>LED Cosmorrow</h2>
-            <p>Growing 6500 K, Full Spectrum, alims 24 V. Jamais 20 W et 40 W sur la même prise.</p>
-            <span class="go">Catalogue constructeur →</span>
+            <p>Growing 6500 K, Full Spectrum, alimentations 24 V. Jamais 20 W et 40 W sur la même prise.</p>
+            <span class="go">Voir la gamme →</span>
           </a>
           <a class="card path-card" href="especes.html">
-            <p class="kicker">Ça s’étire / ça grille</p>
+            <p class="kicker">Tes plantes</p>
             <h2>Espèces</h2>
-            <p>PPFD, DLI, eau et tente par genre — Dionaea, Sarracenia, Drosera, Nepenthes…</p>
+            <p>Lumière, eau et tente par genre — Dionaea, Sarracenia, Drosera, Nepenthes…</p>
             <span class="go">Fiches carnivores →</span>
           </a>
         </div>
       </section>
 
       <section class="section">
-        <h2>Sept métiers en tente</h2>
-        <p class="hint">Pas un curseur unique. Un protocole par job.</p>
+        <h2>Sept façons de cultiver</h2>
+        <p class="hint">Germoir, boutures, adultes, rouge, étages, tropicales ou hiver : un protocole chacun.</p>
         <div class="chips mt-s4">
           <a class="chip" href="protocoles.html#germoir">Germoir</a>
           <a class="chip" href="protocoles.html#bouturage">Bouturage</a>
@@ -195,23 +196,30 @@ page(
       </section>
 
       <section class="section">
-        <article class="card">
-          <h2>Kit signature</h2>
-          <p>Tente 120 × 60, deux bacs 60 × 40, <strong>2 × Cosmorrow Growing 90 cm (COP4065) + COM2X40</strong>. 80 W, 202 µmol/s, blanc 6500 K, IP65, ~130–145 €. C’est le kit Les Gloutonnes.</p>
+        <article class="card kit-feature">
+          <p class="kicker">Kit signature</p>
+          <h2>Tente 120 × 60</h2>
+          <p>Deux bacs 60 × 40, deux Cosmorrow Growing 90 cm (COP4065) et une alimentation COM2X40. C’est le kit Les Gloutonnes.</p>
+          <div class="stats kit-stats mt-s4">
+            <div class="stat"><div class="lbl">Puissance</div><div class="val">80 W</div></div>
+            <div class="stat"><div class="lbl">PPF</div><div class="val">202 µmol/s</div></div>
+            <div class="stat"><div class="lbl">Blanc</div><div class="val">6500 K</div></div>
+            <div class="stat"><div class="lbl">Fourchette</div><div class="val">~140 €</div></div>
+          </div>
           <p class="btn-row mt-s4">
             <a class="btn-primary" href="cosmorrow.html#kit-germoir-120x60">Détail du kit</a>
-            <a class="btn-ghost" href="outils.html?kit=kit-germoir-120x60">Carte PPFD</a>
+            <a class="btn-ghost" href="outils.html?kit=kit-germoir-120x60">Carte de lumière</a>
           </p>
         </article>
       </section>
 
       <section class="section">
-        <h2>Ce que cet outil refuse</h2>
+        <h2>À éviter</h2>
         <div class="card-grid">
-          <article class="card"><h3>Le blurple Amazon</h3><p>Sans PPF publié, ce n’est pas une fiche, c’est un listing. Cosmorrow publie µmol/s et µmol/J.</p></article>
-          <article class="card"><h3>Le 660 nm magique</h3><p>Le rouge des Sarracenia suit le DLI et le génotype. Growing 6500 K compacte mieux un germoir qu’un spectre floraison.</p></article>
+          <article class="card"><h3>Les barres « blurple » sans fiche</h3><p>Sans PPF publié, ce n’est pas une référence, c’est une annonce. Cosmorrow publie le PPF (µmol/s) et le PPE (µmol/J).</p></article>
+          <article class="card"><h3>Le rouge 660 nm magique</h3><p>Le rouge des Sarracenia vient du DLI — la dose quotidienne — et du génotype. Growing 6500 K compacte mieux un germoir qu’un spectre floraison.</p></article>
           <article class="card"><h3>L’engrais « plantes vertes »</h3><p>Terreau fertilisé et Miracle-Gro tuent les racines. Foliar 0,3 g/L d’un orchidée propre, eau osmose, tourbe blonde non amendée.</p></article>
-          <article class="card"><h3>La tente chaude toute l’année pour une dionée</h3><p>Dormance 3–4 mois, 0–10 °C. En FR/BE le dehors / garage gagne. La LED ne fait pas le froid.</p></article>
+          <article class="card"><h3>La tente chaude toute l’année pour une dionée</h3><p>Dormance 3–4 mois, 0–10 °C. En Belgique et en France, le dehors ou le garage gagne. La LED ne fait pas le froid.</p></article>
         </div>
       </section>
 """,
@@ -224,7 +232,7 @@ page(
     "Assistant kit Cosmorrow | Les Gloutonnes",
     "Configure ta tente de carnivores : projet, genres, surface, contraintes. Un kit Secret Jardin Cosmorrow en quatre questions.",
     """
-      <noscript class="callout is-warn"><p>L’assistant a besoin de JavaScript. Le catalogue est sur <a href="cosmorrow.html">Cosmorrow</a>.</p></noscript>
+      <noscript class="callout is-warn"><p>Active JavaScript pour l’assistant. Le catalogue est sur <a href="cosmorrow.html">Cosmorrow</a>.</p></noscript>
       <div id="assistant-app" class="stack"></div>
 """,
     DATA_CORE
@@ -241,7 +249,7 @@ page(
       <header class="page-hero stack">
         <p class="kicker">Secret Jardin · 24 V · IP65</p>
         <h1>Cosmorrow, et seulement Cosmorrow.</h1>
-        <p class="lede">Blanc 6500 K pour germer, Full Spectrum en appoint, alims calibrées 20 W ou 40 W. PPF publié, zone constructeur, pas un PAR 230 de boutique.</p>
+        <p class="lede">Blanc 6500 K pour germer, Full Spectrum en appoint, alimentations calibrées 20 W ou 40 W. PPF publié, zone constructeur — pas un « PAR 230 » de boutique.</p>
       </header>
       <noscript class="callout is-warn"><p>Active JavaScript pour le tableau SKU et les kits. Les règles d’or restent lisibles ci-dessus.</p></noscript>
       <section class="section">
@@ -255,12 +263,12 @@ page(
       </section>
       <section class="section">
         <h2>Unités lumineuses</h2>
-        <p class="hint">On dimensionne en PPF, PPFD et DLI. Les lumens, le « PAR 230 » et les watts marketing restent au vestiaire.</p>
+        <p class="hint">On dimensionne en PPF (µmol/s), PPFD (µmol/m²/s) et DLI (mol/m²/j). Les lumens, le « PAR 230 » et les watts marketing restent au vestiaire.</p>
         <div class="card-grid" id="units-glossary"></div>
       </section>
       <section class="section">
         <h2>Spectres Growing vs Full Spectrum</h2>
-        <p class="hint">660 nm = rouge PAR. Cosmorrow n’émet pas de far-red 730 nm. Le germoir reste en 6500 K.</p>
+        <p class="hint">660 nm = rouge PAR. Cosmorrow n’émet pas de rouge lointain 730 nm. Le germoir reste en 6500 K.</p>
         <div class="card-grid dense" id="spectrum-compare"></div>
       </section>
       <section class="section">
@@ -274,7 +282,7 @@ page(
       </section>
       <section class="section">
         <h2>Kits par tente</h2>
-        <p class="hint">Prix 2025–2026 growshop FR/BE, barres + alim + programmateur, hors tente. Fourchettes.</p>
+        <p class="hint">Prix 2025–2026, magasins Belgique / France — barres + alimentation + programmateur, hors tente. Fourchettes.</p>
         <div class="stack mt-s4" id="kit-list"></div>
       </section>
 """,
@@ -287,11 +295,11 @@ page(
 page(
     "especes.html",
     "PPFD par genre carnivore | Les Gloutonnes",
-    "Cibles PPFD, DLI, eau et tente pour Dionaea, Sarracenia, Drosera, Nepenthes et les autres carnivores sous Cosmorrow.",
+    "Cibles PPFD, DLI, eau et tente pour Dionaea, Sarracenia, Drosera, Nepenthes sous LED Cosmorrow.",
     """
       <header class="page-hero stack">
-        <p class="kicker">Carnivero / Florawave · fourchettes</p>
-        <h1>Chaque genre a sa fenêtre de photons.</h1>
+        <p class="kicker">Par genre</p>
+        <h1>Chaque plante a sa dose de lumière.</h1>
         <p class="lede">On vise d’abord le bas-milieu de fourchette (PPFD en µmol/m²/s, DLI en mol/m²/j), puis on monte selon la plante — pas selon un listing 660 nm. Growing 6500 K est la barre de travail.</p>
       </header>
       <div class="chips mt-s5" id="species-filter"></div>
@@ -310,11 +318,11 @@ page(
     "Sept protocoles de tente carnivore sous Cosmorrow : germoir, bouturage, production, colorisation, mixte, tropicale, dormance.",
     """
       <header class="page-hero stack">
-        <p class="kicker">Métiers de tente</p>
-        <h1>Un protocole par job, pas un curseur unique.</h1>
-        <p class="lede">Semis, boutures, adultes, rouge, étages, jungle ou hiver : la même Cosmorrow, des hauteurs et des heures différentes. La dormance des tempérées se joue au froid, pas au spectre.</p>
+        <p class="kicker">Du semis à l’hiver</p>
+        <h1>Un protocole par usage.</h1>
+        <p class="lede">Semis, boutures, adultes, rouge, étages, tropicales ou hiver : la même Cosmorrow, des hauteurs et des heures différentes. La dormance des tempérées se joue au froid, pas au spectre.</p>
       </header>
-      <noscript class="callout is-warn"><p>Active JavaScript pour les protocoles. Le CDC est dans le README.</p></noscript>
+      <noscript class="callout is-warn"><p>Active JavaScript pour afficher les protocoles.</p></noscript>
       <nav class="anchor-nav" id="protocol-nav" aria-label="Protocoles"></nav>
       <div id="protocol-list"></div>
       <section class="section">
@@ -337,9 +345,9 @@ page(
     "Monter une tente carnivores : cotes, extracteur, hygrométrie, plan de pose Cosmorrow, électricité 230 V.",
     """
       <header class="page-hero stack">
-        <p class="kicker">Mylar, 230 V, 24 V</p>
+        <p class="kicker">Pose et climat</p>
         <h1>La tente n’est pas un placard. C’est un climat.</h1>
-        <p class="lede">Deux bacs 60 × 40 dans 120 × 60. Barres parallèles au grand côté. Alim dehors. Extracteur plus doux qu’en cannabis.</p>
+        <p class="lede">Deux bacs 60 × 40 dans 120 × 60. Barres parallèles au grand côté. Alimentation dehors. Extracteur plus doux que pour du cannabis.</p>
       </header>
       <section class="section">
         <h2>Plan de pose signature</h2>
@@ -425,12 +433,12 @@ page(
 page(
     "outils.html",
     "PPFD, DLI, électricité | Les Gloutonnes",
-    "Simulateur PPFD Cosmorrow, DLI et coût électrique pour tente de carnivores. Modèle optique prudent, pas un PAR-mètre.",
+    "Simulateur PPFD Cosmorrow, DLI et coût électrique pour tente de carnivores.",
     """
       <header class="page-hero stack">
         <p class="kicker">Carte de lumière</p>
-        <h1>Comparer des kits, pas certifier un DLI.</h1>
-        <p class="lede">Carte PPFD simplifiée pour Cosmorrow seulement. Cosmorrow n’est pas dimmable : le curseur d’intensité simule un voile, pas un Controller+.</p>
+        <h1>Estime le PPFD de ton kit.</h1>
+        <p class="lede">Une carte simplifiée pour Cosmorrow seulement, calée sur la fiche constructeur. Cosmorrow n’est pas dimmable : le curseur d’intensité simule un voile, pas un variateur.</p>
       </header>
       <noscript class="callout is-warn"><p>Active JavaScript pour la carte PPFD. Catalogue : <a href="cosmorrow.html">Cosmorrow</a>.</p></noscript>
       <div class="sim-layout section">
@@ -469,7 +477,7 @@ page(
               <span>Intensité <strong id="intensity-val">100 %</strong></span>
               <input id="intensity" type="range" min="40" max="100" value="100" />
             </label>
-            <p id="dim-warn" class="dim-warn" hidden>Cosmorrow n’est pas dimmable. Ce curseur simule un voile, pas un Controller+.</p>
+            <p id="dim-warn" class="dim-warn" hidden>Cosmorrow n’est pas dimmable. Ce curseur simule un voile, pas un variateur.</p>
             <label for="kwh-eur">Tarif € / kWh
               <input id="kwh-eur" type="number" inputmode="decimal" step="0.0001" min="0.05" max="0.80" autocomplete="off" />
             </label>
@@ -493,7 +501,7 @@ page(
     """
       <header class="page-hero stack">
         <p class="kicker">Une question à la fois</p>
-        <h1>Ce n’est presque jamais une maladie magique.</h1>
+        <h1>D’abord la lumière, l’eau et le froid.</h1>
         <p class="lede" id="diag-intro"></p>
       </header>
       <noscript class="callout is-warn"><p>Active JavaScript pour l’arbre de décisions. Protocoles : <a href="protocoles.html">ici</a>.</p></noscript>
@@ -509,25 +517,29 @@ page(
 page(
     "a-propos.html",
     "Sources et confidentialité | Les Gloutonnes",
-    "Méthode Les Gloutonnes : Cosmorrow only, PPFD Carnivero, fiche Secret Jardin 2023-09, foliar 0,3 g/L. Pas de tracking.",
+    "Guide de culture en tente : Cosmorrow, PPFD Carnivero, fiche Secret Jardin 2023-09. Une application Les Gloutonnes.",
     """
       <header class="page-hero stack">
         <p class="kicker">Les Gloutonnes</p>
-        <h1>Un labo de tente, pas un growshop.</h1>
-        <p class="lede">Cet outil aide à installer des carnivores sous LED Cosmorrow. Fourchettes, sources, prudence. Pas de compte, pas de cookies, pas de pub.</p>
+        <h1>Une application de culture, pas un comparateur.</h1>
+        <p class="lede">
+          Le Guide de culture en tente fait partie des
+          <a href="https://www.lesgloutonnes.be/pages/applications-culture.html" rel="noopener noreferrer">applications Les Gloutonnes</a>,
+          à côté des guides Cephalotus, Darlingtonia et Nepenthes.
+        </p>
       </header>
       <section class="section prose">
         <h2>Pourquoi Cosmorrow</h2>
-        <p>Secret Jardin (Belgique) publie un PPF en µmol/s, un PPE en µmol/J, une zone, un IP65, du 24 V et du 230 V livrable en FR/BE. Growing 6500 K est le spectre de germoir. Le Full Spectrum est un appoint. On ne tient plus de palmarès multi-marques : le site est un compagnon de pose, pas un comparateur.</p>
-        <h2>Unités</h2>
-        <p>PPF en µmol/s, PPFD en µmol/m²/s, PPE en µmol/J, DLI en mol/m²/j. La fiche Cosmorrow écrit le PPFD en µmol/s/m² : même grandeur, on normalise. PAR est une bande (400–700 nm), pas un nombre. Le 660 nm du Full Spectrum est du rouge PAR, pas du far-red 730 nm.</p>
+        <p>Secret Jardin, en Belgique, publie un PPF (µmol/s), un PPE (µmol/J), une zone d’éclairage, un indice d’étanchéité IP65, du 24 V et du 230 V livrable ici. Growing 6500 K est le spectre de germoir. Le Full Spectrum est un appoint. On ne compare plus les marques : l’application t’aide à poser un kit, pas à classer des listings.</p>
+        <h2>Comment on parle de lumière</h2>
+        <p>PPF : flux de la barre, en µmol/s. PPFD : densité à la canopée, en µmol/m²/s (la fiche Secret Jardin écrit µmol/s/m² : même grandeur). PPE : rendement, en µmol/J. DLI : dose quotidienne, en mol/m²/j (PPFD × heures × 0,0036). PAR est une bande de longueurs d’onde (400–700 nm), pas un chiffre. Le 660 nm du Full Spectrum est du rouge PAR, pas du rouge lointain 730 nm.</p>
         <h2>Sources</h2>
         <ul>
           <li><a href="https://www.secretjardin.com/wp-content/uploads/2023/09/20230905-COP-BULBS-DATASHEET.pdf" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Fiche Cosmorrow COP BULBS 2023-09</a> (Secret Jardin)</li>
-          <li><a href="https://www.secretjardin.com/bulbs-power-supplies/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Barres et alims Cosmorrow</a></li>
-          <li><a href="https://www.carnivero.com/pages/grow-light-ppfd-recommendations" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">PPFD par genre — Carnivero / Florawave</a></li>
+          <li><a href="https://www.secretjardin.com/bulbs-power-supplies/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Barres et alimentations Cosmorrow</a></li>
+          <li><a href="https://www.carnivero.com/pages/grow-light-ppfd-recommendations" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Cibles d’éclairage par genre — Carnivero</a></li>
           <li>Adamec, L. (1997). Mineral nutrition of carnivorous plants. <em>Botanical Review</em> 63.</li>
-          <li>Foliar 0,3 g/L : orchidée ¼ (FR/BE) ; Maxsea 16-16-16 = recette California Carnivores équivalente, pas un sésame d’import.</li>
+          <li>Foliar 0,3 g/L : engrais orchidée au quart (Belgique / France). Maxsea 16-16-16 est une recette américaine équivalente, pas un sésame d’import.</li>
         </ul>
         <h2>Limites</h2>
         <p>La carte de lumière est une estimation, pas un appareil de mesure. Les prix sont des fourchettes de magasin. Les cibles d’éclairage viennent de la pratique, pas d’une ordonnance.</p>
