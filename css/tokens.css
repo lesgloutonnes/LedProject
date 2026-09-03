@@ -9,10 +9,10 @@
   --bg: oklch(0.29 0.034 162);
   --fg: oklch(0.93 0.016 108);
   --card: oklch(0.34 0.030 158);
-  --muted: oklch(0.74 0.028 150);
+  --muted: oklch(0.78 0.028 150);
   --primary: oklch(0.78 0.082 155);
   --primary-fg: oklch(0.22 0.040 155);
-  --accent: oklch(0.76 0.118 58);
+  --accent: oklch(0.82 0.12 58);
   --danger: oklch(0.72 0.145 28);
   --ok: oklch(0.76 0.108 148);
   --border: oklch(0.42 0.024 158);
@@ -77,10 +77,10 @@
     --bg: #243a32;
     --fg: #e8ead8;
     --card: #2e463d;
-    --muted: #a3b8a8;
+    --muted: #b7cabb;
     --primary: #8bc49a;
     --primary-fg: #123026;
-    --accent: #d9a85c;
+    --accent: #e3b56a;
     --danger: #e08a6a;
     --ok: #7dbe94;
     --border: #3d564c;
@@ -127,7 +127,7 @@ html {
   background: var(--bg);
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
-  scroll-padding-top: 5.5rem;
+  scroll-padding-top: 6rem;
 }
 
 body {
@@ -165,6 +165,8 @@ button {
 
 a {
   color: var(--primary);
+  text-underline-offset: 0.2em;
+  text-decoration-thickness: 1px;
 }
 
 :focus-visible {
@@ -187,6 +189,18 @@ h3 {
   font-weight: 520;
   line-height: 1.08;
   text-wrap: balance;
+}
+
+h1 {
+  font-size: var(--step-5);
+}
+
+h2 {
+  font-size: var(--step-4);
+}
+
+h3 {
+  font-size: var(--step-3);
 }
 
 /* --- Utilitaires (rien d’autre) --- */
@@ -280,7 +294,7 @@ h3 {
 }
 
 .page-main [id] {
-  scroll-margin-top: 5.5rem;
+  scroll-margin-top: 6rem;
 }
 
 @media (min-width: 720px) {

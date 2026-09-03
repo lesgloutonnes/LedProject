@@ -27,7 +27,7 @@ a[href^="http://"]::after {
   position: sticky;
   top: 0;
   z-index: 40;
-  background: oklch(0.29 0.034 162 / 0.92);
+  background: var(--bg-elevated);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
   padding-top: env(safe-area-inset-top, 0px);
@@ -36,19 +36,25 @@ a[href^="http://"]::after {
 .site-header .wrap {
   display: flex;
   align-items: center;
-  gap: var(--s-3);
-  min-height: 3.5rem;
-  padding-block: var(--s-2);
+  gap: var(--s-4);
+  min-height: 4rem;
+  padding-block: var(--s-3);
   min-width: 0;
 }
 
 .brand {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  gap: 0.15rem;
   text-decoration: none;
   color: inherit;
   line-height: 1.1;
   flex: 0 0 auto;
+}
+
+.brand:hover {
+  color: inherit;
 }
 
 .brand-kicker {
@@ -57,11 +63,13 @@ a[href^="http://"]::after {
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--primary);
+  line-height: 1;
 }
 
 .brand-name {
   font-family: var(--display);
-  font-size: 1.15rem;
+  font-size: 1.125rem;
+  line-height: 1.15;
 }
 
 .nav-primary {
@@ -70,24 +78,33 @@ a[href^="http://"]::after {
   gap: var(--s-1);
   flex: 1;
   min-width: 0;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 .nav-primary a {
   color: var(--fg);
   text-decoration: none;
   font-size: var(--step-1);
-  padding: 0.4rem 0.55rem;
+  line-height: 1.15;
+  padding: 0.35rem 0.6rem;
   border-radius: var(--radius-sm);
   min-height: 44px;
   display: inline-flex;
   align-items: center;
+  flex: 0 0 auto;
+  transition: background-color var(--duration) var(--ease), color var(--duration) var(--ease),
+    box-shadow var(--duration) var(--ease);
 }
 
-.nav-primary a[aria-current="page"],
 .nav-primary a:hover {
   background: var(--card);
   color: var(--primary);
+}
+
+.nav-primary a[aria-current="page"] {
+  background: oklch(0.38 0.04 155 / 0.4);
+  color: var(--primary);
+  box-shadow: none;
 }
 
 .nav-more {
@@ -98,11 +115,17 @@ a[href^="http://"]::after {
   list-style: none;
   cursor: pointer;
   font-size: var(--step-1);
-  padding: 0.4rem 0.55rem;
+  line-height: 1.15;
+  padding: 0.35rem 0.6rem;
   border-radius: var(--radius-sm);
   min-height: 44px;
   display: inline-flex;
   align-items: center;
+}
+
+.nav-more summary:hover {
+  background: var(--card);
+  color: var(--primary);
 }
 
 .nav-more summary::-webkit-details-marker {
@@ -124,13 +147,22 @@ a[href^="http://"]::after {
 }
 
 .nav-more a {
-  display: block;
+  display: flex;
+  align-items: center;
   width: 100%;
+  box-shadow: none;
+}
+
+.nav-more a[aria-current="page"] {
+  box-shadow: none;
+  background: oklch(0.38 0.04 155 / 0.45);
 }
 
 .header-cta {
   margin-left: auto;
   display: none;
+  flex: 0 0 auto;
+  align-self: center;
 }
 
 /* --- Buttons --- */
@@ -143,12 +175,16 @@ a[href^="http://"]::after {
   justify-content: center;
   gap: var(--s-2);
   min-height: 44px;
-  padding: 0.55rem 1rem;
+  padding: 0.5rem 1.05rem;
   border-radius: var(--radius-md);
   text-decoration: none;
   border: 1px solid transparent;
   font-weight: 600;
+  font-size: var(--step-2);
+  line-height: 1.15;
   touch-action: manipulation;
+  transition: background-color var(--duration) var(--ease), filter var(--duration) var(--ease),
+    box-shadow var(--duration) var(--ease);
 }
 
 .btn-primary {
@@ -193,16 +229,22 @@ button:disabled,
 
 .page-hero {
   padding-top: var(--s-6);
+  padding-bottom: var(--s-2);
   --stack-space: var(--s-4);
+}
+
+.page-hero h1 {
+  margin: 0;
 }
 
 .kicker {
   font-family: var(--mono);
-  font-size: 0.7rem;
-  letter-spacing: 0.2em;
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--primary);
   margin: 0;
+  font-weight: 600;
 }
 
 .lede {
@@ -228,6 +270,13 @@ button:disabled,
 
 /* --- Cards --- */
 
+.card {
+  background: var(--card);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-0);
+  padding: var(--s-4) var(--s-5);
+}
+
 .card:hover {
   box-shadow: 0 0 0 1px var(--border);
 }
@@ -239,14 +288,29 @@ button.card:focus-visible {
   box-shadow: 0 0 0 1px var(--primary);
 }
 
+.card h2,
 .card h3 {
   margin: 0 0 var(--s-2);
+}
+
+.card p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.card .btn-row {
+  margin-top: var(--s-4);
 }
 
 .path-grid,
 .card-grid {
   display: grid;
-  gap: var(--s-3);
+  gap: var(--s-4);
+}
+
+a.card {
+  color: inherit;
+  text-decoration: none;
 }
 
 .path-card {
@@ -255,13 +319,18 @@ button.card:focus-visible {
   gap: var(--s-2);
   text-decoration: none;
   color: inherit;
-  min-height: 8.5rem;
+  min-height: 11rem;
+  height: 100%;
 }
 
 .path-card:hover,
 .path-card:focus-visible {
   color: inherit;
   box-shadow: 0 0 0 1px var(--primary), var(--shadow-1);
+}
+
+.path-card h2 {
+  margin: 0;
 }
 
 .path-card .kicker {
@@ -277,6 +346,7 @@ button.card:focus-visible {
 .path-card span.go {
   color: var(--primary);
   font-weight: 600;
+  margin-top: auto;
 }
 
 /* --- Chips --- */
@@ -295,6 +365,7 @@ button.card:focus-visible {
   padding: 0.45rem 0.75rem;
   min-height: 44px;
   font-size: var(--step-1);
+  line-height: 1.15;
   white-space: nowrap;
   touch-action: manipulation;
 }
@@ -638,7 +709,7 @@ tr.is-active {
   -webkit-overflow-scrolling: touch;
   padding-bottom: var(--s-3);
   position: sticky;
-  top: 3.5rem;
+  top: 4rem;
   z-index: 20;
   background: oklch(0.29 0.034 162 / 0.94);
   margin: 0 calc(-1 * var(--page-gutter));
@@ -992,13 +1063,16 @@ a.chip {
 @media (prefers-reduced-motion: reduce) {
   .site-header {
     backdrop-filter: none;
-    background: var(--bg);
+    background: var(--bg-elevated);
   }
 
   .cta-sticky,
   .path-card,
   .chip,
-  .choice {
+  .choice,
+  .nav-primary a,
+  .btn-primary,
+  .btn-ghost {
     transition: none;
   }
 }
@@ -1059,6 +1133,14 @@ a.chip {
 
   .nav-primary {
     display: flex;
+  }
+
+  .page-hero {
+    padding-top: var(--s-7);
+  }
+
+  .section {
+    margin-top: var(--s-8);
   }
 
   .nav-primary .nav-wide {
