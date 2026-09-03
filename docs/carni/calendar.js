@@ -117,7 +117,7 @@ window.LG_CALENDAR = {
         "Séparer visuellement tropicales et tempérées : deux tentes, ou tropicales qui restent, tempérées qui iront au frais.",
         "Nettoyer, jeter les mixes collés d’algues, rincer les bacs.",
         "Graines de Sarracenia / Dionaea : récolter mûres, lancer la strat au frigo.",
-        "Gemmae de pygmées : souvent maintenant (jours courts) — semer de suite, pas attendre mars.",
+        "Gemmae de pygmées : souvent maintenant (jours courts) — semer de suite, pas attendre mars. Si elles sont restées à 14 h toute l’année, elles gemment peu : on passe à 10–12 h.",
       ],
       notes: "C’est le mois où l’on décide la dormance. Reporter à novembre dans le salon chaud, c’est déjà trop tard pour un bon palier.",
     },

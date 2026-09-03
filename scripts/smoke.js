@@ -121,7 +121,12 @@ assert.ok(/ssp\. purpurea/i.test(sarrLow.dormancyNote), "purpurea nord vs golfe"
 assert.ok(/venosa/i.test(sarrLow.dormancyNote), "venosa moins rustique");
 assert.ok(!/Première feuille = phyllode/.test(sarr.seedlingNotes), "plantule Sarracenia ≠ phyllode d’adulte");
 assert.ok(/mini-urnes/.test(sarr.seedlingNotes), "Sarracenia : mini-urnes dès le semis");
-assert.ok(/Oreophila n’est pas du golfe|Oreophila n'est pas du golfe/.test(sarr.warnings.join(" ")), "warning oreophila");
+assert.ok(/Oreophila \/ alabamensis \/ jonesii/.test(sarr.warnings.join(" ")), "warning montagne ≠ golfe");
+assert.ok(/alabamensis/i.test(sarr.latin + sarr.dormancyNote), "alabamensis avec oreophila");
+assert.ok(/2–3 ans|2-3 ans/.test(sarr.seedlingNotes), "Sarracenia : graines 2–3 ans au frigo");
+assert.ok(/adelae/i.test(cap.latin + cap.tentTips + cap.warnings.join(" ")), "Queensland ≠ capensis");
+assert.ok(/50–100|50-100/.test(cap.tentTips + cap.warnings.join(" ")), "adelae : 50–100 µmol");
+assert.ok(/fluide/i.test(ctx.LG_SPECIES.find(function (s) { return s.id === "heliamphora"; }).fertilizer), "Heliamphora : engrais dans l’urne");
 assert.ok(/acclimatation/.test(dion.tentTips), "dionée : acclimater avant le plein soleil");
 assert.ok(/acclimatation/.test(prod.steps.map(function (s) { return s.body; }).join(" ")), "production : acclimater avant le dehors");
 assert.ok(/golfe/i.test(dorm.climate), "dormance : trier golfe vs natives");
@@ -130,6 +135,7 @@ assert.ok(!/Sarracenia et dionées adultes supportent le gel léger dehors/.test
 var pyg = ctx.LG_SPECIES.find(function (s) { return s.id === "drosera-pygmy"; });
 assert.ok(/automne/i.test(pyg.seedlingNotes), "pygmées : gemmae surtout à l’automne");
 assert.ok(!/fin d’hiver–printemps indoor/.test(pyg.seedlingNotes));
+assert.ok(/14 h/.test(pyg.warnings.join(" ") + pyg.seedlingNotes), "pygmées : 14 h = peu de gemmae");
 
 assert.ok(!/droséra du Portugal/i.test(dros.common), "Drosophyllum n’est pas un Drosera");
 assert.ok(/drosophylle/i.test(dros.common));
@@ -162,6 +168,33 @@ var utricEpi = ctx.LG_SPECIES.find(function (s) { return s.id === "utricularia-e
 assert.ok(/humboldtii/i.test(utricEpi.waterNote), "humboldtii : eau, pas seulement brume");
 assert.ok(!/HumboldtII/.test(utricEpi.waterNote + utricEpi.substrate + utricEpi.tentTips), "humboldtii, pas HumboldtII");
 
+var tropDrosWarn = ctx.LgMatch.genreWarnings("tropicale", ["drosera"]);
+assert.ok(
+  tropDrosWarn.some(function (w) {
+    return /adelae/i.test(w);
+  }),
+  "tropicale + drosera : Queensland ≠ capensis"
+);
+var mixDrosWarn = ctx.LgMatch.genreWarnings("mixte", ["drosera"]);
+assert.ok(
+  mixDrosWarn.some(function (w) {
+    return /adelae/i.test(w);
+  }),
+  "mixte + drosera : Queensland à l’étage bas"
+);
+assert.ok(
+  ctx.LgMatch.genreWarnings("tropicale", ["cephalotus"]).some(function (w) {
+    return /lowland/i.test(w);
+  }),
+  "tropicale + cephalotus : pas lowland"
+);
+
+var heliam = ctx.LG_SPECIES.find(function (s) { return s.id === "heliamphora"; });
+assert.ok(/fluide/i.test(heliam.fertilizer), "Heliamphora : pas un foliar cuticule");
+assert.ok(!/Foliar 0,3 g\/L 1×\/mois, ou très peu/.test(heliam.fertilizer));
+
+var urnTree = ctx.LG_DIAGNOSTIC.trees.find(function (t) { return t.id === "urnes"; });
+assert.ok(/n’a pas de phyllode|n'a pas de phyllode/.test(JSON.stringify(urnTree.nodes["urn-sarr"])), "Heliamphora ≠ phyllode");
 var drosDormWarn = ctx.LgMatch.genreWarnings("dormance", ["drosera"]);
 assert.ok(
   drosDormWarn.some(function (w) {
