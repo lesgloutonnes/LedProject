@@ -27,12 +27,12 @@ window.LG_PROTOCOLS = [
     steps: [
       {
         title: "Trier les lots et la cold strat",
-        body: "Sarracenia : 6–8 semaines au frigo (4 °C) — 4 semaines, c’est souvent trop court pour flava / leucophylla. Dionaea et Drosera tempérées (rotundifolia, intermedia, filiformis) : 4–6 semaines. Sachet de papier ou tourbe juste humide, pas un Tupperware étanche qui moisit. Capensis, spatulata, aliciae, Byblis liniflora : pas de froid, semis direct. D. binata : pas de cold strat type rotundifolia. Graines de Sarracenia / Dionaea : l’année de récolte. Note le nom et la date au crayon.",
+        body: "Sarracenia : 6–8 semaines au frigo (4 °C) — 4 semaines, c’est souvent trop court pour flava / leucophylla. Dionaea et Drosera tempérées (rotundifolia, intermedia, filiformis) : 4–6 semaines. Sachet de papier ou tourbe juste humide, pas un Tupperware étanche qui moisit. Capensis, spatulata, aliciae, Byblis liniflora : pas de froid, semis direct. D. binata : pas de cold strat type rotundifolia. Adelae / prolifera / schizandra : pas ce germoir 150–250 µmol/m²/s — sphaigne, HR haute, 50–100 µmol/m²/s, comme une plantule Nepenthes. Graines de Dionaea : l’année de récolte. Sarracenia au frigo sec : encore 2–3 ans. Note le nom et la date au crayon.",
         checklist: [
           "Lots tempérés au frigo, datés, pas hermétiques",
           "Sarracenia : 6–8 semaines (pas 4)",
           "Lots tropicaux à température, prêts à semer",
-          "Sarracenia / Dionaea : lot de l’année (viabilité)",
+          "Dionaea : lot de l’année ; Sarracenia au frigo sec : 2–3 ans encore",
           "Pas de congélateur (sauf protocole graine très spécifique, hors germoir standard)",
         ],
       },
@@ -88,7 +88,7 @@ window.LG_PROTOCOLS = [
       "Hypocotyles > 1 cm filiformes : PPFD trop bas ou dôme trop longtemps — descendre la barre.",
       "Terreau vert fluo + plantules translucides : trop d’eau / trop de lumière / trop peu d’air.",
       "Fonte des semis (tiges cernées) : trop chaud + trop humide — aérer, jeter les foyers, ne pas « sauver » au fongicide maison.",
-      "Aucune levée à 8 semaines sur lot stratifié : tester un témoin à 20 °C hors frigo, vérifier la date du lot (Sarracenia > 12 mois = souvent mort).",
+      "Aucune levée à 8 semaines sur lot stratifié : tester un témoin à 20 °C hors frigo, vérifier la date du lot (Dionaea > 12 mois au tiède = souvent mort ; Sarracenia au frigo sec tiennent 2–3 ans).",
     ],
     next: ["cutting", "production", "dormancy"],
   },
@@ -364,7 +364,7 @@ window.LG_PROTOCOLS = [
       },
       {
         title: "Plafond Growing pour les gourmandes",
-        body: "Sarracenia dressées (y compris minor), Dionaea, Drosera de soleil, Byblis : étage haut, 15–20 cm sous COP4065, 200–300 µmol/m²/s. Les basses (purpurea, psittacina, pygmées) au bord, un peu plus loin du hotspot. Minor n’est pas une « petite » : urne dressée à opercule.",
+        body: "Sarracenia dressées (y compris minor), Dionaea, Drosera de soleil, Byblis : étage haut, 15–20 cm sous COP4065, 200–300 µmol/m²/s. Les basses (purpurea, psittacina, pygmées) au bord, un peu plus loin du hotspot. Minor n’est pas une « petite » : urne dressée à opercule. Adelae / prolifera / schizandra : étage bas, avec les Nepenthes — pas le plafond capensis.",
         checklist: [
           "Dressées au centre-haut",
           "Basses en périphérie",
@@ -409,7 +409,7 @@ window.LG_PROTOCOLS = [
     title: "Chambre tropicale",
     kicker: "Extracteur · HR 60–80 % · pas de dormance",
     summary:
-      "Nepenthes, Heliamphora, Drosera capensis, Byblis liniflora, Utricularia épiphytes : croissance continue, 12–14 h, jamais 5 °C. Cephalotus n’est pas une lowland : étage frais, collet aéré, pas 30 °C / 90 % HR. L’extracteur empêche botrytis et collet mou. Cosmorrow Growing en doux, PPFD bas-milieu Carnivero.",
+      "Nepenthes, Heliamphora, Drosera capensis, Byblis liniflora, Utricularia épiphytes : croissance continue, 12–14 h, jamais 5 °C. Adelae / prolifera / schizandra : ombre 50–100 µmol/m²/s, pas le régime capensis. Cephalotus n’est pas une lowland : étage frais, collet aéré, pas 30 °C / 90 % HR. L’extracteur empêche botrytis et collet mou. Cosmorrow Growing en doux, PPFD bas-milieu Carnivero.",
     duration: "Année complète ; palier d’acclimatation 2–3 semaines pour les nouvelles",
     difficulty: 2,
     climate:
@@ -421,11 +421,11 @@ window.LG_PROTOCOLS = [
       note: "Cibles : Nepenthes 80–100 µmol/m²/s, Heliamphora 200 µmol/m²/s, Cephalotus 120 µmol/m²/s, capensis 180 µmol/m²/s. Le plafond Sarracenia 300 µmol/m²/s n’est pas un objectif tropical.",
     },
     water:
-      "Pas de bac unique type tourbière. Arrosage RO du mix, soucoupes vidées. Heliamphora : un peu d’eau RO dans l’urne en permanence (pas un suc digestif : de l’eau). Cephalotus : ressuyage, étage frais, pas la jungle 30 °C. Stock d’eau à température de pièce pour les lowland, plus frais pour highland.",
+      "Pas de bac unique type tourbière. Arrosage RO du mix, soucoupes vidées. Heliamphora : un peu d’eau RO dans l’urne en permanence (pas un suc digestif : de l’eau) ; l’engrais, c’est quelques ml à 0,3 g/L dans cette eau, pas un foliar sur la cuticule. Cephalotus : ressuyage, étage frais, pas la jungle 30 °C. Stock d’eau à température de pièce pour les lowland, plus frais pour highland.",
     substrate:
       "Nepenthes / Heliamphora / Utric épiphytes : LFS + écorce + perlite. Cephalotus : tourbe/perlite/sable aéré. Capensis / Byblis : tourbe/perlite 50/50. Sphaigne vivante : on la change quand elle brunit en anaérobie.",
     fertilizer:
-      "Foliar 0,3 g/L 1×/mois (orchidée ou Rain Mix sur Nepenthes). 1 bille Osmocote dans une urne mature (option Nepenthes). Proies 1–2×/mois. Racinaire rare.",
+      "Foliar 0,3 g/L 1×/mois (orchidée ou Rain Mix sur Nepenthes). Heliamphora : quelques ml à 0,3 g/L dans l’eau de l’urne, pas un foliar. 1 bille Osmocote dans une urne mature (option Nepenthes). Proies 1–2×/mois. Racinaire rare.",
     steps: [
       {
         title: "Choisir lowland ou highland",
@@ -503,7 +503,7 @@ window.LG_PROTOCOLS = [
     steps: [
       {
         title: "Choisir le lieu : dehors d’abord",
-        body: "FR/BE : on trie. Purpurea ssp. purpurea et Drosera rotundifolia / intermedia / anglica : dehors, bac, même le gel. Dionaea et flava / rubra du nord : châssis ou garage hors gel — mieux qu’une tente chauffée, pas un balcon nu sous la pluie verglaçante. Alata, leucophylla, venosa, rosea, psittacina : châssis, pas le gel nu. Oreophila : châssis plus sec (montagne, pas golfe). La LED ne fait pas le froid. Cosmorrow 8–10 h = plan B appartement, plus quelques dionées au frigo (godet aéré, jamais un zip hermétique). Les tropicales ne vont nulle part ici.",
+        body: "FR/BE : on trie. Purpurea ssp. purpurea et Drosera rotundifolia / intermedia / anglica : dehors, bac, même le gel. Dionaea et flava / rubra du nord : châssis ou garage hors gel — mieux qu’une tente chauffée, pas un balcon nu sous la pluie verglaçante. Alata, leucophylla, venosa, rosea, psittacina : châssis, pas le gel nu. Oreophila / alabamensis / jonesii : châssis plus sec (montagne, pas golfe). La LED ne fait pas le froid. Cosmorrow 8–10 h = plan B appartement, plus quelques dionées au frigo (godet aéré, jamais un zip hermétique). Les tropicales ne vont nulle part ici.",
         checklist: [
           "Lieu noté : dehors / châssis / garage / tente froide / frigo (quelques dionées)",
           "Golfe et dionées : châssis, pas le gel + pluie",

@@ -47,13 +47,13 @@ window.LG_SPECIES = [
   },
   {
     id: "sarracenia-upright",
-    latin: "Sarracenia (flava, leucophylla, oreophila, alata, rubra, minor…)",
+    latin: "Sarracenia (flava, leucophylla, oreophila, alabamensis, alata, rubra, minor…)",
     common: "Sarracènes dressées",
     family: "Sarraceniaceae",
     climate: "temperate",
     dormancy: "required",
     dormancyNote:
-      "Obligatoire 3–4 mois. Les urnes de l’année se fanent ; le rhizome reste, souvent en phyllodes. 0–10 °C, 8–10 h, substrat humide sans bac. En FR/BE, bac extérieur / châssis hors gel est le geste de pépinière ; la tente chaude est le plan B. Flava du nord, rubra ssp. rubra / jonesii : souvent dehors, gel léger OK si le pot n’est pas un glaçon d’eau. Alata, leucophylla, rubra gulfensis : golfe — châssis, pas le gel nu + pluie glacée. Oreophila n’est pas une espèce du golfe : montagne d’Alabama, le froid passe, l’hiver mouillé pourrit (châssis plus sec).",
+      "Obligatoire 3–4 mois. Les urnes de l’année se fanent ; le rhizome reste, souvent en phyllodes. 0–10 °C, 8–10 h, substrat humide sans bac. En FR/BE, bac extérieur / châssis hors gel est le geste de pépinière ; la tente chaude est le plan B. Flava du nord, rubra ssp. rubra : souvent dehors, gel léger OK si le pot n’est pas un glaçon d’eau. Alata, leucophylla, rubra gulfensis : golfe — châssis, pas le gel nu + pluie glacée. Oreophila, alabamensis, jonesii : montagne (Alabama / Appalaches), pas le golfe — le froid passe, l’hiver mouillé dans un godet pourrit (châssis plus sec).",
     ppfd: [200, 300, 500],
     dli: [8.6, 14.0, 25.2],
     photoperiodGrow: 14,
@@ -72,7 +72,7 @@ window.LG_SPECIES = [
     traps:
       "Les urnes chassent seules si tu ouvres la tente. Sinon : 1–2 mouches par urne mature et par mois, ou un foliar 0,3 g/L. Ne pas remplir les urnes de bouillon ni d’Osmocote.",
     seedlingNotes:
-      "Graines à stratification froide 6–8 semaines (4 semaines, c’est souvent trop court pour flava / leucophylla). Viables surtout l’année de récolte (frigo sec). Semis de surface, mix ébouillanté, 14 h, 15–20 cm, 150–250 µmol/m²/s. Premières feuilles petites, souvent un tube mal formé ; les mini-urnes arrivent en quelques feuilles. « Phyllode » = feuille plate d’adulte en fin de saison (surtout flava), pas le vocabulaire de la plantule. 2–4 ans avant un adulte. Repiquer par motte à 4–6 feuilles, pas racine nue.",
+      "Graines à stratification froide 6–8 semaines (4 semaines, c’est souvent trop court pour flava / leucophylla). Frigo sec : encore bonnes 2–3 ans — ce n’est pas une dionée (1 an) ni une Nepenthes (semaines). Semis de surface, mix ébouillanté, 14 h, 15–20 cm, 150–250 µmol/m²/s. Premières feuilles petites, souvent un tube mal formé ; les mini-urnes arrivent en quelques feuilles. « Phyllode » = feuille plate d’adulte en fin de saison (surtout flava), pas le vocabulaire de la plantule. 2–4 ans avant un adulte. Repiquer par motte à 4–6 feuilles, pas racine nue.",
     cuttingNotes:
       "Division de rhizome au débourrement (mars–avril) : un morceau avec au moins un point de croissance. Bouture de rhizome sans feuille possible mais plus lente. Pas de bouture de feuille utile.",
     redColorNotes:
@@ -81,7 +81,7 @@ window.LG_SPECIES = [
       "Dormance obligatoire. Une Sarracenia « toujours en pousse » s’affaiblit.",
       "Pots trop étroits = urnes chétives. Viser 2–3 L larges dès l’ado, pas un tube profond.",
       "Hampe : on coupe sur un ado. On laisse seulement un adulte dont on veut les graines — la hampe sort avant les urnes, ce n’est pas un bonus gratuit.",
-      "Oreophila n’est pas du golfe : montagne d’Alabama, le froid passe, l’hiver mouillé pourrit.",
+      "Oreophila / alabamensis / jonesii : montagne, pas golfe — le froid passe, l’hiver mouillé pourrit.",
       "Carnivero n’a testé que des semis de dressées sous LED (**) : les adultes demandent plus de hauteur utile.",
     ],
     projects: ["seedling", "production", "coloring", "mixed", "dormancy"],
@@ -164,7 +164,7 @@ window.LG_SPECIES = [
   },
   {
     id: "drosera-capensis",
-    latin: "Drosera capensis (et spatulata, aliciae, nidiformis, binata…)",
+    latin: "Drosera capensis (et spatulata, aliciae, nidiformis, binata… — pas adelae / prolifera / schizandra)",
     common: "Droséras capensis / tropicales",
     family: "Droseraceae",
     climate: "tropical-lowland",
@@ -183,7 +183,7 @@ window.LG_SPECIES = [
     substrate: "Tourbe blonde + perlite 50/50. Se ressème partout : un bac dédié évite l’invasion.",
     fertilizer: "Foliar 0,3 g/L 1×/mois, ou rien si les sciarides circulent. C’est la plante la plus autonome de la tente.",
     tentTips:
-      "Étage médian, 20–30 cm sous COP4065, ou COP2065 dédiée. Parfaite plante « comble-trou » d’une tente mixte. Spatulata et aliciae restent en rosette : elles tiennent au premier plan, 15–20 cm. Binata monte : laisse de la hauteur, gants pour les grosses touffes.",
+      "Étage médian, 20–30 cm sous COP4065, ou COP2065 dédiée. Parfaite plante « comble-trou » d’une tente mixte. Spatulata et aliciae restent en rosette : elles tiennent au premier plan, 15–20 cm. Binata monte : laisse de la hauteur, gants pour les grosses touffes. Adelae / prolifera / schizandra (Queensland, sous-bois) : étage Nepenthes, 50–100 µmol/m²/s, HR haute — sous COP4065 à 15 cm elles blanchissent. Ce n’est pas capensis.",
     traps: "Mucilage = indicateur de santé. Si les gouttes disparaissent : air trop sec, lumière trop faible, ou eau trop riche.",
     seedlingNotes:
       "Pas de cold strat. Surface, 20–24 °C, 14 h, 150–250 µmol/m²/s. Levée 7–21 jours. Graines fraîches germent en tapis : éclaircir tôt, capensis étouffe ses voisines et les Sarracenia.",
@@ -195,6 +195,7 @@ window.LG_SPECIES = [
       "Envahissante par graines : coupe les hampes si tu ne veux pas un tapis.",
       "Ne pas la coller contre des Nepenthes basses : elle vole la lumière du collet.",
       "D. binata n’est pas une tempérée d’hémisphère nord : pas de protocole hibernacle 5 °C.",
+      "Adelae / prolifera / schizandra : Queensland, pas capensis — 50–100 µmol/m²/s, HR haute, pas le plafond des spatulata.",
     ],
     projects: ["seedling", "cutting", "production", "coloring", "mixed", "tropical"],
   },
@@ -223,12 +224,13 @@ window.LG_SPECIES = [
       "Premier plan, 15–20 cm sous COP2065 ou COP4065. Elles tiennent dans 3 cm de hauteur : une tablette basse dédiée évite qu’on les oublie sous les urnes. Air sec-modéré, pas de brumisation lourde.",
     traps: "Mucilage fin. Micro-proies (collemboles, sciarides). Rien de plus.",
     seedlingNotes:
-      "On sème rarement des graines : on sème les gemmae. Indoor FR/BE, elles partent souvent à l’automne (jours qui raccourcissent) : on sème tout de suite — un gemma qui attend au chaud pourrit. Reliquat au frigo, semis en fin d’hiver. Gemmae en surface, mix minéral juste humide, 15–22 °C, 12 h. Levée 1–3 semaines. Graines dures : fumée de prairie ou GA-3 1000 ppm 24 h — lot dédié, pas le germoir Sarracenia.",
+      "On sème rarement des graines : on sème les gemmae. Indoor FR/BE, elles partent souvent à l’automne (jours qui raccourcissent) : on sème tout de suite — un gemma qui attend au chaud pourrit. Reliquat au frigo, semis en fin d’hiver. Gemmae en surface, mix minéral juste humide, 15–22 °C, 12 h. Levée 1–3 semaines. À 14 h constants d’une mixte, elles gemment peu : c’est le raccourcissement (10–12 h) qui déclenche, pas « fin d’hiver au chaud ». Graines dures : fumée de prairie ou GA-3 1000 ppm 24 h — lot dédié, pas le germoir Sarracenia.",
     cuttingNotes: "Gemmae = bouture naturelle. Pas de leaf pulling classique.",
     redColorNotes: "PPFD élevé + nuits fraîches = rosettes compactes et rouges. Trop d’HR et trop peu de lumière = étiolement vert, gemmae molles.",
     warnings: [
       "Ne pas les cultiver comme des capensis (bac d’eau + jungle).",
       "Les gemmae pourrissent si elles baignent.",
+      "14 h toute l’année = peu de gemmae. On raccourcit à 10–12 h à l’automne.",
     ],
     projects: ["production", "coloring", "mixed"],
   },
@@ -502,7 +504,7 @@ window.LG_SPECIES = [
       "Sphaigne toujours humide, eau RO. L’urne doit garder un peu d’eau pauvre : Heliamphora n’a pas un suc digestif type Sarracenia, c’est de l’eau de tepui dans la cruche. Urne sèche = souvent une urne perdue. Pas de bac type Sarracenia si le mix étouffe.",
     substrate: "Sphaigne longue fibre vivante de préférence, panier aéré. Parfois perlite. Rempoter dès que la sphaigne s’affaisse.",
     fertilizer:
-      "Foliar 0,3 g/L 1×/mois, ou très peu d’engrais orchidée. 1 petite proie par urne de temps en temps. Racinaire : prudence, algues dans la sphaigne.",
+      "Quelques ml d’orchidée 0,3 g/L dans l’eau de l’urne 1×/mois : Heliamphora absorbe par le fluide (pas un suc type Sarracenia). Foliar sur la cuticule cireuse = taches, on s’en passe. 1 petite proie de temps en temps. Racinaire : prudence, algues dans la sphaigne.",
     tentTips:
       "Tente tropicale highland dédiée, ou étage frais. COP4065 à 20–30 cm pour viser 200 µmol/m²/s (Carnivero bas-milieu ; leurs photos P85 montent à 500–600 sur des adultes — on n’y va pas d’emblée). Extracteur + hygro. Minor est la plus simple en tente.",
     traps:

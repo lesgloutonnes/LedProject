@@ -81,7 +81,7 @@
     }
     if (projet === "dormance" && set.indexOf("sarracenia") >= 0) {
       notes.push(
-        "Purpurea ssp. purpurea dehors. Alata / leucophylla / venosa / psittacina : châssis, pas le gel nu sous la pluie. Oreophila : montagne, châssis plus sec — ce n’est pas le golfe."
+        "Purpurea ssp. purpurea dehors. Alata / leucophylla / venosa / psittacina : châssis, pas le gel nu sous la pluie. Oreophila / alabamensis / jonesii : montagne, châssis plus sec — ce n’est pas le golfe."
       );
     }
     if (projet === "dormance" && set.indexOf("dionaea") >= 0) {
@@ -92,6 +92,16 @@
     if (projet === "dormance" && set.indexOf("pinguicula") >= 0) {
       notes.push(
         "Les mexicaines n’ont pas d’hiver à 5 °C : saison sèche, pas hibernacle. Vulgaris / grandiflora : hibernacle. Lusitanica : pas de bourgeon d’hiver à sécher."
+      );
+    }
+    if (projet === "tropicale" && set.indexOf("drosera") >= 0) {
+      notes.push(
+        "Capensis / spatulata / binata : 150–200 µmol/m²/s. Adelae / prolifera / schizandra (Queensland) : étage ombre 50–100 µmol/m²/s, HR haute — ce n’est pas capensis."
+      );
+    }
+    if (projet === "mixte" && set.indexOf("drosera") >= 0) {
+      notes.push(
+        "Drosera de soleil au plafond. Adelae / prolifera / schizandra : étage bas avec les Nepenthes, pas sous les COP4065 des spatulata."
       );
     }
     if (projet === "tropicale" && set.indexOf("cephalotus") >= 0) {

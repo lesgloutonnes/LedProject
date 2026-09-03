@@ -196,7 +196,7 @@ window.LG_NUTRIENTS = {
     how: [
       "Dionaea : 1 insecte vivant par piège, 1–2 pièges seulement. Congelé-décongelé : masses les poils sensitifs après la pose — une proie morte ne ferme pas le piège, il pourrit. Trop gros = pourriture. 2 pièges / mois sur un adulte, c’est déjà de la production.",
       "Drosera / Byblis / Drosophyllum : drosophiles, sciarides, pucerons — elles collent. Un foliar léger remplace souvent ce geste.",
-      "Sarracenia / Heliamphora / Cephalotus : 1–2 petites proies par urne mature, ou rien si foliar. Heliamphora : un peu d’eau RO dans l’urne en permanence (pas un suc, de l’eau). Pas d’Osmocote dans une Sarracenia (urne ouverte = algues).",
+      "Sarracenia / Cephalotus : 1–2 petites proies par urne mature, ou foliar 0,3 g/L. Heliamphora : eau RO dans l’urne en permanence + quelques ml à 0,3 g/L dedans 1×/mois (elle absorbe par le fluide, pas un suc). Foliar sur la cuticule Heliamphora = taches. Pas d’Osmocote dans une Sarracenia (urne ouverte = algues).",
       "Nepenthes : mêmes proies, ou 1 bille Osmocote optionnelle, ou quelques ml d’engrais orchidée ¼ dans l’urne — un seul mode à la fois.",
       "Pinguicula : micro-proies, pas de pince lourde. Foliar 0,3 g/L plus sûr.",
       "Utricularia : on ne nourrit pas à la pince ; la microfaune du mix suffit.",

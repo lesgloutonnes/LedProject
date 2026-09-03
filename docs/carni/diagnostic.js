@@ -279,7 +279,7 @@ window.LG_DIAGNOSTIC = {
           ],
         },
         "urn-sarr": {
-          question: "Vois-tu surtout des phyllodes (feuilles plates) ou des urnes de plus en plus petites ?",
+          question: "Sarracenia / Cephalotus : vois-tu surtout des phyllodes (feuilles plates) ? Heliamphora : des urnes avortées ou de plus en plus petites ?",
           answers: [
             {
               label: "Phyllodes / feuilles plates (Cephalotus, Sarracenia en fin de saison)",
@@ -289,6 +289,7 @@ window.LG_DIAGNOSTIC = {
                   "Cephalotus : un peu plus de PPFD (cible 120) et nuits fraîches, sans cuire le collet.",
                   "Sarracenia en septembre–octobre : phyllodes et urnes tardives normales, puis dormance.",
                   "Sarracenia en juin tout plat : barre trop loin ou pot minuscule.",
+                  "Heliamphora n’a pas de phyllode : une urne mal formée, c’est HR, drop nocturne ou PPFD, pas « l’automne des Sarracenia ».",
                 ],
               },
             },
@@ -298,8 +299,9 @@ window.LG_DIAGNOSTIC = {
                 title: "Pot, dormance manquée ou faim",
                 fix: [
                   "Rempote au débourrement en 2–3 L (Sarracenia adulte).",
-                  "Vérifie qu’un hiver froid a bien eu lieu l’an dernier.",
-                  "Foliar 0,3 g/L 1–2×/mois + DLI bas-milieu (dressées ~300 µmol/m²/s).",
+                  "Vérifie qu’un hiver froid a bien eu lieu l’an dernier — Sarracenia / Cephalotus, pas Heliamphora.",
+                  "Sarracenia : foliar 0,3 g/L 1–2×/mois + DLI bas-milieu (dressées ~300 µmol/m²/s).",
+                  "Heliamphora : pas de dormance à rattraper. Urnes chétives = HR, nuits trop chaudes, ou sphaigne morte. Engrais : quelques ml à 0,3 g/L dans l’eau de l’urne, pas un foliar.",
                 ],
               },
             },
@@ -597,7 +599,7 @@ window.LG_DIAGNOSTIC = {
               result: {
                 title: "Viabilité faible",
                 fix: [
-                  "Graines de Sarracenia / Dionaea : fraîcheur = tout. Lot de plus d’un an au tiède = souvent mort. Racheter l’année.",
+                  "Dionaea : plutôt l’année. Sarracenia au frigo sec : encore 2–3 ans. Au tiède, tout meurt vite. Nepenthes : semaines, pas ce germoir.",
                   "Un témoin au chaud hors frigo écarte une strat trop longue ou un frigo trop sec.",
                 ],
               },

@@ -21,7 +21,7 @@ Tous les `.js` sont du vanilla (IIFE-free, assignation `window.*`) pour un `<scr
 
 - *Dionaea*
 - *Sarracenia* dressées (dont *minor*) / basses (*purpurea*, *rosea*, *psittacina*)
-- *Drosera* tempérée (hibernacle) / capensis-tropicale (dont *binata*) / pygmée
+- *Drosera* tempérée (hibernacle) / capensis-tropicale (dont *binata* ; *adelae* / Queensland ≠ capensis) / pygmée
 - *Nepenthes* lowland / highland
 - *Pinguicula* tempérée / mexicaine
 - *Utricularia* terrestre / épiphyte
@@ -52,10 +52,10 @@ Champs : `id`, `latin`, `common`, `family`, `climate`, `dormancy` + `dormancyNot
 1. **PPFD par genre** — [Carnivero, *Genera Specific PPFD Recommendations*](https://www.carnivero.com/pages/grow-light-ppfd-recommendations) (expérience Florawave / serre ; viser le bas-milieu ; photopériode 12–14 h). Les `*` du tableau d’origine sont repris dans les fiches. *Byblis* n’y figure pas : fourchette indicative, jamais présentée comme une mesure Carnivero.
 2. **DLI** — calcul `PPFD × heures × 0,0036`. Min ≈ PPFD min × 12 h ; cible ≈ PPFD cible × 13 h ; max ≈ PPFD max × 14 h. Ordres de grandeur, pas un labo.
 3. **Nutrition** — Adamec L., 1997. *Mineral nutrition of carnivorous plants: a review.* Bot. Rev. 63: 273–299. Absorption foliaire réelle ; interaction pièges / racines. Pas une recette d’engrais : un cadre pour **ne pas** diaboliser un foliar dilué.
-4. **Foliar 0,3 g/L** — dose de travail FR/BE : orchidée équilibré au quart (ou Rain Mix). Maxsea 16-16-16 ¼ c. à café / gallon US est **la même force**, pas un sésame d’import. Jamais Miracle-Gro, jamais terreau fertilisé, racinaire déconseillé (algues).
+4. **Foliar 0,3 g/L** — dose de travail FR/BE : orchidée équilibré au quart (ou Rain Mix). Maxsea 16-16-16 ¼ c. à café / gallon US est **la même force**, pas un sésame d’import. Jamais Miracle-Gro, jamais terreau fertilisé, racinaire déconseillé (algues). *Heliamphora* : quelques ml dans l’eau de l’urne, pas un foliar sur la cuticule.
 5. **Eau** — RO / pluie / distillée / ZeroWater (TDS 000). **Brita non**. Seuil de travail : **TDS < 50 ppm** (≈ 100 µS/cm). Tourbe **non amendée** (pH 3,5–4,5) : la tourbe de rayon est souvent chaulée. **Pas de coco** (Na, K, EC), pas de terre de bruyère de jardinerie.
 6. **LED** — uniquement **Cosmorrow** (fiche constructeur COP 2023-09) : COP2065 / COP4065 Growing 6500 K ; COP20FS / COP40FS en appoint. 24 V, IP65. Pas de mélange 20 W + 40 W sur la même alim. COP40FS (70 cm) ≠ COP4065 (87 cm).
-7. **Dormance** — obligatoire vs optionnelle vs none, écrit sur chaque fiche. Tempérées FR/BE : **été dehors** (mai–septembre, acclimatation 7–14 j) puis **châssis / garage** l’hiver (0–10 °C, 3–4 mois). *Purpurea* ssp. *purpurea* et droséras natives : gel nu OK. Golfe et dionée : châssis, pas le balcon sous la pluie verglaçante. *S. oreophila* : montagne, pas golfe — hiver plus sec. Tente Cosmorrow 8–10 h = plan B si pas de froid. Tropicales : pas d’hiver inventé. *N. ventricosa* n’est pas une lowland.
+7. **Dormance** — obligatoire vs optionnelle vs none, écrit sur chaque fiche. Tempérées FR/BE : **été dehors** (mai–septembre, acclimatation 7–14 j) puis **châssis / garage** l’hiver (0–10 °C, 3–4 mois). *Purpurea* ssp. *purpurea* et droséras natives : gel nu OK. Golfe et dionée : châssis, pas le balcon sous la pluie verglaçante. *S. oreophila* / *alabamensis* / *jonesii* : montagne, pas golfe — hiver plus sec. Tente Cosmorrow 8–10 h = plan B si pas de froid. Tropicales : pas d’hiver inventé. *N. ventricosa* n’est pas une lowland. *D. adelae* n’est pas *capensis*.
 8. **Colorisation** — pas de pic 660 obligatoire. Génotype + DLI + nuits fraîches. Growing 6500 K suffit souvent.
 9. **Sécurité** — pas de conseils médicaux ; pas de chimie dangereuse ; engrais = dilutions horti nommées seulement ; nematodes / soufre horti cités comme options étiquette, jamais de recettes maison.
 
