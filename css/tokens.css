@@ -269,8 +269,7 @@ h3 {
         max(var(--page-gutter), env(safe-area-inset-right, 0px))
     )
   );
-  margin-left: max(var(--page-gutter), env(safe-area-inset-left, 0px));
-  margin-right: max(var(--page-gutter), env(safe-area-inset-right, 0px));
+  margin-inline: auto;
 }
 
 .mt-s4 {

@@ -317,6 +317,8 @@ htmlPages.forEach(function (file) {
 });
 assert.ok(fs.readFileSync("js/pages/outils.js", "utf8").indexOf("lambertien") < 0, "lambertien visiteur");
 assert.ok(fs.readFileSync("js/pages/assistant.js", "utf8").indexOf("comme favorite") < 0, "favorite visiteur");
+assert.ok(fs.readFileSync("js/pages/assistant.js", "utf8").indexOf("métier à la fois") < 0, "métier visiteur assistant");
+assert.ok(/margin-inline:\s*auto/.test(fs.readFileSync("css/tokens.css", "utf8")), "wrap centré");
 
 var storeSandbox = {
   window: {},

@@ -112,8 +112,9 @@
       })
       .join("");
     return (
-      "<h1>Quel projet dans la tente ?</h1><p class=\"lede\">Un métier à la fois. Tu pourras mixer plus tard, pas dans le premier kit.</p>" +
-      '<div class="choice-grid" role="radiogroup" aria-label="Type de projet">' +
+      "<h1>Quel projet dans la tente ?</h1><p class=\"lede\">Un projet à la fois pour le premier kit. Tu pourras mixer plus tard.</p>" +
+      (state.projet ? "" : '<p class="hint">Clique une carte pour continuer.</p>') +
+      '<div class="choice-grid choice-grid--projects" role="radiogroup" aria-label="Type de projet">' +
       cards +
       "</div>"
     );
@@ -431,10 +432,13 @@
     });
     root.querySelectorAll(".choice[data-id]").forEach(function (btn) {
       btn.addEventListener("click", function () {
-        state.projet = btn.getAttribute("data-id");
+        var id = btn.getAttribute("data-id");
+        state.projet = id;
         if (state.projet === "dormance" && state.contraintes) state.contraintes.dormance = true;
         persist();
         render();
+        var active = root.querySelector('.choice.is-active[data-id="' + id + '"]');
+        if (active) active.focus();
       });
     });
     root.querySelectorAll(".chip[data-id]").forEach(function (btn) {
