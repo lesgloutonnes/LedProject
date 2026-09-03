@@ -115,7 +115,7 @@ window.LG_FIXTURES = [
       ],
     },
     spectrumNote:
-      "Mix 2700 K / 4000 K / 6500 K + 660 nm (rouge profond PAR, pas du rouge lointain 730 nm). Fiche 2023-09 (alors COP20BL) : PPF 48, PPE 2,40. Révision 2024-01 : PPF 53, PPE 2,85. On retient la fourchette 48–53 µmol/s et 2,40–2,85 µmol/J. CCT équivalente ~3500 K. PPFD moy. constructeur 238 µmol/m²/s sur 60×40 à 15 cm.",
+      "Mix 2700 K / 4000 K / 6500 K + 660 nm (rouge profond PAR, pas du rouge lointain 730 nm). Blanc 2700 K = pompe 450 nm + luminophore ~610 nm, pas une diode orange. Fiche 2023-09 (alors COP20BL) : PPF 48, PPE 2,40. Révision 2024-01 : PPF 53, PPE 2,85. On retient la fourchette 48–53 µmol/s et 2,40–2,85 µmol/J. CCT équivalente ~3500 K. PPFD moy. constructeur 238 µmol/m²/s sur 60×40 à 15 cm.",
     ip: "IP65",
     voltage: 24,
     currentA: 0.78,
@@ -162,7 +162,7 @@ window.LG_FIXTURES = [
       ],
     },
     spectrumNote:
-      "Mix 2700 K / 4000 K / 6500 K + 660 nm (23 / 23 / 23 / 31 %). Rouge 660 nm = PAR, pas rouge lointain 730 nm. CCT ~3500 K. Mesure constructeur à 20 cm — pas 15 cm. Plus large (4,5 cm) que les Growing. PPFD moy. 240 µmol/m²/s sur 90×60 à 20 cm.",
+      "Mix 2700 K / 4000 K / 6500 K + 660 nm (23 / 23 / 23 / 31 %). Rouge 660 nm = PAR, pas rouge lointain 730 nm. Blanc 2700 K = pompe 450 nm + luminophore ~610 nm. CCT ~3500 K. Mesure constructeur à 20 cm — pas 15 cm. Plus large (4,5 cm) que les Growing. PPFD moy. 240 µmol/m²/s sur 90×60 à 20 cm.",
     ip: "IP65",
     voltage: 24,
     currentA: 1.56,

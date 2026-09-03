@@ -28,7 +28,7 @@ Cosmorrow **Growing 6500 K** (COP2065 / COP4065) est la barre de travail : blanc
 
 Non. Le rouge des carnivores, ce sont surtout des **anthocyanes** dont l’expression dépend du **DLI** (la dose de photons sur 24 h), du **génotype**, et souvent de **nuits un peu fraîches**. Une *Sarracenia flava* typique reste citron sous n’importe quel spectre horticole. Un ‘Red Dragon’ rougit sous du **6500 K** dès que tu lui donnes ~12–16 mol/m²/j et un automne.
 
-Le rouge photosynthétique (autour de 660 nm) **fait partie** de la photosynthèse, et un spectre « full » en contient. Il n’est pas un interrupteur à pigment. Le **rouge lointain** (~730 nm, far-red) est une autre bande : Cosmorrow n’en émet pas. Ce n’est **pas** de l’infra-rouge lointain (chaleur). Coller une barre « bloom » 2700 K ou un blurple Amazon au germoir, en revanche, **étiole** : trop peu de bleu relatif, mauvais usage.
+Le rouge photosynthétique (autour de 660 nm) **fait partie** de la photosynthèse, et un spectre « full » en contient. Il n’est pas un interrupteur à pigment. Le **rouge lointain** (~730 nm) est une autre bande : Cosmorrow n’en émet pas. Ce n’est **pas** de l’infra-rouge lointain (chaleur). Coller une barre « bloom » 2700 K ou un blurple Amazon au germoir, en revanche, **étiole** : trop peu de bleu relatif, mauvais usage.
 
 **Pratique Cosmorrow :** Growing 6500 K en base. Si tu veux plus de DLI sans descendre la barre sur les têtes, tu allonges à 16 h ou tu ajoutes un COP20FS **en appoint**, 20–30 cm. Un levier à la fois, 6–8 semaines, on juge les **nouvelles** feuilles. Voir le protocole `coloring`.
 
@@ -88,9 +88,11 @@ Dose de photons sur 24 h, en **mol/m²/j**.
 \mathrm{DLI} = \mathrm{PPFD} \times \text{heures} \times 0{,}0036
 \]
 
-Exemples : 200 µmol/m²/s pendant 14 h ≈ **10,1 mol/m²/j**. 250 µmol/m²/s pendant 16 h ≈ **14,4 mol/m²/j**.
+Exemples : 200 µmol/m²/s pendant 14 h ≈ **10,1 mol/m²/j**. 250 µmol/m²/s pendant 16 h ≈ **14,4 mol/m²/j**. 350 µmol/m²/s pendant 14 h ≈ **17,6 mol/m²/j**. 300 µmol/m²/s × 14 h ≈ **15,1 mol/m²/j** — ce n’est pas encore 16–20.
 
 Deux leviers pour le même DLI : plus près (plus de PPFD) ou plus longtemps (plus d’heures). Pour colorer, monter le DLI **dans** la fourchette du genre est le vrai geste ; un pic 660 sans DLI n’en est pas un. Au germoir, on reste plutôt 8–14 mol/m²/j. En colorisation de dressées, on peut viser 16–20 mol/m²/j **si** les feuilles ne blanchissent pas.
+
+Plein soleil d’été FR/BE : PPFD midi souvent **1 500–2 000 µmol/m²/s**, DLI d’un juin clair **~30–45 mol/m²/j**. D’où les 7–14 jours d’ombre / matin seulement en sortant de tente (~150–250 µmol/m²/s, ~8–13 mol/m²/j).
 
 Le DLI ne remplace pas la **photopériode** biologique : 6 h à très haut PPFD n’est pas un hiver de dionée « compensé ».
 

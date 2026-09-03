@@ -26,7 +26,7 @@
       id: "ppf",
       term: "PPF",
       unit: UNITS.ppf,
-      body: "Flux de photons photosynthétiques : photons 400–700 nm émis par la barre, par seconde. C’est le réservoir. Deux PPF s’additionnent. Ce n’est pas des lumens.",
+      body: "Flux de photons photosynthétiques : photons 400–700 nm émis par la barre, par seconde. C’est le réservoir. Deux PPF s’additionnent. Ce ne sont pas des lumens.",
     },
     {
       id: "ppfd",

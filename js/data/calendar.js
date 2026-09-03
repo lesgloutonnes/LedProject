@@ -54,7 +54,7 @@ window.LG_CALENDAR = {
         "Installer / réhausser les COP4065 à 15–25 cm des têtes.",
         "Leaf pullings Dionaea / Drosera / Pinguicula mexicaine : fenêtre idéale.",
         "Éclaircir les semis de février, premier repiquage si 4–6 feuilles.",
-        "Gelées derrière : Sarracenia et Dionaea adultes dehors (plein soleil, bac de pluie) après 7–14 jours d’acclimatation. La tente garde germoir, tropicales, et l’appartement sans extérieur.",
+        "Gelées derrière : Sarracenia et Dionaea adultes dehors (plein soleil, bac de pluie) après 7–14 jours d’acclimatation (tente ~200 µmol/m²/s vs soleil ~1 500–2 000 µmol/m²/s). La tente garde germoir, tropicales, et l’appartement sans extérieur.",
         "Sciarides : la chaleur revient, pièges jaunes, surface qui ressuye.",
       ],
       notes: "En FR/BE, l’été des tempérées se joue dehors. On photographie les clones maintenant, avant de pousser le DLI en tente sur ce qui reste indoor.",

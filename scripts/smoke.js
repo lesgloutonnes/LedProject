@@ -33,6 +33,11 @@ assert.ok(/à la canopée/.test(ppfdG.body), "PPFD : densité à la canopée");
 var cctG = ctx.LgFmt.glossary.find(function (g) { return g.id === "cct"; });
 assert.ok(/rouge lointain/.test(cctG.body), "660 nm ≠ rouge lointain 730 nm");
 assert.ok(!/infra-?rouge lointain/i.test(cctG.body));
+var ppfG = ctx.LgFmt.glossary.find(function (g) { return g.id === "ppf"; });
+assert.ok(/ne sont pas des lumens/.test(ppfG.body), "PPF : ce ne sont pas des lumens");
+assert.equal(Math.round(ctx.LG_OPTICS.dli(300, 14) * 10) / 10, 15.1);
+assert.equal(Math.round(ctx.LG_OPTICS.dli(350, 14) * 10) / 10, 17.6);
+assert.equal(Math.round(ctx.LG_OPTICS.dli(400, 14) * 10) / 10, 20.2);
 
 var fs20 = ctx.LG_FIXTURES.find(function (f) { return f.sku === "COP20FS"; });
 var fs40 = ctx.LG_FIXTURES.find(function (f) { return f.sku === "COP40FS"; });
@@ -108,6 +113,27 @@ var cap = ctx.LG_SPECIES.find(function (s) { return s.id === "drosera-capensis";
 assert.ok(/binata/i.test(cap.latin), "D. binata avec les capensis, pas l’hibernacle");
 var dtemp = ctx.LG_SPECIES.find(function (s) { return s.id === "drosera-temperate"; });
 assert.ok(!/\bbinata\b/i.test(dtemp.latin), "binata hors latin tempérées");
+assert.ok(/≥ 150 µmol\/m²\/s/.test(dtemp.tentTips), "rotundifolia : PPFD ≥ 150 avec unité");
+assert.ok(!/16–20 mol\/m²\/j \(300/.test(sarr.redColorNotes), "DLI 16–20 ≠ 300 µmol/m²/s × 14 h");
+assert.ok(/350–400 µmol\/m²\/s × 14 h/.test(sarr.redColorNotes), "colorisation dressées : 350–400 × 14 h");
+assert.ok(/1 500–2 000 µmol\/m²\/s/.test(dion.tentTips), "dionée : saut PPFD tente → soleil");
+var pygmy = ctx.LG_SPECIES.find(function (s) { return s.id === "drosera-pygmy"; });
+assert.ok(/150–250 µmol\/m²\/s/.test(pygmy.seedlingNotes), "gemmae : PPFD avec unité");
+assert.ok(/200–300 µmol\/m²\/s/.test(pygmy.redColorNotes), "pygmées : PPFD de colorisation chiffré");
+assert.ok(/100–400 µmol\/m²\/s/.test(utric.warnings.join(" ")), "utriculaires : fourchette Carnivero avec unité");
+assert.ok(/luminophore/.test(fs20.spectrumNote) && /luminophore/.test(fs40.spectrumNote), "FS : blanc 2700 K = luminophore");
+var prodOutdoor = prod.steps.find(function (st) { return /Été FR\/BE/.test(st.title); });
+assert.ok(prodOutdoor);
+assert.ok(/8–13 mol\/m²\/j/.test(prodOutdoor.body) && /30–45 mol\/m²\/j/.test(prodOutdoor.body), "été : DLI tente vs soleil");
+assert.ok(/1 500–2 000 µmol\/m²\/s/.test(prodOutdoor.body), "été : PPFD soleil chiffré");
+ctx.LG_SPECIES.forEach(function (sp) {
+  var dMin = Math.round(ctx.LG_OPTICS.dli(sp.ppfd[0], 12) * 10) / 10;
+  var dTgt = Math.round(ctx.LG_OPTICS.dli(sp.ppfd[1], 13) * 10) / 10;
+  var dMax = Math.round(ctx.LG_OPTICS.dli(sp.ppfd[2], 14) * 10) / 10;
+  assert.equal(sp.dli[0], dMin, sp.id + " DLI min = PPFD min × 12 h");
+  assert.equal(sp.dli[1], dTgt, sp.id + " DLI cible = PPFD cible × 13 h");
+  assert.equal(sp.dli[2], dMax, sp.id + " DLI max = PPFD max × 14 h");
+});
 
 var ceph = ctx.LG_SPECIES.find(function (s) { return s.id === "cephalotus"; });
 assert.ok(/Céphalote/.test(ceph.common), "Céphalote, pas Céphatote");
@@ -175,6 +201,7 @@ assert.ok(!/infra-rouge lointain/i.test(apropos), "far-red ≠ infra-rouge loint
 assert.ok(/rouge lointain/i.test(apropos), "660 nm ≠ rouge lointain 730 nm");
 assert.ok(/feuillage/i.test(apropos), "PPFD au feuillage, pas « canopée »");
 assert.ok(!/far-?red/i.test(apropos), "copy public : rouge lointain, pas far-red");
+assert.ok(!/far-?red/i.test(fs.readFileSync("docs/carni/copy.md", "utf8")), "copy horti : rouge lointain, pas far-red");
 assert.ok(!/PPF\s*:\s*flux/i.test(apropos), "PPF ≠ flux (confusion lumens)");
 assert.ok(/PAR est une bande/.test(apropos), "PAR = bande 400–700 nm, pas un chiffre");
 assert.ok(/rouge PAR/.test(apropos), "660 nm = rouge PAR");

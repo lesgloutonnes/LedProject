@@ -28,7 +28,7 @@ window.LG_SPECIES = [
     fertilizer:
       "Foliar 0,3 g/L (orchidée ¼ ou Maxsea 16-16-16) 1–2×/mois en saison, feuillage sec, matin. Proies 1–2 pièges / mois suffisent souvent. Jamais Miracle-Gro, jamais terreau fertilisé, jamais d’engrais dans le bac.",
     tentTips:
-      "Étage haut, 15–20 cm sous COP4065 Growing 6500 K (ou COP2065 sur une étagère 60×40). La dionée veut du photon et de l’air, pas une jungle à 90 % HR. Extraire pour rester ~50–60 %. Viser 200 µmol/m²/s, pas 400 d’emblée. Pot 8–10 cm, légèrement à l’étroit : un 3 L n’accélère pas un rhizome de 2 cm. En FR/BE, un adulte va dehors mai–septembre (soleil, pluie, proies) après 7–14 jours d’acclimatation : une plante de tente grille en plein juin. La tente est le plan appartement / germoir, pas un substitut d’été.",
+      "Étage haut, 15–20 cm sous COP4065 Growing 6500 K (ou COP2065 sur une étagère 60×40). La dionée veut du photon et de l’air, pas une jungle à 90 % HR. Extraire pour rester ~50–60 %. Viser 200 µmol/m²/s, pas 400 d’emblée. Pot 8–10 cm, légèrement à l’étroit : un 3 L n’accélère pas un rhizome de 2 cm. En FR/BE, un adulte va dehors mai–septembre (soleil, pluie, proies) après 7–14 jours d’acclimatation : tente ~200 µmol/m²/s vs soleil de juin ~1 500–2 000 µmol/m²/s — une plante sortie de tente grille en plein midi. La tente est le plan appartement / germoir, pas un substitut d’été.",
     traps:
       "Un insecte vivant par piège, 1–2 pièges par mois. Congelé-décongelé : seulement si tu masses les poils sensitifs après la pose — une proie morte ne déclenche pas la fermeture étanche, le piège pourrit. Pas de viande hachée, fromage, œuf. Un piège ne s’ouvre qu’une poignée de fois : ne pas « jouer » avec. Après digestion, le piège noircit : on le laisse, on ne coupe pas à vif.",
     seedlingNotes:
@@ -68,7 +68,7 @@ window.LG_SPECIES = [
     fertilizer:
       "Foliar 0,3 g/L 1–2×/mois sur urnes et feuillage. Osmocote dans l’urne : on s’en passe (urne ouverte = sel + algues). Racinaire : non.",
     tentTips:
-      "Toujours l’étage le plus haut, au plus près des COP4065 (15–20 cm du sommet des urnes, pas du pot). Deux COP4065 sur 120×60 tiennent des adultes si tu les espaces sur la profondeur. Les urnes qui touchent la barre grillent : laisse 10 cm de marge quand elles poussent. Mai–septembre en FR/BE : les adultes dressées font mieux dehors (plein soleil, bac de pluie) que sous 26 °C de tente, après 7–14 jours d’acclimatation ; on rentre le germoir et les tropicales.",
+      "Toujours l’étage le plus haut, au plus près des COP4065 (15–20 cm du sommet des urnes, pas du pot). Deux COP4065 sur 120×60 tiennent des adultes si tu les espaces sur la profondeur. Les urnes qui touchent la barre grillent : laisse 10 cm de marge quand elles poussent. Mai–septembre en FR/BE : les adultes dressées font mieux dehors (plein soleil, bac de pluie) que sous 26 °C de tente, après 7–14 jours d’acclimatation (tente ~200–300 µmol/m²/s vs soleil ~1 500–2 000 µmol/m²/s) ; on rentre le germoir et les tropicales.",
     traps:
       "Les urnes chassent seules si tu ouvres la tente. Sinon : 1–2 mouches par urne mature et par mois, ou un foliar 0,3 g/L. Ne pas remplir les urnes de bouillon ni d’Osmocote.",
     seedlingNotes:
@@ -76,7 +76,7 @@ window.LG_SPECIES = [
     cuttingNotes:
       "Division de rhizome au débourrement (mars–avril) : un morceau avec au moins un point de croissance. Bouture de rhizome sans feuille possible mais plus lente. Pas de bouture de feuille utile.",
     redColorNotes:
-      "Leucophylla, flava var. atropurpurea, hybrides ‘Adrian Slack’ : le DLI fait plus que le spectre. 16–20 mol/m²/j (300 µmol/m²/s × 14–16 h) colore ; 8 mol/m²/j reste vert. Growing 6500 K suffit. FS en appoint si tu veux pousser le rouge sans monter le PPFD. Génotype d’abord : une flava verte ne devient pas cramoisie.",
+      "Leucophylla, flava var. atropurpurea, hybrides ‘Adrian Slack’ : le DLI fait plus que le spectre. 16–20 mol/m²/j colore (ex. 350–400 µmol/m²/s × 14 h ≈ 18–20 mol/m²/j). 300 µmol/m²/s × 14 h ≈ 15 mol/m²/j, encore juste ; 8 mol/m²/j reste vert. Growing 6500 K suffit. FS en appoint si tu veux pousser le rouge sans monter le PPFD. Génotype d’abord : une flava verte ne devient pas cramoisie.",
     warnings: [
       "Dormance obligatoire. Une Sarracenia « toujours en pousse » s’affaiblit.",
       "Pots trop étroits = urnes chétives. Viser 2–3 L larges dès l’ado, pas un tube profond.",
@@ -146,7 +146,7 @@ window.LG_SPECIES = [
     fertilizer:
       "Foliar 0,3 g/L 1×/mois suffit : le mucilage capte déjà. Trop d’engrais = mucilage qui « fond » et algues sur le terreau.",
     tentTips:
-      "Étage haut ou médian, 15–25 cm sous COP4065. Les rotundifolia restent basses : tu peux les glisser au pied des Sarracenia si le PPFD y reste ≥ 150. D. binata, si tu en as : tiges hautes, pas d’hibernacle, plutôt l’étage capensis.",
+      "Étage haut ou médian, 15–25 cm sous COP4065. Les rotundifolia restent basses : tu peux les glisser au pied des Sarracenia si le PPFD y reste ≥ 150 µmol/m²/s. D. binata, si tu en as : tiges hautes, pas d’hibernacle, plutôt l’étage capensis.",
     traps:
       "Le mucilage fait le travail. Sciarides de la tente = buffet. Complément : drosophiles 1×/mois, ou foliar. Pas de viande.",
     seedlingNotes:
@@ -223,9 +223,9 @@ window.LG_SPECIES = [
       "Premier plan, 15–20 cm sous COP2065 ou COP4065. Elles tiennent dans 3 cm de hauteur : une tablette basse dédiée évite qu’on les oublie sous les urnes. Air sec-modéré, pas de brumisation lourde.",
     traps: "Mucilage fin. Micro-proies (collemboles, sciarides). Rien de plus.",
     seedlingNotes:
-      "On sème rarement des graines : on sème les gemmae. Indoor FR/BE, elles partent souvent à l’automne (jours qui raccourcissent) : on sème tout de suite — un gemma qui attend au chaud pourrit. Reliquat au frigo, semis en fin d’hiver. Gemmae en surface, mix minéral juste humide, 15–22 °C, 12 h. Levée 1–3 semaines. Graines dures : fumée de prairie ou GA-3 1000 ppm 24 h — lot dédié, pas le germoir Sarracenia.",
+      "On sème rarement des graines : on sème les gemmae. Indoor FR/BE, elles partent souvent à l’automne (jours qui raccourcissent) : on sème tout de suite — un gemma qui attend au chaud pourrit. Reliquat au frigo, semis en fin d’hiver. Gemmae en surface, mix minéral juste humide, 15–22 °C, 12 h, 150–250 µmol/m²/s (COP2065 à 15–20 cm). Levée 1–3 semaines. Graines dures : fumée de prairie ou GA-3 1000 ppm 24 h — lot dédié, pas le germoir Sarracenia.",
     cuttingNotes: "Gemmae = bouture naturelle. Pas de leaf pulling classique.",
-    redColorNotes: "PPFD élevé + nuits fraîches = rosettes compactes et rouges. Trop d’HR et trop peu de lumière = étiolement vert, gemmae molles.",
+    redColorNotes: "200–300 µmol/m²/s + nuits fraîches = rosettes compactes et rouges. Sous 100 µmol/m²/s : étiolement vert, gemmae molles.",
     warnings: [
       "Ne pas les cultiver comme des capensis (bac d’eau + jungle).",
       "Les gemmae pourrissent si elles baignent.",
@@ -407,7 +407,7 @@ window.LG_SPECIES = [
     redColorNotes: "Peu concernées. La « couleur » se joue sur les fleurs (sandersonii).",
     warnings: [
       "Envahissantes (subulata). Un bac dédié si tu tiens à tes semis de Sarracenia.",
-      "PPFD Carnivero tempérées (*) 100–400 : rester bas-milieu.",
+      "PPFD Carnivero tempérées (*) 100–400 µmol/m²/s : rester bas-milieu.",
     ],
     projects: ["production", "mixed", "tropical"],
   },
