@@ -54,6 +54,12 @@ var fx = ctx.TOURBIERE_FIXTURES.find(function (f) { return f.sku === "COP4065"; 
 var sim = ctx.TOURBIERE_OPTICS.simulatePpfd(fx, tent, 15, 100, { layout: "parallel-depth", count: 2, cols: 24, rows: 12 });
 assert.ok(sim.avg > 50 && sim.avg < 800, "PPFD moyen raisonnable: " + sim.avg);
 
+var kitIds = {};
+ctx.TOURBIERE_KITS.forEach(function (k) {
+  if (kitIds[k.id]) throw new Error("kit id dupliqué: " + k.id);
+  kitIds[k.id] = true;
+});
+
 ctx.TOURBIERE_DIAGNOSTIC.trees.forEach(function (tree) {
   if (!tree.nodes[tree.startId]) {
     throw new Error("startId manquant " + tree.id + " " + tree.startId);
