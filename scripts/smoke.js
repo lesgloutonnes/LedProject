@@ -70,6 +70,37 @@ assert.ok(!/pots profonds 15/.test(sarr.substrate));
 var dorm = ctx.LG_PROTOCOLS.find(function (p) { return p.id === "dormancy"; });
 assert.ok(/dehors/i.test(dorm.summary), "dormance : dehors d’abord");
 
+var low = ctx.LG_SPECIES.find(function (s) { return s.id === "nepenthes-lowland"; });
+assert.ok(!/ventricosa/i.test(low.latin), "ventricosa n’est pas une lowland");
+assert.ok(/gracilis/i.test(low.latin));
+
+var dion = ctx.LG_SPECIES.find(function (s) { return s.id === "dionaea"; });
+assert.ok(/poils sensitifs/i.test(dion.traps), "dionée : massage des poils si proie morte");
+assert.ok(/mai–septembre|mai-septembre/i.test(dion.tentTips), "dionée : été dehors FR/BE");
+
+var prod = ctx.LG_PROTOCOLS.find(function (p) { return p.id === "production"; });
+assert.ok(/dehors/i.test(prod.summary), "production : été dehors");
+
+var never = ctx.LG_NUTRIENTS.fertilizers.never.join(" ");
+assert.ok(/coco/i.test(never), "coco interdit");
+assert.ok(/bruyère/i.test(never), "terre de bruyère rayon interdite");
+
+var ping = ctx.LG_SPECIES.find(function (s) { return s.id === "pinguicula-mexican"; });
+assert.ok(/gypse/i.test(ping.substrate), "gypsicola : gypse, pas tourbe");
+
+var utric = ctx.LG_SPECIES.find(function (s) { return s.id === "utricularia-terrestrial"; });
+assert.notEqual(utric.climate, "temperate", "sandersonii/livida ne sont pas des tempérées à 5 °C");
+
+var dros = ctx.LG_SPECIES.find(function (s) { return s.id === "drosophyllum"; });
+assert.ok(!/terre de bruyère non fertilisée/i.test(dros.substrate));
+assert.ok(/sable siliceux 70/i.test(dros.substrate));
+
+var pou = ctx.LG_DIAGNOSTIC.trees.find(function (t) { return t.id === "pourriture"; });
+assert.ok(
+  pou.nodes["pou-1"].answers.some(function (a) { return /repas/i.test(a.label); }),
+  "diagnostic : piège qui pourrit après un repas"
+);
+
 var r = ctx.LgMatch.matchKit({
   projet: "germoir",
   tenteId: "tent-120x60",

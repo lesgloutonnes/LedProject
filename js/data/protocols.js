@@ -27,9 +27,10 @@ window.LG_PROTOCOLS = [
     steps: [
       {
         title: "Trier les lots et la cold strat",
-        body: "Sarracenia, Dionaea, Drosera tempérées (rotundifolia, intermedia, filiformis) : 4–8 semaines au frigo (4 °C) dans un sachet de papier ou de tourbe juste humide — pas un Tupperware étanche qui moisit. Capensis, spatulata, aliciae, Byblis liniflora : pas de froid, semis direct. Graines de Sarracenia / Dionaea : l’année de récolte. Note le nom et la date au crayon.",
+        body: "Sarracenia : 6–8 semaines au frigo (4 °C) — 4 semaines, c’est souvent trop court pour flava / leucophylla. Dionaea et Drosera tempérées (rotundifolia, intermedia, filiformis) : 4–6 semaines. Sachet de papier ou tourbe juste humide, pas un Tupperware étanche qui moisit. Capensis, spatulata, aliciae, Byblis liniflora : pas de froid, semis direct. D. binata : pas de cold strat type rotundifolia. Graines de Sarracenia / Dionaea : l’année de récolte. Note le nom et la date au crayon.",
         checklist: [
           "Lots tempérés au frigo, datés, pas hermétiques",
+          "Sarracenia : 6–8 semaines (pas 4)",
           "Lots tropicaux à température, prêts à semer",
           "Sarracenia / Dionaea : lot de l’année (viabilité)",
           "Pas de congélateur (sauf protocole graine très spécifique, hors germoir standard)",
@@ -180,7 +181,7 @@ window.LG_PROTOCOLS = [
     title: "Production d’adultes",
     kicker: "Photons stables · pots larges · 0,3 g/L",
     summary:
-      "La tente n’est plus un germoir : on donne de la hauteur aux urnes, de la place aux rhizomes, un PPFD dans le bas-milieu Carnivero, et un rythme de nourriture / foliar. Cosmorrow Growing en plafond, FS seulement si tu manques de DLI sans vouloir descendre les barres.",
+      "La tente n’est plus un germoir : hauteur d’urnes, pots larges, PPFD bas-milieu Carnivero, foliar 0,3 g/L. En FR/BE, les adultes tempérés (Sarracenia, Dionaea) font une meilleure saison dehors mai–septembre (soleil, pluie, proies) : la tente garde tropicales, germoir, et l’appartement sans extérieur. Cosmorrow Growing en plafond, FS seulement si tu manques de DLI sans descendre les barres.",
     duration: "Saison de croissance 7–8 mois (tempérées) ou continu (tropicales)",
     difficulty: 1,
     climate:
@@ -209,10 +210,10 @@ window.LG_PROTOCOLS = [
       },
       {
         title: "Rempoter juste",
-        body: "Fin d’hiver / débourrement pour les tempérées ; n’importe quand hors canicule pour les tropicales. Rhizome Sarracenia à fleur de mix, point de croissance libre. Dionaea : ne pas enterrer le collet. Nepenthes : collet au niveau, mix aéré, pas de tourbe brique.",
+        body: "Fin d’hiver / débourrement pour les tempérées ; n’importe quand hors canicule pour les tropicales. Rhizome Sarracenia à fleur de mix, point de croissance libre, pot large : il avance à l’horizontale et bute en 12–24 mois si le pot est étroit (la tourbe s’affaisse aussi). Dionaea : ne pas enterrer le collet. Nepenthes : collet au niveau, mix aéré, pas de tourbe brique, pas de coco.",
         checklist: [
-          "Mix non fertilisé, rincé",
-          "Pots à la taille des racines : larges pour Sarracenia, pas « 10 L pour plus tard »",
+          "Mix non fertilisé, rincé — pas de coco, pas de terre de bruyère de rayon",
+          "Pots larges pour Sarracenia (2–3 L), pas un tube, pas « 10 L pour plus tard »",
           "Eau RO dès le premier arrosage",
         ],
       },
@@ -227,11 +228,20 @@ window.LG_PROTOCOLS = [
       },
       {
         title: "Nourrir sans gaver",
-        body: "Adamec 1997 : le foliar et les proies stimulent aussi l’absorption racinaire. 1–2 repas / mois ou un foliar 0,3 g/L, pas les deux tous les 3 jours. Pièges Dionaea : 1 insecte, 1–2 pièges. Urnes Nepenthes : 1–2 proies ou 1 bille Osmocote — pas les Sarracenia.",
+        body: "Adamec 1997 : le foliar et les proies stimulent aussi l’absorption racinaire. 1–2 repas / mois ou un foliar 0,3 g/L, pas les deux tous les 3 jours. Pièges Dionaea : 1 insecte vivant, 1–2 pièges ; congelé seulement si tu masses les poils sensitifs (sinon le piège ne scelle pas et pourrit). Urnes Nepenthes : 1–2 proies ou 1 bille Osmocote — pas les Sarracenia.",
         checklist: [
           "Calendrier foliar 1–2×/mois, 0,3 g/L pesé",
-          "Pas de viande hachée",
-          "Pas d’engrais dans le bac d’eau",
+          "Dionaea : proie vivante, ou massage des poils si décongelée",
+          "Pas de viande hachée, pas d’engrais dans le bac",
+        ],
+      },
+      {
+        title: "Été FR/BE : dehors si tu as le soleil",
+        body: "Sarracenia et Dionaea adultes : plein soleil, bac d’eau de pluie, mai–septembre. C’est le geste de pépinière — DLI, proies, puis dormance naturelle. La tente garde Nepenthes, Heliamphora, germoir, Cephalotus, et l’appartement sans extérieur. On ne « sort pas les tropicales pour leur donner de l’air » : un lowland au vent sec de juin grille.",
+        checklist: [
+          "Adultes tempérés dehors dès que les gelées sont derrière",
+          "Tropicales et semis restent sous Cosmorrow",
+          "Rentrée progressive en septembre (protocole dormance)",
         ],
       },
       {
@@ -409,7 +419,7 @@ window.LG_PROTOCOLS = [
       note: "Cibles : Nepenthes 80–100 µmol, Heliamphora 200, Cephalotus 120, capensis 180. Le plafond Sarracenia 300 µmol n’est pas un objectif tropical.",
     },
     water:
-      "Pas de bac unique type tourbière. Arrosage RO du mix, soucoupes vidées. Heliamphora : un peu d’eau RO dans l’urne. Cephalotus : ressuyage. Stock d’eau à température de pièce pour les lowland, plus frais pour highland.",
+      "Pas de bac unique type tourbière. Arrosage RO du mix, soucoupes vidées. Heliamphora : un peu d’eau RO dans l’urne en permanence (pas un suc digestif : de l’eau). Cephalotus : ressuyage, étage frais, pas la jungle 30 °C. Stock d’eau à température de pièce pour les lowland, plus frais pour highland.",
     substrate:
       "Nepenthes / Heliamphora / Utric épiphytes : LFS + écorce + perlite. Cephalotus : tourbe/perlite/sable aéré. Capensis / Byblis : tourbe/perlite 50/50. Sphaigne vivante : on la change quand elle brunit en anaérobie.",
     fertilizer:
@@ -417,7 +427,7 @@ window.LG_PROTOCOLS = [
     steps: [
       {
         title: "Choisir lowland ou highland",
-        body: "Deux étiquettes, deux tentes, ou on se limite aux « easy » (ventricosa, capensis, alata hybrids). Bicalcarata à côté d’hamata dans 1 m³ : l’un des deux souffre. Note jour/nuit cibles sur un papier collé à la tente.",
+        body: "Deux étiquettes, deux tentes, ou on se limite aux « easy » (ventricosa et intermédiaires, capensis, hybrides alata/graciliflora). Ventricosa n’est pas une lowland : elle veut un drop nocturne, elle pardonne une mixte, elle cuit moins vite qu’hamata mais elle n’est pas bicalcarata. Bicalcarata à côté d’hamata dans 1 m³ : l’un des deux souffre. Note jour/nuit cibles sur un papier collé à la tente.",
         checklist: [
           "Régime thermique unique écrit",
           "Liste de genres compatibles",

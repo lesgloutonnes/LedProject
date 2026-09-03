@@ -10,7 +10,7 @@ Une tente de carnivores n’est pas un paludarium Instagram ni un clone de grow 
 
 Les Gloutonnes classe les plantes par **ce qu’elles demandent sous Cosmorrow**, pas par la beauté des catalogues.
 
-**Les tempérées à dormance obligatoire** — *Dionaea muscipula*, les *Sarracenia*, les *Drosera* d’hémisphère nord, les *Pinguicula* tempérées, *Darlingtonia* — poussent fort 7–8 mois, puis elles ont besoin de **3–4 mois à 0–10 °C**, 8–10 h de lumière faible, substrat juste humide. En FR/BE, un châssis ou un garage hors gel fait mieux qu’une tente à 20 °C. Sans ça, elles « marchent » encore une saison et s’épuisent. Ce n’est pas du folklore de forum : c’est leur phénologie.
+**Les tempérées à dormance obligatoire** — *Dionaea muscipula*, les *Sarracenia*, les *Drosera* d’hémisphère nord, les *Pinguicula* tempérées, *Darlingtonia* — poussent fort 7–8 mois, puis elles ont besoin de **3–4 mois à 0–10 °C**, 8–10 h de lumière faible, substrat juste humide. En FR/BE, un adulte hors gel **va dehors mai–septembre** (soleil, pluie, proies), puis châssis / garage l’hiver : ça bat une tente à 20 °C. Sans ça, elles « marchent » encore une saison et s’épuisent. Ce n’est pas du folklore de forum : c’est leur phénologie.
 
 **Les tropicales** — *Nepenthes*, *Heliamphora*, *Drosera capensis* et alliées, *Byblis* annuelles, *Utricularia* épiphytes — **n’ont pas d’hiver**. Tu leur dois 12–14 h toute l’année, une HR 60–80 % avec de l’air qui bouge, et un PPFD souvent **plus bas** que celui d’une dionée. Les coller sous le plafond des Sarracenia, c’est la brûlure, pas la générosité.
 
