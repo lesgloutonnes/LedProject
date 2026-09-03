@@ -200,8 +200,8 @@ page(
         <div class="card-grid">
           <article class="card"><h3>Le blurple Amazon</h3><p>Sans PPF publié, ce n’est pas une fiche, c’est un listing. Cosmorrow publie µmol/s et µmol/J.</p></article>
           <article class="card"><h3>Le 660 nm magique</h3><p>Le rouge des Sarracenia suit le DLI et le génotype. Growing 6500 K compacte mieux un germoir qu’un spectre floraison.</p></article>
-          <article class="card"><h3>L’engrais « plantes vertes »</h3><p>Terreau fertilisé et Miracle-Gro tuent les racines. Maxsea ¼ en foliar, eau osmose, tourbe blonde.</p></article>
-          <article class="card"><h3>La tente chaude toute l’année pour une dionée</h3><p>Dormance 3–4 mois, 5–10 °C, 8–10 h. La LED ne fait pas le froid.</p></article>
+          <article class="card"><h3>L’engrais « plantes vertes »</h3><p>Terreau fertilisé et Miracle-Gro tuent les racines. Foliar 0,3 g/L d’un orchidée propre, eau osmose, tourbe blonde non amendée.</p></article>
+          <article class="card"><h3>La tente chaude toute l’année pour une dionée</h3><p>Dormance 3–4 mois, 0–10 °C. En FR/BE le dehors / garage gagne. La LED ne fait pas le froid.</p></article>
         </div>
       </section>
 """,
@@ -302,7 +302,7 @@ page(
       <header class="page-hero stack">
         <p class="kicker">Métiers de tente</p>
         <h1>Un protocole par job, pas un curseur unique.</h1>
-        <p class="lede">Semis, boutures, adultes, rouge, étages, jungle ou hiver : la même Cosmorrow, des hauteurs et des heures différentes.</p>
+        <p class="lede">Semis, boutures, adultes, rouge, étages, jungle ou hiver : la même Cosmorrow, des hauteurs et des heures différentes. La dormance des tempérées se joue au froid, pas au spectre.</p>
       </header>
       <noscript class="callout is-warn"><p>Activez JavaScript pour les protocoles. Le CDC est dans le README.</p></noscript>
       <nav class="anchor-nav" id="protocol-nav" aria-label="Protocoles"></nav>
@@ -372,13 +372,13 @@ page(
 
 page(
     "nutriments.html",
-    "Eau, tourbe, Maxsea — Les Gloutonnes · Tourbière",
-    "Eau osmose ou pluie, tourbe blonde, Maxsea 16-16-16 au quart, proies 1–2 fois par mois. Pas de Miracle-Gro.",
+    "Eau, tourbe, foliar 0,3 g/L — Les Gloutonnes · Tourbière",
+    "Eau osmose ou pluie, tourbe blonde non amendée, foliar 0,3 g/L (orchidée ¼ ou Maxsea), proies 1–2 fois par mois. Pas de Miracle-Gro.",
     """
       <header class="page-hero stack">
-        <p class="kicker">TDS &lt; 50 ppm</p>
+        <p class="kicker">TDS &lt; 50 ppm · 0,3 g/L</p>
         <h1>L’eau pauvre n’est pas négociable.</h1>
-        <p class="lede">Osmose, pluie, distillée, ZeroWater. Brita ne suffit pas. Le terreau « plantes vertes » est un poison. Le foliar Maxsea ¼ est un outil, pas un dogme.</p>
+        <p class="lede">Osmose, pluie, distillée, ZeroWater. Brita ne suffit pas. La tourbe de rayon est souvent chaulée. Le foliar, c’est 0,3 g/L d’un orchidée propre — Maxsea n’est qu’une recette US du même ordre.</p>
       </header>
       <section class="section">
         <h2>Eau autorisée</h2>
@@ -400,6 +400,10 @@ page(
       <section class="section">
         <h2>Proies</h2>
         <article class="card" id="feeding"></article>
+      </section>
+      <section class="section">
+        <h2>Ravageurs</h2>
+        <article class="card stack" id="pests"></article>
       </section>
 """,
     """
@@ -475,7 +479,7 @@ page(
 page(
     "diagnostic.html",
     "Diagnostic étiolement / brûlure — Les Gloutonnes · Tourbière",
-    "Arbre de décisions : étiolement, brûlure, mucilage, urnes, pourriture, algues, sciarides, rouge, semis, boutures.",
+    "Arbre de décisions : étiolement, brûlure, mucilage, urnes, pourriture, algues, sciarides, ravageurs, dormance manquée, rouge, semis, boutures.",
     """
       <header class="page-hero stack">
         <p class="kicker">Une question à la fois</p>
@@ -495,7 +499,7 @@ page(
 page(
     "a-propos.html",
     "Sources et méthode — Les Gloutonnes · Tourbière",
-    "Méthode Tourbière : Cosmorrow only, PPFD Carnivero, fiche Secret Jardin 2023-09, Maxsea / California Carnivores. Pas de tracking.",
+    "Méthode Tourbière : Cosmorrow only, PPFD Carnivero, fiche Secret Jardin 2023-09, foliar 0,3 g/L. Pas de tracking.",
     """
       <header class="page-hero stack">
         <p class="kicker">Les Gloutonnes</p>
@@ -513,7 +517,7 @@ page(
           <li><a href="https://www.secretjardin.com/bulbs-power-supplies/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Barres et alims Cosmorrow</a></li>
           <li><a href="https://www.carnivero.com/pages/grow-light-ppfd-recommendations" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">PPFD par genre — Carnivero / Florawave</a></li>
           <li>Adamec, L. (1997). Mineral nutrition of carnivorous plants. <em>Botanical Review</em> 63.</li>
-          <li>California Carnivores / Maxsea : foliar ¼ c. à café / gallon, feuilles seulement.</li>
+          <li>Foliar 0,3 g/L : orchidée ¼ (FR/BE) ; Maxsea 16-16-16 = recette California Carnivores équivalente, pas un sésame d’import.</li>
         </ul>
         <h2>Limites</h2>
         <p>Le simulateur est un modèle lambertien 120° + rebond mylar forfaitaire. Ce n’est pas un PAR-mètre. Les prix sont des fourchettes growshop. Les cibles PPFD sont des fourchettes d’expérience, pas une ordonnance.</p>

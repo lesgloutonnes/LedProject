@@ -1,6 +1,6 @@
 /**
  * Eau, substrats, engrais, proies — Les Gloutonnes · Tourbière
- * Engrais : dilutions horticoles connues uniquement (Maxsea ¼, orchidée ¼).
+ * Engrais : 0,3 g/L foliar (orchidée ¼ FR/BE, Maxsea US). Jamais Miracle-Gro.
  * Jamais Miracle-Gro, jamais terreau fertilisé.
  */
 window.TOURBIERE_NUTRIENTS = {
@@ -53,10 +53,12 @@ window.TOURBIERE_NUTRIENTS = {
       },
     ],
     practice: [
-      "Mesurer le TDS (conductimètre ~10 €), pas se fier à la transparence.",
-      "Stocker à l’ombre, bidons opaques, 1–2 semaines max pour la pluie (algues, moustiques).",
+      "Mesurer le TDS (conductimètre ~10 €), pas se fier à la transparence. Seuil de travail : < 50 ppm. Cible confort : 0–20 ppm.",
+      "Conversion utile : TDS (ppm, facteur 0,5) × 2 ≈ EC en µS/cm. 50 ppm ≈ 100 µS/cm. Au-delà, ce n’est plus de l’eau de tourbière.",
+      "Le pH de l’eau RO est souvent 5–6,5 ; la tourbe tamponne le pot à ~3,5–4,5. On ne « corrige » jamais au calcaire, au bicarbonate ou à l’eau du robinet.",
+      "Stocker à l’ombre, bidons opaques, 1–2 semaines max pour la pluie (algues, moustiques). Toiture cuivre / zinc / bitume neuf : on jette.",
       "Arroser / bac avec la même qualité toute l’année, y compris en dormance.",
-      "Le bac d’eau n’est pas un engrais : on ne verse jamais de Maxsea dedans.",
+      "Le bac d’eau n’est pas un engrais : on ne verse jamais de foliar dedans.",
     ],
   },
 
@@ -65,9 +67,10 @@ window.TOURBIERE_NUTRIENTS = {
       id: "peat-perlite",
       name: "Tourbe blonde + perlite 50/50",
       uses: ["germoir", "Dionaea", "Sarracenia", "Drosera capensis / tempérées", "Byblis liniflora"],
-      recipe: "Volume à volume, tourbe blonde non fertilisée + perlite horticole. Rincer à l’eau RO jusqu’à eau claire. Ne pas tasser comme une brique.",
+      recipe:
+        "Volume à volume, tourbe blonde de sphaigne non amendée + perlite horticole. Lire l’étiquette : « enrichie », « amendée », « chaux », « engrais starter » = poubelle. Rincer à l’eau RO jusqu’à eau claire. Ne pas tasser comme une brique.",
       notes:
-        "Le mix de base du site. La tourbe « horticole enrichie » du jardin discounter est un piège. Pas de vermiculite seule (retient trop, parfois un peu de poussière trop riche). Sable siliceux peut remplacer une partie de perlite (surtout pygmées, Drosophyllum).",
+        "La tourbe de jardinerie FR/BE est souvent chaulée (pH 5,5–6,5) : les carnivores veulent 3,5–4,5. Tourbe noire trop décomposée : asphyxie. Germoir : ébouillanter le mix (eau RO frémissante, laisser refroidir 24 h) pour casser algues et œufs de sciarides — geste de pépinière, pas de folklore. Sarracenia : pots larges (rhizome horizontal), pas des colonnes profondes. Sable siliceux peut remplacer une partie de perlite (pygmées, Drosophyllum).",
     },
     {
       id: "lfs",
@@ -104,54 +107,96 @@ window.TOURBIERE_NUTRIENTS = {
   fertilizers: {
     never: [
       "Terreau horticole « plantes vertes » ou « carnivores » pré-fertilisé — le second existe en rayon et reste trop riche.",
-      "Miracle-Gro, Engrais universel, billes d’azote jardin, or brun, marc de café, lait, eau de cuisson.",
+      "Miracle-Gro, Engrais universel, billes d’azote jardin, or brun, marc de café, lait, eau de cuisson, cendre, marc, peau de banane.",
       "Arrosage racinaire concentré dans le bac d’eau (algues + sel au collet).",
+      "« Engrais spécial carnivores » en dose étiquette, surtout s’il se verse au pied.",
     ],
     products: [
       {
-        id: "maxsea",
-        name: "Maxsea 16-16-16 (foliar)",
+        id: "eu-orchid",
+        name: "Engrais orchidée ¼ — le réflexe FR/BE",
         protocol:
-          "¼ cuillère à café par gallon US ≈ 1,25 ml / 3,8 L ≈ 0,3 g/L. 1–2× par mois en saison de croissance, sur feuillage sec, le matin, lumière allumée ou juste avant. Rinçage inutile si la dilution est tenue. Source de pratique : California Carnivores / culture US documentée.",
-        why: "Adamec 1997 : l’absorption foliaire des carnivores est réelle et stimule aussi la prise racinaire. Un foliar dilué remplace une partie des proies en tente pauvre en insectes. Ce n’est pas « anti-nature » : c’est du minéral propre à faible dose.",
-        avoid: "Ne pas monter à ½ ou 1 c. à café « pour aller plus vite ». Ne pas vaporiser les hibernacles ni les feuilles d’hiver succulentes. Ne pas mélanger à un autre NPK le même jour.",
+          "Poudre ou liquide équilibré (type 20-20-20, 18-18-18, Orchid Focus Grow, Rain Mix) à 0,3 g/L, soit un quart de la dose étiquette si celle-ci vise 1,2 g/L. 1–2×/mois en saison, foliar sur feuillage sec, le matin. Diluant = eau RO uniquement. C’est la dose de travail du site : Maxsea n’est pas magique, c’est le même ordre de grandeur NPK + micros.",
+        why: "Maxsea 16-16-16 se trouve mal en Europe. Un orchidée propre, sans urée brute à gogo et sans calcaire, fait le même métier. Adamec 1997 : l’absorption foliaire est réelle. En tente fermée, les insectes manquent : 0,3 g/L remplace une partie des proies, ça ne « dénature » pas la plante.",
+        avoid: "Dose étiquette entière. Deux engrais + Osmocote la même semaine. Foliar sur hibernacle, feuilles d’hiver succulentes, ou plantules de moins de 4 feuilles.",
       },
       {
-        id: "orchid",
-        name: "Engrais orchidée ¼ de dose (Nepenthes)",
+        id: "maxsea",
+        name: "Maxsea 16-16-16 (recette US, même dose)",
         protocol:
-          "Engrais orchidée équilibré du commerce, **un quart** de la dose étiquette, 1×/mois sur le mix (léger percolation) ou en foliar très dilué. Eau RO uniquement comme diluant.",
-        why: "Les Nepenthes répondent souvent mieux à un rythme type orchidée qu’à un marais. Utile si tu n’as pas de Maxsea sous la main — un seul des deux, pas les deux à pleine cadence.",
-        avoid: "Dose étiquette entière. Engrais orchidée + Osmocote + Maxsea la même semaine.",
+          "California Carnivores : ¼ c. à café US par gallon (3,8 L). En massique : ≈ 1,2 g / 4 L = 0,3 g/L — on pèse, on ne convertit pas des millilitres de poudre. 1–2×/mois, foliar, feuillage sec. Identique en force à l’orchidée ¼ ci-dessus : on choisit l’un, pas les deux.",
+        why: "Recette documentée, pas un sésame. L’algue du Maxsea n’est pas ce qui nourrit : c’est le 16-16-16 à très faible dose. Si tu l’as déjà, garde-le. Si tu dois commander depuis les US, prends un orchidée local.",
+        avoid: "Ne pas monter à ½ ou 1 c. à café « pour aller plus vite ». Ne pas traduire ¼ de cuillère par ¼ de bouchon de liquide concentré.",
+      },
+      {
+        id: "rainmix",
+        name: "Rain Mix / Peters-type (Nepenthes, Heliamphora)",
+        protocol:
+          "0,3–0,4 g/L en foliar 1×/mois, ou légère percolation du mix Nepenthes (quelques dizaines de ml, puis eau claire). Jamais dans un bac de Sarracenia. Un seul mode : foliar OU percolation, pas les deux le même jour.",
+        why: "Formule d’épiphytes, pauvre en urée, utilisée en collection EU. Utile si tes Nepenthes urnent peu en appartement. Ce n’est pas un engrais « plus fort » : c’est plus propre pour un mix sphaigne/écorce.",
+        avoid: "Arrosage à chaque eau. Dose 1 g/L « de serre commerciale ». Rain Mix + orchidée + Osmocote en même temps.",
       },
       {
         id: "osmocote",
         name: "Osmocote : 1 bille dans une urne (option Nepenthes)",
         protocol:
-          "Une seule bille d’Osmocote (ou équivalent enrobé) **dans une urne mature**, pas dans chaque urne, pas dans le substrat. L’urne digère lentement. Option de pépiniériste, pas un réflexe mensuel.",
-        why: "Appoint localisé, loin des racines. Complète un foliar léger sur plante adulte qui urne peu en appartement.",
-        avoid: "Billes dans le mix Nepenthes ou dans le bac Sarracenia. Plusieurs billes « pour voir ». Dionaea / Drosera : non.",
+          "Une seule bille d’Osmocote (ou équivalent enrobé) dans une urne mature, pas dans chaque urne, pas dans le substrat. L’urne digère lentement. Option de collection, pas un réflexe mensuel, et pas pour Dionaea / Drosera / Sarracenia (urne ouverte = sel + algues).",
+        why: "Appoint localisé, loin des racines, sur adulte qui urne peu. Complète un foliar, ne le remplace pas en cadence.",
+        avoid: "Billes dans le mix ou dans le bac. Plusieurs billes « pour voir ». Urnes juvéniles ou desséchées.",
       },
     ],
     algaeAlert:
       "Si le bac verdit, si la sphaigne se recouvre d’un feutre, si une pellicule irisée apparaît : tu arroses trop riche (racinaire, bac engraissé, eau de pluie de gouttière sale) ou tu éclaires l’eau stagnante. On vide, on rince à l’eau RO, on passe foliar only, on masque le bac de la LED. On ne « corrige » pas avec de l’eau de javel sur les plantes.",
     season: {
-      grow: "Maxsea ¼ 1–2×/mois, ou proies, ou les deux en cadence douce.",
-      dormancy: "Zéro engrais. Zéro Osmocote nouveau.",
-      seedlings: "Rien avant 4–6 vraies feuilles, puis ⅛ (moitié de ¼) une fois.",
-      cuttings: "Rien avant racines, puis ⅛ une fois.",
+      grow: "Foliar 0,3 g/L 1–2×/mois, ou proies, ou les deux en cadence douce — un seul NPK.",
+      dormancy: "Zéro engrais. Zéro Osmocote nouveau. Zéro « petit coup pour l’hiver ».",
+      seedlings: "Rien avant 4–6 vraies feuilles, puis 0,15 g/L une fois (moitié de 0,3).",
+      cuttings: "Rien avant racines, puis 0,15 g/L une fois.",
     },
+  },
+
+  pests: {
+    title: "Ravageurs de tente — on traite l’élevage, pas le salon",
+    intro:
+      "Une tente chaude et humide élève les sciarides, les pucerons et les acariens plus vite que le jardin. On identifie, on sèche la surface, on isole. Pas de « insecticide plantes vertes » du rayon, pas de savon noir sur le mucilage, pas de cannelle sur un rhizome (ça ne soigne pas une pourriture).",
+    items: [
+      {
+        id: "sciarides",
+        label: "Sciarides",
+        note: "Adultes = nuage. Dégât réel = larves au collet des semis. Ressuyage de surface, pièges jaunes, bacs opaques. Invasion lourde : nématodes Steinernema feltiae selon étiquette. On ne noie pas le bac « pour les tuer ».",
+      },
+      {
+        id: "pucerons",
+        label: "Pucerons (hampes, Nepenthes, Drosera)",
+        note: "Jet d’eau RO, isolement, redémarrage de hampe si elle est collée de miellat. Savon noir : jamais sur mucilage ni dans les urnes. Un foliar trop riche attire souvent le puceron : on baisse la cadence, on ne « booste » pas.",
+      },
+      {
+        id: "cochenilles",
+        label: "Cochenilles farineuses (Nepenthes, surtout aisselles)",
+        note: "Coton-tige + alcool à 70° sur les foyers visibles, 2–3 passages à 5–7 jours. Inspecter le dessous des feuilles. Plante trop infestée : on bouture le propre, on jette le reste. Pas d’huile de neem en saturant l’HR.",
+      },
+      {
+        id: "acariens",
+        label: "Acariens (bronzage, toile fine, face inférieure)",
+        note: "Air trop sec + chaleur de tente. On remonte l’HR sans fermer hermétique, on rince le feuillage à l’eau RO le matin, on isole. Les Drosera « sèches » ne sont pas toujours un manque de lumière.",
+      },
+      {
+        id: "botrytis",
+        label: "Botrytis / mildiou gris",
+        note: "HR 90 %+ sans air, tissus morts qui restent. Couper le mou, extraire, cesser le dôme. Soufre horti en poudre sur une coupe de rhizome : option étiquette, pas un bain. Javel et fongicides ménagers : non.",
+      },
+    ],
   },
 
   feeding: {
     title: "Proies : 1–2 fois par mois, pas un buffet",
     frequency: "1–2 repas par mois et par plante adulte en croissance. Les plantules et les dormantes : rien de forcé.",
     how: [
-      "Dionaea : 1 insecte vivant (ou congelé/décongelé) par piège, 1–2 pièges seulement. Le piège doit se fermer et étanchéifier ; si tu forces trop gros, il pourrit.",
+      "Dionaea : 1 insecte vivant (ou congelé/décongelé) par piège, 1–2 pièges seulement. Le piège doit se fermer et étanchéifier ; trop gros = pourriture. Pas la peine de « tout nourrir » : 2 pièges / mois sur un adulte, c’est déjà de la production.",
       "Drosera / Byblis / Drosophyllum : drosophiles, sciarides, pucerons — elles collent. Un foliar léger remplace souvent ce geste.",
       "Sarracenia / Heliamphora / Cephalotus : 1–2 petites proies par urne mature, ou rien si foliar. Un peu d’eau RO dans l’urne Heliamphora.",
       "Nepenthes : mêmes proies, ou 1 bille Osmocote optionnelle, ou quelques ml d’engrais orchidée ¼ dans l’urne — un seul mode à la fois.",
-      "Pinguicula : micro-proies, pas de pince lourde. Foliar ¼ plus sûr.",
+      "Pinguicula : micro-proies, pas de pince lourde. Foliar 0,3 g/L plus sûr.",
       "Utricularia : on ne nourrit pas à la pince ; la microfaune du mix suffit.",
     ],
     never: [
@@ -161,6 +206,6 @@ window.TOURBIERE_NUTRIENTS = {
       "Miel, sirop, soda dans les urnes « pour attirer » : fermentation, moisissures.",
     ],
     tentNote:
-      "Une tente fermée manque d’insectes. C’est précisément pour ça que le foliar Maxsea ¼ existe. Ouvrir la tente l’été près d’une fenêtre (sans lâcher les sciarides dans le salon) aide. Les sciarides du terreau sont un buffet pour Drosera, un problème pour les semis : on les gère (pièges jaunes, surface qui sèche), on ne les « cultive » pas.",
+      "Une tente fermée manque d’insectes. C’est précisément pour ça que le foliar 0,3 g/L existe. Ouvrir la tente l’été près d’une fenêtre (sans lâcher les sciarides dans le salon) aide. Les sciarides du terreau sont un buffet pour Drosera, un problème pour les semis : on les gère (pièges jaunes, surface qui sèche), on ne les « cultive » pas.",
   },
 };

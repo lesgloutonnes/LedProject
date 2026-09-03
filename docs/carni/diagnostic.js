@@ -73,7 +73,7 @@ window.TOURBIERE_DIAGNOSTIC = {
                 fix: [
                   "Tu es probablement sous la cible (ex. dionée à 80 µmol). Monte le DLI d’un cran (hauteur ou heures).",
                   "Le vert n’est pas une maladie : beaucoup de clones restent verts (génotype). Voir arbre « pas de rouge ».",
-                  "Tiens le foliar Maxsea ¼ : une plante affamée sous LED correcte reste molle.",
+                  "Tiens le foliar 0,3 g/L : une plante affamée sous LED correcte reste molle.",
                 ],
               },
             },
@@ -143,7 +143,7 @@ window.TOURBIERE_DIAGNOSTIC = {
               result: {
                 title: "Sel d’engrais ou air trop sec",
                 fix: [
-                  "Si tu arrosais Maxsea au bac : stop, foliar only, rincer.",
+                  "Si tu arrosais l’engrais au bac : stop, foliar only, rincer.",
                   "Pointes sèches + HR 30 % : extracteur trop violent ou tente trop loin de tout humidificateur — surtout Nepenthes.",
                   "Vieilles urnes qui croûtent en fin de saison : normal, on ne « soigne » pas au ciseau dans le vert.",
                 ],
@@ -185,7 +185,7 @@ window.TOURBIERE_DIAGNOSTIC = {
                 title: "Pas assez d’énergie pour sécréter",
                 fix: [
                   "Rapproche Growing 6500 K, 14 h, bas-milieu Carnivero (Drosera ~200 µmol).",
-                  "Un foliar Maxsea ¼ après 2 semaines de bon DLI, pas avant.",
+                  "Un foliar 0,3 g/L après 2 semaines de bon DLI, pas avant.",
                   "Eau pauvre : une eau riche donne parfois un feuillage gras sans gouttes nettes.",
                 ],
               },
@@ -299,7 +299,7 @@ window.TOURBIERE_DIAGNOSTIC = {
                 fix: [
                   "Rempote au débourrement en 2–3 L (Sarracenia adulte).",
                   "Vérifie qu’un hiver froid a bien eu lieu l’an dernier.",
-                  "Foliar Maxsea ¼ 1–2×/mois + DLI bas-milieu (dressées ~300 µmol).",
+                  "Foliar 0,3 g/L 1–2×/mois + DLI bas-milieu (dressées ~300 µmol).",
                 ],
               },
             },
@@ -372,7 +372,7 @@ window.TOURBIERE_DIAGNOSTIC = {
               result: {
                 title: "Algues = nutriments + lumière sur l’eau",
                 fix: [
-                  "Stop racinaire. Foliar Maxsea ¼ seulement.",
+                  "Stop racinaire. Foliar 0,3 g/L seulement.",
                   "Vide le bac, rince les pots à l’eau RO, masque l’eau de la LED (bacs opaques).",
                   "Gratte la croûte en surface si elle étouffe les semis, sans arracher les plantules.",
                 ],
@@ -531,7 +531,7 @@ window.TOURBIERE_DIAGNOSTIC = {
                 title: "Soit encore sous la fenêtre, soit clone mal nommé",
                 fix: [
                   "Vérifie que tu n’es pas à 120 µmol sur une dressée (cible ~300).",
-                  "Foliar ¼ : une plante affamée colore mal.",
+                  "Foliar 0,3 g/L : une plante affamée colore mal.",
                   "Doute sur l’étiquette du vendeur : fréquent.",
                 ],
               },
@@ -569,7 +569,7 @@ window.TOURBIERE_DIAGNOSTIC = {
               result: {
                 title: "Protocole de semis jardin, pas carnivore",
                 fix: [
-                  "Surface, tourbe/perlite 50/50 non engraissée, eau RO.",
+                  "Surface, tourbe/perlite 50/50 non amendée, ébouillantée, eau RO.",
                   "14 h, COP4065 ou COP2065 à 15–20 cm.",
                   "On recommence le lot s’il reste des graines.",
                 ],
@@ -586,7 +586,7 @@ window.TOURBIERE_DIAGNOSTIC = {
               result: {
                 title: "Viabilité faible",
                 fix: [
-                  "Graines de Sarracenia / Dionaea : fraîcheur = tout. Racheter un lot de l’année.",
+                  "Graines de Sarracenia / Dionaea : fraîcheur = tout. Lot de plus d’un an au tiède = souvent mort. Racheter l’année.",
                   "Un témoin au chaud hors frigo écarte une strat trop longue ou un frigo trop sec.",
                 ],
               },
@@ -668,6 +668,153 @@ window.TOURBIERE_DIAGNOSTIC = {
                   "On attend 4–8 semaines. Les plantules partent du pétiole.",
                   "Ne pas déterrer tous les 3 jours.",
                   "Si à 10 semaines rien et pétiole sec comme du papier : échec propre, on relance.",
+                ],
+              },
+            },
+          ],
+        },
+      },
+    },
+    {
+      id: "ravageurs",
+      title: "Pucerons, cochenilles, acariens",
+      startId: "rav-1",
+      nodes: {
+        "rav-1": {
+          question: "Que vois-tu surtout ?",
+          answers: [
+            { label: "Pucerons sur hampes / jeunes pousses", nextId: "rav-puc" },
+            { label: "Amas cotonneux (aisselles Nepenthes, revers)", nextId: "rav-coch" },
+            { label: "Bronzage, toile fine, feuilles ternes", nextId: "rav-ac" },
+          ],
+        },
+        "rav-puc": {
+          question: "La plante a-t-elle un mucilage (Drosera, Byblis, Pinguicula) que tu voudrais laver au savon ?",
+          answers: [
+            {
+              label: "Oui, collante",
+              result: {
+                title: "Jet RO, pas de savon sur le mucilage",
+                fix: [
+                  "Douche d’eau RO, isolement, on coupe la hampe si elle est saturée de miellat.",
+                  "Savon noir / insecticide rayon : ça déglace le mucilage et n’est pas un protocole carnivore.",
+                  "Baisse la cadence de foliar : un NPK trop fréquent attire souvent le puceron.",
+                ],
+              },
+            },
+            {
+              label: "Non, Sarracenia / Nepenthes / Dionaea",
+              result: {
+                title: "Isolement + eau, pas de « boost »",
+                fix: [
+                  "Jet RO répété 3–4 jours. Inspecter les nouvelles hampes.",
+                  "Pas de systémique « plantes vertes ». Pas d’huile en saturant l’HR.",
+                  "Si le foyer revient : c’est souvent trop d’azote foliar, on passe à 1×/mois.",
+                ],
+              },
+            },
+          ],
+        },
+        "rav-coch": {
+          question: "Les foyers sont-ils localisés (quelques aisselles) ou généralisés ?",
+          answers: [
+            {
+              label: "Localisés",
+              result: {
+                title: "Coton-tige + alcool 70°, 3 passages",
+                fix: [
+                  "Alcool à 70° sur coton, aisselles et revers, J0 / J5 / J12.",
+                  "Inspecter le collet et le dessous des feuilles. Isoler le pot.",
+                  "Pas d’huile de neem en jungle saturée (botrytis).",
+                ],
+              },
+            },
+            {
+              label: "Toute la plante est farineuse",
+              result: {
+                title: "On bouture le propre, on jette le reste",
+                fix: [
+                  "Une Nepenthes farineuse de haut en bas se soigne mal en 1 m³ partagé.",
+                  "Prélever 1–2 nœuds sains, protocole bouture. Le reste sort de la tente.",
+                  "Inspecter les voisines 2 semaines.",
+                ],
+              },
+            },
+          ],
+        },
+        "rav-ac": {
+          question: "L’air est-il sec (HR < 45 %) et la tente chaude ?",
+          answers: [
+            {
+              label: "Oui",
+              result: {
+                title: "Acariens de tente sèche",
+                fix: [
+                  "Remonter l’HR vers 55–65 % sans fermer hermétique. Extracteur plus doux.",
+                  "Rincer le feuillage à l’eau RO le matin. Isoler.",
+                  "Drosera « sèches » : d’abord ça, pas une barre plus près.",
+                ],
+              },
+            },
+            {
+              label: "HR OK, et ça bronze quand même",
+              result: {
+                title: "Foyer installé",
+                fix: [
+                  "Isoler, rincer 3 jours de suite, inspecter le revers à la loupe.",
+                  "Pas de savon sur mucilage. Pas de cocktail ménager.",
+                  "Si toile dense : plante trop atteinte, on bouture le sommet propre.",
+                ],
+              },
+            },
+          ],
+        },
+      },
+    },
+    {
+      id: "hiver-tente",
+      title: "Tempérée qui pousse en janvier (dormance manquée)",
+      startId: "hiv-1",
+      nodes: {
+        "hiv-1": {
+          question: "Dionaea, Sarracenia ou Drosera tempérée sous 14 h / 20 °C en novembre–février ?",
+          answers: [
+            { label: "Oui, tente chaude toute l’année", nextId: "hiv-2" },
+            {
+              label: "Non, elles sont au froid (dehors, garage, 8–10 h)",
+              result: {
+                title: "Alors ce n’est pas une dormance manquée",
+                fix: [
+                  "Pièges noirs / urnes molles au froid : normal. On ne réveille pas.",
+                  "Pousses filiformes au froid : trop de lumière ou trop d’eau — on éloigne, on sèche.",
+                  "Si tu visais autre chose : étiolement, pourriture, ou ravageurs.",
+                ],
+              },
+            },
+          ],
+        },
+        "hiv-2": {
+          question: "As-tu un extérieur, un garage hors gel, ou seulement l’appartement ?",
+          answers: [
+            {
+              label: "Châssis, balcon, garage, cave 5–10 °C",
+              result: {
+                title: "Sors-les. La LED ne fait pas l’hiver",
+                fix: [
+                  "FR/BE : Sarracenia et dionées adultes hivernent mieux dehors / garage que sous Cosmorrow à 20 °C.",
+                  "Rampe : 12 h puis 8–10 h, T° vers 0–10 °C, bac retiré. Voir protocole dormance.",
+                  "8 h de Growing dans un salon chaud, ce n’est pas une dormance : c’est un étiolement lent.",
+                ],
+              },
+            },
+            {
+              label: "Que l’appartement",
+              result: {
+                title: "Plan B : pièce froide ou frigo aéré",
+                fix: [
+                  "Tente non chauffée contre un mur nord, 8–10 h, barre loin — si tu tiens 8–12 °C, c’est déjà mieux que 20 °C.",
+                  "Quelques dionées : godet au frigo à légumes, aéré, un peu de lumière, 4–8 semaines mini, jamais un zip hermétique.",
+                  "Si tu ne peux vraiment pas : assume une plante affaiblie et ne rachète pas 10 dionées « pour compenser ».",
                 ],
               },
             },

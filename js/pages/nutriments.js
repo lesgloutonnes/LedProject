@@ -92,9 +92,33 @@
         e(block.season.dormancy) +
         " · <strong>Semis.</strong> " +
         e(block.season.seedlings) +
+        " · <strong>Boutures.</strong> " +
+        e(block.season.cuttings) +
         "</p>";
     }
     fert.innerHTML = html;
+  }
+
+  var pests = document.getElementById("pests");
+  if (pests && n.pests) {
+    pests.innerHTML =
+      "<h3>" +
+      e(n.pests.title) +
+      "</h3><p>" +
+      e(n.pests.intro || "") +
+      '</p><div class="stack" style="--stack-space:0.75rem">' +
+      (n.pests.items || [])
+        .map(function (x) {
+          return (
+            '<article class="card"><h3>' +
+            e(x.label) +
+            "</h3><p>" +
+            e(x.note) +
+            "</p></article>"
+          );
+        })
+        .join("") +
+      "</div>";
   }
 
   var feed = document.getElementById("feeding");

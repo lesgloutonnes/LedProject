@@ -113,7 +113,9 @@
           e(m.photoperiod || m.hours || "") +
           "</p><ul class=\"check-list\">" +
           gestures +
-          "</ul></article>"
+          "</ul>" +
+          (m.notes ? '<p class="hint">' + e(m.notes) + "</p>" : "") +
+          "</article>"
         );
       })
       .join("");

@@ -20,6 +20,8 @@ load("js/data/diagnostic.js");
 load("js/lib/format.js");
 load("js/lib/optics.js");
 
+load("js/data/nutrients.js");
+
 var assert = require("assert");
 assert.equal(ctx.TourbiereFmt.units.ppfd, "µmol/m²/s");
 assert.equal(ctx.TourbiereFmt.units.dli, "mol/m²/j");
@@ -48,6 +50,25 @@ assert.ok(ctx.TOURBIERE_KITS.length >= 12);
 assert.ok(ctx.TOURBIERE_SPECIES.length >= 12);
 assert.equal(ctx.TOURBIERE_PROTOCOLS.length, 7);
 assert.equal(ctx.TOURBIERE_PROJECTS.length, 7);
+assert.ok(ctx.TOURBIERE_NUTRIENTS.fertilizers.products.length >= 3);
+assert.ok(ctx.TOURBIERE_NUTRIENTS.pests.items.length >= 4);
+assert.ok(
+  ctx.TOURBIERE_DIAGNOSTIC.trees.some(function (t) { return t.id === "ravageurs"; }),
+  "arbre ravageurs"
+);
+assert.ok(
+  ctx.TOURBIERE_DIAGNOSTIC.trees.some(function (t) { return t.id === "hiver-tente"; }),
+  "arbre dormance manquée"
+);
+assert.equal(ctx.TOURBIERE_PROJECTS.filter(function (p) { return p.id === "collection"; }).length, 1);
+assert.equal(ctx.TOURBIERE_PROJECTS.filter(function (p) { return p.id === "rouge"; }).length, 1);
+
+var sarr = ctx.TOURBIERE_SPECIES.find(function (s) { return s.id === "sarracenia-upright"; });
+assert.ok(/larges/i.test(sarr.substrate), "Sarracenia : pots larges, pas profonds");
+assert.ok(!/pots profonds 15/.test(sarr.substrate));
+
+var dorm = ctx.TOURBIERE_PROTOCOLS.find(function (p) { return p.id === "dormancy"; });
+assert.ok(/dehors/i.test(dorm.summary), "dormance : dehors d’abord");
 
 var r = ctx.TourbiereMatch.matchKit({
   projet: "germoir",

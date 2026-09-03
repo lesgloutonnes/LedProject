@@ -15,9 +15,9 @@ python3 -m http.server 8000
 - **Espèces** — PPFD / DLI / eau / tente par genre
 - **Protocoles** — germoir, bouturage, production, colorisation, mixte, tropicale, dormance
 - **Tente** — pose, hygro, extracteur, électricité
-- **Nutriments** — eau pauvre, tourbe, Maxsea ¼, proies
+- **Nutriments** — eau pauvre, tourbe non amendée, foliar 0,3 g/L, proies
 - **Outils** — carte PPFD, DLI, kWh
-- **Diagnostic** — arbres de décisions
+- **Diagnostic** — arbres de décisions (lumière, eau, ravageurs, dormance manquée)
 
 Marque LED unique : **Cosmorrow**. Pas de palmarès multi-marques.
 
@@ -30,6 +30,6 @@ Tente 120 × 60, deux bacs 60 × 40 : **2 × COP4065 Growing 90 cm + COM2X40**.
 - [Fiche COP BULBS 2023-09](https://www.secretjardin.com/wp-content/uploads/2023/09/20230905-COP-BULBS-DATASHEET.pdf)
 - [PPFD Carnivero](https://www.carnivero.com/pages/grow-light-ppfd-recommendations)
 - Adamec 1997 (nutrition minérale des carnivores)
-- California Carnivores / Maxsea ¼ foliar
+- Foliar 0,3 g/L (orchidée ¼ FR/BE ; Maxsea = recette US équivalente)
 
 Cahier des charges : `docs/CAHIER_DES_CHARGES.md`.
