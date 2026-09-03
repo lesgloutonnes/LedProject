@@ -18,7 +18,7 @@ window.LG_KITS = [
     psu: "COM20",
     totalWatts: 20,
     totalPpf: 51,
-    why: "Zone constructeur 60×40 @ 15 cm, PPFD moy. 268. Une barre Growing 20 W pile dans un Dark Propagator / une étagère. Blanc 6500 K pour cotylédons compacts.",
+    why: "Zone constructeur 60×40 @ 15 cm, PPFD moy. 268 µmol/m²/s. Une barre Growing 20 W pile dans un Dark Propagator / une étagère. Blanc 6500 K pour cotylédons compacts.",
     hangCm: 15,
     hours: 14,
     shopping: [

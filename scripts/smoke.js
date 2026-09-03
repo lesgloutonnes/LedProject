@@ -119,6 +119,11 @@ ctx.LG_FIXTURES.forEach(function (f) {
 });
 assert.equal(fs20.spectrum.share, "diodes");
 assert.equal(fs20.spectrum.channels[0].peakNm[0], 450);
+assert.equal(Math.round(ctx.LG_OPTICS.yearlyKwh(80, 14, 100) * 10) / 10, 408.8);
+assert.ok(
+  ctx.LG_OPTICS.yearlyKwh(80, 14, 40) < ctx.LG_OPTICS.yearlyKwh(80, 14, 100),
+  "yearlyKwh ne scale la facture que si on lui passe un % électrique"
+);
 var blob = JSON.stringify(ctx.LG_SPECIES) + JSON.stringify(ctx.LG_PROTOCOLS) + JSON.stringify(ctx.LG_PROJECTS) + JSON.stringify(ctx.LG_DIAGNOSTIC);
 var stripped = blob
   .replace(/µmol\/m²\/s/g, "")

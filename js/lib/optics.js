@@ -457,8 +457,9 @@ function dli(ppfd, hours) {
 }
 
 /**
- * kWh / an. intensity = 0–100 (fraction de puissance).
- * Cosmorrow n’est pas dimmable : passer 100 sauf simulation de recul.
+ * kWh / an. intensity = 0–100 (fraction de puissance électrique).
+ * Cosmorrow n’est pas dimmable : un voile ou un recul ne baisse pas les watts.
+ * Toujours passer 100 pour une facture Cosmorrow.
  */
 function yearlyKwh(watts, hours, intensity) {
   var pct = intensity == null ? 100 : intensity;

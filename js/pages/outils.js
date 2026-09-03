@@ -258,21 +258,24 @@
       draw(sim, tent);
       var dliVal = optics.dli(sim.avg, state.hours);
       var watts = kit ? kit.totalWatts : (fixtureForSim(kit) && fixtureForSim(kit).fixture.watts * (state.qty || 1)) || 0;
-      var kwh = optics.yearlyKwh(watts, state.hours, state.intensity);
+      // Voile / recul ≠ dimmer : Cosmorrow tire toujours 100 % des watts.
+      var kwh = optics.yearlyKwh(watts, state.hours, 100);
       var tariff = store.getPrefs().kwhEur;
       var pack = fixtureForSim(kit);
       var ficheFx = pack && pack.fixture;
+      var ficheQty = pack && pack.count ? pack.count : 1;
       var ficheLine =
         ficheFx && ficheFx.ppfdAvg != null && ficheFx.footprint
           ? [
-              "Fiche " + ficheFx.sku,
+              "Fiche 1 × " + ficheFx.sku,
               fmt.ppfd(ficheFx.ppfdAvg),
               ficheFx.footprint.w +
                 "×" +
                 ficheFx.footprint.d +
                 " cm @ " +
                 ficheFx.footprint.hCm +
-                " cm · moyenne constructeur",
+                " cm · 1 barre, zone constructeur" +
+                (ficheQty > 1 ? " (le kit en a " + ficheQty + ")" : ""),
             ]
           : null;
       if (statsEl) {
@@ -294,7 +297,11 @@
           ["PPFD moyen", fmt.ppfd(sim.avg), "tente entière · " + fmt.units.ppfd + " · calé fiche"],
           ["Centre / coin", fmt.n0(sim.center) + " / " + fmt.n0(sim.corner), "hotspot vs bord, " + fmt.units.ppfd],
           ["DLI", fmt.dli(dliVal), state.hours + " h/j · DLI = PPFD × h × 0,0036"],
-          ["Facture an", fmt.euro2(optics.yearlyCost(kwh, tariff)), fmt.n1(kwh) + " kWh · " + fmt.n2(tariff) + " €/kWh"],
+          [
+            "Facture an",
+            fmt.euro2(optics.yearlyCost(kwh, tariff)),
+            fmt.n1(kwh) + " kWh · " + watts + " W × " + state.hours + " h (non dimmable) · " + fmt.n2(tariff) + " €/kWh",
+          ],
         ]
           .concat(ficheLine ? [ficheLine] : [])
           .map(function (row) {
