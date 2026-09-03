@@ -153,7 +153,7 @@
     var cards = tents
       .map(function (t) {
         var active = state.tente && state.tente.id === t.id ? " is-active" : "";
-        var badge = t.id === fav ? ' <span class="badge">Favorite</span>' : "";
+        var badge = t.id === fav ? ' <span class="badge">Préférée</span>' : "";
         return (
           '<button type="button" class="choice' +
           active +

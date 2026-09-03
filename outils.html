@@ -53,15 +53,15 @@
         <a class="btn-primary header-cta" href="assistant.html">Lancer l’assistant</a>
       </div>
     </header>
-    <p id="store-warn" class="callout is-warn wrap store-warn" hidden role="status">Mémoire pleine ou privée : le kit reste sur cet écran seulement.</p>
+    <p id="store-warn" class="callout is-warn wrap store-warn" hidden role="status">Tes réglages n’ont pas pu être enregistrés sur cet appareil. Le kit reste affiché ici.</p>
     <main id="contenu" class="page-main wrap">
 
       <header class="page-hero stack">
-        <p class="kicker">Lambertien 120° · mylar 0,25 · calé fiche COP</p>
-        <h1>Comparer des kits, pas certifier un DLI.</h1>
-        <p class="lede">Carte PPFD simplifiée pour Cosmorrow seulement. Cosmorrow n’est pas dimmable : le curseur d’intensité simule un voile, pas un Controller+.</p>
+        <p class="kicker">Carte de lumière</p>
+        <h1>Estime le PPFD de ton kit.</h1>
+        <p class="lede">Une carte simplifiée pour Cosmorrow seulement, calée sur la fiche constructeur. Cosmorrow n’est pas dimmable : le curseur d’intensité simule un voile, pas un variateur.</p>
       </header>
-      <noscript class="callout is-warn"><p>Activez JavaScript pour la carte PPFD. Catalogue : <a href="cosmorrow.html">Cosmorrow</a>.</p></noscript>
+      <noscript class="callout is-warn"><p>Active JavaScript pour la carte PPFD. Catalogue : <a href="cosmorrow.html">Cosmorrow</a>.</p></noscript>
       <div class="sim-layout section">
         <article class="card heatmap-bleed">
           <div class="heatmap" role="img" aria-labelledby="heatmap-title heatmap-stats">
@@ -98,7 +98,7 @@
               <span>Intensité <strong id="intensity-val">100 %</strong></span>
               <input id="intensity" type="range" min="40" max="100" value="100" />
             </label>
-            <p id="dim-warn" class="dim-warn" hidden>Cosmorrow n’est pas dimmable. Ce curseur simule un voile, pas un Controller+.</p>
+            <p id="dim-warn" class="dim-warn" hidden>Cosmorrow n’est pas dimmable. Ce curseur simule un voile, pas un variateur.</p>
             <label for="kwh-eur">Tarif € / kWh
               <input id="kwh-eur" type="number" inputmode="decimal" step="0.0001" min="0.05" max="0.80" autocomplete="off" />
             </label>
@@ -111,12 +111,13 @@
     </main>
 
     <footer class="site-footer wrap">
+      <p class="footer-brand">Les Gloutonnes · Guide de culture en tente</p>
       <p>
         <a href="https://www.lesgloutonnes.be/pages/applications-culture.html" rel="noopener noreferrer">Applications de culture</a>
-        · Les Gloutonnes · Cosmorrow ·
-        <a href="a-propos.html">Sources</a>
+        · <a href="a-propos.html">Sources et confidentialité</a>
         · <a href="https://www.lesgloutonnes.be/" rel="noopener noreferrer">lesgloutonnes.be</a>
       </p>
+      <p class="footer-note">Gratuit, sans compte et sans cookies. Tes réglages restent sur ton appareil.</p>
     </footer>
     <nav class="bottom-nav" aria-label="Pied">
       <a href="index.html" data-icon="home"><span class="bottom-nav-icon" aria-hidden="true"></span>Accueil</a>

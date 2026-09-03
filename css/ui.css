@@ -123,9 +123,11 @@ a[href^="http://"]::after {
   align-items: center;
 }
 
-.nav-more summary:hover {
-  background: var(--card);
-  color: var(--primary);
+.nav-more summary::after {
+  content: "▾";
+  margin-left: 0.35em;
+  font-size: 0.7em;
+  opacity: 0.7;
 }
 
 .nav-more summary::-webkit-details-marker {
@@ -824,6 +826,28 @@ caption .unit,
   gap: var(--s-3);
 }
 
+.kit-stats {
+  margin-top: var(--s-4);
+}
+
+.kit-feature {
+  background: linear-gradient(160deg, oklch(0.36 0.05 155), oklch(0.32 0.04 80));
+  box-shadow: none;
+}
+
+.kit-feature .kicker {
+  color: var(--led);
+}
+
+.kit-feature h2 {
+  margin-bottom: var(--s-3);
+}
+
+.kit-feature p {
+  color: var(--fg);
+  max-width: 40rem;
+}
+
 .stat .lbl {
   font-size: 0.68rem;
   letter-spacing: 0.12em;
@@ -1012,10 +1036,23 @@ a.chip {
 /* --- Footer --- */
 
 .site-footer {
-  padding: var(--s-5) 0 calc(var(--s-4) + var(--bottom-nav-space));
+  padding: var(--s-6) 0 calc(var(--s-4) + var(--bottom-nav-space));
   color: var(--muted);
-  font-size: var(--step-0);
+  font-size: var(--step-1);
   text-align: center;
+}
+
+.footer-brand {
+  font-family: var(--display);
+  font-size: var(--step-3);
+  color: var(--fg);
+  margin: 0 0 var(--s-2);
+}
+
+.footer-note {
+  margin: var(--s-3) 0 0;
+  font-size: var(--step-0);
+  letter-spacing: 0.04em;
 }
 
 .store-warn {
@@ -1028,9 +1065,12 @@ a.chip {
   margin: 0;
 }
 
-.prose p,
-.prose li {
-  max-width: var(--prose);
+.prose h2 {
+  margin-top: var(--s-6);
+}
+
+.prose h2:first-child {
+  margin-top: 0;
 }
 
 .prose ul {
@@ -1147,8 +1187,8 @@ a.chip {
     display: none;
   }
 
-  .brand-kicker {
-    display: none;
+  .kit-stats {
+    grid-template-columns: repeat(4, 1fr);
   }
 
   .path-grid {

@@ -294,7 +294,7 @@
       var statsBox = document.getElementById("stats");
       if (statsBox) {
         statsBox.innerHTML = [
-          ["PPFD moyen", fmt.ppfd(sim.avg), "tente entière · " + fmt.units.ppfd + " · calé fiche"],
+          ["PPFD moyen", fmt.ppfd(sim.avg), "tente entière · " + fmt.units.ppfd + " · selon la fiche"],
           ["Centre / coin", fmt.n0(sim.center) + " / " + fmt.n0(sim.corner), "hotspot vs bord, " + fmt.units.ppfd],
           ["DLI", fmt.dli(dliVal), state.hours + " h/j · DLI = PPFD × h × 0,0036"],
           [
@@ -331,7 +331,7 @@
         e(fmt.units.ppfd) +
         ", DLI en " +
         e(fmt.units.dli) +
-        ". Moyenne calée sur la fiche constructeur (même SKU, zone et hauteur de mesure). Ce n’est pas un PAR-mètre. Cosmorrow n’est pas dimmable : on monte la barre." +
+        ". Moyenne calée sur la fiche constructeur (même barre, même zone et même hauteur de mesure). Ce n’est pas un appareil de mesure. Cosmorrow n’est pas dimmable : on monte la barre." +
         (sim && sim.omittedShelves
           ? " Carte = étage haut uniquement : l’étage bas n’est pas additionné sur le même plan."
           : "") +

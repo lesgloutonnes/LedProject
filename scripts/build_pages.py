@@ -57,18 +57,19 @@ HEAD = """<!DOCTYPE html>
         <a class="btn-primary header-cta" href="assistant.html">Lancer l’assistant</a>
       </div>
     </header>
-    <p id="store-warn" class="callout is-warn wrap store-warn" hidden role="status">Mémoire pleine ou privée : le kit reste sur cet écran seulement.</p>
+    <p id="store-warn" class="callout is-warn wrap store-warn" hidden role="status">Tes réglages n’ont pas pu être enregistrés sur cet appareil. Le kit reste affiché ici.</p>
     <main id="contenu" class="page-main wrap">
 {main}
     </main>
 {sticky}
     <footer class="site-footer wrap">
+      <p class="footer-brand">Les Gloutonnes · Guide de culture en tente</p>
       <p>
         <a href="https://www.lesgloutonnes.be/pages/applications-culture.html" rel="noopener noreferrer">Applications de culture</a>
-        · Les Gloutonnes · Cosmorrow ·
-        <a href="a-propos.html">Sources</a>
+        · <a href="a-propos.html">Sources et confidentialité</a>
         · <a href="https://www.lesgloutonnes.be/" rel="noopener noreferrer">lesgloutonnes.be</a>
       </p>
+      <p class="footer-note">Gratuit, sans compte et sans cookies. Tes réglages restent sur ton appareil.</p>
     </footer>
     <nav class="bottom-nav" aria-label="Pied">
       <a href="index.html" data-icon="home"><span class="bottom-nav-icon" aria-hidden="true"></span>Accueil</a>
@@ -242,7 +243,7 @@ page(
         <h1>Cosmorrow, et seulement Cosmorrow.</h1>
         <p class="lede">Blanc 6500 K pour germer, Full Spectrum en appoint, alims calibrées 20 W ou 40 W. PPF publié, zone constructeur, pas un PAR 230 de boutique.</p>
       </header>
-      <noscript class="callout is-warn"><p>Activez JavaScript pour le tableau SKU et les kits. Les règles d’or restent lisibles ci-dessus.</p></noscript>
+      <noscript class="callout is-warn"><p>Active JavaScript pour le tableau SKU et les kits. Les règles d’or restent lisibles ci-dessus.</p></noscript>
       <section class="section">
         <h2>Règles d’or</h2>
         <div class="card-grid">
@@ -294,7 +295,7 @@ page(
         <p class="lede">On vise d’abord le bas-milieu de fourchette (PPFD en µmol/m²/s, DLI en mol/m²/j), puis on monte selon la plante — pas selon un listing 660 nm. Growing 6500 K est la barre de travail.</p>
       </header>
       <div class="chips mt-s5" id="species-filter"></div>
-      <noscript class="callout is-warn"><p>Activez JavaScript pour les fiches genres. Cibles PPFD : voir Carnivero.</p></noscript>
+      <noscript class="callout is-warn"><p>Active JavaScript pour les fiches genres. Cibles PPFD : voir Carnivero.</p></noscript>
       <div class="stack stack-loose" id="species-list"></div>
 """,
     """
@@ -313,7 +314,7 @@ page(
         <h1>Un protocole par job, pas un curseur unique.</h1>
         <p class="lede">Semis, boutures, adultes, rouge, étages, jungle ou hiver : la même Cosmorrow, des hauteurs et des heures différentes. La dormance des tempérées se joue au froid, pas au spectre.</p>
       </header>
-      <noscript class="callout is-warn"><p>Activez JavaScript pour les protocoles. Le CDC est dans le README.</p></noscript>
+      <noscript class="callout is-warn"><p>Active JavaScript pour les protocoles. Le CDC est dans le README.</p></noscript>
       <nav class="anchor-nav" id="protocol-nav" aria-label="Protocoles"></nav>
       <div id="protocol-list"></div>
       <section class="section">
@@ -427,11 +428,11 @@ page(
     "Simulateur PPFD Cosmorrow, DLI et coût électrique pour tente de carnivores. Modèle optique prudent, pas un PAR-mètre.",
     """
       <header class="page-hero stack">
-        <p class="kicker">Lambertien 120° · mylar 0,25 · calé fiche COP</p>
+        <p class="kicker">Carte de lumière</p>
         <h1>Comparer des kits, pas certifier un DLI.</h1>
         <p class="lede">Carte PPFD simplifiée pour Cosmorrow seulement. Cosmorrow n’est pas dimmable : le curseur d’intensité simule un voile, pas un Controller+.</p>
       </header>
-      <noscript class="callout is-warn"><p>Activez JavaScript pour la carte PPFD. Catalogue : <a href="cosmorrow.html">Cosmorrow</a>.</p></noscript>
+      <noscript class="callout is-warn"><p>Active JavaScript pour la carte PPFD. Catalogue : <a href="cosmorrow.html">Cosmorrow</a>.</p></noscript>
       <div class="sim-layout section">
         <article class="card heatmap-bleed">
           <div class="heatmap" role="img" aria-labelledby="heatmap-title heatmap-stats">
@@ -495,7 +496,7 @@ page(
         <h1>Ce n’est presque jamais une maladie magique.</h1>
         <p class="lede" id="diag-intro"></p>
       </header>
-      <noscript class="callout is-warn"><p>Activez JavaScript pour l’arbre de décisions. Protocoles : <a href="protocoles.html">ici</a>.</p></noscript>
+      <noscript class="callout is-warn"><p>Active JavaScript pour l’arbre de décisions. Protocoles : <a href="protocoles.html">ici</a>.</p></noscript>
       <div class="choice-grid tree-pick section" id="tree-pick"></div>
       <div id="tree-panel" class="section"></div>
 """,
@@ -507,7 +508,7 @@ page(
 
 page(
     "a-propos.html",
-    "Sources et méthode | Les Gloutonnes",
+    "Sources et confidentialité | Les Gloutonnes",
     "Méthode Les Gloutonnes : Cosmorrow only, PPFD Carnivero, fiche Secret Jardin 2023-09, foliar 0,3 g/L. Pas de tracking.",
     """
       <header class="page-hero stack">
@@ -529,9 +530,9 @@ page(
           <li>Foliar 0,3 g/L : orchidée ¼ (FR/BE) ; Maxsea 16-16-16 = recette California Carnivores équivalente, pas un sésame d’import.</li>
         </ul>
         <h2>Limites</h2>
-        <p>Le simulateur est un modèle lambertien 120° + rebond mylar forfaitaire. Ce n’est pas un PAR-mètre. Les prix sont des fourchettes growshop. Les cibles PPFD sont des fourchettes d’expérience, pas une ordonnance.</p>
-        <h2>Vie privée</h2>
-        <p>Aucune mesure d’audience. Tes projets restent dans <code>localStorage</code> (<code>lg.tente.project</code>, <code>lg.tente.prefs</code>). Tu peux tout effacer dans les outils du navigateur.</p>
+        <p>La carte de lumière est une estimation, pas un appareil de mesure. Les prix sont des fourchettes de magasin. Les cibles d’éclairage viennent de la pratique, pas d’une ordonnance.</p>
+        <h2>Confidentialité</h2>
+        <p>Pas de compte, pas de cookies, pas de mesure d’audience. Ton kit et tes réglages restent sur ton appareil. Tu peux les effacer depuis les paramètres de ton navigateur.</p>
       </section>
 """,
     "",
