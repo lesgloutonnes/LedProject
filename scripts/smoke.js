@@ -142,6 +142,16 @@ var apropos = fs.readFileSync("a-propos.html", "utf8");
 assert.ok(!/infra-rouge lointain/i.test(apropos), "far-red ≠ infra-rouge lointain");
 assert.ok(/rouge lointain/i.test(apropos), "660 nm ≠ rouge lointain 730 nm");
 assert.ok(/feuillage/i.test(apropos), "PPFD au feuillage, pas « canopée »");
+assert.ok(!/far-?red/i.test(apropos), "copy public : rouge lointain, pas far-red");
+assert.ok(!/PPF\s*:\s*flux/i.test(apropos), "PPF ≠ flux (confusion lumens)");
+assert.ok(/PAR est une bande/.test(apropos), "PAR = bande 400–700 nm, pas un chiffre");
+assert.ok(/rouge PAR/.test(apropos), "660 nm = rouge PAR");
+assert.ok(/de la canopée/.test(g40.spectrumNote), "canopée est féminin");
+assert.ok(!/du canopée|dans le canopée|au-dessus du canopée/.test(
+  JSON.stringify(ctx.LG_FIXTURES) + fs.readFileSync("js/data/install.js", "utf8")
+), "plus de « du canopée »");
+assert.ok(/luminophore/.test(fs.readFileSync("js/pages/cosmorrow.js", "utf8")));
+assert.ok(!/lumiphore/.test(fs.readFileSync("js/pages/cosmorrow.js", "utf8")), "luminophore, pas lumiphore");
 
 var r = ctx.LgMatch.matchKit({
   projet: "germoir",
@@ -279,6 +289,7 @@ assert.ok(apropos.indexOf("µmol/J") >= 0, "à-propos : PPE avec unité");
 assert.ok(apropos.indexOf("mol/m²/j") >= 0, "à-propos : DLI avec unité");
 assert.ok(/rouge lointain/.test(apropos), "à-propos : 660 nm ≠ rouge lointain");
 assert.ok(!/infra-?rouge lointain/i.test(apropos), "à-propos : pas d’infra-rouge lointain");
+assert.ok(!/far-?red/i.test(apropos), "à-propos : pas de far-red anglais");
 
 var home = fs.readFileSync("index.html", "utf8");
 assert.ok(/>PPF</.test(home) && home.indexOf("202 µmol/s") >= 0, "accueil : PPF 202 µmol/s, pas « flux »");
@@ -306,6 +317,7 @@ htmlPages.forEach(function (file) {
   assert.ok(/id="contenu"[^>]*tabindex="-1"/.test(html) || /tabindex="-1"[^>]*id="contenu"/.test(html), file + " skip target");
   assert.ok(/media-src 'none'/.test(html), file + " CSP media-src");
   assert.ok(!/\bpar job\b/i.test(html), file + " jargon job");
+  assert.ok(!/far-?red/i.test(html), file + " pas de far-red anglais");
   var re = /<a\s[^>]*href="https?:\/\/[^"]+"[^>]*>/gi;
   var tag;
   while ((tag = re.exec(html))) {

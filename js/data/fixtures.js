@@ -70,7 +70,7 @@ window.LG_FIXTURES = [
       channels: [{ id: "w6500", label: "blanc 6500 K", pct: 100, cctK: 6500, peakNm: [450, 555] }],
     },
     spectrumNote:
-      "100 % blanc 6500 K. SKU signature Les Gloutonnes : zone constructeur 120×60 à 15 cm, pile deux bacs 60×40. Surface tiède → on peut coller à ~15 cm du canopée.",
+      "100 % blanc 6500 K. SKU signature Les Gloutonnes : zone constructeur 120×60 à 15 cm, pile deux bacs 60×40. Surface tiède → on peut coller à ~15 cm de la canopée.",
     ip: "IP65",
     voltage: 24,
     currentA: 1.56,
