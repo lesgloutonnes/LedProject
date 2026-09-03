@@ -135,6 +135,7 @@ Attributs : échapper **aussi** les quotes. Ne pas interpoler dans `style="left:
 Tout `target="_blank"` **exige** `rel="noopener noreferrer"`. Pas l’un sans l’autre.
 
 Sources (Carnivero, Secret Jardin COP, Maxsea) : `_blank` + rel. Liens internes : **pas** de `_blank`.
+`js/nav.js` durcit aussi **tous** les `a[href^=http]` du DOM (pied, Plus, copy) : `target="_blank"`, `rel="noopener noreferrer"`, `referrerpolicy="no-referrer"`, plus un `span.visually-hidden` « (nouvelle fenêtre) ».
 
 Icône « sortie » en CSS, `span.visually-hidden` « (nouvelle fenêtre) » sur le premier lien externe d’un bloc, ou `aria-label` sur chaque lien externe.
 
@@ -167,6 +168,9 @@ Meta **raisonnable** pour pages file/http sans backend. À coller dans le head (
     font-src 'self' https://fonts.gstatic.com;
     img-src 'self' data:;
     connect-src 'self';
+    media-src 'none';
+    worker-src 'none';
+    frame-src 'none';
     upgrade-insecure-requests"
 />
 ```

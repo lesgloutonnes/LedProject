@@ -18,7 +18,7 @@
     <!-- CSP static : scripts self only. style unsafe-inline = overlays heatmap (option A, a11y-security.md). -->
     <meta
       http-equiv="Content-Security-Policy"
-      content="default-src 'self'; base-uri 'self'; form-action 'none'; frame-ancestors 'none'; object-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; upgrade-insecure-requests"
+      content="default-src 'self'; base-uri 'self'; form-action 'none'; frame-ancestors 'none'; object-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; media-src 'none'; worker-src 'none'; frame-src 'none'; upgrade-insecure-requests"
     />
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -66,7 +66,7 @@
       </div>
     </header>
 
-    <main id="contenu" class="page-main wrap">
+    <main id="contenu" class="page-main wrap" tabindex="-1">
       <!--
         BRANCHER ICI le contenu de page.
         Accueil : hero + 3 cards chemins + bande protocoles.
@@ -88,10 +88,10 @@
 
     <footer class="site-footer wrap">
       <p>
-        <a href="https://www.lesgloutonnes.be/pages/applications-culture.html" rel="noopener noreferrer">Applications de culture</a>
+        <a href="https://www.lesgloutonnes.be/pages/applications-culture.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Applications de culture</a>
         · Les Gloutonnes · Cosmorrow ·
         <a href="a-propos.html">Sources</a>
-        · <a href="https://www.lesgloutonnes.be/" rel="noopener noreferrer">lesgloutonnes.be</a>
+        · <a href="https://www.lesgloutonnes.be/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">lesgloutonnes.be</a>
       </p>
     </footer>
 

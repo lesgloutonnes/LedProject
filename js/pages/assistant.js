@@ -159,6 +159,8 @@
           active +
           '" data-tent="' +
           e(t.id) +
+          '" role="radio" aria-checked="' +
+          (state.tente && state.tente.id === t.id) +
           '"><strong>' +
           e(t.name) +
           badge +
@@ -177,11 +179,13 @@
     var customOn = state.tente && state.tente.id === "custom";
     return (
       "<h1>Quelle surface ?</h1><p class=\"lede\">Deux bacs 60 × 40 rentrent dans 120 × 60 — c’est le format signature 120 × 60.</p>" +
-      '<div class="choice-grid">' +
+      '<div class="choice-grid" role="radiogroup" aria-label="Surface de tente">' +
       cards +
       '<button type="button" class="choice' +
       (customOn ? " is-active" : "") +
-      '" data-tent="custom"><strong>Autre</strong><span>Saisie L × l × H en cm</span></button></div>' +
+      '" data-tent="custom" role="radio" aria-checked="' +
+      customOn +
+      '"><strong>Autre</strong><span>Saisie L × l × H en cm</span></button></div>' +
       (customOn
         ? '<div class="card stack mt-s4 stack-tight"><label for="custom-l">Longueur cm <input id="custom-l" type="number" inputmode="numeric" pattern="[0-9]*" min="40" max="240" autocomplete="off" enterkeyhint="next" value="' +
           e(state.tente.lengthCm || 120) +
@@ -192,7 +196,7 @@
           '"></label></div>'
         : "") +
       (state.tente && state.tente.id !== "custom"
-        ? '<p class="hint mt-s4"><button type="button" class="btn-ghost" id="save-fav">Enregistrer comme favorite</button></p>'
+        ? '<p class="hint mt-s4"><button type="button" class="btn-ghost" id="save-fav">Enregistrer comme tente préférée</button></p>'
         : "")
     );
   }
@@ -410,6 +414,21 @@
   }
 
   function bind() {
+    root.querySelectorAll('[role="radiogroup"]').forEach(function (group) {
+      group.addEventListener("keydown", function (ev) {
+        var radios = Array.prototype.slice.call(group.querySelectorAll('[role="radio"]'));
+        if (!radios.length) return;
+        var i = radios.indexOf(document.activeElement);
+        if (i < 0) i = 0;
+        var next = i;
+        if (ev.key === "ArrowRight" || ev.key === "ArrowDown") next = (i + 1) % radios.length;
+        else if (ev.key === "ArrowLeft" || ev.key === "ArrowUp") next = i <= 0 ? radios.length - 1 : i - 1;
+        else return;
+        ev.preventDefault();
+        radios[next].focus();
+        radios[next].click();
+      });
+    });
     root.querySelectorAll(".choice[data-id]").forEach(function (btn) {
       btn.addEventListener("click", function () {
         state.projet = btn.getAttribute("data-id");
