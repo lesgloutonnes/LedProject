@@ -16,15 +16,16 @@
     if (!channels || !channels.length) return "";
     var segs = channels
       .map(function (ch) {
+        var pct = Math.max(0, Math.min(100, Number(ch.pct) || 0));
         return (
           '<span style="width:' +
-          Number(ch.pct) +
+          pct +
           "%;background:" +
           channelColor(ch) +
           '" title="' +
           e(ch.label) +
           " · " +
-          e(String(ch.pct)) +
+          e(String(pct)) +
           '%"></span>'
         );
       })

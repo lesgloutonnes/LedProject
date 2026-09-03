@@ -36,7 +36,10 @@
       if (e.target === dialog && typeof dialog.close === "function") dialog.close();
     });
     dialog.addEventListener("close", function () {
-      if (openBtn) openBtn.setAttribute("aria-expanded", "false");
+      if (openBtn) {
+        openBtn.setAttribute("aria-expanded", "false");
+        if (typeof openBtn.focus === "function") openBtn.focus();
+      }
     });
   }
 
@@ -65,7 +68,10 @@
     }
   }
 
-  document.querySelectorAll('a[target="_blank"]').forEach(function (a) {
+  function hardenExternal(a) {
+    var href = a.getAttribute("href") || "";
+    if (!/^https?:\/\//i.test(href)) return;
+    a.setAttribute("target", "_blank");
     var rel = (a.getAttribute("rel") || "").toLowerCase();
     if (rel.indexOf("noopener") === -1 || rel.indexOf("noreferrer") === -1) {
       a.setAttribute("rel", "noopener noreferrer");
@@ -77,7 +83,9 @@
       s.textContent = " (nouvelle fenêtre)";
       a.appendChild(s);
     }
-  });
+  }
+
+  document.querySelectorAll("a[href]").forEach(hardenExternal);
 
   function showStoreWarn() {
     var el = document.getElementById("store-warn");

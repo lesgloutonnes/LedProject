@@ -240,3 +240,62 @@ assert.ok(
 );
 
 console.log("SMOKE OK", r.kit.name, "PPFD moy", Math.round(sim.avg));
+
+var htmlPages = [
+  "index.html",
+  "assistant.html",
+  "cosmorrow.html",
+  "especes.html",
+  "protocoles.html",
+  "tente.html",
+  "nutriments.html",
+  "outils.html",
+  "diagnostic.html",
+  "a-propos.html",
+];
+htmlPages.forEach(function (file) {
+  var html = fs.readFileSync(file, "utf8");
+  assert.ok(/id="contenu"[^>]*tabindex="-1"/.test(html) || /tabindex="-1"[^>]*id="contenu"/.test(html), file + " skip target");
+  assert.ok(/media-src 'none'/.test(html), file + " CSP media-src");
+  assert.ok(!/\bpar job\b/i.test(html), file + " jargon job");
+  var re = /<a\s[^>]*href="https?:\/\/[^"]+"[^>]*>/gi;
+  var tag;
+  while ((tag = re.exec(html))) {
+    var a = tag[0];
+    assert.ok(/noopener/.test(a) && /noreferrer/.test(a), file + " noopener " + a);
+    assert.ok(/target="_blank"/.test(a), file + " target=blank " + a);
+    assert.ok(/referrerpolicy="no-referrer"/.test(a), file + " referrer " + a);
+  }
+});
+assert.ok(fs.readFileSync("js/pages/outils.js", "utf8").indexOf("lambertien") < 0, "lambertien visiteur");
+assert.ok(fs.readFileSync("js/pages/assistant.js", "utf8").indexOf("comme favorite") < 0, "favorite visiteur");
+
+var storeSandbox = {
+  window: {},
+  localStorage: (function () {
+    var d = {};
+    return {
+      getItem: function (k) {
+        return Object.prototype.hasOwnProperty.call(d, k) ? d[k] : null;
+      },
+      setItem: function (k, v) {
+        d[k] = String(v);
+      },
+      removeItem: function (k) {
+        delete d[k];
+      },
+    };
+  })(),
+};
+storeSandbox.window = storeSandbox;
+storeSandbox.window.dispatchEvent = function () {};
+storeSandbox.window.CustomEvent = function (name, init) {
+  this.type = name;
+  this.detail = init && init.detail;
+};
+vm.runInNewContext(fs.readFileSync("js/lib/storage.js", "utf8"), storeSandbox, { filename: "storage.js" });
+assert.equal(storeSandbox.window.LgStore.MAX_BYTES, 8192);
+assert.equal(storeSandbox.window.LgStore.setPrefs({ kwhEur: 0.2 }).kwhEur, 0.2);
+assert.equal(storeSandbox.window.LgStore.setPrefs({ tenteFavorite: "<script>" }).tenteFavorite, "tent-120x60");
+storeSandbox.window.LgStore.setProject({ notes: "x".repeat(9000) });
+assert.ok(!storeSandbox.window.LgStore.getProject().notes, "quota 8 Ko refuse un dump trop gros");

@@ -1,5 +1,6 @@
 (function () {
   var PREFIX = "lg.tente.";
+  var MAX_BYTES = 8192;
   var PREFS_DEFAULT = { v: 1, kwhEur: 0.2016, tenteFavorite: "tent-120x60" };
   var PROJECT_DEFAULT = {
     v: 1,
@@ -52,7 +53,12 @@
 
   function write(key, value) {
     try {
-      localStorage.setItem(PREFIX + key, JSON.stringify(value));
+      var raw = JSON.stringify(value);
+      if (raw.length > MAX_BYTES) {
+        window.dispatchEvent(new CustomEvent("lg-tente-store", { detail: { ok: false } }));
+        return false;
+      }
+      localStorage.setItem(PREFIX + key, raw);
       window.dispatchEvent(new CustomEvent("lg-tente-store", { detail: { ok: true } }));
       return true;
     } catch (err) {
@@ -67,11 +73,20 @@
     if (typeof p.kwhEur !== "number" || p.kwhEur < 0.05 || p.kwhEur > 0.8) {
       p.kwhEur = PREFS_DEFAULT.kwhEur;
     }
+    if (p.tenteFavorite != null && !/^[a-z0-9-]+$/i.test(String(p.tenteFavorite))) {
+      p.tenteFavorite = PREFS_DEFAULT.tenteFavorite;
+    }
     return p;
   }
 
   function setPrefs(partial) {
     var next = Object.assign({}, getPrefs(), partial, { v: 1 });
+    if (typeof next.kwhEur !== "number" || next.kwhEur < 0.05 || next.kwhEur > 0.8) {
+      next.kwhEur = PREFS_DEFAULT.kwhEur;
+    }
+    if (next.tenteFavorite != null && !/^[a-z0-9-]+$/i.test(String(next.tenteFavorite))) {
+      next.tenteFavorite = PREFS_DEFAULT.tenteFavorite;
+    }
     write("prefs", next);
     return next;
   }
@@ -81,6 +96,9 @@
     if (!p) return Object.assign({}, PROJECT_DEFAULT, { contraintes: { budget: null, hygro: null, dormance: null } });
     if (!p.contraintes) p.contraintes = { budget: null, hygro: null, dormance: null };
     if (!Array.isArray(p.genres)) p.genres = [];
+    p.genres = p.genres.filter(function (g) {
+      return typeof g === "string" && /^[a-z0-9-]+$/i.test(g);
+    });
     return p;
   }
 
@@ -105,6 +123,7 @@
 
   window.LgStore = {
     canStore: canStore,
+    MAX_BYTES: MAX_BYTES,
     getPrefs: getPrefs,
     setPrefs: setPrefs,
     getProject: getProject,

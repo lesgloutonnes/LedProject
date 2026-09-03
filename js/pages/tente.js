@@ -82,12 +82,19 @@
     var c = install.climate;
     if (typeof c === "string") climate.innerHTML = "<p>" + e(c) + "</p>";
     else {
+      var climateLabels = {
+        extracteur: "Extracteur",
+        intracteur: "Intracteur",
+        hygrometre: "Hygromètre",
+        brumisation: "Brumisation",
+        chaleur: "Chaleur",
+      };
       climate.innerHTML = Object.keys(c)
         .map(function (k) {
           var val = c[k];
           return (
             "<p><strong>" +
-            e(k) +
+            e(climateLabels[k] || k) +
             ".</strong> " +
             e(typeof val === "string" ? val : JSON.stringify(val)) +
             "</p>"
@@ -110,9 +117,17 @@
           .join("") +
         "</ul>";
     } else {
+      var elecLabels = {
+        mains: "Secteur",
+        programmateur: "Programmateur",
+        load: "Charge",
+        dc24: "24 V",
+        ip: "Indice IP",
+        rcd: "Différentiel 30 mA",
+      };
       elec.innerHTML = Object.keys(el)
         .map(function (k) {
-          return "<p><strong>" + e(k) + ".</strong> " + e(String(el[k])) + "</p>";
+          return "<p><strong>" + e(elecLabels[k] || k) + ".</strong> " + e(String(el[k])) + "</p>";
         })
         .join("");
     }
