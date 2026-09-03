@@ -251,7 +251,7 @@ Une ligne sources + « pas de tracking » + lien À propos. Compact. `padding-bo
 - Fond forêt, texte LED, un ambre pour l’argent et les urnes.
 - SKU en mono, titres en Fraunces, UI en Figtree.
 - Un CTA par écran.
-- Fourchettes PPFD, jamais un dogme 300 µmol.
+- Fourchettes PPFD, jamais un dogme 300 µmol/m²/s.
 
 **Don’t**
 

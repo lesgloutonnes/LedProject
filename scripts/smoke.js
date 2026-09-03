@@ -98,6 +98,40 @@ var sim = ctx.LG_OPTICS.simulatePpfd(fx, tent, 15, 100, { layout: "parallel-dept
 assert.ok(sim.avg > 50 && sim.avg < 800, "PPFD moyen raisonnable: " + sim.avg);
 assert.equal(sim.ppfdUnit, "µmol/m²/s");
 
+ctx.LG_FIXTURES.forEach(function (f) {
+  var zone = { wCm: f.footprint.w, dCm: f.footprint.d, trays: [] };
+  var cal = ctx.LG_OPTICS.simulatePpfd(f, zone, f.footprint.hCm, 100, {
+    layout: "parallel-depth",
+    count: 1,
+    cols: 32,
+    rows: 16,
+  });
+  var err = Math.abs(cal.avg - f.ppfdAvg) / f.ppfdAvg;
+  assert.ok(err < 0.05, f.sku + " calage " + cal.avg + " vs fiche " + f.ppfdAvg);
+  var raw = ctx.LG_OPTICS.simulatePpfd(f, zone, f.footprint.hCm, 100, {
+    layout: "parallel-depth",
+    count: 1,
+    skipCalib: true,
+    cols: 32,
+    rows: 16,
+  });
+  assert.ok(raw.avg < f.ppfdAvg, f.sku + " modèle brut sous la fiche");
+});
+assert.equal(fs20.spectrum.share, "diodes");
+assert.equal(fs20.spectrum.channels[0].peakNm[0], 450);
+assert.equal(Math.round(ctx.LG_OPTICS.yearlyKwh(80, 14, 100) * 10) / 10, 408.8);
+assert.ok(
+  ctx.LG_OPTICS.yearlyKwh(80, 14, 40) < ctx.LG_OPTICS.yearlyKwh(80, 14, 100),
+  "yearlyKwh ne scale la facture que si on lui passe un % électrique"
+);
+var blob = JSON.stringify(ctx.LG_SPECIES) + JSON.stringify(ctx.LG_PROTOCOLS) + JSON.stringify(ctx.LG_PROJECTS) + JSON.stringify(ctx.LG_DIAGNOSTIC);
+var stripped = blob
+  .replace(/µmol\/m²\/s/g, "")
+  .replace(/µmol\/s/g, "")
+  .replace(/mol\/m²\/j/g, "");
+assert.ok(stripped.indexOf("µmol") < 0, "PPFD encore en µmol nu dans espèces/protocoles/projets/diagnostic");
+assert.ok(!/\d\s*mol[^/]/.test(stripped), "DLI encore en mol nu");
+
 var mixte = ctx.LG_KITS.find(function (k) { return k.id === "kit-mixte-120x60"; });
 assert.ok(mixte);
 var topBar = mixte.bars[0];

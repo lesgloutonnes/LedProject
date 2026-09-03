@@ -45,7 +45,7 @@ window.LG_DIAGNOSTIC = {
                 title: "Ombre portée, pas « mauvaise LED »",
                 fix: [
                   "Monte Sarracenia / Dionaea / Drosera de soleil à l’étage haut.",
-                  "Laisse le bas aux Nepenthes et Pinguicula (60–120 µmol, c’est leur fenêtre).",
+                  "Laisse le bas aux Nepenthes et Pinguicula (60–120 µmol/m²/s, c’est leur fenêtre).",
                   "Écarte les pots : une forêt d’urnes étiole ce qu’il y a au pied.",
                 ],
               },
@@ -71,7 +71,7 @@ window.LG_DIAGNOSTIC = {
               result: {
                 title: "PPFD bas-milieu, pas encore d’étiolement grave",
                 fix: [
-                  "Tu es probablement sous la cible (ex. dionée à 80 µmol). Monte le DLI d’un cran (hauteur ou heures).",
+                  "Tu es probablement sous la cible (ex. dionée à 80 µmol/m²/s). Monte le DLI d’un cran (hauteur ou heures).",
                   "Le vert n’est pas une maladie : beaucoup de clones restent verts (génotype). Voir arbre « pas de rouge ».",
                   "Tiens le foliar 0,3 g/L : une plante affamée sous LED correcte reste molle.",
                 ],
@@ -106,7 +106,7 @@ window.LG_DIAGNOSTIC = {
                 title: "Barre trop près pour ce genre",
                 fix: [
                   "Remonte à 25–40 cm (Nepenthes / mexicaines) ou 15–20 cm (germoir).",
-                  "Les plantules n’ont pas à prendre 300 µmol. Fenêtre 150–250.",
+                  "Les plantules n’ont pas à prendre 300 µmol/m²/s. Fenêtre 150–250 µmol/m²/s.",
                   "COP40FS à 15 cm n’est pas un germoir : Growing 6500 K, plus loin.",
                 ],
               },
@@ -184,7 +184,7 @@ window.LG_DIAGNOSTIC = {
               result: {
                 title: "Pas assez d’énergie pour sécréter",
                 fix: [
-                  "Rapproche Growing 6500 K, 14 h, bas-milieu Carnivero (Drosera ~200 µmol).",
+                  "Rapproche Growing 6500 K, 14 h, bas-milieu Carnivero (Drosera ~200 µmol/m²/s).",
                   "Un foliar 0,3 g/L après 2 semaines de bon DLI, pas avant.",
                   "Eau pauvre : une eau riche donne parfois un feuillage gras sans gouttes nettes.",
                 ],
@@ -242,7 +242,7 @@ window.LG_DIAGNOSTIC = {
               result: {
                 title: "Patience : l’urne n’est pas un droit de J+15",
                 fix: [
-                  "HR 70–80 % (60 % mini), lumière 80–100 µmol, mix aéré humide.",
+                  "HR 70–80 % (60 % mini), lumière 80–100 µmol/m²/s, mix aéré humide.",
                   "Ne colle pas une COP4065 à 15 cm « pour forcer les urnes » : Carnivero note qu’un PPFD trop haut sans nutriments de piège pousse la feuille au détriment du piège.",
                   "Nourrir dès la première mini-urne (proie ou ¼ orchidée quelques ml), pas avant.",
                 ],
@@ -272,7 +272,7 @@ window.LG_DIAGNOSTIC = {
                 fix: [
                   "Lowland qui passe des nuits à 12 °C, ou highland qui cuit à 30 °C : corrige le régime (protocole tropical).",
                   "HR chronique < 50 % : urnes avortées. Humidificateur eau RO + extracteur doux.",
-                  "PPFD < 40 µmol : étage trop sombre. COP2065 à 30 cm.",
+                  "PPFD < 40 µmol/m²/s : étage trop sombre. COP2065 à 30 cm.",
                 ],
               },
             },
@@ -299,7 +299,7 @@ window.LG_DIAGNOSTIC = {
                 fix: [
                   "Rempote au débourrement en 2–3 L (Sarracenia adulte).",
                   "Vérifie qu’un hiver froid a bien eu lieu l’an dernier.",
-                  "Foliar 0,3 g/L 1–2×/mois + DLI bas-milieu (dressées ~300 µmol).",
+                  "Foliar 0,3 g/L 1–2×/mois + DLI bas-milieu (dressées ~300 µmol/m²/s).",
                 ],
               },
             },
@@ -530,7 +530,7 @@ window.LG_DIAGNOSTIC = {
               result: {
                 title: "Soit encore sous la fenêtre, soit clone mal nommé",
                 fix: [
-                  "Vérifie que tu n’es pas à 120 µmol sur une dressée (cible ~300).",
+                  "Vérifie que tu n’es pas à 120 µmol/m²/s sur une dressée (cible ~300 µmol/m²/s).",
                   "Foliar 0,3 g/L : une plante affamée colore mal.",
                   "Doute sur l’étiquette du vendeur : fréquent.",
                 ],
@@ -553,7 +553,7 @@ window.LG_DIAGNOSTIC = {
               result: {
                 title: "Stratification manquante",
                 fix: [
-                  "4–8 semaines à 4 °C, papier ou tourbe juste humide, puis surface à 20–24 °C, 14 h, 150–250 µmol.",
+                  "4–8 semaines à 4 °C, papier ou tourbe juste humide, puis surface à 20–24 °C, 14 h, 150–250 µmol/m²/s.",
                   "Capensis / spatulata / Byblis liniflora : pas de froid — si tu les as frigo 8 semaines pour rien, sème-les maintenant.",
                 ],
               },
@@ -627,7 +627,7 @@ window.LG_DIAGNOSTIC = {
                 title: "Cuites et noyées",
                 fix: [
                   "Sphaigne essorée, plus de filet d’eau.",
-                  "COP2065 à 30–40 cm, 40–80 µmol, 12–14 h.",
+                  "COP2065 à 30–40 cm, 40–80 µmol/m²/s, 12–14 h.",
                   "Aère le dôme 2 min / jour. Reprends sur bois ferme.",
                 ],
               },
@@ -656,7 +656,7 @@ window.LG_DIAGNOSTIC = {
                   "Pas d’eau stagnante sur le pétiole. Mix essoré.",
                   "Dionaea : fragment de rhizome blanc obligatoire.",
                   "Pinguicula mexicaine : HR 70–80 %, pas 100 %, mix drainant.",
-                  "Lumière 80–120 µmol (dionée/drosera) ou 40–80 (pinguicula), jamais germoir 250 collé.",
+                  "Lumière 80–120 µmol/m²/s (dionée/drosera) ou 40–80 µmol/m²/s (pinguicula), jamais germoir 250 µmol/m²/s collé.",
                 ],
               },
             },

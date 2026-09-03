@@ -18,7 +18,7 @@ window.LG_KITS = [
     psu: "COM20",
     totalWatts: 20,
     totalPpf: 51,
-    why: "Zone constructeur 60×40 @ 15 cm, PPFD moy. 268. Une barre Growing 20 W pile dans un Dark Propagator / une étagère. Blanc 6500 K pour cotylédons compacts.",
+    why: "Zone constructeur 60×40 @ 15 cm, PPFD moy. 268 µmol/m²/s. Une barre Growing 20 W pile dans un Dark Propagator / une étagère. Blanc 6500 K pour cotylédons compacts.",
     hangCm: 15,
     hours: 14,
     shopping: [
@@ -184,7 +184,7 @@ window.LG_KITS = [
     psu: "COM40",
     totalWatts: 40,
     totalPpf: 107,
-    why: "Moins de PPF, plus d’hygro. Une FS 40 W sur sa zone constructeur 90×60 @ 20 cm, puis on monte à 25–30 cm. 12–14 h. L’enjeu Nepenthes / Heliamphora / Cephalotus c’est 70–85 % HR, pas 300 µmol.",
+    why: "Moins de PPF, plus d’hygro. Une FS 40 W sur sa zone constructeur 90×60 @ 20 cm, puis on monte à 25–30 cm. 12–14 h. L’enjeu Nepenthes / Heliamphora / Cephalotus c’est 70–85 % HR, pas 300 µmol/m²/s.",
     hangCm: 28,
     hours: 13,
     shopping: [
@@ -279,7 +279,7 @@ window.LG_KITS = [
     warnings: [
       "COP40FS plus courte (70 vs 87) et plus large (4,5 vs 3,2 cm) : la centrer, ne pas l’aligner en bout.",
       "FS à ~20 cm, Growing à ~15–18 cm — deux hauteurs si besoin.",
-      "Un cultivar vert restera vert à 500 µmol. Arrêter si blanchiment / urnes croustillantes.",
+      "Un cultivar vert restera vert à 500 µmol/m²/s. Arrêter si blanchiment / urnes croustillantes.",
     ],
     estimatedEUR: 215,
   },

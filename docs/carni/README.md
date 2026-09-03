@@ -39,7 +39,7 @@ Champs : `id`, `latin`, `common`, `family`, `climate`, `dormancy` + `dormancyNot
 
 | id | Titre court |
 | --- | --- |
-| `seedling` | Germoir 14 h, 15–20 cm, 150–250 µmol, cold strat |
+| `seedling` | Germoir 14 h, 15–20 cm, 150–250 µmol/m²/s, cold strat |
 | `cutting` | Boutures Nepenthes HR 90–100 % + leaf pullings |
 | `production` | Adultes, foliar ¼, pots justes |
 | `coloring` | DLI × génotype, Growing 6500 K d’abord, FS appoint |

@@ -10,7 +10,9 @@
  * - Les Cosmorrow n’ont pas un diagramme lambertien parfait (lentille ~115–120°).
  * - Le mylar 0,25 est un bonus forfaitaire : murs sales, portes ouvertes, filet = moins.
  * - Une barre est discrétisée en segments ; le hotspot réel dépend des 3 lignes de LED.
- * - PPFD constructeur (ex. 268 sur 60×40 @ 15 cm) sert de calage, pas de vérité terrain.
+ * - PPFD constructeur (ex. 268 sur 60×40 @ 15 cm) cale la moyenne : le lambertien + mylar 0,25
+ *   sous-estime la fiche (rebond réel + photons renvoyés depuis les parois). On multiplie le PPF
+ *   simulé d’un facteur par SKU pour coller à cette moyenne, sans toucher au PPF catalogue.
  * - L’intensité % simule un éloignement / un voile, PAS un dimmer (Cosmorrow n’est pas dimmable).
  * - Comparer des kits, pas certifier un DLI de culture.
  */
@@ -18,6 +20,7 @@ var LG_EUR_PER_KWH = 0.2;
 var LG_BEAM_DEG = 120;
 var LG_BOUNCE_MYLAR = 0.25;
 var LG_COS_CUTOFF = 0.5;
+var LG_CALIB_CACHE = {};
 
 function lgTentSize(tent) {
   var w = tent.wCm || tent.lengthCm || tent.widthCm;
@@ -211,6 +214,56 @@ function lgSample(grid, cols, rows, nx, ny) {
 }
 
 /**
+ * Facteur pour coller la moyenne du modèle à la PPFD fiche (même zone, même hauteur).
+ * Linéaire en PPF : applicable avant le bounce. skipCalib évite la récursion.
+ */
+function datasheetScale(fixture) {
+  if (!fixture || fixture.ppfdAvg == null || !fixture.footprint) return 1;
+  var key = fixture.sku || fixture.id || "anon";
+  if (Object.prototype.hasOwnProperty.call(LG_CALIB_CACHE, key)) return LG_CALIB_CACHE[key];
+  var fp = fixture.footprint;
+  var tent = { wCm: fp.w, dCm: fp.d, hCm: 80, trays: [] };
+  var raw = simulatePpfd(fixture, tent, fp.hCm, 100, {
+    layout: "parallel-depth",
+    count: 1,
+    skipCalib: true,
+    cols: 32,
+    rows: 16,
+  });
+  var scale = raw.avg > 1 ? fixture.ppfdAvg / raw.avg : 1;
+  LG_CALIB_CACHE[key] = scale;
+  return scale;
+}
+
+function compareDatasheet(fixture) {
+  if (!fixture || !fixture.footprint) return null;
+  var fp = fixture.footprint;
+  var tent = { wCm: fp.w, dCm: fp.d, trays: [] };
+  var raw = simulatePpfd(fixture, tent, fp.hCm, 100, {
+    layout: "parallel-depth",
+    count: 1,
+    skipCalib: true,
+    cols: 32,
+    rows: 16,
+  });
+  var cal = simulatePpfd(fixture, tent, fp.hCm, 100, {
+    layout: "parallel-depth",
+    count: 1,
+    cols: 32,
+    rows: 16,
+  });
+  return {
+    sku: fixture.sku,
+    datasheet: fixture.ppfdAvg,
+    zone: fp,
+    modelRaw: raw.avg,
+    modelCalibrated: cal.avg,
+    scale: datasheetScale(fixture),
+    ppfdUnit: "µmol/m²/s",
+  };
+}
+
+/**
  * Carte PPFD simplifiée.
  * intensityPct : 0–100 (Cosmorrow n’est pas dimmable ; ça simule un voile / un recul).
  * options.layout / options.count / options.bounce / options.cols / options.rows
@@ -222,6 +275,7 @@ function simulatePpfd(fixture, tent, heightCm, intensityPct) {
   var rows = options.rows || Math.max(12, Math.min(32, Math.round(size.dCm / 4)));
   var bounce = options.bounce == null ? LG_BOUNCE_MYLAR : options.bounce;
   var scale = (intensityPct == null ? 100 : intensityPct) / 100;
+  var calib = options.skipCalib ? 1 : datasheetScale(fixture);
   var layout = options.layout || fixture.layout || "parallel-depth";
   var count = options.count == null ? fixture.count || 1 : options.count;
   var lights = placements(fixture, tent, layout, count, options)
@@ -233,7 +287,7 @@ function simulatePpfd(fixture, tent, heightCm, intensityPct) {
     .map(function (l) {
       var copy = {};
       for (var k in l) if (Object.prototype.hasOwnProperty.call(l, k)) copy[k] = l[k];
-      copy.ppf = l.ppf * scale;
+      copy.ppf = l.ppf * scale * calib;
       return copy;
     });
   var h = Math.max(8, heightCm);
@@ -321,9 +375,10 @@ function simulatePpfd(fixture, tent, heightCm, intensityPct) {
     bounce: bounce,
     heightCm: h,
     intensityPct: intensityPct == null ? 100 : intensityPct,
-    model: "lambertien 120° + bounce mylar forfaitaire — pas un PAR-mètre",
+    model: "lambertien 120° + bounce mylar 0,25, calé sur PPFD moyen fiche — pas un PAR-mètre",
     ppfdUnit: "µmol/m²/s",
     dliUnit: "mol/m²/j",
+    calib: calib,
   };
 }
 
@@ -402,8 +457,9 @@ function dli(ppfd, hours) {
 }
 
 /**
- * kWh / an. intensity = 0–100 (fraction de puissance).
- * Cosmorrow n’est pas dimmable : passer 100 sauf simulation de recul.
+ * kWh / an. intensity = 0–100 (fraction de puissance électrique).
+ * Cosmorrow n’est pas dimmable : un voile ou un recul ne baisse pas les watts.
+ * Toujours passer 100 pour une facture Cosmorrow.
  */
 function yearlyKwh(watts, hours, intensity) {
   var pct = intensity == null ? 100 : intensity;
@@ -426,6 +482,8 @@ window.LG_OPTICS = {
   DLI_UNIT: "mol/m²/j",
   placements: placements,
   simulatePpfd: simulatePpfd,
+  datasheetScale: datasheetScale,
+  compareDatasheet: compareDatasheet,
   applyUniformBounce: applyUniformBounce,
   summarizePpfd: summarizePpfd,
   dli: dli,

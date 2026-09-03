@@ -152,8 +152,8 @@
           e((f.parNm && f.parNm[0] + "–" + f.parNm[1] + " nm") || fmt.units.par) +
           "</span></p><p class=\"hint\">" +
           e(f.spectrum && f.spectrum.kind === "full-spectrum"
-            ? "660 nm = rouge PAR. Pas de far-red 730 nm sur Cosmorrow."
-            : "Blanc froid : internodes courts au germoir.") +
+            ? "Parts de diodes (fiche), pas une SPD. 660 nm = rouge PAR, pas du far-red 730 nm. Blanc 2700 K = pompe 450 nm + lumiphore ~610 nm."
+            : "100 % diodes 6500 K (parts de diodes, pas une SPD). Blanc froid : internodes courts au germoir.") +
           "</p></article>"
         );
       })

@@ -25,7 +25,7 @@ window.LG_CALENDAR = {
       name: "Février",
       photoperiod: "Dormantes : encore 8–10 h en début de mois, palier 10–12 h en toute fin si les bourgeons bougent. Tropicales : 12–14 h.",
       gestures: [
-        "Semis d’hiver : sortir les graines stratifiées depuis décembre–janvier, semer en surface, 14 h, 15–20 cm, 150–250 µmol.",
+        "Semis d’hiver : sortir les graines stratifiées depuis décembre–janvier, semer en surface, 14 h, 15–20 cm, 150–250 µmol/m²/s.",
         "Nettoyer les restes d’urnes vraiment mortes sans blesser le rhizome.",
         "Vérifier le stock d’eau RO / le TDS des cartouches ZeroWater.",
         "Planifier les rempotages de mars : pots, tourbe, perlite rincée.",
@@ -147,7 +147,7 @@ window.LG_CALENDAR = {
       name: "Décembre",
       photoperiod: "Dormantes : 8–10 h. Tropicales : 12–14 h. Germoir de strat : 14 h s’il est déjà semé.",
       gestures: [
-        "Cadeaux de plantes : acclimater (sac, HR, lumière douce), ne pas les coller sous 300 µmol le soir de Noël.",
+        "Cadeaux de plantes : acclimater (sac, HR, lumière douce), ne pas les coller sous 300 µmol/m²/s le soir de Noël.",
         "Recharger l’eau distillée / vérifier l’osmoseur avant les soldes d’eau calcaire de janvier.",
         "Relire les étiquettes de strat au frigo (dates).",
         "Rien d’heroïque : on maintient, on ne lance pas un étage colorisation.",
