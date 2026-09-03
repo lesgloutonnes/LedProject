@@ -119,6 +119,28 @@ assert.ok(/petits pièges/.test(dion.seedlingNotes), "dionée : mini-pièges dè
 
 assert.ok(/ssp\. purpurea/i.test(sarrLow.dormancyNote), "purpurea nord vs golfe");
 assert.ok(/venosa/i.test(sarrLow.dormancyNote), "venosa moins rustique");
+assert.ok(!/Première feuille = phyllode/.test(sarr.seedlingNotes), "plantule Sarracenia ≠ phyllode d’adulte");
+assert.ok(/mini-urnes/.test(sarr.seedlingNotes), "Sarracenia : mini-urnes dès le semis");
+assert.ok(/Oreophila n’est pas du golfe|Oreophila n'est pas du golfe/.test(sarr.warnings.join(" ")), "warning oreophila");
+assert.ok(/acclimatation/.test(dion.tentTips), "dionée : acclimater avant le plein soleil");
+assert.ok(/acclimatation/.test(prod.steps.map(function (s) { return s.body; }).join(" ")), "production : acclimater avant le dehors");
+assert.ok(/golfe/i.test(dorm.climate), "dormance : trier golfe vs natives");
+assert.ok(!/Sarracenia et dionées adultes supportent le gel léger dehors/.test(dorm.climate), "dormance : pas de gel léger fourre-tout");
+
+var pyg = ctx.LG_SPECIES.find(function (s) { return s.id === "drosera-pygmy"; });
+assert.ok(/automne/i.test(pyg.seedlingNotes), "pygmées : gemmae surtout à l’automne");
+assert.ok(!/fin d’hiver–printemps indoor/.test(pyg.seedlingNotes));
+
+assert.ok(!/droséra du Portugal/i.test(dros.common), "Drosophyllum n’est pas un Drosera");
+assert.ok(/drosophylle/i.test(dros.common));
+
+var sarrDormWarn = ctx.LgMatch.genreWarnings("dormance", ["sarracenia"]);
+assert.ok(
+  sarrDormWarn.some(function (w) {
+    return /oreophila/i.test(w) && /golfe/i.test(w);
+  }),
+  "sarracenia + dormance : oreophila ≠ golfe"
+);
 
 var high = ctx.LG_SPECIES.find(function (s) { return s.id === "nepenthes-highland"; });
 assert.ok(/16–20|16-20/.test(high.dormancyNote + high.tentTips + high.warnings.join(" ")), "ventricosa : nuits intermédiaires");
@@ -126,9 +148,19 @@ assert.ok(high.tempNight[0] >= 12, "fiche highland : ne pas coller 10 °C à ven
 
 var pingT = ctx.LG_SPECIES.find(function (s) { return s.id === "pinguicula-temperate"; });
 assert.ok(/n’en fait pas|n'en fait pas/.test(pingT.dormancyNote), "lusitanica n’est pas un hibernacle");
+assert.ok(/Lusitanica/.test(pingT.waterNote), "lusitanica : on ne sèche pas comme un hibernacle");
+
+var pingDormWarn = ctx.LgMatch.genreWarnings("dormance", ["pinguicula"]);
+assert.ok(
+  pingDormWarn.some(function (w) {
+    return /lusitanica/i.test(w);
+  }),
+  "pinguicula + dormance : lusitanica n’est pas vulgaris"
+);
 
 var utricEpi = ctx.LG_SPECIES.find(function (s) { return s.id === "utricularia-epiphytic"; });
 assert.ok(/humboldtii/i.test(utricEpi.waterNote), "humboldtii : eau, pas seulement brume");
+assert.ok(!/HumboldtII/.test(utricEpi.waterNote + utricEpi.substrate + utricEpi.tentTips), "humboldtii, pas HumboldtII");
 
 var drosDormWarn = ctx.LgMatch.genreWarnings("dormance", ["drosera"]);
 assert.ok(
