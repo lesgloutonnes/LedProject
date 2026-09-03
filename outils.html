@@ -7,9 +7,10 @@
     <meta name="description" content="Simulateur PPFD Cosmorrow, DLI et coût électrique pour tente de carnivores. Modèle optique prudent, pas un PAR-mètre." />
     <meta name="theme-color" content="#243a32" />
     <meta name="color-scheme" content="dark" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
     <meta
       http-equiv="Content-Security-Policy"
-      content="default-src 'self'; base-uri 'self'; form-action 'none'; frame-ancestors 'none'; object-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'"
+      content="default-src 'self'; base-uri 'self'; form-action 'none'; frame-ancestors 'none'; object-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; upgrade-insecure-requests"
     />
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -17,6 +18,7 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap"
       rel="stylesheet"
+      referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="css/tokens.css" />
     <link rel="stylesheet" href="css/ui.css" />
@@ -30,14 +32,15 @@
           <span class="brand-name">Tourbière</span>
         </a>
         <nav class="nav-primary" aria-label="Principale">
-          <a href="index.html">Accueil</a>
+          <a class="nav-wide" href="index.html">Accueil</a>
           <a href="assistant.html">Assistant</a>
           <a href="cosmorrow.html">Cosmorrow</a>
           <a href="especes.html">Espèces</a>
-          <a href="protocoles.html">Protocoles</a>
+          <a class="nav-wide" href="protocoles.html">Protocoles</a>
           <details class="nav-more">
             <summary>Plus</summary>
             <ul>
+              <li><a href="protocoles.html">Protocoles</a></li>
               <li><a href="tente.html">Tente</a></li>
               <li><a href="nutriments.html">Nutriments</a></li>
               <li><a href="outils.html">Outils</a></li>
@@ -49,6 +52,7 @@
         <a class="btn-primary header-cta" href="assistant.html">Lancer l’assistant</a>
       </div>
     </header>
+    <p id="store-warn" class="callout is-warn wrap store-warn" hidden role="status">Mémoire pleine ou privée : le kit reste sur cet écran seulement.</p>
     <main id="contenu" class="page-main wrap">
 
       <header class="page-hero stack">
@@ -75,22 +79,27 @@
         <div class="stack">
           <article class="card">
             <h3>Réglages</h3>
-            <label>Kit
+            <label for="kit-select">Kit
               <select id="kit-select"></select>
             </label>
-            <label>Tente
+            <label for="tent-select">Tente
               <select id="tent-select"></select>
             </label>
-            <label class="slider">
+            <label class="slider" for="height">
               <span>Hauteur <strong id="height-val">20 cm</strong></span>
               <input id="height" type="range" min="12" max="50" value="20" />
             </label>
-            <label class="slider">
+            <label class="slider" for="hours">
               <span>Photopériode <strong id="hours-val">14 h</strong></span>
               <input id="hours" type="range" min="8" max="18" value="14" />
             </label>
-            <label>Tarif € / kWh
-              <input id="kwh-eur" type="number" inputmode="decimal" step="0.0001" min="0.05" max="0.80" />
+            <label class="slider" for="intensity">
+              <span>Intensité <strong id="intensity-val">100 %</strong></span>
+              <input id="intensity" type="range" min="40" max="100" value="100" />
+            </label>
+            <p id="dim-warn" class="dim-warn" hidden>Cosmorrow n’est pas dimmable. Ce curseur simule un voile, pas un Controller+.</p>
+            <label for="kwh-eur">Tarif € / kWh
+              <input id="kwh-eur" type="number" inputmode="decimal" step="0.0001" min="0.05" max="0.80" autocomplete="off" />
             </label>
           </article>
           <div id="stats" class="stats"></div>
@@ -116,8 +125,8 @@
       </button>
     </nav>
     <dialog id="plus-sheet" aria-labelledby="plus-title">
-      <h2 id="plus-title">Plus</h2>
       <button type="button" class="plus-close" id="plus-close">Fermer</button>
+      <h2 id="plus-title">Plus</h2>
       <nav aria-label="Secondaire">
         <ul>
           <li><a href="protocoles.html">Protocoles</a></li>
