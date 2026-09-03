@@ -313,7 +313,7 @@ window.LG_DIAGNOSTIC = {
       startId: "pou-1",
       nodes: {
         "pou-1": {
-          question: "La zone molle est-elle le collet / le rhizome, ou seulement de vieilles feuilles ?",
+          question: "La zone molle est-elle le collet / le rhizome, de vieux pièges, ou un piège qui pourrit juste après un repas ?",
           answers: [
             { label: "Collet ou rhizome mou, odeur", nextId: "pou-2" },
             {
@@ -324,6 +324,17 @@ window.LG_DIAGNOSTIC = {
                   "On coupe le tissu mort, pas le vert.",
                   "Dionée en hiver : pièges noirs attendus.",
                   "Si le cœur est ferme et vert pâle, on n’arrache pas.",
+                ],
+              },
+            },
+            {
+              label: "Piège Dionaea qui pourrit 2–3 jours après un repas",
+              result: {
+                title: "Proie morte non scellée, ou trop grosse",
+                fix: [
+                  "Une mouche congelée ne déclenche pas les poils : le piège reste entrouvert, ça pourrit. Masse les poils après la pose, ou nourris vivant.",
+                  "Trop gros pour le piège = même pourriture. 1–2 pièges / mois, pas un buffet.",
+                  "On coupe le piège atteint au pétiole, on n’arrache pas le rhizome.",
                 ],
               },
             },
@@ -553,7 +564,7 @@ window.LG_DIAGNOSTIC = {
               result: {
                 title: "Stratification manquante",
                 fix: [
-                  "4–8 semaines à 4 °C, papier ou tourbe juste humide, puis surface à 20–24 °C, 14 h, 150–250 µmol/m²/s.",
+                  "Sarracenia : 6–8 semaines à 4 °C, papier ou tourbe juste humide, puis surface à 20–24 °C, 14 h, 150–250 µmol/m²/s. Dionaea / Drosera tempérées : 4–6 semaines suffisent souvent.",
                   "Capensis / spatulata / Byblis liniflora : pas de froid — si tu les as frigo 8 semaines pour rien, sème-les maintenant.",
                 ],
               },

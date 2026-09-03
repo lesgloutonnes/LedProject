@@ -28,9 +28,9 @@ window.LG_SPECIES = [
     fertilizer:
       "Foliar 0,3 g/L (orchidée ¼ ou Maxsea 16-16-16) 1–2×/mois en saison, feuillage sec, matin. Proies 1–2 pièges / mois suffisent souvent. Jamais Miracle-Gro, jamais terreau fertilisé, jamais d’engrais dans le bac.",
     tentTips:
-      "Étage haut, 15–20 cm sous COP4065 Growing 6500 K (ou COP2065 sur une étagère 60×40). La dionée veut du photon et de l’air, pas une jungle à 90 % HR. Extraire pour rester ~50–60 %. Viser 200 µmol/m²/s, pas 400 d’emblée. Pot 8–10 cm, légèrement à l’étroit : un 3 L n’accélère pas un rhizome de 2 cm.",
+      "Étage haut, 15–20 cm sous COP4065 Growing 6500 K (ou COP2065 sur une étagère 60×40). La dionée veut du photon et de l’air, pas une jungle à 90 % HR. Extraire pour rester ~50–60 %. Viser 200 µmol/m²/s, pas 400 d’emblée. Pot 8–10 cm, légèrement à l’étroit : un 3 L n’accélère pas un rhizome de 2 cm. En FR/BE, un adulte hors gel va dehors mai–septembre (soleil, pluie, proies) : la tente est le plan appartement / germoir, pas un substitut d’été.",
     traps:
-      "Un insecte vivant (ou congelé puis décongelé) par piège, 1–2 pièges par mois. Pas de viande hachée, fromage, œuf. Un piège ne s’ouvre qu’une poignée de fois : ne pas « jouer » avec. Après digestion, le piège noircit : on le laisse, on ne coupe pas à vif.",
+      "Un insecte vivant par piège, 1–2 pièges par mois. Congelé-décongelé : seulement si tu masses les poils sensitifs après la pose — une proie morte ne déclenche pas la fermeture étanche, le piège pourrit. Pas de viande hachée, fromage, œuf. Un piège ne s’ouvre qu’une poignée de fois : ne pas « jouer » avec. Après digestion, le piège noircit : on le laisse, on ne coupe pas à vif.",
     seedlingNotes:
       "Graines noires minuscules, viables 1 an au frais/sec, plus faibles ensuite. Strat 4–6 semaines (frigo 4 °C, papier ou tourbe juste humide) utile sur lots sauvages ; beaucoup de F1 germent sans. Surface, jamais d’enfouissement. Mix ébouillanté, 14 h, 15–20 cm, 150–250 µmol/m²/s. Levée 2–6 semaines. Première vraie feuille en rosette, pas encore de piège.",
     cuttingNotes:
@@ -63,15 +63,15 @@ window.LG_SPECIES = [
     water: "tray",
     waterNote:
       "Bac 2–3 cm en croissance. Laisser le bac sécher presque à blanc 1 jour de temps en temps pour oxygéner, sans jamais laisser le pain de tourbe croûter.",
-    substrate: "Tourbe blonde non amendée + perlite 50/50. Pots larges (15–20 cm de diamètre) : le rhizome pousse à l’horizontale, une colonne profonde ne sert à rien (ça, c’est Darlingtonia). Sable siliceux possible, jamais de calcaire.",
+    substrate: "Tourbe blonde non amendée + perlite 50/50. Pots larges (15–20 cm de diamètre) : le rhizome pousse à l’horizontale, une colonne profonde ne sert à rien (ça, c’est Darlingtonia). Rempoter tous les 12–24 mois au débourrement : la tourbe s’affaisse, le rhizome bute contre la paroi d’un pot étroit. Sable siliceux possible, jamais de calcaire, jamais de coco.",
     fertilizer:
       "Foliar 0,3 g/L 1–2×/mois sur urnes et feuillage. Osmocote dans l’urne : on s’en passe (urne ouverte = sel + algues). Racinaire : non.",
     tentTips:
-      "Toujours l’étage le plus haut, au plus près des COP4065 (15–20 cm du sommet des urnes, pas du pot). Deux COP4065 sur 120×60 tiennent des adultes si tu les espaces sur la profondeur. Les urnes qui touchent la barre grillent : laisse 10 cm de marge quand elles poussent.",
+      "Toujours l’étage le plus haut, au plus près des COP4065 (15–20 cm du sommet des urnes, pas du pot). Deux COP4065 sur 120×60 tiennent des adultes si tu les espaces sur la profondeur. Les urnes qui touchent la barre grillent : laisse 10 cm de marge quand elles poussent. Mai–septembre en FR/BE : les adultes dressées font mieux dehors (plein soleil, bac de pluie) que sous 26 °C de tente ; on rentre le germoir et les tropicales.",
     traps:
       "Les urnes chassent seules si tu ouvres la tente. Sinon : 1–2 mouches par urne mature et par mois, ou un foliar 0,3 g/L. Ne pas remplir les urnes de bouillon ni d’Osmocote.",
     seedlingNotes:
-      "Graines à stratification froide 4–8 semaines. Viables surtout l’année de récolte (frigo sec). Semis de surface, mix ébouillanté, 14 h, 15–20 cm, 150–250 µmol/m²/s. Première feuille = phyllode, pas encore d’urne. 2–4 ans avant un adulte. Repiquer par motte à 4–6 feuilles, pas racine nue.",
+      "Graines à stratification froide 6–8 semaines (4 semaines, c’est souvent trop court pour flava / leucophylla). Viables surtout l’année de récolte (frigo sec). Semis de surface, mix ébouillanté, 14 h, 15–20 cm, 150–250 µmol/m²/s. Première feuille = phyllode, pas encore d’urne. 2–4 ans avant un adulte. Repiquer par motte à 4–6 feuilles, pas racine nue.",
     cuttingNotes:
       "Division de rhizome au débourrement (mars–avril) : un morceau avec au moins un point de croissance. Bouture de rhizome sans feuille possible mais plus lente. Pas de bouture de feuille utile.",
     redColorNotes:
@@ -110,7 +110,7 @@ window.LG_SPECIES = [
     traps:
       "Urnes ouvertes vers le haut (purpurea) : quelques drosophiles suffisent. Pas de viande. L’eau stagnante dans l’urne n’est pas un problème tant qu’elle reste pauvre.",
     seedlingNotes:
-      "Comme les dressées : cold strat 4–8 semaines, surface, mix ébouillanté, 150–250 µmol/m²/s, 14 h. Graines de l’année. Plantules plus compactes, plus rapides à faire une mini-urne.",
+      "Comme les dressées : cold strat 6–8 semaines, surface, mix ébouillanté, 150–250 µmol/m²/s, 14 h. Graines de l’année. Plantules plus compactes, plus rapides à faire une mini-urne.",
     cuttingNotes: "Division de rhizome au printemps. Les rosettes se séparent facilement.",
     redColorNotes:
       "Purpurea venosa et rosea colorent bien dès 200–250 µmol/m²/s en 6500 K, surtout avec nuits fraîches. Le rouge est aussi un signal de « assez de lumière + un peu de stress hydrique contrôlé », pas un pic 660.",
@@ -122,13 +122,13 @@ window.LG_SPECIES = [
   },
   {
     id: "drosera-temperate",
-    latin: "Drosera (rotundifolia, intermedia, anglica, filiformis, binata…)",
+    latin: "Drosera (rotundifolia, intermedia, anglica, filiformis…)",
     common: "Droséras tempérées",
     family: "Droseraceae",
     climate: "temperate",
     dormancy: "required",
     dormancyNote:
-      "Hibernacle (rotundifolia, intermedia, filiformis) ou simple ralentissement (binata : australienne, repos optionnel). 3–4 mois, 0–10 °C, 8–10 h. Filiformis : ne jamais laisser sécher le hibernacle. Binata : un hiver lumineux et frais aide, ce n’est pas une dionée.",
+      "Hibernacle vrai (rotundifolia, intermedia, anglica, filiformis) : 3–4 mois, 0–10 °C, 8–10 h, mix juste humide. Filiformis : ne jamais laisser sécher le hibernacle. D. binata (Australie) n’est pas dans ce groupe : pas d’hibernacle, repos frais optionnel, culture plutôt type capensis.",
     ppfd: [100, 200, 400],
     dli: [4.3, 9.4, 20.2],
     photoperiodGrow: 14,
@@ -142,7 +142,7 @@ window.LG_SPECIES = [
     fertilizer:
       "Foliar 0,3 g/L 1×/mois suffit : le mucilage capte déjà. Trop d’engrais = mucilage qui « fond » et algues sur le terreau.",
     tentTips:
-      "Étage haut ou médian, 15–25 cm sous COP4065. Les rotundifolia restent basses : tu peux les glisser au pied des Sarracenia si le PPFD y reste ≥ 150. Binata monte : laisse de la hauteur.",
+      "Étage haut ou médian, 15–25 cm sous COP4065. Les rotundifolia restent basses : tu peux les glisser au pied des Sarracenia si le PPFD y reste ≥ 150. D. binata, si tu en as : tiges hautes, pas d’hibernacle, plutôt l’étage capensis.",
     traps:
       "Le mucilage fait le travail. Sciarides de la tente = buffet. Complément : drosophiles 1×/mois, ou foliar. Pas de viande.",
     seedlingNotes:
@@ -153,7 +153,7 @@ window.LG_SPECIES = [
       "Rotundifolia et filiformis ‘Florida Red’ colorent dès 200 µmol/m²/s en 6500 K. Le mucilage brille plus que le pigment : si la feuille est rouge mais sèche, c’est trop de chaleur / trop peu d’HR, pas trop de bleu.",
     warnings: [
       "Hibernacle ≠ mort : ne pas jeter un pot « vide » en décembre.",
-      "Binata a des feuilles coupantes : gants pour les grosses touffes.",
+      "Ne pas coller D. binata dans le protocole 5 °C des rotundifolia : ce n’est pas une tempérée d’hémisphère nord.",
     ],
     projects: ["seedling", "cutting", "production", "coloring", "mixed", "dormancy"],
   },
@@ -228,7 +228,7 @@ window.LG_SPECIES = [
   },
   {
     id: "nepenthes-lowland",
-    latin: "Nepenthes (ampullaria, bicalcarata, mirabilis, ventricosa × lowland…)",
+    latin: "Nepenthes (ampullaria, bicalcarata, mirabilis, gracilis, rafflesiana…)",
     common: "Nepenthes de basse altitude",
     family: "Nepenthaceae",
     climate: "tropical-lowland",
@@ -259,20 +259,21 @@ window.LG_SPECIES = [
       "La couleur d’urne est surtout génétique et HR + un peu de DLI. Monter à 150–200 µmol/m²/s peut rougir mais dessèche les urnes si l’HR descend sous 60 %. Growing 6500 K suffit.",
     warnings: [
       "Bac d’eau type tourbière = asphyxie racinaire.",
-      "Nuits froides de highland tuent les vraies lowland (bicalcarata).",
+      "Nuits froides de highland tuent les vraies lowland (bicalcarata, ampullaria).",
+      "Une « ventricosa » ou « alata » de rayon n’est pas une lowland : c’est une intermédiaire (voir highland).",
       "Fourchette Carnivero 30–200 : commencer à 80, pas à 200.",
     ],
     projects: ["cutting", "production", "mixed", "tropical"],
   },
   {
     id: "nepenthes-highland",
-    latin: "Nepenthes (ventricosa, alata, rajah, hamata, lowii… et hybrides highland / intermédiaires)",
+    latin: "Nepenthes (ventricosa, alata / graciliflora, rajah, hamata, lowii… et hybrides highland / intermédiaires)",
     common: "Nepenthes de haute altitude",
     family: "Nepenthaceae",
     climate: "tropical-highland",
     dormancy: "none",
     dormancyNote:
-      "Pas de dormance. Écart jour/nuit 8–12 °C. Sans nuits fraîches, hamata / lowii / rajah stagnent. Ventricosa, alata et la plupart des hybrides « easy » sont des intermédiaires : elles pardonnent une tente mixte, ce ne sont pas de vraies highland de crête.",
+      "Pas de dormance. Écart jour/nuit 8–12 °C. Sans nuits fraîches, hamata / lowii / rajah stagnent. Ventricosa, alata (souvent graciliflora en commerce) et la plupart des hybrides « easy » sont des intermédiaires : elles pardonnent une tente mixte, ce ne sont pas de vraies highland de crête, et ce ne sont pas des lowland.",
     ppfd: [50, 100, 200],
     dli: [2.2, 4.7, 10.1],
     photoperiodGrow: 13,
@@ -352,7 +353,7 @@ window.LG_SPECIES = [
     waterNote:
       "Arrosage par le bas, laisser sécher la surface entre deux. En feuilles d’hiver : encore plus sec. L’eau stagnante = pourriture du collet, cause n°1.",
     substrate:
-      "Mix minéral : perlite + vermiculite + un peu de tourbe ou sphaigne hachée (ex. 40/40/20), ou sable + pouzzolane + tourbe. Gypsicola / gypsophiles : encore plus minéral (gypse horti possible, jamais de calcaire). Pots bas, très drainants.",
+      "Mix acide (moranensis, esseriana, agnata, ‘Weser’) : perlite + vermiculite + un peu de tourbe ou sphaigne hachée (ex. 40/40/20). Gypsicola et gypsophiles : mix minéral (sable siliceux + pouzzolane + gypse horti), quasi sans tourbe. Gypse (sulfate de calcium) ≠ chaux / calcaire (carbonate) : on ne chaulait pas un mix carnivore. Pots bas, très drainants.",
     fertilizer: "Foliar 0,3 g/L 1×/mois sur feuilles carnivores seulement. Rien sur les feuilles d’hiver succulentes.",
     tentTips:
       "Étage bas-médian, 25–40 cm sous COP4065, ou COP2065 à 25 cm. Elles grillent et se recroquevillent au-delà de ~180–200 µmol/m²/s. Air plutôt sec, bon extracteur.",
@@ -365,6 +366,7 @@ window.LG_SPECIES = [
     warnings: [
       "Jamais de bac d’eau permanent.",
       "Ne pas les mettre sous le même régime hydrique que Sarracenia.",
+      "Gypsicola dans un 50/50 tourbe : collet pourri ou plante molle — ce n’est pas un Weser.",
     ],
     projects: ["cutting", "production", "coloring", "mixed", "tropical"],
   },
@@ -373,10 +375,10 @@ window.LG_SPECIES = [
     latin: "Utricularia (subulata, livida, sandersonii, bisquamata…)",
     common: "Utriculaires terrestres",
     family: "Lentibulariaceae",
-    climate: "temperate",
+    climate: "tropical-highland",
     dormancy: "optional",
     dormancyNote:
-      "Les tempérées strictes apprécient un hiver frais ; livida / sandersonii / subulata croissent presque toute l’année en tente. Carnivero note les tempérées en estimation (*).",
+      "Pas d’hiver à 5 °C. Livida, sandersonii, bisquamata (Afrique du Sud) et subulata croissent presque toute l’année en tente ; un palier frais est un plus, pas une dormance de dionée. Carnivero note les tempérées strictes en estimation (*) — ce n’est pas cette fiche.",
     ppfd: [100, 180, 400],
     dli: [4.3, 8.4, 20.2],
     photoperiodGrow: 13,
@@ -450,7 +452,7 @@ window.LG_SPECIES = [
     water: "moist",
     waterNote:
       "Humide, jamais détrempé. Bac d’eau occasionnel par forte chaleur, pas en continu. Laisser légèrement ressuyer. Eau pauvre.",
-    substrate: "Tourbe + perlite + sable siliceux 40/40/20, ou sphaigne + perlite. Pots profonds, collet aéré. Déteste le compactage.",
+    substrate: "Tourbe + perlite + sable siliceux 40/40/20, ou sphaigne + perlite. Pots 10–12 cm, collet aéré — pas un tube Darlingtonia, pas un godet de 5 cm. Déteste le compactage.",
     fertilizer:
       "Foliar 0,3 g/L 1×/mois, ou 1 petite proie par urne. Très sensible à l’excès racinaire. Pas d’Osmocote. Pas de régime lowland (30 °C / 90 % HR).",
     tentTips:
@@ -486,14 +488,14 @@ window.LG_SPECIES = [
     tempNight: [10, 16],
     water: "moist",
     waterNote:
-      "Sphaigne toujours humide, eau RO. Un peu d’eau dans l’urne (comme en nature) : eau pauvre uniquement. Pas de bac type Sarracenia si le mix étouffe.",
+      "Sphaigne toujours humide, eau RO. L’urne doit garder un peu d’eau pauvre : Heliamphora n’a pas un suc digestif type Sarracenia, c’est de l’eau de tepui dans la cruche. Urne sèche = souvent une urne perdue. Pas de bac type Sarracenia si le mix étouffe.",
     substrate: "Sphaigne longue fibre vivante de préférence, panier aéré. Parfois perlite. Rempoter dès que la sphaigne s’affaisse.",
     fertilizer:
       "Foliar 0,3 g/L 1×/mois, ou très peu d’engrais orchidée. 1 petite proie par urne de temps en temps. Racinaire : prudence, algues dans la sphaigne.",
     tentTips:
       "Tente tropicale highland dédiée, ou étage frais. COP4065 à 20–30 cm pour viser 200 µmol/m²/s (Carnivero bas-milieu ; leurs photos P85 montent à 500–600 sur des adultes — on n’y va pas d’emblée). Extracteur + hygro. Minor est la plus simple en tente.",
     traps:
-      "Urnes ouvertes : quelques ml d’eau RO + micro-proies. Ne pas remplir d’engrais. Nectar et cuillère (nectar spoon) indiquent une plante à l’aise.",
+      "Urnes ouvertes : quelques ml d’eau RO en permanence + micro-proies. Ne pas remplir d’engrais. Nectar et cuillère (nectar spoon) indiquent une plante à l’aise.",
     seedlingNotes: "Semis lent sur sphaigne, 18–22 °C, HR 90 %, 80–150 µmol/m²/s. Hybrides plus faciles que les espèces tepui strictes.",
     cuttingNotes: "Division de rhizome / rejets. Bouture de feuille rarement fiable.",
     redColorNotes:
@@ -558,7 +560,7 @@ window.LG_SPECIES = [
     water: "damp-never-wet",
     waterNote:
       "Jamais de bac d’eau. Arrosage par le bas, laisser sécher nettement entre deux. L’excès d’eau est l’échec n°1. Eau RO uniquement.",
-    substrate: "Sable siliceux + un peu de tourbe (70/30) ou terre de bruyère non fertilisée + sable. Pots terre cuite profonds. On sème en place : déteste le rempotage.",
+    substrate: "Sable siliceux 70 % + tourbe blonde non amendée 30 %. Pots terre cuite. Semis en place : déteste le rempotage. Pas de terre de bruyère de rayon (engrais + chaux), pas de coco.",
     fertilizer: "Foliar 0,3 g/L 1×/mois. Proies volantes. Pas de racinaire, pas de rempotage « pour voir ».",
     tentTips:
       "Tente sèche, extracteur fort, COP4065 à 15–20 cm (cible 250 µmol/m²/s). Incompatible avec l’étage Nepenthes. Plutôt une étagère dédiée, HR 40–50 %.",
@@ -571,6 +573,7 @@ window.LG_SPECIES = [
       "* Estimation Carnivero. Plante de confirmé.",
       "Rempotage = risque de perte. On sème où elle vivra.",
       "HR de jungle = pourriture.",
+      "Terre de bruyère Jardiland / terreau méditerranéen = sel. Sable + tourbe non amendée, rien d’autre.",
     ],
     projects: ["seedling", "production"],
   },
