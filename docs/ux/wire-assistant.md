@@ -58,7 +58,7 @@ Job : un métier, pas une plante.
 │ ┌─────────────────────────────────┐ │
 │ │ ( ) Germoir / semis             │ │  cards radio
 │ │     Sarracenia, Drosera,        │ │
-│ │     Dionaea — 150–250 µmol      │ │
+│ │     Dionaea — 150–250 µmol/m²/s      │ │
 │ └─────────────────────────────────┘ │
 │ ┌─────────────────────────────────┐ │
 │ │ ( ) Bouturage & acclimatation   │ │
@@ -111,7 +111,7 @@ Job : qui vit sous les barres. Multi.
 │ │ fraîche, pas une chambre chaude.│ │
 │ └─────────────────────────────────┘ │
 │                                     │
-│ Cibles (live, 1 ligne / genre)      │  Species mini : 100–400 µmol
+│ Cibles (live, 1 ligne / genre)      │  Species mini : 100–400 µmol/m²/s
 │  Sarracenia  200–500  ·  DLI 16–24  │
 │                                     │
 │ [ ← Retour ]       [ Continuer → ]  │

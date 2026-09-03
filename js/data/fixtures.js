@@ -26,6 +26,7 @@ window.LG_FIXTURES = [
     spectrum: {
       kind: "growing",
       label: "100 % blanc 6500 K",
+      share: "diodes",
       channels: [{ id: "w6500", label: "blanc 6500 K", pct: 100, cctK: 6500, peakNm: [450, 555] }],
     },
     spectrumNote:
@@ -65,6 +66,7 @@ window.LG_FIXTURES = [
     spectrum: {
       kind: "growing",
       label: "100 % blanc 6500 K",
+      share: "diodes",
       channels: [{ id: "w6500", label: "blanc 6500 K", pct: 100, cctK: 6500, peakNm: [450, 555] }],
     },
     spectrumNote:
@@ -104,8 +106,9 @@ window.LG_FIXTURES = [
     spectrum: {
       kind: "full-spectrum",
       label: "2700 / 4000 / 6500 K + 660 nm",
+      share: "diodes",
       channels: [
-        { id: "w2700", label: "blanc 2700 K", pct: 23, cctK: 2700, peakNm: [610, 630] },
+        { id: "w2700", label: "blanc 2700 K", pct: 23, cctK: 2700, peakNm: [450, 610] },
         { id: "w4000", label: "blanc 4000 K", pct: 23, cctK: 4000, peakNm: [450, 580] },
         { id: "w6500", label: "blanc 6500 K", pct: 23, cctK: 6500, peakNm: [450, 555] },
         { id: "r660", label: "rouge 660 nm", pct: 31, peakNm: 660 },
@@ -150,8 +153,9 @@ window.LG_FIXTURES = [
     spectrum: {
       kind: "full-spectrum",
       label: "2700 / 4000 / 6500 K + 660 nm",
+      share: "diodes",
       channels: [
-        { id: "w2700", label: "blanc 2700 K", pct: 23, cctK: 2700, peakNm: [610, 630] },
+        { id: "w2700", label: "blanc 2700 K", pct: 23, cctK: 2700, peakNm: [450, 610] },
         { id: "w4000", label: "blanc 4000 K", pct: 23, cctK: 4000, peakNm: [450, 580] },
         { id: "w6500", label: "blanc 6500 K", pct: 23, cctK: 6500, peakNm: [450, 555] },
         { id: "r660", label: "rouge 660 nm", pct: 31, peakNm: 660 },

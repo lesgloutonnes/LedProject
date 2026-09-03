@@ -42,7 +42,7 @@ La pratique retenue ici — **0,3 g/L foliar** d’un orchidée équilibré (ou 
 
 Traduction : **engrais interdit à 100 %** = faux. **Engrais de jardinerie à dose étiquette dans le bac** = vrai problème (sel, algues, collet brûlé).
 
-Carnivero le relie même à la lumière : plus tu montes le PPFD, plus le métabolisme demande des nutriments via les pièges. Une Sarracenia à 300 µmol qui ne mange jamais n’est pas « plus pure », elle est souvent plus molle.
+Carnivero le relie même à la lumière : plus tu montes le PPFD, plus le métabolisme demande des nutriments via les pièges. Une Sarracenia à 300 µmol/m²/s qui ne mange jamais n’est pas « plus pure », elle est souvent plus molle.
 
 ### « Cette LED est trop faible, il me faut 200 W »
 
@@ -52,7 +52,7 @@ Le watt n’est pas une unité de lumière pour les plantes. Ce qui compte :
 2. le **PPFD** au feuillage (µmol/m²/s), qui dépend de la **hauteur** et de la **géométrie** ;
 3. le **DLI** (mol/m²/j) = PPFD × heures × 0,0036.
 
-Deux COP4065 + COM2X40 au-dessus de 120 × 60 cm, à 15–20 cm, dans la fenêtre 150–250 µmol au germoir : c’est le job. Un panneau 130 W en hotspot 30 × 20 cm « a l’air plus fort » et laisse un bac à l’ombre. Une barre aquarium sans PPF publié n’est pas « trop faible » : elle est **illisible**.
+Deux COP4065 + COM2X40 au-dessus de 120 × 60 cm, à 15–20 cm, dans la fenêtre 150–250 µmol/m²/s au germoir : c’est le job. Un panneau 130 W en hotspot 30 × 20 cm « a l’air plus fort » et laisse un bac à l’ombre. Une barre aquarium sans PPF publié n’est pas « trop faible » : elle est **illisible**.
 
 Si tes Sarracenia s’étiolent sous Cosmorrow, tu as presque toujours : trop haut, trop peu d’heures, un seul 20 W pour toute la tente, ou une **dormance manquée** (tempérées à 20 °C en janvier). Tu n’as pas « besoin d’une autre marque ». Tu règles la **hauteur**, les **heures**, et tu sépares les genres.
 
@@ -88,9 +88,9 @@ Dose de photons sur 24 h, en **mol/m²/j**.
 \mathrm{DLI} = \mathrm{PPFD} \times \text{heures} \times 0{,}0036
 \]
 
-Exemples : 200 µmol pendant 14 h ≈ **10,1 mol**. 250 µmol pendant 16 h ≈ **14,4 mol**.
+Exemples : 200 µmol/m²/s pendant 14 h ≈ **10,1 mol/m²/j**. 250 µmol/m²/s pendant 16 h ≈ **14,4 mol/m²/j**.
 
-Deux leviers pour le même DLI : plus près (plus de PPFD) ou plus longtemps (plus d’heures). Pour colorer, monter le DLI **dans** la fourchette du genre est le vrai geste ; un pic 660 sans DLI n’en est pas un. Au germoir, on reste plutôt 8–14 mol. En colorisation de dressées, on peut viser 16–20 mol **si** les feuilles ne blanchissent pas.
+Deux leviers pour le même DLI : plus près (plus de PPFD) ou plus longtemps (plus d’heures). Pour colorer, monter le DLI **dans** la fourchette du genre est le vrai geste ; un pic 660 sans DLI n’en est pas un. Au germoir, on reste plutôt 8–14 mol/m²/j. En colorisation de dressées, on peut viser 16–20 mol/m²/j **si** les feuilles ne blanchissent pas.
 
 Le DLI ne remplace pas la **photopériode** biologique : 6 h à très haut PPFD n’est pas un hiver de dionée « compensé ».
 

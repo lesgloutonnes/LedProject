@@ -1,4 +1,4 @@
-# Copy — Cosmorrow dans la tourbière
+# Copy — Cosmorrow en tente carnivores
 
 Textes FR pour le site Les Gloutonnes. Ton : expert de tente, pas vendeur de growshop. Une seule marque LED : Secret Jardin Cosmorrow (Belgique).
 
@@ -11,10 +11,10 @@ Les plantes carnivores n’ont pas besoin d’une recette « cannabis floraison 
 Cosmorrow coche ça sans palmarès multi-marques :
 
 - **Blanc 6500 K (Growing)** — 100 % de la barre. C’est le spectre végétatif : internodes courts, plantules trapues, boutures qui ne s’étiolent pas. Le germoir Sarracenia / Drosera / Dionaea n’a rien à gagner d’un 2700 K « bloom ».
-- **PPF publié** — fiche COP 2023-09 : 51 µmol/s (20 W Growing), 101 µmol/s (40 W Growing), ~48–53 (FS 20 W), 107 (FS 40 W). PPE 2,70 (Growing) et 2,40–2,85 (FS). On dimensionne avec des µmol, pas avec un watt marketing.
+- **PPF publié** — fiche COP 2023-09 : 51 µmol/s (20 W Growing), 101 µmol/s (40 W Growing), ~48–53 (FS 20 W), 107 (FS 40 W). PPE 2,70 (Growing) et 2,40–2,85 (FS). On dimensionne en PPF (µmol/s) et PPFD (µmol/m²/s), pas en watts marketing.
 - **IP65** — tourbière + arrosage + brume. La barre encaisse le jet, pas le bain. L’alim, elle, sort de la tente.
 - **24 V DC** — petit courant, surface tiède, on rapproche à **~15 cm** (Growing). Pas un panneau 30×20 qui fait un hotspot et grillle un bac sur deux.
-- **Zone 120 × 60** — le COP4065 est mesuré sur 120 × 60 cm à 15 cm, PPFD moyen **205**. Deux barres + COM2X40 = le kit signature au-dessus de **deux bacs 60 × 40**.
+- **Zone 120 × 60** — le COP4065 est mesuré sur 120 × 60 cm à 15 cm, PPFD moyen **205 µmol/m²/s**. Deux barres + COM2X40 = le kit signature au-dessus de **deux bacs 60 × 40**.
 
 Secret Jardin est belge, prise 230 V, stock growshop FR/BE. On achète une barre et une alim, pas un colis Texas.
 

@@ -6,7 +6,7 @@ window.LG_PROJECTS = [
   {
     id: "germoir",
     label: "Germoir / semis",
-    blurb: "Graines en surface, 14 h, blanc 6500 K, 150–250 µmol. Deux bacs plutôt qu’un hotspot.",
+    blurb: "Graines en surface, 14 h, blanc 6500 K, 150–250 µmol/m²/s. Deux bacs plutôt qu’un hotspot.",
     kitProject: "germoir",
     protocolId: "seedling",
     hours: 14,
