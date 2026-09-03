@@ -1,36 +1,35 @@
-# LedProject — Les Gloutonnes
+# Les Gloutonnes · Tourbière
 
-Simulateur HTML (sans npm) : **marques d’abord**, puis modèles pour **deux bacs 60 × 40 cm** sous tente Vivosun **120 × 60 × 150**.
+Site de référence pour **mettre en place une tente de carnivores** sous LED **Secret Jardin Cosmorrow**.
 
-Ouvre `index.html` ou `python3 -m http.server 8000`.
+HTML / CSS / JS vanilla, sans npm. Ouvre `index.html` ou :
 
-## Cahier des charges
+```bash
+python3 -m http.server 8000
+```
 
-Barres 90–120 cm (ou 60 cm × 1 bac), IP65+, PPF publié, blanc 4000–6500 K, 150–250 µmol/m²/s au germoir, 230 V FR/BE.
+## Ce que ça fait
 
-## Marques A (on pioche un SKU)
+- **Assistant** — 4 questions → kit Cosmorrow + liste d’achat + protocole
+- **Cosmorrow** — barres, alims 24 V, kits par tente (jamais 20 W + 40 W)
+- **Espèces** — PPFD / DLI / eau / tente par genre
+- **Protocoles** — germoir, bouturage, production, colorisation, mixte, tropicale, dormance
+- **Tente** — pose, hygro, extracteur, électricité
+- **Nutriments** — eau pauvre, tourbe, Maxsea ¼, proies
+- **Outils** — carte PPFD, DLI, kWh
+- **Diagnostic** — arbres de décisions
 
-| Marque | Pourquoi | Frein |
-| --- | --- | --- |
-| **Florawave (Carnivero)** | Seule doc PPFD par genre carnivore, Osram, IP65, LM-79 | Fret Texas |
-| **Signify / Philips GreenPower** | Étalon horti, IP66, 5 ans | Intégrateurs seulement |
-| **SANlight** | FLEX II jeunes plants, IP68, PPF honnête | Câblage + prix |
-| **Hortimol** | Osram TLED, boutures, 230 V | 60 W trop fort au germoir |
-| **Secret Jardin Cosmorrow** | 6500 K, 101 µmol/s, zone 120 × 60 | Pas Full Spectrum 70 cm |
-| **Lumatek VF** (pas Zeus) | Cadre 120 × 52, 4 barres, dimmable | Driver 650 W ~200 € |
+Marque LED unique : **Cosmorrow**. Pas de palmarès multi-marques.
 
-HLG, Fluence, Gavita, Valoya : marques A/C hors géométrie. Mars Hydro, Barrina, SANSI, Chihiros, SuperFish, BloomLED sans PPF, FloraStar : hors palmarès.
+## Kit signature
 
-## Top 9 (après filtre)
+Tente 120 × 60, deux bacs 60 × 40 : **2 × COP4065 Growing 90 cm + COM2X40**.
 
-1. **2 × Cosmorrow Growing 90 cm + COM2X40** — à commander (~130–145 €)
-2. 2 × Hortimol TLED 40 W 60 cm
-3. 2 × Hortimol TLED 40 W 120 cm
-4. 4 × SANlight FLEX II 20
-5. 1 × Florawave P80
-6. 2 × Hortimol TLED 60 W 120 cm (après-semis)
-7. Lumatek VF120W + driver
-8. 2 × Florawave P80 (adultes)
-9. 2 × Philips GreenPower PM 120 cm (référence, pas un panier)
+## Sources
 
-Sources : [Carnivero PPFD](https://www.carnivero.com/pages/grow-light-ppfd-recommendations), [COP datasheet](https://www.secretjardin.com/wp-content/uploads/2023/09/20230905-COP-BULBS-DATASHEET.pdf), SANlight FLEX II, Hortimol TLED, Lumatek VF120W, Philips GreenPower Production Module.
+- [Fiche COP BULBS 2023-09](https://www.secretjardin.com/wp-content/uploads/2023/09/20230905-COP-BULBS-DATASHEET.pdf)
+- [PPFD Carnivero](https://www.carnivero.com/pages/grow-light-ppfd-recommendations)
+- Adamec 1997 (nutrition minérale des carnivores)
+- California Carnivores / Maxsea ¼ foliar
+
+Cahier des charges : `docs/CAHIER_DES_CHARGES.md`.

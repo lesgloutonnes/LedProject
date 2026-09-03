@@ -1,0 +1,249 @@
+/* Les Gloutonnes · Tourbière — tokens + reset léger + utilitaires
+   Coller dans css/tokens.css. PAS l’UI complète.
+   Source : docs/ux/design-system.md */
+
+:root {
+  color-scheme: dark;
+
+  /* Palette — dark forest, pas noir profond. Contraste AA visé. */
+  --bg: oklch(0.29 0.034 162);
+  --fg: oklch(0.93 0.016 108);
+  --card: oklch(0.34 0.030 158);
+  --muted: oklch(0.74 0.028 150);
+  --primary: oklch(0.78 0.082 155);
+  --primary-fg: oklch(0.22 0.040 155);
+  --accent: oklch(0.76 0.118 58);
+  --danger: oklch(0.72 0.145 28);
+  --ok: oklch(0.76 0.108 148);
+  --border: oklch(0.42 0.024 158);
+  --led: oklch(0.95 0.018 230);
+  --bg-elevated: oklch(0.32 0.032 160);
+
+  /* Hex de secours (très vieux moteurs). OKLCH gagne si supporté. */
+  --bg-fallback: #243a32;
+  --fg-fallback: #e8ead8;
+
+  /* Typo — Google Fonts optionnelles ; fallbacks offline. */
+  --sans: "Figtree", system-ui, "Segoe UI", Roboto, sans-serif;
+  --display: "Fraunces", Georgia, "Palatino Linotype", Palatino, serif;
+  --mono: ui-monospace, "Cascadia Mono", "SF Mono", Menlo, monospace;
+
+  --step-0: 0.75rem;
+  --step-1: 0.875rem;
+  --step-2: 1rem;
+  --step-3: 1.125rem;
+  --step-4: clamp(1.35rem, 2.2vw, 1.75rem);
+  --step-5: clamp(1.85rem, 4.2vw, 2.85rem);
+  --prose: 36rem;
+  --leading: 1.55;
+
+  /* Forme */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-full: 999px;
+  --shadow-0: 0 0 0 1px var(--border);
+  --shadow-1: 0 1px 0 oklch(0.95 0.02 108 / 0.06),
+    0 8px 24px oklch(0.12 0.03 162 / 0.35);
+
+  /* Spacing 4px */
+  --s-1: 0.25rem;
+  --s-2: 0.5rem;
+  --s-3: 0.75rem;
+  --s-4: 1rem;
+  --s-5: 1.5rem;
+  --s-6: 2rem;
+  --s-7: 3rem;
+  --s-8: 4rem;
+  --page-gutter: var(--s-4);
+  --content: 1120px;
+
+  /* Nav mobile : barre + safe area. Appliquer sur main. */
+  --bottom-nav-h: 3.5rem;
+  --bottom-nav-space: calc(
+    var(--bottom-nav-h) + env(safe-area-inset-bottom, 0px) + var(--s-5)
+  );
+
+  /* Motion */
+  --duration: 180ms;
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --focus: 0 0 0 3px var(--bg), 0 0 0 5px var(--primary);
+
+  /* Breakpoints (doc) : 375 / 720 / 1100 — utiliser dans @media min-width */
+}
+
+@supports not (color: oklch(0.5 0.1 150)) {
+  :root {
+    --bg: #243a32;
+    --fg: #e8ead8;
+    --card: #2e463d;
+    --muted: #a3b8a8;
+    --primary: #8bc49a;
+    --primary-fg: #123026;
+    --accent: #d9a85c;
+    --danger: #e08a6a;
+    --ok: #7dbe94;
+    --border: #3d564c;
+    --led: #eef2f8;
+    --bg-elevated: #2a4138;
+  }
+}
+
+@media (min-width: 720px) {
+  :root {
+    --page-gutter: var(--s-6);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --duration: 0.01ms;
+  }
+}
+
+/* --- Reset léger --- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: dark;
+  background: var(--bg);
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100%;
+  min-height: 100dvh;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--sans);
+  font-size: var(--step-2);
+  line-height: var(--leading);
+  overflow-wrap: break-word;
+}
+
+img,
+svg,
+video,
+canvas {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: var(--primary);
+}
+
+:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 3px;
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--display);
+  font-weight: 520;
+  line-height: 1.08;
+  text-wrap: balance;
+}
+
+/* --- Utilitaires (rien d’autre) --- */
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.stack > * {
+  margin-block: 0;
+}
+
+.stack > * + * {
+  margin-block-start: var(--stack-space, var(--s-4));
+}
+
+.cluster {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--cluster-gap, var(--s-2));
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+  gap: var(--grid-gap, var(--s-3));
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link {
+  position: absolute;
+  left: var(--s-4);
+  top: var(--s-4);
+  z-index: 100;
+  padding: var(--s-2) var(--s-3);
+  background: var(--primary);
+  color: var(--primary-fg);
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  transform: translateY(-150%);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.wrap {
+  width: min(var(--content), calc(100% - 2 * var(--page-gutter)));
+  margin-inline: auto;
+}
+
+/* Réserve pour la barre bas — masquer ≥ 720 px dans ui.css */
+.page-main {
+  padding-bottom: var(--bottom-nav-space);
+}
+
+@media (min-width: 720px) {
+  .page-main {
+    padding-bottom: var(--s-8);
+  }
+}

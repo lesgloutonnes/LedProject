@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <!-- Titre UNIQUE par page. Pattern : Tâche — Les Gloutonnes · Tourbière -->
+    <title>Tente carnivores + LED Cosmorrow — Les Gloutonnes · Tourbière</title>
+    <meta
+      name="description"
+      content="Mettre en place une tente de carnivores sous LED Secret Jardin Cosmorrow : assistant kit, PPFD, protocoles. Les Gloutonnes · Tourbière."
+    />
+    <meta name="theme-color" content="#243a32" />
+    <meta name="color-scheme" content="dark" />
+    <!-- CSP static : scripts self only. style unsafe-inline = overlays heatmap (option A, a11y-security.md). -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; base-uri 'self'; form-action 'none'; frame-ancestors 'none'; object-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Chemins relatifs : file:// et http.server. -->
+    <link rel="stylesheet" href="css/tokens.css" />
+    <link rel="stylesheet" href="css/ui.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#contenu">Aller au contenu</a>
+
+    <header class="site-header">
+      <div class="wrap cluster">
+        <a class="brand" href="index.html">
+          <span class="brand-kicker">Les Gloutonnes</span>
+          <span class="brand-name">Tourbière</span>
+        </a>
+        <!-- Desktop / tablet ≥ 720 : nav primaire. Cachée en CSS sous 720 (bottom nav prend le relais). -->
+        <nav class="nav-primary" aria-label="Principale">
+          <a href="index.html">Accueil</a>
+          <a href="assistant.html">Assistant</a>
+          <a href="cosmorrow.html">Cosmorrow</a>
+          <a href="especes.html">Espèces</a>
+          <a href="protocoles.html">Protocoles</a>
+          <!-- Plus desktop : <details> ou bouton + menu. Même cibles que #plus-sheet. -->
+          <details class="nav-more">
+            <summary>Plus</summary>
+            <ul>
+              <li><a href="tente.html">Tente</a></li>
+              <li><a href="nutriments.html">Nutriments</a></li>
+              <li><a href="outils.html">Outils</a></li>
+              <li><a href="diagnostic.html">Diagnostic</a></li>
+              <li><a href="a-propos.html">À propos</a></li>
+            </ul>
+          </details>
+        </nav>
+        <!-- CTA header : href assistant. Sur assistant.html, remplacer par Reprendre ou omettre. -->
+        <a class="btn-primary header-cta" href="assistant.html">Lancer l’assistant</a>
+      </div>
+    </header>
+
+    <main id="contenu" class="page-main wrap">
+      <!--
+        BRANCHER ICI le contenu de page.
+        Accueil : hero + 3 cards chemins + bande protocoles.
+        Assistant : stepper + form#assistant-form (steps) + #kit-result + #kit-print.
+        Cosmorrow : règles + TableScroll SKU + kits.
+        Espèces : chips filtre + SpeciesCard.
+        Protocoles : nav d’ancres + ProtocolStep × 7.
+        Tente : cotes + SVG pose + checklist.
+        Nutriments : fiches eau / substrat / Maxsea.
+        Outils : sliders + Heatmap bleed + stats textuelles #heatmap-stats.
+        Diagnostic : DiagnosticTree.
+        À propos : sources + liens rel=noopener noreferrer.
+      -->
+      <h1>Remplacer ce h1</h1>
+    </main>
+
+    <!-- Accueil seulement : CTA sticky. Ailleurs, supprimer le bloc. -->
+    <a class="cta-sticky" href="assistant.html">Lancer l’assistant</a>
+
+    <footer class="site-footer wrap">
+      <p>
+        Les Gloutonnes · Tourbière · Cosmorrow (Secret Jardin) · pas de tracking ·
+        <a href="a-propos.html">Sources</a>
+      </p>
+    </footer>
+
+    <!-- Mobile &lt; 720 : barre bas 5 items. Item courant = aria-current="page". -->
+    <nav class="bottom-nav" aria-label="Pied">
+      <a href="index.html" aria-current="page">
+        <!-- icône décorative : aria-hidden. Label visible obligatoire. -->
+        <span class="bottom-nav-icon" aria-hidden="true"></span>
+        Accueil
+      </a>
+      <a href="assistant.html">
+        <span class="bottom-nav-icon" aria-hidden="true"></span>
+        Assistant
+      </a>
+      <a href="cosmorrow.html">
+        <span class="bottom-nav-icon" aria-hidden="true"></span>
+        LED
+      </a>
+      <a href="especes.html">
+        <span class="bottom-nav-icon" aria-hidden="true"></span>
+        Espèces
+      </a>
+      <button type="button" id="plus-open" aria-haspopup="dialog" aria-controls="plus-sheet">
+        <span class="bottom-nav-icon" aria-hidden="true"></span>
+        Plus
+      </button>
+    </nav>
+
+    <dialog id="plus-sheet" aria-labelledby="plus-title">
+      <!-- Fermer en <button> + JS (showModal/close). Pas de <form method="dialog"> : CSP form-action 'none'. -->
+      <h2 id="plus-title">Plus</h2>
+      <button type="button" class="plus-close" id="plus-close">Fermer</button>
+      <nav aria-label="Secondaire">
+        <ul>
+          <li><a href="protocoles.html">Protocoles</a></li>
+          <li><a href="tente.html">Tente</a></li>
+          <li><a href="nutriments.html">Nutriments</a></li>
+          <li><a href="outils.html">Outils</a></li>
+          <li><a href="diagnostic.html">Diagnostic</a></li>
+          <li><a href="a-propos.html">À propos</a></li>
+        </ul>
+      </nav>
+    </dialog>
+
+    <!--
+      Scripts page : un fichier, defer, PAS d’inline.
+      Accueil : (option) IntersectionObserver CTA sticky.
+      Assistant : js/assistant.js + js/lib/storage.js + js/lib/escape.js + js/lib/print.js + js/data/*.js
+      Outils : js/outils.js
+      Diagnostic : js/diagnostic.js
+      Plus : 3 lignes — #plus-open → plus-sheet.showModal()
+    -->
+    <script src="js/nav.js" defer></script>
+  </body>
+</html>
