@@ -5,7 +5,7 @@ window.LG_INSTALL = {
   rules: [
     {
       id: "hauteur-growing",
-      title: "15 cm au-dessus du canopée en Growing",
+      title: "15 cm au-dessus de la canopée en Growing",
       body: "Fiche COP 2023-09 : COP2065 / COP4065 mesurés à 15 cm. Surface tiède → on peut rapprocher. Hauteur = barre → sommet des plantes (ou terreau au germoir), pas le plancher de tente.",
     },
     {
@@ -51,7 +51,7 @@ window.LG_INSTALL = {
     { step: 3, item: "Alim COM* assortie au wattage (20 ou 40) et au nombre de ports. Pas de mélange 20/40." },
     { step: 4, item: "Alim à l’extérieur, câble DC qui entre par un passe-gaine, connecteurs vers le haut / hors splash." },
     { step: 5, item: "Accrocher : clips Ø16–25 mm sur la structure, ou crochets / ridoirs. Barres parallèles au grand côté." },
-    { step: 6, item: "Régler 15 cm (Growing) ou 20 cm (FS 40 W) au-dessus du terreau / canopée. Mesurer au mètre, pas à l’œil." },
+    { step: 6, item: "Régler 15 cm (Growing) ou 20 cm (FS 40 W) au-dessus du terreau / de la canopée. Mesurer au mètre, pas à l’œil." },
     { step: 7, item: "Programmateur ON/OFF sur la prise de l’alim (14 h germoir, 16 h colorisation, 8–10 h dormance)." },
     { step: 8, item: "Extracteur + intracteur, hygromètre à hauteur des plantes. Filtre charbon optionnel." },
     { step: 9, item: "Test à sec 15 min : barres tièdes, pas brûlantes ; aucun clignotement ; alim hors zone humide." },
@@ -85,7 +85,7 @@ window.LG_INSTALL = {
     intracteur:
       "Passif (grille) en petite tente 60×40 / 60×60 ; actif Ø100–125 en 80×80 et plus, plus lent que l’extracteur pour rester en légère dépression.",
     hygrometre:
-      "Sonde T°/HR dans le canopée, pas collée à l’extracteur ni sous la barre. Un min/max (écran) suffit ; un data-logger aide en tropical.",
+      "Sonde T°/HR dans la canopée, pas collée à l’extracteur ni sous la barre. Un min/max (écran) suffit ; un data-logger aide en tropical.",
     brumisation:
       "Minuterie courte. Buses et nuage loin des connecteurs 24 V et de l’alim. IP65 = jet, pas brouillard conducteur dans un jack mal enclenché. Plateau d’eau / tourbe humide > brume permanente (fonte, pythium).",
     chaleur:
