@@ -812,7 +812,7 @@ window.LG_DIAGNOSTIC = {
               result: {
                 title: "Sors-les. La LED ne fait pas l’hiver",
                 fix: [
-                  "FR/BE : Sarracenia et dionées adultes hivernent mieux dehors / garage que sous Cosmorrow à 20 °C.",
+                  "FR/BE : dehors / châssis, pas Cosmorrow à 20 °C. Purpurea ssp. purpurea et droséras natives : gel dehors. Dionées et golfe : châssis — le gel mouillé pourrit, ce n’est pas « elles sont rustiques ».",
                   "Rampe : 12 h puis 8–10 h, T° vers 0–10 °C, bac retiré. Voir protocole dormance.",
                   "8 h de Growing dans un salon chaud, ce n’est pas une dormance : c’est un étiolement lent.",
                 ],
