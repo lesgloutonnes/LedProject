@@ -44,13 +44,13 @@
       id: "dli",
       term: "DLI",
       unit: UNITS.dli,
-      body: "Dose quotidienne. DLI = PPFD × heures × 0,0036. C’est ça qui colore, pas un pic 660 nm.",
+      body: "Dose quotidienne. DLI (mol/m²/j) = PPFD (µmol/m²/s) × heures × 0,0036. C’est ça qui colore, pas un pic 660 nm. 200 µmol/m²/s × 14 h = 10,1 mol/m²/j.",
     },
     {
       id: "cct",
       term: "CCT",
       unit: UNITS.cct,
-      body: "Blanc Growing 6500 K (froid, germoir). FS ~3500 K (mix 2700/4000/6500 + 660 nm). Le 660 nm est du rouge PAR, pas du far-red 730 nm.",
+      body: "Blanc Growing 6500 K (froid, germoir). FS ~3500 K (mix 2700/4000/6500 + 660 nm). Les % Cosmorrow sont un mix de diodes, pas une SPD. Le 660 nm est du rouge PAR, pas du far-red 730 nm.",
     },
   ];
 

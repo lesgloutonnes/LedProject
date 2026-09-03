@@ -192,10 +192,23 @@
     if (bars) {
       bars.innerHTML = (sim.lights || [])
         .map(function (light) {
-          var left = ((light.xCm - light.lengthCm / 2) / tent.wCm) * 100;
-          var top = ((light.yCm - Math.max(light.widthCm, 2.4) / 2) / tent.dCm) * 100;
-          var w = (light.lengthCm / tent.wCm) * 100;
-          var h = (Math.max(light.widthCm, 2.4) / tent.dCm) * 100;
+          var alongW = light.axis !== "d";
+          var thick = Math.max(light.widthCm, 2.4);
+          var left;
+          var top;
+          var w;
+          var h;
+          if (alongW) {
+            left = ((light.xCm - light.lengthCm / 2) / tent.wCm) * 100;
+            top = ((light.yCm - thick / 2) / tent.dCm) * 100;
+            w = (light.lengthCm / tent.wCm) * 100;
+            h = (thick / tent.dCm) * 100;
+          } else {
+            left = ((light.xCm - thick / 2) / tent.wCm) * 100;
+            top = ((light.yCm - light.lengthCm / 2) / tent.dCm) * 100;
+            w = (thick / tent.wCm) * 100;
+            h = (light.lengthCm / tent.dCm) * 100;
+          }
           return (
             '<div class="bar-overlay" style="left:' +
             pct(left) +
@@ -247,6 +260,21 @@
       var watts = kit ? kit.totalWatts : (fixtureForSim(kit) && fixtureForSim(kit).fixture.watts * (state.qty || 1)) || 0;
       var kwh = optics.yearlyKwh(watts, state.hours, state.intensity);
       var tariff = store.getPrefs().kwhEur;
+      var pack = fixtureForSim(kit);
+      var ficheFx = pack && pack.fixture;
+      var ficheLine =
+        ficheFx && ficheFx.ppfdAvg != null && ficheFx.footprint
+          ? [
+              "Fiche " + ficheFx.sku,
+              fmt.ppfd(ficheFx.ppfdAvg),
+              ficheFx.footprint.w +
+                "×" +
+                ficheFx.footprint.d +
+                " cm @ " +
+                ficheFx.footprint.hCm +
+                " cm · moyenne constructeur",
+            ]
+          : null;
       if (statsEl) {
         statsEl.textContent =
           "PPFD moyen " +
@@ -263,11 +291,12 @@
       var statsBox = document.getElementById("stats");
       if (statsBox) {
         statsBox.innerHTML = [
-          ["PPFD moyen", fmt.ppfd(sim.avg), "tente entière · " + fmt.units.ppfd],
+          ["PPFD moyen", fmt.ppfd(sim.avg), "tente entière · " + fmt.units.ppfd + " · calé fiche"],
           ["Centre / coin", fmt.n0(sim.center) + " / " + fmt.n0(sim.corner), "hotspot vs bord, " + fmt.units.ppfd],
           ["DLI", fmt.dli(dliVal), state.hours + " h/j · DLI = PPFD × h × 0,0036"],
           ["Facture an", fmt.euro2(optics.yearlyCost(kwh, tariff)), fmt.n1(kwh) + " kWh · " + fmt.n2(tariff) + " €/kWh"],
         ]
+          .concat(ficheLine ? [ficheLine] : [])
           .map(function (row) {
             return (
               '<div class="stat card"><div class="lbl">' +
@@ -295,7 +324,7 @@
         e(fmt.units.ppfd) +
         ", DLI en " +
         e(fmt.units.dli) +
-        ". Ce n’est pas un PAR-mètre. Cosmorrow n’est pas dimmable : on monte la barre." +
+        ". Moyenne calée sur la fiche constructeur (même SKU, zone et hauteur de mesure). Ce n’est pas un PAR-mètre. Cosmorrow n’est pas dimmable : on monte la barre." +
         (sim && sim.omittedShelves
           ? " Carte = étage haut uniquement : l’étage bas n’est pas additionné sur le même plan."
           : "") +

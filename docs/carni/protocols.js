@@ -6,7 +6,7 @@ window.LG_PROTOCOLS = [
   {
     id: "seedling",
     title: "Germoir — semis Sarracenia, Drosera, Dionaea",
-    kicker: "14 h · 15–20 cm · 150–250 µmol",
+    kicker: "14 h · 15–20 cm · 150–250 µmol/m²/s",
     summary:
       "Un étage plat, deux bacs 60×40, barres Cosmorrow Growing 6500 K à 15–20 cm du terreau. On vise le bas de fourchette adulte : assez pour des plantules trapues, pas assez pour griller un cotylédon. Mix ébouillanté, cold strat pour les tempérées, surface, eau pauvre, graines de l’année.",
     duration: "8–16 semaines jusqu’au premier repiquage ; 2–4 ans jusqu’à un adulte Sarracenia",
@@ -75,7 +75,7 @@ window.LG_PROTOCOLS = [
       },
       {
         title: "Premier repiquage",
-        body: "Quand les plantules se touchent ou qu’une vraie urne / un vrai piège apparaît. Touffe de tourbe, pas racine nue. Même mix, pots 5–7 cm, retour sous 14 h à 15–20 cm. On ne « sevre » pas en baissant la lumière : on garde 150–250 µmol.",
+        body: "Quand les plantules se touchent ou qu’une vraie urne / un vrai piège apparaît. Touffe de tourbe, pas racine nue. Même mix, pots 5–7 cm, retour sous 14 h à 15–20 cm. On ne « sevre » pas en baissant la lumière : on garde 150–250 µmol/m²/s.",
         checklist: [
           "Repiquage par motte",
           "Même eau pauvre",
@@ -102,7 +102,7 @@ window.LG_PROTOCOLS = [
     climate: "Nepenthes : 24–28 °C (lowland) ou 20–24 °C jour / 14–18 °C nuit (highland), HR 90–100 % sous dôme. Leaf pullings : 20–24 °C, HR 80–95 %. Air stagnant sans stérilité = pourriture : on aère 2 min par jour.",
     light: {
       sku: "COP2065 Growing 6500 K (étagère 60×40) ou COP4065 relevée",
-      height: "30–40 cm (Nepenthes) ; 25–30 cm (leaf pullings). Cible 40–120 µmol, jamais 250.",
+      height: "30–40 cm (Nepenthes) ; 25–30 cm (leaf pullings). Cible 40–120 µmol/m²/s, jamais 250.",
       hours: "12–14 h",
       note: "Lumière douce = bouture qui photosynthétise sans transpirer. Un COP40FS à 15 cm cuit le pétiole. On préfère Growing 6500 K loin.",
     },
@@ -126,7 +126,7 @@ window.LG_PROTOCOLS = [
         body: "Sphaigne dans un godet, bouture enterrée jusqu’au nœud, dôme ou sac zip. COP2065 à 30–40 cm, 12–14 h. On ne touche plus tous les jours. Racines blanches en 4–10 semaines. Première mini-urne = bonus, pas un objectif.",
         checklist: [
           "HR 90–100 % sous dôme",
-          "40–80 µmol au feuillage",
+          "40–80 µmol/m²/s au feuillage",
           "Aération 2 min / jour",
         ],
       },
@@ -136,7 +136,7 @@ window.LG_PROTOCOLS = [
         checklist: [
           "Fragment de rhizome blanc présent",
           "Pas d’eau stagnante sur le pétiole",
-          "Lumière ~80–120 µmol",
+          "Lumière ~80–120 µmol/m²/s",
         ],
       },
       {
@@ -150,7 +150,7 @@ window.LG_PROTOCOLS = [
       },
       {
         title: "Leaf pulling Pinguicula mexicaine",
-        body: "Feuille carnivore saine, posée sur mix drainant à peine humide. HR 70–80 %, pas un sauna 100 % — le collet mexicain pourrit. Lumière 40–80 µmol. Plantules en 3–8 semaines. On ne tire pas les feuilles d’hiver succulentes.",
+        body: "Feuille carnivore saine, posée sur mix drainant à peine humide. HR 70–80 %, pas un sauna 100 % — le collet mexicain pourrit. Lumière 40–80 µmol/m²/s. Plantules en 3–8 semaines. On ne tire pas les feuilles d’hiver succulentes.",
         checklist: [
           "Mix qui ressuye",
           "HR < 90 %",
@@ -159,7 +159,7 @@ window.LG_PROTOCOLS = [
       },
       {
         title: "Acclimatation",
-        body: "Dès les racines : on fend le dôme 1 h, puis 4 h, puis une nuit, en 10–21 jours. On ne passe pas d’un sac saturé à l’étage Sarracenia 300 µmol. Palier : même tente, étage bas, 14 h, puis on monte d’un cran de PPFD par semaine.",
+        body: "Dès les racines : on fend le dôme 1 h, puis 4 h, puis une nuit, en 10–21 jours. On ne passe pas d’un sac saturé à l’étage Sarracenia 300 µmol/m²/s. Palier : même tente, étage bas, 14 h, puis on monte d’un cran de PPFD par semaine.",
         checklist: [
           "Racines visibles avant sevrage",
           "Sevrage en 10–21 jours",
@@ -189,7 +189,7 @@ window.LG_PROTOCOLS = [
       sku: "2 × COP4065 + COM2X40 en plafond de tente 120×60×150 ; appoint possible 1 × COP20FS sur une zone à colorer",
       height: "15–25 cm du sommet du feuillage (Sarracenia, Dionaea, Drosera) ; 25–40 cm (Nepenthes, Pinguicula)",
       hours: "13–14 h en saison ; 12 h en palier d’automne avant dormance",
-      note: "Cibles : Dionaea / Sarracenia basses / Drosera ~200 µmol ; Sarracenia dressées ~300 ; Nepenthes ~80–100. On mesure à la hauteur des têtes, pas au sol.",
+      note: "Cibles : Dionaea / Sarracenia basses / Drosera ~200 µmol/m²/s ; Sarracenia dressées ~300 µmol/m²/s ; Nepenthes ~80–100 µmol/m²/s. On mesure à la hauteur des têtes, pas au sol.",
     },
     water:
       "Tempérées : bac 1–3 cm, eau RO, on laisse parfois le bac presque à sec 24 h. Tropicales : mix humide, pas de lac. Toujours TDS < 50 ppm.",
@@ -218,7 +218,7 @@ window.LG_PROTOCOLS = [
       },
       {
         title: "Caler PPFD et heures",
-        body: "On commence bas-milieu Carnivero. Dressées trop vertes et molles : on descend la barre de 5 cm ou on passe à 16 h. Nepenthes sans urnes : souvent HR ou jeunesse, pas un manque de 300 µmol — on ne les hisse pas au plafond.",
+        body: "On commence bas-milieu Carnivero. Dressées trop vertes et molles : on descend la barre de 5 cm ou on passe à 16 h. Nepenthes sans urnes : souvent HR ou jeunesse, pas un manque de 300 µmol/m²/s — on ne les hisse pas au plafond.",
         checklist: [
           "14 h stables",
           "Têtes dans la fenêtre du genre",
@@ -262,8 +262,8 @@ window.LG_PROTOCOLS = [
     climate: "Nuits 12–16 °C aident (Dionaea, Sarracenia, Drosera, Heliamphora, Cephalotus). HR modérée : 50–65 % pour les tempérées. Un sauna chaud lave souvent la couleur.",
     light: {
       sku: "Base : COP4065 Growing 6500 K. Appoint optionnel : COP20FS sur une zone, jamais à la place du Growing au germoir",
-      height: "12–20 cm des têtes pour viser 250–350 µmol sur les genres qui le supportent (dressées, dionées adultes, Drosera de soleil)",
-      hours: "14–16 h pour monter le DLI sans forcément coller la barre. 16 h × 250 µmol ≈ 14,4 mol — déjà une fenêtre « rouge ».",
+      height: "12–20 cm des têtes pour viser 250–350 µmol/m²/s sur les genres qui le supportent (dressées, dionées adultes, Drosera de soleil)",
+      hours: "14–16 h pour monter le DLI sans forcément coller la barre. 16 h × 250 µmol/m²/s ≈ 14,4 mol/m²/j — déjà une fenêtre « rouge ».",
       note: "Formule : DLI = PPFD × heures × 0,0036. Colorer = monter le DLI dans la fourchette du genre, pas saturér un pic rouge. Au-delà du max Carnivero, tu brûles avant de « plus rougir ».",
     },
     water: "Inchangé : eau pauvre. Un léger ressuyage (pas un séchage de cactus) peut intensifier les pigments chez Drosera et Sarracenia basses — on reste prudent.",
@@ -299,7 +299,7 @@ window.LG_PROTOCOLS = [
       },
       {
         title: "Nourrir le métabolisme",
-        body: "À 300 µmol, une Sarracenia qui ne mange jamais jaunit mal, elle ne « rougit pas mieux ». Foliar 0,3 g/L 2×/mois ou proies. Observer mucilage, nectar, fermeté des urnes : la couleur sans vigueur n’est pas un succès.",
+        body: "À 300 µmol/m²/s, une Sarracenia qui ne mange jamais jaunit mal, elle ne « rougit pas mieux ». Foliar 0,3 g/L 2×/mois ou proies. Observer mucilage, nectar, fermeté des urnes : la couleur sans vigueur n’est pas un succès.",
         checklist: [
           "Foliar ou proies tenus",
           "Pas d’engrais racinaire « pour rougir »",
@@ -332,7 +332,7 @@ window.LG_PROTOCOLS = [
     climate:
       "Compromis : 22–26 °C jour, 16–20 °C nuit, HR 55–70 %. Trop froid pour de vraies lowland strictes, trop doux pour un hibernacle. Les highland easy (ventricosa) et capensis s’y plaisent. Darlingtonia / Heliamphora strictes : non.",
     light: {
-      sku: "Plafond : 2 × COP4065 + COM2X40. Étage bas : 1–2 × COP2065 + COM20 ou COM2X20, ou rien si le reliquat fait 60–100 µmol",
+      sku: "Plafond : 2 × COP4065 + COM2X40. Étage bas : 1–2 × COP2065 + COM20 ou COM2X20, ou rien si le reliquat fait 60–100 µmol/m²/s",
       height: "Haut : 15–20 cm des têtes Sarracenia / Dionaea. Bas : 30–40 cm au-dessus des Nepenthes, ou tablette à 50–60 cm du sol",
       hours: "14 h pour tout le monde en saison. En automne, les tempérées devront sortir vers la dormance : la tente mixte n’est pas un hivernage.",
       note: "Ne pas mélanger 20 W et 40 W sur la même alim. COP40FS (70 cm) n’aligne pas avec COP4065 (87 cm) : on ne fait pas un « damier » FS/Growing en croyant uniformiser.",
@@ -352,7 +352,7 @@ window.LG_PROTOCOLS = [
       },
       {
         title: "Plafond Growing pour les gourmandes",
-        body: "Sarracenia dressées, Dionaea, Drosera de soleil, Byblis : étage haut, 15–20 cm sous COP4065, 200–300 µmol. Les basses (purpurea, pygmées) au bord, un peu plus loin du hotspot.",
+        body: "Sarracenia dressées, Dionaea, Drosera de soleil, Byblis : étage haut, 15–20 cm sous COP4065, 200–300 µmol/m²/s. Les basses (purpurea, pygmées) au bord, un peu plus loin du hotspot.",
         checklist: [
           "Dressées au centre-haut",
           "Basses en périphérie",
@@ -361,10 +361,10 @@ window.LG_PROTOCOLS = [
       },
       {
         title: "Étage bas pour les ombragées",
-        body: "Nepenthes easy, Utricularia épiphytes, Pinguicula mexicaines : 60–120 µmol. Si le reliquat du plafond suffit (mesure), pas besoin de COP2065. Sinon une barre 20 W à 30–40 cm. Lowland strictes seulement si tu tiens 24 °C la nuit — rare en mixte.",
+        body: "Nepenthes easy, Utricularia épiphytes, Pinguicula mexicaines : 60–120 µmol/m²/s. Si le reliquat du plafond suffit (mesure), pas besoin de COP2065. Sinon une barre 20 W à 30–40 cm. Lowland strictes seulement si tu tiens 24 °C la nuit — rare en mixte.",
         checklist: [
           "PPFD bas mesuré, pas deviné",
-          "COP2065 si < 50 µmol au feuillage Nepenthes",
+          "COP2065 si < 50 µmol/m²/s au feuillage Nepenthes",
           "Pinguicula hors bac d’eau",
         ],
       },
@@ -406,7 +406,7 @@ window.LG_PROTOCOLS = [
       sku: "2 × COP4065 en plafond pour une tente haute, ou 2–4 × COP2065 sur étagères. COP20FS possible en appoint highland",
       height: "25–40 cm des têtes Nepenthes / Heliamphora ; 20–30 cm Cephalotus / capensis",
       hours: "12–14 h toute l’année. Pas de descente à 8 h « pour leur faire un hiver ».",
-      note: "Cibles : Nepenthes 80–100 µmol, Heliamphora 200, Cephalotus 120, capensis 180. Le plafond Sarracenia 300 µmol n’est pas un objectif tropical.",
+      note: "Cibles : Nepenthes 80–100 µmol/m²/s, Heliamphora 200 µmol/m²/s, Cephalotus 120 µmol/m²/s, capensis 180 µmol/m²/s. Le plafond Sarracenia 300 µmol/m²/s n’est pas un objectif tropical.",
     },
     water:
       "Pas de bac unique type tourbière. Arrosage RO du mix, soucoupes vidées. Heliamphora : un peu d’eau RO dans l’urne. Cephalotus : ressuyage. Stock d’eau à température de pièce pour les lowland, plus frais pour highland.",
@@ -435,7 +435,7 @@ window.LG_PROTOCOLS = [
       },
       {
         title: "LED douce, étagères possibles",
-        body: "Étagères + COP2065 = parfait tropical (chaque tablette 40–80 µmol à 30 cm, on rapproche si besoin). Plafond COP4065 : plantes hautes au milieu, jeunes en périphérie. 13 h, cycle stable.",
+        body: "Étagères + COP2065 = parfait tropical (chaque tablette 40–80 µmol/m²/s à 30 cm, on rapproche si besoin). Plafond COP4065 : plantes hautes au milieu, jeunes en périphérie. 13 h, cycle stable.",
         checklist: [
           "Aucune barre à 10 cm d’une urne",
           "20 W et 40 W sur alims séparées",

@@ -28,15 +28,15 @@ window.LG_SPECIES = [
     fertilizer:
       "Foliar 0,3 g/L (orchidée ¼ ou Maxsea 16-16-16) 1–2×/mois en saison, feuillage sec, matin. Proies 1–2 pièges / mois suffisent souvent. Jamais Miracle-Gro, jamais terreau fertilisé, jamais d’engrais dans le bac.",
     tentTips:
-      "Étage haut, 15–20 cm sous COP4065 Growing 6500 K (ou COP2065 sur une étagère 60×40). La dionée veut du photon et de l’air, pas une jungle à 90 % HR. Extraire pour rester ~50–60 %. Viser 200 µmol, pas 400 d’emblée. Pot 8–10 cm, légèrement à l’étroit : un 3 L n’accélère pas un rhizome de 2 cm.",
+      "Étage haut, 15–20 cm sous COP4065 Growing 6500 K (ou COP2065 sur une étagère 60×40). La dionée veut du photon et de l’air, pas une jungle à 90 % HR. Extraire pour rester ~50–60 %. Viser 200 µmol/m²/s, pas 400 d’emblée. Pot 8–10 cm, légèrement à l’étroit : un 3 L n’accélère pas un rhizome de 2 cm.",
     traps:
       "Un insecte vivant (ou congelé puis décongelé) par piège, 1–2 pièges par mois. Pas de viande hachée, fromage, œuf. Un piège ne s’ouvre qu’une poignée de fois : ne pas « jouer » avec. Après digestion, le piège noircit : on le laisse, on ne coupe pas à vif.",
     seedlingNotes:
-      "Graines noires minuscules, viables 1 an au frais/sec, plus faibles ensuite. Strat 4–6 semaines (frigo 4 °C, papier ou tourbe juste humide) utile sur lots sauvages ; beaucoup de F1 germent sans. Surface, jamais d’enfouissement. Mix ébouillanté, 14 h, 15–20 cm, 150–250 µmol. Levée 2–6 semaines. Première vraie feuille en rosette, pas encore de piège.",
+      "Graines noires minuscules, viables 1 an au frais/sec, plus faibles ensuite. Strat 4–6 semaines (frigo 4 °C, papier ou tourbe juste humide) utile sur lots sauvages ; beaucoup de F1 germent sans. Surface, jamais d’enfouissement. Mix ébouillanté, 14 h, 15–20 cm, 150–250 µmol/m²/s. Levée 2–6 semaines. Première vraie feuille en rosette, pas encore de piège.",
     cuttingNotes:
-      "Leaf pulling : feuille entière avec un bout de rhizome blanc. À plat sur tourbe ou sphaigne, HR 80–95 %, 20–24 °C, lumière douce (COP2065 à 25–30 cm, ~80–120 µmol). Plantules en 4–8 semaines. Ne pas trop mouiller : pourriture du pétiole = échec n°1.",
+      "Leaf pulling : feuille entière avec un bout de rhizome blanc. À plat sur tourbe ou sphaigne, HR 80–95 %, 20–24 °C, lumière douce (COP2065 à 25–30 cm, ~80–120 µmol/m²/s). Plantules en 4–8 semaines. Ne pas trop mouiller : pourriture du pétiole = échec n°1.",
     redColorNotes:
-      "Le rouge intérieur du piège est génétique (cultivars ‘Red Dragon’, ‘Akai Ryu’ vs formes vertes). Growing 6500 K + DLI ~12–16 mol suffit souvent. Un appoint COP20FS n’est pas obligatoire. Fraîcheur nocturne (12–16 °C) aide les anthocyanes. Sans dormance, la couleur s’affadit d’année en année.",
+      "Le rouge intérieur du piège est génétique (cultivars ‘Red Dragon’, ‘Akai Ryu’ vs formes vertes). Growing 6500 K + DLI ~12–16 mol/m²/j suffit souvent. Un appoint COP20FS n’est pas obligatoire. Fraîcheur nocturne (12–16 °C) aide les anthocyanes. Sans dormance, la couleur s’affadit d’année en année.",
     warnings: [
       "Dormance obligatoire : une tente chaude toute l’année n’est pas un cadeau.",
       "Eau du robinet = brûlures marginales et mort lente du rhizome.",
@@ -71,11 +71,11 @@ window.LG_SPECIES = [
     traps:
       "Les urnes chassent seules si tu ouvres la tente. Sinon : 1–2 mouches par urne mature et par mois, ou un foliar 0,3 g/L. Ne pas remplir les urnes de bouillon ni d’Osmocote.",
     seedlingNotes:
-      "Graines à stratification froide 4–8 semaines. Viables surtout l’année de récolte (frigo sec). Semis de surface, mix ébouillanté, 14 h, 15–20 cm, 150–250 µmol. Première feuille = phyllode, pas encore d’urne. 2–4 ans avant un adulte. Repiquer par motte à 4–6 feuilles, pas racine nue.",
+      "Graines à stratification froide 4–8 semaines. Viables surtout l’année de récolte (frigo sec). Semis de surface, mix ébouillanté, 14 h, 15–20 cm, 150–250 µmol/m²/s. Première feuille = phyllode, pas encore d’urne. 2–4 ans avant un adulte. Repiquer par motte à 4–6 feuilles, pas racine nue.",
     cuttingNotes:
       "Division de rhizome au débourrement (mars–avril) : un morceau avec au moins un point de croissance. Bouture de rhizome sans feuille possible mais plus lente. Pas de bouture de feuille utile.",
     redColorNotes:
-      "Leucophylla, flava var. atropurpurea, hybrides ‘Adrian Slack’ : le DLI fait plus que le spectre. 16–20 mol (300 µmol × 14–16 h) colore ; 8 mol reste vert. Growing 6500 K suffit. FS en appoint si tu veux pousser le rouge sans monter le PPFD. Génotype d’abord : une flava verte ne devient pas cramoisie.",
+      "Leucophylla, flava var. atropurpurea, hybrides ‘Adrian Slack’ : le DLI fait plus que le spectre. 16–20 mol/m²/j (300 µmol/m²/s × 14–16 h) colore ; 8 mol/m²/j reste vert. Growing 6500 K suffit. FS en appoint si tu veux pousser le rouge sans monter le PPFD. Génotype d’abord : une flava verte ne devient pas cramoisie.",
     warnings: [
       "Dormance obligatoire. Une Sarracenia « toujours en pousse » s’affaiblit.",
       "Pots trop étroits = urnes chétives. Viser 2–3 L larges dès l’ado, pas un tube profond.",
@@ -110,13 +110,13 @@ window.LG_SPECIES = [
     traps:
       "Urnes ouvertes vers le haut (purpurea) : quelques drosophiles suffisent. Pas de viande. L’eau stagnante dans l’urne n’est pas un problème tant qu’elle reste pauvre.",
     seedlingNotes:
-      "Comme les dressées : cold strat 4–8 semaines, surface, mix ébouillanté, 150–250 µmol, 14 h. Graines de l’année. Plantules plus compactes, plus rapides à faire une mini-urne.",
+      "Comme les dressées : cold strat 4–8 semaines, surface, mix ébouillanté, 150–250 µmol/m²/s, 14 h. Graines de l’année. Plantules plus compactes, plus rapides à faire une mini-urne.",
     cuttingNotes: "Division de rhizome au printemps. Les rosettes se séparent facilement.",
     redColorNotes:
-      "Purpurea venosa et rosea colorent bien dès 200–250 µmol en 6500 K, surtout avec nuits fraîches. Le rouge est aussi un signal de « assez de lumière + un peu de stress hydrique contrôlé », pas un pic 660.",
+      "Purpurea venosa et rosea colorent bien dès 200–250 µmol/m²/s en 6500 K, surtout avec nuits fraîches. Le rouge est aussi un signal de « assez de lumière + un peu de stress hydrique contrôlé », pas un pic 660.",
     warnings: [
       "Psittacina pourrit si le collet cuit dans une HR saturée sans air.",
-      "Ne pas confondre « basse » et « ombre » : 100 µmol est un plancher, pas une cible de confort.",
+      "Ne pas confondre « basse » et « ombre » : 100 µmol/m²/s est un plancher, pas une cible de confort.",
     ],
     projects: ["seedling", "production", "coloring", "mixed", "dormancy"],
   },
@@ -146,11 +146,11 @@ window.LG_SPECIES = [
     traps:
       "Le mucilage fait le travail. Sciarides de la tente = buffet. Complément : drosophiles 1×/mois, ou foliar. Pas de viande.",
     seedlingNotes:
-      "Graines très fines, viables plusieurs années au sec/frais (mieux que Sarracenia). Strat 4–6 semaines (rotundifolia, intermedia). Surface, vaporisation, jamais d’enfouissement. Mix ébouillanté : les algues gagnent sinon. 14 h, 150–250 µmol. Filiformis récalcitrant : GA-3 500–1000 ppm 24 h — option de lot difficile, pas un réflexe.",
+      "Graines très fines, viables plusieurs années au sec/frais (mieux que Sarracenia). Strat 4–6 semaines (rotundifolia, intermedia). Surface, vaporisation, jamais d’enfouissement. Mix ébouillanté : les algues gagnent sinon. 14 h, 150–250 µmol/m²/s. Filiformis récalcitrant : GA-3 500–1000 ppm 24 h — option de lot difficile, pas un réflexe.",
     cuttingNotes:
       "Leaf pulling très fiable : feuille à plat sur sphaigne, HR haute, lumière douce. Plantules au pétiole en 3–6 semaines. Root cuttings chez filiformis.",
     redColorNotes:
-      "Rotundifolia et filiformis ‘Florida Red’ colorent dès 200 µmol en 6500 K. Le mucilage brille plus que le pigment : si la feuille est rouge mais sèche, c’est trop de chaleur / trop peu d’HR, pas trop de bleu.",
+      "Rotundifolia et filiformis ‘Florida Red’ colorent dès 200 µmol/m²/s en 6500 K. Le mucilage brille plus que le pigment : si la feuille est rouge mais sèche, c’est trop de chaleur / trop peu d’HR, pas trop de bleu.",
     warnings: [
       "Hibernacle ≠ mort : ne pas jeter un pot « vide » en décembre.",
       "Binata a des feuilles coupantes : gants pour les grosses touffes.",
@@ -181,11 +181,11 @@ window.LG_SPECIES = [
       "Étage médian, 20–30 cm sous COP4065, ou COP2065 dédiée. Parfaite plante « comble-trou » d’une tente mixte. Spatulata et aliciae restent en rosette : elles tiennent au premier plan, 15–20 cm.",
     traps: "Mucilage = indicateur de santé. Si les gouttes disparaissent : air trop sec, lumière trop faible, ou eau trop riche.",
     seedlingNotes:
-      "Pas de cold strat. Surface, 20–24 °C, 14 h, 150–250 µmol. Levée 7–21 jours. Graines fraîches germent en tapis : éclaircir tôt, capensis étouffe ses voisines et les Sarracenia.",
+      "Pas de cold strat. Surface, 20–24 °C, 14 h, 150–250 µmol/m²/s. Levée 7–21 jours. Graines fraîches germent en tapis : éclaircir tôt, capensis étouffe ses voisines et les Sarracenia.",
     cuttingNotes:
       "Leaf pulling facile. Tige de capensis : bouture de hampe florale ou de feuille. Racines en 2–4 semaines.",
     redColorNotes:
-      "Capensis ‘Alba’ reste verte (génotype). ‘Rubra’ / ‘Red’ demandent DLI et un peu de fraîcheur, pas un spectre rouge. Aliciae colore dès 200 µmol.",
+      "Capensis ‘Alba’ reste verte (génotype). ‘Rubra’ / ‘Red’ demandent DLI et un peu de fraîcheur, pas un spectre rouge. Aliciae colore dès 200 µmol/m²/s.",
     warnings: [
       "Envahissante par graines : coupe les hampes si tu ne veux pas un tapis.",
       "Ne pas la coller contre des Nepenthes basses : elle vole la lumière du collet.",
@@ -248,15 +248,15 @@ window.LG_SPECIES = [
     fertilizer:
       "Foliar / mix 0,3 g/L 1×/mois (orchidée ou Rain Mix), ou 1 bille d’Osmocote dans une urne mature — un seul mode. Jamais de terreau horticole, jamais de bac type Sarracenia.",
     tentTips:
-      "Étage bas : la lumière y tombe à 60–120 µmol sous des COP4065 tendues en haut — c’est la fenêtre lowland. Sinon COP2065 à 30–40 cm. Extraire + hygro 60–80 %. Nuits chaudes (pas de drop 12 °C).",
+      "Étage bas : la lumière y tombe à 60–120 µmol/m²/s sous des COP4065 tendues en haut — c’est la fenêtre lowland. Sinon COP2065 à 30–40 cm. Extraire + hygro 60–80 %. Nuits chaudes (pas de drop 12 °C).",
     traps:
       "1–2 proies par urne et par mois, ou 1 bille Osmocote, ou un soupçon d’engrais orchidée dilué dans l’urne (quelques ml, jamais plein). Urnes vides trop longtemps + fort PPFD = plante qui « photosynthétise » au détriment du piégeage (Carnivero).",
     seedlingNotes:
-      "Graines récalcitrantes : semer dans la semaine, sphaigne, 26–30 °C, HR 90 %, 40–80 µmol. Après 1–2 mois au tiède, le taux s’effondre. In-vitro reste plus réaliste qu’un semis amateur sur un lot de voyage.",
+      "Graines récalcitrantes : semer dans la semaine, sphaigne, 26–30 °C, HR 90 %, 40–80 µmol/m²/s. Après 1–2 mois au tiède, le taux s’effondre. In-vitro reste plus réaliste qu’un semis amateur sur un lot de voyage.",
     cuttingNotes:
-      "Bouture de tige 1–2 nœuds, sphaigne pure, HR 90–100 % (sac ou dôme), 24–28 °C, lumière douce 40–80 µmol (COP2065 à 30–40 cm ou COP4065 à 40–50 cm). Racines en 4–10 semaines. Ne pas coller la barre : brûlure + pourriture.",
+      "Bouture de tige 1–2 nœuds, sphaigne pure, HR 90–100 % (sac ou dôme), 24–28 °C, lumière douce 40–80 µmol/m²/s (COP2065 à 30–40 cm ou COP4065 à 40–50 cm). Racines en 4–10 semaines. Ne pas coller la barre : brûlure + pourriture.",
     redColorNotes:
-      "La couleur d’urne est surtout génétique et HR + un peu de DLI. Monter à 150–200 µmol peut rougir mais dessèche les urnes si l’HR descend sous 60 %. Growing 6500 K suffit.",
+      "La couleur d’urne est surtout génétique et HR + un peu de DLI. Monter à 150–200 µmol/m²/s peut rougir mais dessèche les urnes si l’HR descend sous 60 %. Growing 6500 K suffit.",
     warnings: [
       "Bac d’eau type tourbière = asphyxie racinaire.",
       "Nuits froides de highland tuent les vraies lowland (bicalcarata).",
@@ -288,14 +288,14 @@ window.LG_SPECIES = [
     tentTips:
       "Étage médian-bas, 25–40 cm sous COP4065, ou COP20FS en appoint doux. Le drop nocturne se joue à l’extracteur + pièce fraîche, pas à la LED. Éviter le plafond chaud des Sarracenia.",
     traps: "Même logique que lowland. Urnes inférieures d’abord ; les supérieures viennent avec la maturité et une HR stable.",
-    seedlingNotes: "Comme lowland, mais 18–22 °C la nuit dès les plantules chez les vraies highland. Lumière 50–100 µmol.",
+    seedlingNotes: "Comme lowland, mais 18–22 °C la nuit dès les plantules chez les vraies highland. Lumière 50–100 µmol/m²/s.",
     cuttingNotes:
       "Même protocole bouture, températures plus basses : 20–24 °C jour, 14–18 °C nuit. HR 90–100 % jusqu’à l’enracinement, puis acclimatation en 2–3 semaines.",
     redColorNotes:
       "Ventricosa colore facilement. Les espèces « dark » (hamata) demandent DLI + nuits fraîches + génotype. Pas un pic 660.",
     warnings: [
       "Tente lowland (30 °C nuit) = highland en sursis.",
-      "Ne pas chasser le PPFD des Sarracenia : au-delà de ~200 µmol les feuilles durcissent et les urnes avortent si l’HR n’est pas là.",
+      "Ne pas chasser le PPFD des Sarracenia : au-delà de ~200 µmol/m²/s les feuilles durcissent et les urnes avortent si l’HR n’est pas là.",
     ],
     projects: ["cutting", "production", "mixed", "tropical"],
   },
@@ -323,7 +323,7 @@ window.LG_SPECIES = [
       "Étage médian, 20–30 cm sous COP2065. Elles n’aiment ni le four des dressées ni la jungle des Nepenthes. Bonne candidate d’étage mixte « frais ».",
     traps: "Feuilles gluantes : sciarides, collemboles. Pas de viande. Ne pas vaporiser d’engrais concentré qui « lave » le mucilage.",
     seedlingNotes:
-      "Graines fines, souvent cold strat 4–6 semaines. Surface, 18–22 °C, 150 µmol. Lusitanica germe sans froid.",
+      "Graines fines, souvent cold strat 4–6 semaines. Surface, 18–22 °C, 150 µmol/m²/s. Lusitanica germe sans froid.",
     cuttingNotes: "Leaf pulling de feuille d’été, comme les mexicaines, mais plus lent. Hibernacle : on ne touche pas.",
     redColorNotes: "Grandiflora rougit au fort DLI et au froid. Vulgaris reste souvent vert-jaune : génotype.",
     warnings: [
@@ -355,13 +355,13 @@ window.LG_SPECIES = [
       "Mix minéral : perlite + vermiculite + un peu de tourbe ou sphaigne hachée (ex. 40/40/20), ou sable + pouzzolane + tourbe. Gypsicola / gypsophiles : encore plus minéral (gypse horti possible, jamais de calcaire). Pots bas, très drainants.",
     fertilizer: "Foliar 0,3 g/L 1×/mois sur feuilles carnivores seulement. Rien sur les feuilles d’hiver succulentes.",
     tentTips:
-      "Étage bas-médian, 25–40 cm sous COP4065, ou COP2065 à 25 cm. Elles grillent et se recroquevillent au-delà de ~180–200 µmol. Air plutôt sec, bon extracteur.",
+      "Étage bas-médian, 25–40 cm sous COP4065, ou COP2065 à 25 cm. Elles grillent et se recroquevillent au-delà de ~180–200 µmol/m²/s. Air plutôt sec, bon extracteur.",
     traps: "Mucilage : micro-proies. Un foliar léger remplace les proies. Pas de « nourrissage » à la pince sur ces feuilles fragiles.",
-    seedlingNotes: "Surface, 20–24 °C, 50–100 µmol, pas de cold strat. Lent. Bouture de feuille souvent plus simple.",
+    seedlingNotes: "Surface, 20–24 °C, 50–100 µmol/m²/s, pas de cold strat. Lent. Bouture de feuille souvent plus simple.",
     cuttingNotes:
       "Leaf pulling : feuille carnivore saine, posée sur mix à peine humide, HR 70–80 % (pas 100 %), lumière douce. Plantules au pétiole en 3–8 semaines. C’est LE mode de multiplication.",
     redColorNotes:
-      "Moranensis et gypsicola rougissent à 80–120 µmol + nuits fraîches. Trop de lumière = feuilles noires-rouges recroquevillées (stress, pas « belle couleur »).",
+      "Moranensis et gypsicola rougissent à 80–120 µmol/m²/s + nuits fraîches. Trop de lumière = feuilles noires-rouges recroquevillées (stress, pas « belle couleur »).",
     warnings: [
       "Jamais de bac d’eau permanent.",
       "Ne pas les mettre sous le même régime hydrique que Sarracenia.",
@@ -389,7 +389,7 @@ window.LG_SPECIES = [
     substrate: "Tourbe blonde + sable 50/50, couche fine. Se mélangent aux Drosera : bac commun possible.",
     fertilizer: "Très peu. Foliar 0,3 g/L 1×/6 semaines max. Les utricules du substrat pêchent les infusoires.",
     tentTips:
-      "Premier plan, 20–30 cm sous Cosmorrow. Sandersonii fleurit bien à 150–200 µmol. Trop fort = tapis jaunissant.",
+      "Premier plan, 20–30 cm sous Cosmorrow. Sandersonii fleurit bien à 150–200 µmol/m²/s. Trop fort = tapis jaunissant.",
     traps: "Utricules souterrains : pas de nourrissage à la pince. Un substrat vivant (microfaune) suffit.",
     seedlingNotes: "Graines poussière, surface, souvent sans strat. Division de tapis plus simple que le semis.",
     cuttingNotes: "Division de stolons / tapis au rempotage. C’est tout.",
@@ -422,12 +422,12 @@ window.LG_SPECIES = [
     tentTips:
       "Étage bas tropical, à côté des Nepenthes, COP2065 à 30–40 cm. Humidificateur + extracteur. Longifolia tolère un peu plus de lumière qu’alpina.",
     traps: "Comme les terrestres : pas de piège aérien à nourrir.",
-    seedlingNotes: "Semis délicat, sphaigne, HR 90 %, lumière 40–80 µmol. Division plus réaliste.",
+    seedlingNotes: "Semis délicat, sphaigne, HR 90 %, lumière 40–80 µmol/m²/s. Division plus réaliste.",
     cuttingNotes: "Division de rhizomes / stolons dans la sphaigne.",
     redColorNotes: "Hors sujet. Fleurs spectaculaires si DLI et HR sont stables, pas si on « pousse le rouge ».",
     warnings: [
       "Air sec de tente à Sarracenia = feuilles croquantes en une semaine.",
-      "Ne pas les coller sous 300 µmol.",
+      "Ne pas les coller sous 300 µmol/m²/s.",
     ],
     projects: ["cutting", "production", "mixed", "tropical"],
   },
@@ -454,15 +454,15 @@ window.LG_SPECIES = [
     fertilizer:
       "Foliar 0,3 g/L 1×/mois, ou 1 petite proie par urne. Très sensible à l’excès racinaire. Pas d’Osmocote. Pas de régime lowland (30 °C / 90 % HR).",
     tentTips:
-      "Étage médian-frais, 20–30 cm sous COP4065, viser 120 µmol. Extracteur : Cephalotus pourrit dans une jungle saturée et chaude. Nuits 12–16 °C. Ne pas la coller aux true lowland (bicalcarata, ampullaria) dans 1 m³ à 28 °C.",
+      "Étage médian-frais, 20–30 cm sous COP4065, viser 120 µmol/m²/s. Extracteur : Cephalotus pourrit dans une jungle saturée et chaude. Nuits 12–16 °C. Ne pas la coller aux true lowland (bicalcarata, ampullaria) dans 1 m³ à 28 °C.",
     traps:
       "Urnes à opercule : 1 petite proie / mois dans 1–2 urnes. Les feuilles plates (phyllodes) apparaissent si lumière insuffisante ou après stress — ce n’est pas grave, on corrige le DLI.",
     seedlingNotes:
-      "Lent (2–4 ans). Surface, 18–22 °C, 80–150 µmol. Stratification parfois citée, pas consensuelle. Patience.",
+      "Lent (2–4 ans). Surface, 18–22 °C, 80–150 µmol/m²/s. Stratification parfois citée, pas consensuelle. Patience.",
     cuttingNotes:
       "Leaf pulling d’urne ou de feuille plate avec un fragment de rhizome si possible. Sphaigne, HR 80–90 %, 20 °C, lumière douce. Lent et aléatoire. Division de rhizome plus sûre sur plante mature.",
     redColorNotes:
-      "Urnes bordeaux = DLI + nuits fraîches + génotype. Growing 6500 K à 150–200 µmol colore. Au-delà, brûlure de l’opercule.",
+      "Urnes bordeaux = DLI + nuits fraîches + génotype. Growing 6500 K à 150–200 µmol/m²/s colore. Au-delà, brûlure de l’opercule.",
     warnings: [
       "Pourriture du collet : ennemi n°1 (chaleur + eau + nulle aération).",
       "Ne pas la cultiver en lowland Nepenthes : régime highland-cool, pas jungle 30 °C.",
@@ -491,13 +491,13 @@ window.LG_SPECIES = [
     fertilizer:
       "Foliar 0,3 g/L 1×/mois, ou très peu d’engrais orchidée. 1 petite proie par urne de temps en temps. Racinaire : prudence, algues dans la sphaigne.",
     tentTips:
-      "Tente tropicale highland dédiée, ou étage frais. COP4065 à 20–30 cm pour viser 200 µmol (Carnivero bas-milieu ; leurs photos P85 montent à 500–600 sur des adultes — on n’y va pas d’emblée). Extracteur + hygro. Minor est la plus simple en tente.",
+      "Tente tropicale highland dédiée, ou étage frais. COP4065 à 20–30 cm pour viser 200 µmol/m²/s (Carnivero bas-milieu ; leurs photos P85 montent à 500–600 sur des adultes — on n’y va pas d’emblée). Extracteur + hygro. Minor est la plus simple en tente.",
     traps:
       "Urnes ouvertes : quelques ml d’eau RO + micro-proies. Ne pas remplir d’engrais. Nectar et cuillère (nectar spoon) indiquent une plante à l’aise.",
-    seedlingNotes: "Semis lent sur sphaigne, 18–22 °C, HR 90 %, 80–150 µmol. Hybrides plus faciles que les espèces tepui strictes.",
+    seedlingNotes: "Semis lent sur sphaigne, 18–22 °C, HR 90 %, 80–150 µmol/m²/s. Hybrides plus faciles que les espèces tepui strictes.",
     cuttingNotes: "Division de rhizome / rejets. Bouture de feuille rarement fiable.",
     redColorNotes:
-      "Minor et hybrides rougissent dès 200 µmol en 6500 K + nuits fraîches. Pousser vers 300–400 colore plus, à condition que l’HR et le drop tiennent. Pas un besoin de 660 nm.",
+      "Minor et hybrides rougissent dès 200 µmol/m²/s en 6500 K + nuits fraîches. Pousser vers 300–400 colore plus, à condition que l’HR et le drop tiennent. Pas un besoin de 660 nm.",
     warnings: [
       "Tente 30 °C = échec. Priorité au drop nocturne.",
       "Sphaigne morte compacte = pourriture. On rempote.",
@@ -526,10 +526,10 @@ window.LG_SPECIES = [
     substrate: "Sphaigne longue fibre + perlite, pots profonds / tubes (racines longues qui veulent du froid). L’inverse des Sarracenia : ici la profondeur sert.",
     fertilizer: "Proies et foliar 0,3 g/L, rarement. Racinaire déconseillé. Plante exigeante : on soigne l’eau froide et le fond de pot, on ne « booste » pas.",
     tentTips:
-      "Mal adaptée à une tente chaude Cosmorrow sans gestion du fond de pot. Si tu tentes : étage avec extracteur fort, pots sur clayette, eau froide, COP4065 à 20–25 cm (cible 180 µmol, pas 400). Une cave fraîche + LED bat une tente 28 °C.",
+      "Mal adaptée à une tente chaude Cosmorrow sans gestion du fond de pot. Si tu tentes : étage avec extracteur fort, pots sur clayette, eau froide, COP4065 à 20–25 cm (cible 180 µmol/m²/s, pas 400). Une cave fraîche + LED bat une tente 28 °C.",
     traps: "Urnes à opercule recourbé : quelques proies par saison. Ne pas verser d’engrais dans l’urne.",
     seedlingNotes:
-      "Cold strat 4–8 semaines. Surface, 15–20 °C, 100–180 µmol. Lent. Taux d’échec élevé si l’eau n’est pas froide et pauvre.",
+      "Cold strat 4–8 semaines. Surface, 15–20 °C, 100–180 µmol/m²/s. Lent. Taux d’échec élevé si l’eau n’est pas froide et pauvre.",
     cuttingNotes: "Division de stolons au printemps. C’est le seul geste réaliste.",
     redColorNotes: "Les ailes et veinules rougissent au DLI et au froid. Secondaire face à la survie racinaire.",
     warnings: [
@@ -561,10 +561,10 @@ window.LG_SPECIES = [
     substrate: "Sable siliceux + un peu de tourbe (70/30) ou terre de bruyère non fertilisée + sable. Pots terre cuite profonds. On sème en place : déteste le rempotage.",
     fertilizer: "Foliar 0,3 g/L 1×/mois. Proies volantes. Pas de racinaire, pas de rempotage « pour voir ».",
     tentTips:
-      "Tente sèche, extracteur fort, COP4065 à 15–20 cm (cible 250 µmol). Incompatible avec l’étage Nepenthes. Plutôt une étagère dédiée, HR 40–50 %.",
+      "Tente sèche, extracteur fort, COP4065 à 15–20 cm (cible 250 µmol/m²/s). Incompatible avec l’étage Nepenthes. Plutôt une étagère dédiée, HR 40–50 %.",
     traps: "Feuilles gluantes type Drosera géante. Mouches, mites. Mucilage abondant = plante à l’aise.",
     seedlingNotes:
-      "Semer en place dans le pot définitif. Graines dures : scarification au papier ou 24–48 h d’eau tiède. 20 °C, lumière forte d’emblée (200 µmol). Pas de transplant. Lots de l’année.",
+      "Semer en place dans le pot définitif. Graines dures : scarification au papier ou 24–48 h d’eau tiède. 20 °C, lumière forte d’emblée (200 µmol/m²/s). Pas de transplant. Lots de l’année.",
     cuttingNotes: "Pas de bouture utile. Semis uniquement.",
     redColorNotes: "Peu de rouge anthocyanique spectaculaire. Le spectacle c’est le mucilage au soleil / LED froide.",
     warnings: [
@@ -599,7 +599,7 @@ window.LG_SPECIES = [
       "Étage médian-haut, 15–25 cm sous COP4065. Liniflora est une excellente plante de tente mixte / tropicale. Tiges grêles : tuteur ou densité pour qu’elles se tiennent.",
     traps: "Mucilage dense. Sciarides et drosophiles. Foliar en appoint. Pas de viande.",
     seedlingNotes:
-      "Liniflora : surface, 24–28 °C, 14 h, 150–250 µmol, levée 1–3 semaines, graines de l’année. Gigantea / lamellata : fumée de prairie (smoke water) ou GA-3 1000 ppm 24 h, mix minéral, pas le germoir Sarracenia — lot dédié, confinement.",
+      "Liniflora : surface, 24–28 °C, 14 h, 150–250 µmol/m²/s, levée 1–3 semaines, graines de l’année. Gigantea / lamellata : fumée de prairie (smoke water) ou GA-3 1000 ppm 24 h, mix minéral, pas le germoir Sarracenia — lot dédié, confinement.",
     cuttingNotes: "Bouture de tige possible chez liniflora, moins classique que le semis. Pérennes : délicat.",
     redColorNotes: "Le « rainbow » est la diffraction du mucilage, pas un pigment rouge. PPFD haut = tiges courtes et gluantes.",
     warnings: [

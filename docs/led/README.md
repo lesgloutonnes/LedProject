@@ -8,7 +8,7 @@ Fichiers JS consommés par le site (vanilla, sans npm). **Marque unique : Secret
 | `psus.js` | `window.LG_PSUS` — 8 alims COM* |
 | `tents.js` | `window.LG_TENTS` — 8 tentes EU |
 | `kits.js` | `window.LG_KITS` — 16 kits tente × projet |
-| `optics.js` | `placements`, `simulatePpfd`, `dli`, `yearlyKwh` (+ `window.LG_OPTICS`) |
+| `optics.js` | `placements`, `simulatePpfd`, `datasheetScale`, `dli`, `yearlyKwh` (+ `window.LG_OPTICS`) |
 | `install.js` | `window.LG_INSTALL` |
 | `copy.md` | Textes FR (pourquoi Cosmorrow, mythes, lire une fiche) |
 
@@ -57,7 +57,7 @@ Anciennes refs boutique : COM2X20 ≈ COM40D, COM2X40 ≈ COM80D.
 
 ## Limites
 
-- **Optique** (`optics.js`) : lambertien 120° + rebond mylar forfaitaire 0,25. Ce n’est **pas un PAR-mètre**. Sert à comparer des layouts Cosmorrow, pas à certifier un DLI.
+- **Optique** (`optics.js`) : lambertien 120° + rebond mylar forfaitaire 0,25, **calé** pour que la moyenne d’une barre sur sa zone/hauteur fiche colle au PPFD constructeur (le modèle brut est trop bas : pas de radiosité de paroi). Ce n’est **pas un PAR-mètre**. Sert à comparer des layouts Cosmorrow, pas à certifier un DLI.
 - **Alims IP** : SJ communique IP65 ; certaines fiches revendeurs indiquent IP54. Dans tous les cas : driver **hors** tente.
 - **COM3X\* / COM5X\*** : « 2/3 » et « 4/5 » = ports vides acceptés, wattage de port unique (20 **ou** 40), jamais mixte.
 - **Tentes** : hauteurs typiques SJ (DP60 60 cm, DS60 158 cm, DS120W 178 cm, HS100 200 cm…). Une Vivosun 120×60×150 est plus basse : même emprise, moins d’étages.

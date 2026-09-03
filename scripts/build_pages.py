@@ -427,7 +427,7 @@ page(
     "Simulateur PPFD Cosmorrow, DLI et coût électrique pour tente de carnivores. Modèle optique prudent, pas un PAR-mètre.",
     """
       <header class="page-hero stack">
-        <p class="kicker">Lambertien 120° · mylar 0,25</p>
+        <p class="kicker">Lambertien 120° · mylar 0,25 · calé fiche COP</p>
         <h1>Comparer des kits, pas certifier un DLI.</h1>
         <p class="lede">Carte PPFD simplifiée pour Cosmorrow seulement. Cosmorrow n’est pas dimmable : le curseur d’intensité simule un voile, pas un Controller+.</p>
       </header>
