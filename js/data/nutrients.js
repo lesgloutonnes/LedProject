@@ -1,9 +1,9 @@
 /**
- * Eau, substrats, engrais, proies — Les Gloutonnes · Tourbière
+ * Eau, substrats, engrais, proies — Les Gloutonnes
  * Engrais : dilutions horticoles connues uniquement (Maxsea ¼, orchidée ¼).
  * Jamais Miracle-Gro, jamais terreau fertilisé.
  */
-window.TOURBIERE_NUTRIENTS = {
+window.LG_NUTRIENTS = {
   water: {
     title: "Eau pauvre, non négociable",
     tdsMaxPpm: 50,

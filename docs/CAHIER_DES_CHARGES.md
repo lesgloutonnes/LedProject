@@ -1,6 +1,6 @@
-# Cahier des charges — Les Gloutonnes · Tourbière
+# Cahier des charges — Guide de culture en tente (Les Gloutonnes)
 
-Site de référence pour **mettre en place une tente de culture** de plantes carnivores sous **LED Secret Jardin Cosmorrow**.
+Application de culture Les Gloutonnes (hub : [applications-culture](https://www.lesgloutonnes.be/pages/applications-culture.html)) pour **mettre en place une tente** de plantes carnivores sous **LED Secret Jardin Cosmorrow**.
 
 Marque LED retenue : **Cosmorrow** (Secret Jardin, Belgique, 24 V, IP65, PPF publié). Le comparatif multi-marques de l’ancienne appli n’est **pas** repris.
 

@@ -2,7 +2,7 @@
  * Mapping assistant ↔ kits ↔ protocoles.
  * Assistant IDs (FR UI) vs kits (germoir/production/…) vs protocoles (seedling/…).
  */
-window.TOURBIERE_PROJECTS = [
+window.LG_PROJECTS = [
   {
     id: "germoir",
     label: "Germoir / semis",
@@ -61,7 +61,7 @@ window.TOURBIERE_PROJECTS = [
   },
 ];
 
-window.TOURBIERE_GENRES = [
+window.LG_GENRES = [
   {
     id: "sarracenia",
     label: "Sarracenia",
@@ -128,7 +128,7 @@ window.TOURBIERE_GENRES = [
   },
 ];
 
-window.TOURBIERE_PROTOCOL_HASH = {
+window.LG_PROTOCOL_HASH = {
   seedling: "germoir",
   cutting: "bouturage",
   production: "collection",

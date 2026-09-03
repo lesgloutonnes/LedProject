@@ -1,10 +1,10 @@
 /**
- * Fiches genres — Les Gloutonnes · Tourbière
+ * Fiches genres — Les Gloutonnes
  * PPFD : Carnivero/Florawave (cibles = bas-milieu de fourchette, photopériode 12–14 h).
  * * = estimation Carnivero (non testé sous LED).
  * LED du site : Secret Jardin Cosmorrow uniquement.
  */
-window.TOURBIERE_SPECIES = [
+window.LG_SPECIES = [
   {
     id: "dionaea",
     latin: "Dionaea muscipula",

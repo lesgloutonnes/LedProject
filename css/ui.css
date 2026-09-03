@@ -1,4 +1,4 @@
-/* Les Gloutonnes · Tourbière — composants UI
+/* Les Gloutonnes — composants UI
    Tokens : css/tokens.css. Mobile-first 375 / 720 / 1100. */
 
 :root {
@@ -873,6 +873,14 @@ a.chip {
   color: var(--muted);
   font-size: var(--step-0);
   text-align: center;
+}
+
+.site-footer a {
+  color: var(--muted);
+}
+
+.site-footer a:hover {
+  color: var(--primary);
 }
 
 .prose p,

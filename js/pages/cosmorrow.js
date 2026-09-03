@@ -1,9 +1,9 @@
 (function () {
   var e = escapeHtml;
-  var fmt = window.TourbiereFmt;
+  var fmt = window.LgFmt;
   var host = document.getElementById("sku-table");
   if (host) {
-    var rows = (window.TOURBIERE_FIXTURES || [])
+    var rows = (window.LG_FIXTURES || [])
       .map(function (f) {
         return (
           "<tr id=\"" +
@@ -40,7 +40,7 @@
 
   var cards = document.getElementById("fixture-cards");
   if (cards) {
-    cards.innerHTML = (window.TOURBIERE_FIXTURES || [])
+    cards.innerHTML = (window.LG_FIXTURES || [])
       .map(function (f) {
         return (
           '<article class="card stack" id="fiche-' +
@@ -67,7 +67,7 @@
 
   var psus = document.getElementById("psu-list");
   if (psus) {
-    psus.innerHTML = (window.TOURBIERE_PSUS || [])
+    psus.innerHTML = (window.LG_PSUS || [])
       .map(function (p) {
         return (
           '<article class="card" id="' +
@@ -92,7 +92,7 @@
 
   var kits = document.getElementById("kit-list");
   if (kits) {
-    kits.innerHTML = (window.TOURBIERE_KITS || [])
+    kits.innerHTML = (window.LG_KITS || [])
       .map(function (k) {
         var psusK = Array.isArray(k.psu) ? k.psu.join(" + ") : k.psu;
         return (

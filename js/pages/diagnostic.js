@@ -1,6 +1,6 @@
 (function () {
   var e = escapeHtml;
-  var data = window.TOURBIERE_DIAGNOSTIC;
+  var data = window.LG_DIAGNOSTIC;
   if (!data) return;
   var pick = document.getElementById("tree-pick");
   var panel = document.getElementById("tree-panel");

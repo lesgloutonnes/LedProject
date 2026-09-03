@@ -1,4 +1,4 @@
-# Architecture de l’information — Les Gloutonnes · Tourbière
+# Architecture de l’information — Les Gloutonnes
 
 Site **multi-pages**, HTML/CSS/JS vanilla, **sans npm**. Une URL = une tâche. Pas de SPA, pas de hash-router : le Wi-Fi magasin coupe, le bouton retour du téléphone doit marcher.
 
@@ -21,7 +21,7 @@ Arborescence cible (le chef de projet assemble) :
     ui.css              ← composants (travail ultérieur)
   js/
     lib/
-      storage.js        ← tourbiere.* + try/catch quota
+      storage.js        ← lg.tente.* + try/catch quota
       escape.js         ← escapeHtml
       print.js          ← window.print d’une zone
     data/
@@ -66,7 +66,7 @@ Chaque page a **un job**, **un CTA primaire**, **des sorties**. Titres uniques (
 
 Au-dessus de la ligne de flottaison mobile :
 
-1. Kicker `Les Gloutonnes · Tourbière`
+1. Kicker `Les Gloutonnes`
 2. H1 display : une phrase (ex. *Une tente, des Cosmorrow, un protocole.*)
 3. Lede 2 lignes max.
 4. **CTA sticky** `Lancer l’assistant` (voir `mobile.md`)
@@ -78,7 +78,7 @@ Au-dessus de la ligne de flottaison mobile :
 | LED Cosmorrow | « Quelle barre, quelle alim ? » | `cosmorrow.html` |
 | Espèces | « Mes plantes étirent / grillent » | `especes.html` |
 
-Sous le fold, **pas** de heatmap. Une bande « 7 protocoles » en chips vers `protocoles.html#germoir` etc. Une ligne tarif kWh (lue depuis `tourbiere.prefs`) + lien Outils.
+Sous le fold, **pas** de heatmap. Une bande « 7 protocoles » en chips vers `protocoles.html#germoir` etc. Une ligne tarif kWh (lue depuis `lg.tente.prefs`) + lien Outils.
 
 ---
 
@@ -114,12 +114,12 @@ Hauteur barre + `safe-area-inset-bottom` → padding-bottom de `main` (token `--
 Header `position: sticky; top: 0; z-index: 40`. Pas de bottom nav (`display: none` via `.bottom-nav`).
 
 ```
-[marque Tourbière]   Accueil  Assistant  Cosmorrow  Espèces  Protocoles   [Plus ▾]   [CTA Assistant]
+[marque Les Gloutonnes]   Accueil  Assistant  Cosmorrow  Espèces  Protocoles   [Plus ▾]   [CTA Assistant]
 ```
 
-- Logo-texte : `Les Gloutonnes` en sans small-caps / kicker + `Tourbière` en Fraunces.
+- Logo-texte : `Les Gloutonnes` en sans small-caps / kicker + `Les Gloutonnes` en Fraunces.
 - 5 liens primaires + menu Plus (mêmes 6 secondaires).
-- CTA header = `Lancer l’assistant` **sauf** sur `assistant.html` (là : « Reprendre » si `tourbiere.project.step` existe, sinon rien).
+- CTA header = `Lancer l’assistant` **sauf** sur `assistant.html` (là : « Reprendre » si `lg.tente.project.step` existe, sinon rien).
 - `backdrop-filter` léger, pas de néon. Bordure basse `--border`.
 
 Entre 720 et 1099 : header compact (liens primaires + Plus), bottom nav **cachée**. On ne montre **jamais** header complet **et** barre bas.
@@ -132,7 +132,7 @@ Premier enfant de `body` : « Aller au contenu » → `#contenu`. Voir `html-she
 
 ## 4. Flux assistant (4 steps + résultat)
 
-URL unique : `assistant.html`. L’étape vit dans `tourbiere.project.step` (1–4) et dans `?step=` en query **en plus** (partage / retour). Si query absente, lire le storage. Si conflit : **query gagne** (lien partagé).
+URL unique : `assistant.html`. L’étape vit dans `lg.tente.project.step` (1–4) et dans `?step=` en query **en plus** (partage / retour). Si query absente, lire le storage. Si conflit : **query gagne** (lien partagé).
 
 ```
 step 1  Projet
@@ -184,7 +184,7 @@ Tentes de départ (ids) :
 | `120-120-180` | 120 × 120 | 2 lignes de barres |
 | `custom` | Saisie libre | clamp 40–240 cm |
 
-Si `tourbiere.prefs.tenteFavorite` matche un id : précocher + badge « Favorite ». Au choix, proposer « Enregistrer comme favorite ».
+Si `lg.tente.prefs.tenteFavorite` matche un id : précocher + badge « Favorite ». Au choix, proposer « Enregistrer comme favorite ».
 
 Montrer l’aire en m² (`L*l/10000`) et le rappel : *2 bacs 60 × 40 rentrent dans 120 × 60*.
 
@@ -204,7 +204,7 @@ Callout : *Ne pas mélanger 20 W et 40 W sur la même alim.* Lien Cosmorrow.
 
 ### Écran résultat
 
-Voir `wire-assistant.md`. Persister le kit dans `tourbiere.project.kit`. CTA :
+Voir `wire-assistant.md`. Persister le kit dans `lg.tente.project.kit`. CTA :
 
 - Checklist montage (in-page)
 - Protocoles (`protocoles.html#` + id projet)
@@ -215,9 +215,9 @@ Voir `wire-assistant.md`. Persister le kit dans `tourbiere.project.kit`. CTA :
 
 ## 5. localStorage
 
-Préfixe unique `tourbiere.`. **Pas** de cookies. **Pas** d’autres clés. Wrapper `try/catch` (quota, mode privé, SecurityError). API proposée dans `js/lib/storage.js`.
+Préfixe unique `lg.tente.`. **Pas** de cookies. **Pas** d’autres clés. Wrapper `try/catch` (quota, mode privé, SecurityError). API proposée dans `js/lib/storage.js`.
 
-### `tourbiere.project`
+### `lg.tente.project`
 
 Session de l’assistant. Écrasée à chaque « Recommencer ». Jamais de PII.
 
@@ -258,7 +258,7 @@ Session de l’assistant. Écrasée à chaque « Recommencer ». Jamais de PII.
 }
 ```
 
-### `tourbiere.prefs`
+### `lg.tente.prefs`
 
 Survit aux « Recommencer ». Écran Outils + step tente.
 

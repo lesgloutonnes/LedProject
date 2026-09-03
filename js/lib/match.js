@@ -1,18 +1,18 @@
 (function () {
   function projectById(id) {
-    return (window.TOURBIERE_PROJECTS || []).find(function (p) {
+    return (window.LG_PROJECTS || []).find(function (p) {
       return p.id === id;
     });
   }
 
   function tentById(id) {
-    return (window.TOURBIERE_TENTS || []).find(function (t) {
+    return (window.LG_TENTS || []).find(function (t) {
       return t.id === id;
     });
   }
 
   function fixtureBySku(sku) {
-    return (window.TOURBIERE_FIXTURES || []).find(function (f) {
+    return (window.LG_FIXTURES || []).find(function (f) {
       return f.sku === sku;
     });
   }
@@ -28,7 +28,7 @@
   }
 
   function nearestTent(lengthCm, widthCm) {
-    var tents = window.TOURBIERE_TENTS || [];
+    var tents = window.LG_TENTS || [];
     var area = (lengthCm * widthCm) / 10000;
     var best = tents[0];
     var bestD = Infinity;
@@ -152,7 +152,7 @@
       dormance: input.dormance,
       genres: input.genres || [],
     };
-    var kits = (window.TOURBIERE_KITS || []).slice();
+    var kits = (window.LG_KITS || []).slice();
     var sameTent = kits.filter(function (k) {
       return tent && k.tentId === tent.id;
     });
@@ -205,7 +205,7 @@
     };
   }
 
-  window.TourbiereMatch = {
+  window.LgMatch = {
     projectById: projectById,
     tentById: tentById,
     fixtureBySku: fixtureBySku,

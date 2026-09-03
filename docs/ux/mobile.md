@@ -1,4 +1,4 @@
-# Mobile — Les Gloutonnes · Tourbière
+# Mobile — Les Gloutonnes
 
 Le site se tient dans un rayon growshop, une serre, un métro. Pouce droit, soleil, Wi-Fi pourri. **375 px** est le design ; **320 px** ne casse pas (pas de scroll X de page).
 

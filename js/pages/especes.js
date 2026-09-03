@@ -1,10 +1,10 @@
 (function () {
   var e = escapeHtml;
-  var fmt = window.TourbiereFmt;
+  var fmt = window.LgFmt;
   var list = document.getElementById("species-list");
   var chips = document.getElementById("species-filter");
   if (!list) return;
-  var species = window.TOURBIERE_SPECIES || [];
+  var species = window.LG_SPECIES || [];
   var active = "all";
 
   function familyOf(id) {

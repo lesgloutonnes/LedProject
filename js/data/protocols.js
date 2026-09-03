@@ -1,8 +1,8 @@
 /**
- * Protocoles de tente — Les Gloutonnes · Tourbière
+ * Protocoles de tente — Les Gloutonnes
  * LED exclusive : Secret Jardin Cosmorrow (Growing 6500 K en base, FS en appoint).
  */
-window.TOURBIERE_PROTOCOLS = [
+window.LG_PROTOCOLS = [
   {
     id: "seedling",
     title: "Germoir — semis Sarracenia, Drosera, Dionaea",

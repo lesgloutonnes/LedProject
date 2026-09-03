@@ -3,7 +3,7 @@
  * Source : fiche COP BULBS 2023-09 (et révision 2024-01 pour COP20FS).
  * Les barres se vendent SANS alimentation. Voir psus.js.
  */
-window.TOURBIERE_FIXTURES = [
+window.LG_FIXTURES = [
   {
     id: "cop2065",
     sku: "COP2065",
@@ -49,7 +49,7 @@ window.TOURBIERE_FIXTURES = [
     ppe: 2.7,
     cct: 6500,
     spectrumNote:
-      "100 % blanc 6500 K. SKU signature Tourbière : zone constructeur 120×60 à 15 cm, pile deux bacs 60×40. Surface tiède → on peut coller à ~15 cm du canopée.",
+      "100 % blanc 6500 K. SKU signature Les Gloutonnes : zone constructeur 120×60 à 15 cm, pile deux bacs 60×40. Surface tiède → on peut coller à ~15 cm du canopée.",
     ip: "IP65",
     voltage: 24,
     currentA: 1.56,

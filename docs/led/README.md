@@ -1,15 +1,15 @@
-# Données LED — Cosmorrow (Les Gloutonnes · Tourbière)
+# Données LED — Cosmorrow (Les Gloutonnes)
 
 Fichiers JS consommés par le site (vanilla, sans npm). **Marque unique : Secret Jardin Cosmorrow.** Pas de palmarès multi-marques.
 
 | Fichier | Export |
 | --- | --- |
-| `fixtures.js` | `window.TOURBIERE_FIXTURES` — 4 barres COP* |
-| `psus.js` | `window.TOURBIERE_PSUS` — 8 alims COM* |
-| `tents.js` | `window.TOURBIERE_TENTS` — 8 tentes EU |
-| `kits.js` | `window.TOURBIERE_KITS` — 16 kits tente × projet |
-| `optics.js` | `placements`, `simulatePpfd`, `dli`, `yearlyKwh` (+ `window.TOURBIERE_OPTICS`) |
-| `install.js` | `window.TOURBIERE_INSTALL` |
+| `fixtures.js` | `window.LG_FIXTURES` — 4 barres COP* |
+| `psus.js` | `window.LG_PSUS` — 8 alims COM* |
+| `tents.js` | `window.LG_TENTS` — 8 tentes EU |
+| `kits.js` | `window.LG_KITS` — 16 kits tente × projet |
+| `optics.js` | `placements`, `simulatePpfd`, `dli`, `yearlyKwh` (+ `window.LG_OPTICS`) |
+| `install.js` | `window.LG_INSTALL` |
 | `copy.md` | Textes FR (pourquoi Cosmorrow, mythes, lire une fiche) |
 
 Chargement type : `<script src="docs/led/fixtures.js"></script>` (ordre : fixtures / psus / tents avant kits / optics).
@@ -62,5 +62,5 @@ Anciennes refs boutique : COM2X20 ≈ COM40D, COM2X40 ≈ COM80D.
 - **COM3X\* / COM5X\*** : « 2/3 » et « 4/5 » = ports vides acceptés, wattage de port unique (20 **ou** 40), jamais mixte.
 - **Tentes** : hauteurs typiques SJ (DP60 60 cm, DS60 158 cm, DS120W 178 cm, HS100 200 cm…). Une Vivosun 120×60×150 est plus basse : même emprise, moins d’étages.
 - **Extracteurs** : débits « carnivores » (hygro), inférieurs aux préco HPS Level III des fiches tentes.
-- **Tarif élec.** : 0,20 €/kWh par défaut (`TOURBIERE_EUR_PER_KWH`), paramétrable via `yearlyCost(kwh, tarif)`.
+- **Tarif élec.** : 0,20 €/kWh par défaut (`LG_EUR_PER_KWH`), paramétrable via `yearlyCost(kwh, tarif)`.
 - Données arrêtées sur la fiche 2023-09 / page SJ ; un millésime barre peut bouger (voir COP20FS).

@@ -1,4 +1,4 @@
-# Design system — Les Gloutonnes · Tourbière
+# Design system — Les Gloutonnes
 
 Direction : **tourbière de nuit sous LED 6500 K**, pas un growshop cannabis.
 
@@ -222,7 +222,7 @@ Trois tons via modificateur : `.callout` (sphaigne, info), `.callout--warn` (amb
 
 ### Checklist
 
-`<ul class="checklist">` de `<label>` + `<input type="checkbox">`. État coché **non persisté** (ou alors dans `tourbiere.project.kit.check[]` si on a le temps). Print : cases vides. Zone tactile 44 px.
+`<ul class="checklist">` de `<label>` + `<input type="checkbox">`. État coché **non persisté** (ou alors dans `lg.tente.project.kit.check[]` si on a le temps). Print : cases vides. Zone tactile 44 px.
 
 ### DiagnosticTree
 

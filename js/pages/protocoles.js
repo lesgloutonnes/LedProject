@@ -3,7 +3,7 @@
   var host = document.getElementById("protocol-list");
   var nav = document.getElementById("protocol-nav");
   if (!host) return;
-  var aliases = window.TOURBIERE_PROTOCOL_HASH || {};
+  var aliases = window.LG_PROTOCOL_HASH || {};
 
   function diffDots(n) {
     var html = '<span class="diff" aria-label="Difficulté ' + e(n) + " sur 3\">";
@@ -11,7 +11,7 @@
     return html + "</span>";
   }
 
-  host.innerHTML = (window.TOURBIERE_PROTOCOLS || [])
+  host.innerHTML = (window.LG_PROTOCOLS || [])
     .map(function (p) {
       var alias = aliases[p.id] || p.id;
       var steps = (p.steps || [])
@@ -87,7 +87,7 @@
     .join("");
 
   if (nav) {
-    nav.innerHTML = (window.TOURBIERE_PROTOCOLS || [])
+    nav.innerHTML = (window.LG_PROTOCOLS || [])
       .map(function (p) {
         var alias = aliases[p.id] || p.id;
         return '<a href="#' + e(alias) + '">' + e(p.title.split("—")[0].trim()) + "</a>";
@@ -96,8 +96,8 @@
   }
 
   var months = document.getElementById("calendar");
-  if (months && window.TOURBIERE_CALENDAR) {
-    var cal = window.TOURBIERE_CALENDAR.months || window.TOURBIERE_CALENDAR;
+  if (months && window.LG_CALENDAR) {
+    var cal = window.LG_CALENDAR.months || window.LG_CALENDAR;
     var arr = Array.isArray(cal) ? cal : [];
     months.innerHTML = arr
       .map(function (m) {

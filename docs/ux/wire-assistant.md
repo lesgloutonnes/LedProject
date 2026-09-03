@@ -4,7 +4,7 @@ Texte, pas Figma. Largeur de référence **375**. Desktop : colonne stepper 220 
 
 Légende : `[ ]` bouton, `( )` radio, `[x]` multi, `────` filet, `···` chips wrap.
 
-Persistance : à chaque Continuer, écrire `tourbiere.project`. Bouton « Recommencer » (header secondaire, pas le CTA) reset `project`, garde `prefs`.
+Persistance : à chaque Continuer, écrire `lg.tente.project`. Bouton « Recommencer » (header secondaire, pas le CTA) reset `project`, garde `prefs`.
 
 ---
 
@@ -14,7 +14,7 @@ Persistance : à chaque Continuer, écrire `tourbiere.project`. Bouton « Recomm
 ┌─────────────────────────────────────┐
 │ [Aller au contenu]                  │  skip (focus only)
 ├─────────────────────────────────────┤
-│ Tourbière          [Recommencer]    │  header compact
+│ Les Gloutonnes          [Recommencer]    │  header compact
 ├─────────────────────────────────────┤
 │  ●──○──○──○                         │  Stepper
 │  Étape 1/4 · Projet                 │
@@ -85,7 +85,7 @@ Job : un métier, pas une plante.
 
 Comportement : une card = un radio. Tap = sélection + anneau `--primary`. **Pas** d’avance auto (évite les tap ratés en magasin). Ordre = tableau `IA.md` (germoir en premier : c’est 80 % des débutants).
 
-Callout bas (option, si on a déjà `tourbiere.project.projet`) : « Projet en cours · Germoir — [reprendre] ». Inutile si on est déjà au step sauvegardé.
+Callout bas (option, si on a déjà `lg.tente.project.projet`) : « Projet en cours · Germoir — [reprendre] ». Inutile si on est déjà au step sauvegardé.
 
 ---
 
@@ -136,7 +136,7 @@ Ne **pas** précocher Cephalotus (trop niche, faux positif).
 
 ## Écran 3 — Surface (tente)
 
-Job : géométrie. La favorite `tourbiere.prefs.tenteFavorite` porte un chip ambre « Favorite ».
+Job : géométrie. La favorite `lg.tente.prefs.tenteFavorite` porte un chip ambre « Favorite ».
 
 ```
 ┌─────────────────────────────────────┐

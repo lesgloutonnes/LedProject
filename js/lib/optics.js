@@ -14,26 +14,26 @@
  * - L’intensité % simule un éloignement / un voile, PAS un dimmer (Cosmorrow n’est pas dimmable).
  * - Comparer des kits, pas certifier un DLI de culture.
  */
-var TOURBIERE_EUR_PER_KWH = 0.2;
-var TOURBIERE_BEAM_DEG = 120;
-var TOURBIERE_BOUNCE_MYLAR = 0.25;
-var TOURBIERE_COS_CUTOFF = 0.5;
+var LG_EUR_PER_KWH = 0.2;
+var LG_BEAM_DEG = 120;
+var LG_BOUNCE_MYLAR = 0.25;
+var LG_COS_CUTOFF = 0.5;
 
-function tourbiereTentSize(tent) {
+function lgTentSize(tent) {
   var w = tent.wCm || tent.lengthCm || tent.widthCm;
   var d = tent.dCm || tent.depthCm;
   return { wCm: w, dCm: d, hCm: tent.hCm || tent.heightCm || 0 };
 }
 
-function tourbiereBarLength(fixture) {
+function lgBarLength(fixture) {
   return fixture.lengthCm || 47;
 }
 
-function tourbiereBarWidth(fixture) {
+function lgBarWidth(fixture) {
   return fixture.widthCm || 3.2;
 }
 
-function tourbiereBarPpf(fixture) {
+function lgBarPpf(fixture) {
   return fixture.ppf || fixture.ppfEach || 0;
 }
 
@@ -43,12 +43,12 @@ function tourbiereBarPpf(fixture) {
  * count  : nombre de barres (ignoré si dual-shelf déjà décrit par fixture.count)
  */
 function placements(fixture, tent, layout, count) {
-  var size = tourbiereTentSize(tent);
+  var size = lgTentSize(tent);
   var n = count == null ? fixture.count || 1 : count;
   var mode = layout || fixture.layout || "parallel-depth";
-  var lengthCm = tourbiereBarLength(fixture);
-  var widthCm = tourbiereBarWidth(fixture);
-  var ppf = tourbiereBarPpf(fixture);
+  var lengthCm = lgBarLength(fixture);
+  var widthCm = lgBarWidth(fixture);
+  var ppf = lgBarPpf(fixture);
   var lights = [];
   var i;
   var halfN;
@@ -128,19 +128,19 @@ function placements(fixture, tent, layout, count) {
   return lights;
 }
 
-function tourbiereContributePoint(px, py, ex, ey, h, dPpf) {
+function lgContributePoint(px, py, ex, ey, h, dPpf) {
   var dx = px - ex;
   var dy = py - ey;
   var r2 = dx * dx + dy * dy + h * h;
   var r = Math.sqrt(r2);
   if (r < 0.8) return 0;
   var cos = h / r;
-  if (cos < TOURBIERE_COS_CUTOFF) return 0;
+  if (cos < LG_COS_CUTOFF) return 0;
   var rM = r / 100;
   return (dPpf / Math.PI) * ((cos * cos) / (rM * rM));
 }
 
-function tourbiereBarContribution(px, py, light, h, segments) {
+function lgBarContribution(px, py, light, h, segments) {
   var alongW = light.axis !== "d";
   var half = light.lengthCm / 2;
   var dPpf = light.ppf / segments;
@@ -150,7 +150,7 @@ function tourbiereBarContribution(px, py, light, h, segments) {
   if (alongW) {
     for (i = 0; i < segments; i += 1) {
       t = (i + 0.5) / segments;
-      sum += tourbiereContributePoint(
+      sum += lgContributePoint(
         px,
         py,
         light.xCm - half + t * light.lengthCm,
@@ -162,7 +162,7 @@ function tourbiereBarContribution(px, py, light, h, segments) {
   } else {
     for (i = 0; i < segments; i += 1) {
       t = (i + 0.5) / segments;
-      sum += tourbiereContributePoint(
+      sum += lgContributePoint(
         px,
         py,
         light.xCm,
@@ -175,7 +175,7 @@ function tourbiereBarContribution(px, py, light, h, segments) {
   return sum;
 }
 
-function tourbiereInTray(px, py, tray) {
+function lgInTray(px, py, tray) {
   return (
     px >= tray.xCm &&
     px < tray.xCm + tray.lengthCm &&
@@ -184,7 +184,7 @@ function tourbiereInTray(px, py, tray) {
   );
 }
 
-function tourbiereSample(grid, cols, rows, nx, ny) {
+function lgSample(grid, cols, rows, nx, ny) {
   var col = Math.min(cols - 1, Math.max(0, Math.floor(nx * cols)));
   var row = Math.min(rows - 1, Math.max(0, Math.floor(ny * rows)));
   return grid[row * cols + col];
@@ -197,10 +197,10 @@ function tourbiereSample(grid, cols, rows, nx, ny) {
  */
 function simulatePpfd(fixture, tent, heightCm, intensityPct) {
   var options = arguments.length > 4 && arguments[4] ? arguments[4] : {};
-  var size = tourbiereTentSize(tent);
+  var size = lgTentSize(tent);
   var cols = options.cols || Math.max(16, Math.min(48, Math.round(size.wCm / 4)));
   var rows = options.rows || Math.max(12, Math.min(32, Math.round(size.dCm / 4)));
-  var bounce = options.bounce == null ? TOURBIERE_BOUNCE_MYLAR : options.bounce;
+  var bounce = options.bounce == null ? LG_BOUNCE_MYLAR : options.bounce;
   var scale = (intensityPct == null ? 100 : intensityPct) / 100;
   var layout = options.layout || fixture.layout || "parallel-depth";
   var count = options.count == null ? fixture.count || 1 : options.count;
@@ -226,7 +226,7 @@ function simulatePpfd(fixture, tent, heightCm, intensityPct) {
       py = (row + 0.5) * cellD;
       v = 0;
       for (li = 0; li < lights.length; li += 1) {
-        v += tourbiereBarContribution(px, py, lights[li], h, options.segments || 18);
+        v += lgBarContribution(px, py, lights[li], h, options.segments || 18);
       }
       grid[row * cols + col] = v;
     }
@@ -263,7 +263,7 @@ function simulatePpfd(fixture, tent, heightCm, intensityPct) {
       py = (row + 0.5) * cellD;
       v = grid[row * cols + col];
       for (ti = 0; ti < trays.length; ti += 1) {
-        if (tourbiereInTray(px, py, trays[ti])) {
+        if (lgInTray(px, py, trays[ti])) {
           trayAvgs[ti].sum += v;
           trayAvgs[ti].n += 1;
           trayAll += v;
@@ -283,9 +283,9 @@ function simulatePpfd(fixture, tent, heightCm, intensityPct) {
     trays: trayAvgs.map(function (t) {
       return t.n ? t.sum / t.n : 0;
     }),
-    center: tourbiereSample(grid, cols, rows, 0.5, 0.5),
-    edge: 0.5 * (tourbiereSample(grid, cols, rows, 0.5, 0.08) + tourbiereSample(grid, cols, rows, 0.5, 0.92)),
-    corner: tourbiereSample(grid, cols, rows, 0.08, 0.08),
+    center: lgSample(grid, cols, rows, 0.5, 0.5),
+    edge: 0.5 * (lgSample(grid, cols, rows, 0.5, 0.08) + lgSample(grid, cols, rows, 0.5, 0.92)),
+    corner: lgSample(grid, cols, rows, 0.08, 0.08),
     uniformity: avg > 0 ? min / avg : 0,
     lights: placements(fixture, tent, layout, count),
     bounce: bounce,
@@ -310,15 +310,15 @@ function yearlyKwh(watts, hours, intensity) {
 }
 
 function yearlyCost(kwh, eurPerKwh) {
-  var tariff = eurPerKwh == null ? TOURBIERE_EUR_PER_KWH : eurPerKwh;
+  var tariff = eurPerKwh == null ? LG_EUR_PER_KWH : eurPerKwh;
   return kwh * tariff;
 }
 
-window.TOURBIERE_OPTICS = {
-  BEAM_DEG: TOURBIERE_BEAM_DEG,
-  BOUNCE_MYLAR: TOURBIERE_BOUNCE_MYLAR,
-  EUR_PER_KWH: TOURBIERE_EUR_PER_KWH,
-  COS_CUTOFF: TOURBIERE_COS_CUTOFF,
+window.LG_OPTICS = {
+  BEAM_DEG: LG_BEAM_DEG,
+  BOUNCE_MYLAR: LG_BOUNCE_MYLAR,
+  EUR_PER_KWH: LG_EUR_PER_KWH,
+  COS_CUTOFF: LG_COS_CUTOFF,
   placements: placements,
   simulatePpfd: simulatePpfd,
   dli: dli,

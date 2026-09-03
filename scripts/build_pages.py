@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Génère les 10 pages HTML Tourbière à partir du shell UX."""
+"""Génère les 10 pages HTML Les Gloutonnes à partir du shell UX."""
 from pathlib import Path
 
 HEAD = """<!DOCTYPE html>
@@ -31,7 +31,7 @@ HEAD = """<!DOCTYPE html>
       <div class="wrap">
         <a class="brand" href="index.html">
           <span class="brand-kicker">Les Gloutonnes</span>
-          <span class="brand-name">Tourbière</span>
+          <span class="brand-name">Les Gloutonnes</span>
         </a>
         <nav class="nav-primary" aria-label="Principale">
           <a href="index.html">Accueil</a>
@@ -59,7 +59,7 @@ HEAD = """<!DOCTYPE html>
 {sticky}
     <footer class="site-footer wrap">
       <p>
-        Les Gloutonnes · Tourbière · Cosmorrow (Secret Jardin) · pas de tracking ·
+        Les Gloutonnes · Cosmorrow (Secret Jardin) · pas de tracking ·
         <a href="a-propos.html">Sources</a>
       </p>
     </footer>
@@ -127,11 +127,11 @@ def page(name, title, description, main, scripts, sticky=False):
 
 page(
     "index.html",
-    "Tente carnivores + LED Cosmorrow — Les Gloutonnes · Tourbière",
-    "Mettre en place une tente de carnivores sous LED Secret Jardin Cosmorrow : assistant kit, PPFD, protocoles. Les Gloutonnes · Tourbière.",
+    "Tente carnivores + LED Cosmorrow — Les Gloutonnes",
+    "Mettre en place une tente de carnivores sous LED Secret Jardin Cosmorrow : assistant kit, PPFD, protocoles. Les Gloutonnes.",
     """
       <header class="page-hero stack">
-        <p class="kicker">Les Gloutonnes · Tourbière</p>
+        <p class="kicker">Les Gloutonnes</p>
         <h1>Une tente, des Cosmorrow, un protocole.</h1>
         <p class="lede">
           Le site de référence pour installer une culture de plantes carnivores sous LED
@@ -183,7 +183,7 @@ page(
       <section class="section">
         <article class="card">
           <h2>Kit signature</h2>
-          <p>Tente 120 × 60, deux bacs 60 × 40, <strong>2 × Cosmorrow Growing 90 cm (COP4065) + COM2X40</strong>. 80 W, 202 µmol/s, blanc 6500 K, IP65, ~130–145 €. C’est le panier Tourbière.</p>
+          <p>Tente 120 × 60, deux bacs 60 × 40, <strong>2 × Cosmorrow Growing 90 cm (COP4065) + COM2X40</strong>. 80 W, 202 µmol/s, blanc 6500 K, IP65, ~130–145 €. C’est le kit Les Gloutonnes.</p>
           <p class="btn-row" style="margin-top:1rem">
             <a class="btn-primary" href="cosmorrow.html#kit-germoir-120x60">Détail du kit</a>
             <a class="btn-ghost" href="outils.html?kit=kit-germoir-120x60">Carte PPFD</a>
@@ -192,7 +192,7 @@ page(
       </section>
 
       <section class="section">
-        <h2>Ce que Tourbière refuse</h2>
+        <h2>Ce que cet outil refuse</h2>
         <div class="card-grid">
           <article class="card"><h3>Le blurple Amazon</h3><p>Sans PPF publié, ce n’est pas une fiche, c’est un listing. Cosmorrow publie µmol/s et µmol/J.</p></article>
           <article class="card"><h3>Le 660 nm magique</h3><p>Le rouge des Sarracenia suit le DLI et le génotype. Growing 6500 K compacte mieux un germoir qu’un spectre floraison.</p></article>
@@ -207,7 +207,7 @@ page(
 
 page(
     "assistant.html",
-    "Assistant kit Cosmorrow — Les Gloutonnes · Tourbière",
+    "Assistant kit Cosmorrow — Les Gloutonnes",
     "Configure ta tente de carnivores : projet, genres, surface, contraintes. Un kit Secret Jardin Cosmorrow en quatre questions.",
     """
       <div id="assistant-app" class="stack"></div>
@@ -220,7 +220,7 @@ page(
 
 page(
     "cosmorrow.html",
-    "Barres et alims Cosmorrow — Les Gloutonnes · Tourbière",
+    "Barres et alims Cosmorrow — Les Gloutonnes",
     "Gamme Secret Jardin Cosmorrow pour carnivores : COP2065, COP4065, Full Spectrum, alims 24 V, kits par tente.",
     """
       <header class="page-hero stack">
@@ -260,7 +260,7 @@ page(
 
 page(
     "especes.html",
-    "PPFD par genre carnivore — Les Gloutonnes · Tourbière",
+    "PPFD par genre carnivore — Les Gloutonnes",
     "Cibles PPFD, DLI, eau et tente pour Dionaea, Sarracenia, Drosera, Nepenthes et les autres carnivores sous Cosmorrow.",
     """
       <header class="page-hero stack">
@@ -279,7 +279,7 @@ page(
 
 page(
     "protocoles.html",
-    "Protocoles semis à dormance — Les Gloutonnes · Tourbière",
+    "Protocoles semis à dormance — Les Gloutonnes",
     "Sept protocoles de tente carnivore sous Cosmorrow : germoir, bouturage, production, colorisation, mixte, tropicale, dormance.",
     """
       <header class="page-hero stack">
@@ -305,7 +305,7 @@ page(
 
 page(
     "tente.html",
-    "Pose et hygro en tente — Les Gloutonnes · Tourbière",
+    "Pose et hygro en tente — Les Gloutonnes",
     "Monter une tente carnivores : cotes, extracteur, hygrométrie, plan de pose Cosmorrow, électricité 230 V.",
     """
       <header class="page-hero stack">
@@ -354,7 +354,7 @@ page(
 
 page(
     "nutriments.html",
-    "Eau, tourbe, Maxsea — Les Gloutonnes · Tourbière",
+    "Eau, tourbe, Maxsea — Les Gloutonnes",
     "Eau osmose ou pluie, tourbe blonde, Maxsea 16-16-16 au quart, proies 1–2 fois par mois. Pas de Miracle-Gro.",
     """
       <header class="page-hero stack">
@@ -392,7 +392,7 @@ page(
 
 page(
     "outils.html",
-    "PPFD, DLI, électricité — Les Gloutonnes · Tourbière",
+    "PPFD, DLI, électricité — Les Gloutonnes",
     "Simulateur PPFD Cosmorrow, DLI et coût électrique pour tente de carnivores. Modèle optique prudent, pas un PAR-mètre.",
     """
       <header class="page-hero stack">
@@ -449,7 +449,7 @@ page(
 
 page(
     "diagnostic.html",
-    "Diagnostic étiolement / brûlure — Les Gloutonnes · Tourbière",
+    "Diagnostic étiolement / brûlure — Les Gloutonnes",
     "Arbre de décisions : étiolement, brûlure, mucilage, urnes, pourriture, algues, sciarides, rouge, semis, boutures.",
     """
       <header class="page-hero stack">
@@ -468,13 +468,13 @@ page(
 
 page(
     "a-propos.html",
-    "Sources et méthode — Les Gloutonnes · Tourbière",
-    "Méthode Tourbière : Cosmorrow only, PPFD Carnivero, fiche Secret Jardin 2023-09, Maxsea / California Carnivores. Pas de tracking.",
+    "Sources et méthode — Les Gloutonnes",
+    "Méthode Les Gloutonnes : Cosmorrow only, PPFD Carnivero, fiche Secret Jardin 2023-09, Maxsea / California Carnivores. Pas de tracking.",
     """
       <header class="page-hero stack">
         <p class="kicker">Les Gloutonnes</p>
         <h1>Un labo de tente, pas un growshop.</h1>
-        <p class="lede">Tourbière aide à installer des carnivores sous LED Cosmorrow. Fourchettes, sources, prudence. Pas de compte, pas de cookies, pas de pub.</p>
+        <p class="lede">Cet outil aide à installer des carnivores sous LED Cosmorrow. Fourchettes, sources, prudence. Pas de compte, pas de cookies, pas de pub.</p>
       </header>
       <section class="section prose">
         <h2>Pourquoi Cosmorrow</h2>
@@ -490,7 +490,7 @@ page(
         <h2>Limites</h2>
         <p>Le simulateur est un modèle lambertien 120° + rebond mylar forfaitaire. Ce n’est pas un PAR-mètre. Les prix sont des fourchettes growshop. Les cibles PPFD sont des fourchettes d’expérience, pas une ordonnance.</p>
         <h2>Vie privée</h2>
-        <p>Aucune mesure d’audience. Tes projets restent dans <code>localStorage</code> (<code>tourbiere.project</code>, <code>tourbiere.prefs</code>). Tu peux tout effacer dans les outils du navigateur.</p>
+        <p>Aucune mesure d’audience. Tes projets restent dans <code>localStorage</code> (<code>lg.tente.project</code>, <code>lg.tente.prefs</code>). Tu peux tout effacer dans les outils du navigateur.</p>
       </section>
 """,
     "",

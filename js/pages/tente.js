@@ -1,7 +1,7 @@
 (function () {
   var e = escapeHtml;
   var rules = document.getElementById("install-rules");
-  var install = window.TOURBIERE_INSTALL || {};
+  var install = window.LG_INSTALL || {};
   if (rules && install.rules) {
     rules.innerHTML = install.rules
       .map(function (r) {
@@ -25,7 +25,7 @@
   }
   var tents = document.getElementById("tent-catalog");
   if (tents) {
-    tents.innerHTML = (window.TOURBIERE_TENTS || [])
+    tents.innerHTML = (window.LG_TENTS || [])
       .map(function (t) {
         return (
           '<article class="card stack" id="' +

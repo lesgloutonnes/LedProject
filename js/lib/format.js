@@ -5,7 +5,7 @@
   var euro0 = new Intl.NumberFormat("fr-FR", { style: "currency", currency: "EUR", maximumFractionDigits: 0 });
   var euro2 = new Intl.NumberFormat("fr-FR", { style: "currency", currency: "EUR", minimumFractionDigits: 2 });
 
-  window.TourbiereFmt = {
+  window.LgFmt = {
     n0: function (n) {
       return nf0.format(n);
     },

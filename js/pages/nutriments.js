@@ -1,6 +1,6 @@
 (function () {
   var e = escapeHtml;
-  var n = window.TOURBIERE_NUTRIENTS;
+  var n = window.LG_NUTRIENTS;
   if (!n) return;
 
   function list(arr, ok) {

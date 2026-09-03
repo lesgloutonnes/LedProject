@@ -1,9 +1,9 @@
 (function () {
   var e = escapeHtml;
-  var fmt = window.TourbiereFmt;
-  var optics = window.TOURBIERE_OPTICS;
-  var match = window.TourbiereMatch;
-  var store = window.TourbiereStore;
+  var fmt = window.LgFmt;
+  var optics = window.LG_OPTICS;
+  var match = window.LgMatch;
+  var store = window.LgStore;
   var params = new URLSearchParams(location.search);
 
   var state = {
@@ -23,7 +23,7 @@
   var kwhEl = document.getElementById("kwh-eur");
 
   function currentKit() {
-    var kits = window.TOURBIERE_KITS || [];
+    var kits = window.LG_KITS || [];
     var found = kits.find(function (k) {
       return k.id === state.kitId;
     });
@@ -264,7 +264,7 @@
   }
 
   if (kitSel) {
-    kitSel.innerHTML = (window.TOURBIERE_KITS || [])
+    kitSel.innerHTML = (window.LG_KITS || [])
       .map(function (k) {
         return (
           '<option value="' +
@@ -291,7 +291,7 @@
     });
   }
   if (tentSel) {
-    tentSel.innerHTML = (window.TOURBIERE_TENTS || [])
+    tentSel.innerHTML = (window.LG_TENTS || [])
       .map(function (t) {
         return (
           '<option value="' +
