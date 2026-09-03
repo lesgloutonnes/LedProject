@@ -13,7 +13,7 @@ window.LG_SPECIES = [
     climate: "temperate",
     dormancy: "required",
     dormancyNote:
-      "Obligatoire 3–4 mois, 0–10 °C, photopériode 8–10 h, intensité réduite. En FR/BE, un châssis / un rebord hors gel vaut mieux qu’une tente à 20 °C. Sans dormance, la plante s’épuise en 1–3 saisons. Les pièges noircissent en hiver : c’est normal, pas une maladie.",
+      "Obligatoire 3–4 mois, 0–10 °C, photopériode 8–10 h, intensité réduite. En FR/BE, un châssis / un rebord hors gel vaut mieux qu’une tente à 20 °C. Le gel léger passe ; le gel + pluie dans un godet détrempé pourrit le rhizome — ce n’est pas une purpurea ssp. purpurea. Sans dormance, la plante s’épuise en 1–3 saisons. Les pièges noircissent en hiver : c’est normal, pas une maladie.",
     ppfd: [100, 200, 400],
     dli: [4.3, 9.4, 20.2],
     photoperiodGrow: 14,
@@ -28,7 +28,7 @@ window.LG_SPECIES = [
     fertilizer:
       "Foliar 0,3 g/L (orchidée ¼ ou Maxsea 16-16-16) 1–2×/mois en saison, feuillage sec, matin. Proies 1–2 pièges / mois suffisent souvent. Jamais Miracle-Gro, jamais terreau fertilisé, jamais d’engrais dans le bac.",
     tentTips:
-      "Étage haut, 15–20 cm sous COP4065 Growing 6500 K (ou COP2065 sur une étagère 60×40). La dionée veut du photon et de l’air, pas une jungle à 90 % HR. Extraire pour rester ~50–60 %. Viser 200 µmol/m²/s, pas 400 d’emblée. Pot 8–10 cm, légèrement à l’étroit : un 3 L n’accélère pas un rhizome de 2 cm. En FR/BE, un adulte hors gel va dehors mai–septembre (soleil, pluie, proies) : la tente est le plan appartement / germoir, pas un substitut d’été.",
+      "Étage haut, 15–20 cm sous COP4065 Growing 6500 K (ou COP2065 sur une étagère 60×40). La dionée veut du photon et de l’air, pas une jungle à 90 % HR. Extraire pour rester ~50–60 %. Viser 200 µmol/m²/s, pas 400 d’emblée. Pot 8–10 cm, légèrement à l’étroit : un 3 L n’accélère pas un rhizome de 2 cm. En FR/BE, un adulte va dehors mai–septembre (soleil, pluie, proies) après 7–14 jours d’acclimatation : une plante de tente grille en plein juin. La tente est le plan appartement / germoir, pas un substitut d’été.",
     traps:
       "Un insecte vivant par piège, 1–2 pièges par mois. Congelé-décongelé : seulement si tu masses les poils sensitifs après la pose — une proie morte ne déclenche pas la fermeture étanche, le piège pourrit. Pas de viande hachée, fromage, œuf. Un piège ne s’ouvre qu’une poignée de fois : ne pas « jouer » avec. Après digestion, le piège noircit : on le laisse, on ne coupe pas à vif.",
     seedlingNotes:
@@ -53,7 +53,7 @@ window.LG_SPECIES = [
     climate: "temperate",
     dormancy: "required",
     dormancyNote:
-      "Obligatoire 3–4 mois. Les urnes de l’année se fanent ; le rhizome reste, souvent en phyllodes. 0–10 °C, 8–10 h, substrat humide sans bac. En FR/BE, bac extérieur / châssis hors gel est le geste de pépinière ; la tente chaude est le plan B. Flava / rubra du nord passent souvent l’hiver dehors. Alata, leucophylla, oreophila : golfe ou montagne sèche — châssis, pas le gel nu + pluie glacée.",
+      "Obligatoire 3–4 mois. Les urnes de l’année se fanent ; le rhizome reste, souvent en phyllodes. 0–10 °C, 8–10 h, substrat humide sans bac. En FR/BE, bac extérieur / châssis hors gel est le geste de pépinière ; la tente chaude est le plan B. Flava du nord, rubra ssp. rubra / jonesii : souvent dehors, gel léger OK si le pot n’est pas un glaçon d’eau. Alata, leucophylla, rubra gulfensis : golfe — châssis, pas le gel nu + pluie glacée. Oreophila n’est pas une espèce du golfe : montagne d’Alabama, le froid passe, l’hiver mouillé pourrit (châssis plus sec).",
     ppfd: [200, 300, 500],
     dli: [8.6, 14.0, 25.2],
     photoperiodGrow: 14,
@@ -68,7 +68,7 @@ window.LG_SPECIES = [
     fertilizer:
       "Foliar 0,3 g/L 1–2×/mois sur urnes et feuillage. Osmocote dans l’urne : on s’en passe (urne ouverte = sel + algues). Racinaire : non.",
     tentTips:
-      "Toujours l’étage le plus haut, au plus près des COP4065 (15–20 cm du sommet des urnes, pas du pot). Deux COP4065 sur 120×60 tiennent des adultes si tu les espaces sur la profondeur. Les urnes qui touchent la barre grillent : laisse 10 cm de marge quand elles poussent. Mai–septembre en FR/BE : les adultes dressées font mieux dehors (plein soleil, bac de pluie) que sous 26 °C de tente ; on rentre le germoir et les tropicales.",
+      "Toujours l’étage le plus haut, au plus près des COP4065 (15–20 cm du sommet des urnes, pas du pot). Deux COP4065 sur 120×60 tiennent des adultes si tu les espaces sur la profondeur. Les urnes qui touchent la barre grillent : laisse 10 cm de marge quand elles poussent. Mai–septembre en FR/BE : les adultes dressées font mieux dehors (plein soleil, bac de pluie) que sous 26 °C de tente, après 7–14 jours d’acclimatation ; on rentre le germoir et les tropicales.",
     traps:
       "Les urnes chassent seules si tu ouvres la tente. Sinon : 1–2 mouches par urne mature et par mois, ou un foliar 0,3 g/L. Ne pas remplir les urnes de bouillon ni d’Osmocote.",
     seedlingNotes:
@@ -131,7 +131,7 @@ window.LG_SPECIES = [
     climate: "temperate",
     dormancy: "required",
     dormancyNote:
-      "Hibernacle vrai (rotundifolia, intermedia, anglica, filiformis) : 3–4 mois, 0–10 °C, 8–10 h, mix juste humide. Filiformis : ne jamais laisser sécher le hibernacle. D. binata (Australie) n’est pas dans ce groupe : pas d’hibernacle, repos frais optionnel, culture plutôt type capensis.",
+      "Hibernacle vrai (rotundifolia, intermedia, anglica, filiformis). En FR/BE, rotundifolia / intermedia / anglica sont des natives : l’hiver se fait dehors, même sous la glace — pas dans une tente Cosmorrow. Filiformis var. filiformis (nord) : châssis, hibernacle jamais sec. Tracyi (golfe, souvent vendue comme filiformis) : plus fragile, hors-gel. D. binata (Australie) n’est pas dans ce groupe : pas d’hibernacle, repos frais optionnel, culture plutôt type capensis.",
     ppfd: [100, 200, 400],
     dli: [4.3, 9.4, 20.2],
     photoperiodGrow: 14,
@@ -157,6 +157,7 @@ window.LG_SPECIES = [
     warnings: [
       "Hibernacle ≠ mort : ne pas jeter un pot « vide » en décembre.",
       "Ne pas coller D. binata dans le protocole 5 °C des rotundifolia : ce n’est pas une tempérée d’hémisphère nord.",
+      "Tracyi (golfe) n’est pas filiformis du New Jersey : hors-gel, pas le bac gelé des rotundifolia.",
     ],
     projects: ["seedling", "cutting", "production", "coloring", "mixed", "dormancy"],
   },
@@ -221,7 +222,7 @@ window.LG_SPECIES = [
       "Premier plan, 15–20 cm sous COP2065 ou COP4065. Elles tiennent dans 3 cm de hauteur : une tablette basse dédiée évite qu’on les oublie sous les urnes. Air sec-modéré, pas de brumisation lourde.",
     traps: "Mucilage fin. Micro-proies (collemboles, sciarides). Rien de plus.",
     seedlingNotes:
-      "On sème rarement des graines : on sème les gemmae (fin d’hiver–printemps indoor, selon cycle). Gemmae en surface, mix minéral juste humide, 15–22 °C, 12 h. Levée 1–3 semaines. Graines dures : fumée de prairie ou GA-3 1000 ppm 24 h — lot dédié, pas le germoir Sarracenia.",
+      "On sème rarement des graines : on sème les gemmae. Indoor FR/BE, elles partent souvent à l’automne (jours qui raccourcissent) : on sème tout de suite — un gemma qui attend au chaud pourrit. Reliquat au frigo, semis en fin d’hiver. Gemmae en surface, mix minéral juste humide, 15–22 °C, 12 h. Levée 1–3 semaines. Graines dures : fumée de prairie ou GA-3 1000 ppm 24 h — lot dédié, pas le germoir Sarracenia.",
     cuttingNotes: "Gemmae = bouture naturelle. Pas de leaf pulling classique.",
     redColorNotes: "PPFD élevé + nuits fraîches = rosettes compactes et rouges. Trop d’HR et trop peu de lumière = étiolement vert, gemmae molles.",
     warnings: [
@@ -425,11 +426,11 @@ window.LG_SPECIES = [
     tempNight: [12, 20],
     water: "moist",
     waterNote:
-      "Alpina / longifolia : sphaigne toujours humide, vaporisations RO, pas de lac au collet. HumboldtII / nelumbifolia : tepui — pieds dans l’eau pauvre (souvent compagnes d’Heliamphora), pas le même régime qu’alpina.",
-    substrate: "Sphaigne longue fibre, panier d’orchidée ou plaque. Parfois mix sphaigne + écorce. HumboldtII : plus d’eau, panier ou coupelle basse.",
+      "Alpina / longifolia : sphaigne toujours humide, vaporisations RO, pas de lac au collet. Humboldtii / nelumbifolia : tepui — pieds dans l’eau pauvre (souvent compagnes d’Heliamphora), pas le même régime qu’alpina.",
+    substrate: "Sphaigne longue fibre, panier d’orchidée ou plaque. Parfois mix sphaigne + écorce. Humboldtii : plus d’eau, panier ou coupelle basse.",
     fertilizer: "Orchidée 0,3 g/L foliar 1×/mois. Très dilué. Les utricules sont dans le mix, pas en l’air.",
     tentTips:
-      "Étage bas tropical, à côté des Nepenthes, COP2065 à 30–40 cm. Humidificateur + extracteur. Longifolia tolère un peu plus de lumière qu’alpina. HumboldtII / nelumbifolia : plutôt l’étage Heliamphora (nuits fraîches, eau dans le récipient).",
+      "Étage bas tropical, à côté des Nepenthes, COP2065 à 30–40 cm. Humidificateur + extracteur. Longifolia tolère un peu plus de lumière qu’alpina. Humboldtii / nelumbifolia : plutôt l’étage Heliamphora (nuits fraîches, eau dans le récipient).",
     traps: "Comme les terrestres : pas de piège aérien à nourrir.",
     seedlingNotes: "Semis délicat, sphaigne, HR 90 %, lumière 40–80 µmol/m²/s. Division plus réaliste.",
     cuttingNotes: "Division de rhizomes / stolons dans la sphaigne.",
@@ -552,7 +553,7 @@ window.LG_SPECIES = [
   {
     id: "drosophyllum",
     latin: "Drosophyllum lusitanicum",
-    common: "Drosophyllum / droséra du Portugal",
+    common: "Drosophyllum / drosophylle",
     family: "Drosophyllaceae",
     climate: "mediterranean",
     dormancy: "none",

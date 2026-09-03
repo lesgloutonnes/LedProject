@@ -237,8 +237,9 @@ window.LG_PROTOCOLS = [
       },
       {
         title: "Été FR/BE : dehors si tu as le soleil",
-        body: "Sarracenia et Dionaea adultes : plein soleil, bac d’eau de pluie, mai–septembre. C’est le geste de pépinière — DLI, proies, puis dormance naturelle. La tente garde Nepenthes, Heliamphora, germoir, Cephalotus, et l’appartement sans extérieur. On ne « sort pas les tropicales pour leur donner de l’air » : un lowland au vent sec de juin grille.",
+        body: "Sarracenia et Dionaea adultes : plein soleil, bac d’eau de pluie, mai–septembre — après 7–14 jours d’acclimatation. Une plante sortie de tente le 1er juin, c’est de la brûlure, pas de la générosité. Godets de 8 cm : le rhizome cuit en juillet, on plonge le pot ou on passe plus large. C’est le geste de pépinière — DLI, proies, puis dormance naturelle. La tente garde Nepenthes, Heliamphora, germoir, Cephalotus, et l’appartement sans extérieur. On ne « sort pas les tropicales pour leur donner de l’air » : un lowland au vent sec de juin grille.",
         checklist: [
+          "Acclimatation 7–14 jours avant le plein soleil",
           "Adultes tempérés dehors dès que les gelées sont derrière",
           "Tropicales et semis restent sous Cosmorrow",
           "Rentrée progressive en septembre (protocole dormance)",
@@ -488,7 +489,7 @@ window.LG_PROTOCOLS = [
     duration: "3–4 mois (typiquement novembre–février en FR/BE)",
     difficulty: 2,
     climate:
-      "Cible 0–10 °C. Sarracenia et dionées adultes supportent le gel léger dehors (châssis, vent moins desséchant qu’un balcon nu). En tente / garage : 5–10 °C, hors gel de préférence. HR 40–60 %. Air qui bouge. Un salon à 19 °C n’est pas une dormance, même à 8 h de LED.",
+      "Cible 0–10 °C. Purpurea ssp. purpurea et droséras natives : gel dehors, y compris la glace. Dionée et la plupart des Sarracenia : châssis — le gel léger passe, le godet détrempé sous la pluie verglaçante pourrit. Golfe (alata, leucophylla, venosa, rosea, psittacina) : châssis, pas le balcon nu. En tente / garage : 5–10 °C, hors gel de préférence. HR 40–60 %. Air qui bouge. Un salon à 19 °C n’est pas une dormance, même à 8 h de LED.",
     light: {
       sku: "1 × COP2065 ou 1 × COP4065 relevée très haut ; éventuellement la même rampe qu’en saison, simple minuterie plus courte",
       height: "30–50 cm, ou intensité perçue ~30–50 % de la saison (on n’a pas de dimmer : on éloigne)",
@@ -502,9 +503,11 @@ window.LG_PROTOCOLS = [
     steps: [
       {
         title: "Choisir le lieu : dehors d’abord",
-        body: "FR/BE : Sarracenia et Dionaea adultes hivernent mieux dans un châssis, un bac contre un mur nord, ou un garage hors gel que dans une tente chauffée. La LED ne fait pas le froid. On réserve Cosmorrow 8–10 h au plan B (appartement sans extérieur) et aux quelques pots de frigo (dionées en godet, jamais un sac zip hermétique). Les tropicales ne vont nulle part ici.",
+        body: "FR/BE : on trie. Purpurea ssp. purpurea et Drosera rotundifolia / intermedia / anglica : dehors, bac, même le gel. Dionaea et flava / rubra du nord : châssis ou garage hors gel — mieux qu’une tente chauffée, pas un balcon nu sous la pluie verglaçante. Alata, leucophylla, venosa, rosea, psittacina : châssis, pas le gel nu. Oreophila : châssis plus sec (montagne, pas golfe). La LED ne fait pas le froid. Cosmorrow 8–10 h = plan B appartement, plus quelques dionées au frigo (godet aéré, jamais un zip hermétique). Les tropicales ne vont nulle part ici.",
         checklist: [
-          "Lieu noté : dehors / garage / tente froide / frigo (quelques dionées)",
+          "Lieu noté : dehors / châssis / garage / tente froide / frigo (quelques dionées)",
+          "Golfe et dionées : châssis, pas le gel + pluie",
+          "Natives (purpurea nord, rotundifolia) : dehors",
           "Tropicales déjà dans une autre tente à 13–14 h",
           "Châssis : pots rentrés si dessiccation de foehn, pas si « il gèle un peu »",
         ],

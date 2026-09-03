@@ -76,7 +76,17 @@
     }
     if (projet === "dormance" && set.indexOf("drosera") >= 0) {
       notes.push(
-        "Seules les droséras à hibernacle (rotundifolia, intermedia, filiformis) vont au froid. Capensis, binata et pygmées restent en croissance."
+        "Seules les droséras à hibernacle (rotundifolia, intermedia, anglica, filiformis) vont au froid — dehors en FR/BE pour les natives, pas une tente. Capensis, binata et pygmées restent en croissance. Tracyi (golfe) : châssis, pas le gel nu."
+      );
+    }
+    if (projet === "dormance" && set.indexOf("sarracenia") >= 0) {
+      notes.push(
+        "Purpurea ssp. purpurea dehors. Alata / leucophylla / venosa / psittacina : châssis, pas le gel nu sous la pluie. Oreophila : montagne, châssis plus sec — ce n’est pas le golfe."
+      );
+    }
+    if (projet === "dormance" && set.indexOf("dionaea") >= 0) {
+      notes.push(
+        "Dionée : châssis. Le gel léger passe ; le godet détrempé sous la pluie verglaçante pourrit le rhizome."
       );
     }
     if (projet === "dormance" && set.indexOf("pinguicula") >= 0) {
