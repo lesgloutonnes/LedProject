@@ -109,6 +109,34 @@ assert.ok(/Céphalote/.test(ceph.common), "Céphalote, pas Céphatote");
 assert.ok(!/Céphatote/.test(ceph.common));
 
 assert.ok(/hampe/i.test(dion.warnings.join(" ")), "dionée : hampe coupée sur un jeune");
+assert.ok(!/pas encore de piège/.test(dion.seedlingNotes), "dionée : les 1res feuilles ont déjà des mini-pièges");
+assert.ok(/petits pièges/.test(dion.seedlingNotes), "dionée : mini-pièges dès les vraies feuilles");
+
+assert.ok(/ssp\. purpurea/i.test(sarrLow.dormancyNote), "purpurea nord vs golfe");
+assert.ok(/venosa/i.test(sarrLow.dormancyNote), "venosa moins rustique");
+
+var high = ctx.LG_SPECIES.find(function (s) { return s.id === "nepenthes-highland"; });
+assert.ok(/16–20|16-20/.test(high.dormancyNote + high.tentTips + high.warnings.join(" ")), "ventricosa : nuits intermédiaires");
+assert.ok(high.tempNight[0] >= 12, "fiche highland : ne pas coller 10 °C à ventricosa");
+
+var pingT = ctx.LG_SPECIES.find(function (s) { return s.id === "pinguicula-temperate"; });
+assert.ok(/n’en fait pas|n'en fait pas/.test(pingT.dormancyNote), "lusitanica n’est pas un hibernacle");
+
+var utricEpi = ctx.LG_SPECIES.find(function (s) { return s.id === "utricularia-epiphytic"; });
+assert.ok(/humboldtii/i.test(utricEpi.waterNote), "humboldtii : eau, pas seulement brume");
+
+var drosDormWarn = ctx.LgMatch.genreWarnings("dormance", ["drosera"]);
+assert.ok(
+  drosDormWarn.some(function (w) {
+    return /capensis|binata/i.test(w);
+  }),
+  "drosera + dormance : pas les capensis au frigo"
+);
+
+var apropos = fs.readFileSync("a-propos.html", "utf8");
+assert.ok(!/infra-rouge lointain/i.test(apropos), "far-red ≠ infra-rouge lointain");
+assert.ok(/rouge lointain/i.test(apropos), "660 nm ≠ rouge lointain 730 nm");
+assert.ok(/feuillage/i.test(apropos), "PPFD au feuillage, pas « canopée »");
 
 var r = ctx.LgMatch.matchKit({
   projet: "germoir",

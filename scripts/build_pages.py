@@ -520,7 +520,7 @@ page(
         <h2>Pourquoi Cosmorrow</h2>
         <p>Secret Jardin (Belgique) publie un PPF en µmol/s, un PPE en µmol/J, une zone, un IP65, du 24 V et du 230 V livrable en FR/BE. Growing 6500 K est le spectre de germoir. Le Full Spectrum est un appoint. On ne tient plus de palmarès multi-marques : le site est un compagnon de pose, pas un comparateur.</p>
         <h2>Unités</h2>
-        <p>PPF en µmol/s, PPFD en µmol/m²/s, PPE en µmol/J, DLI en mol/m²/j. La fiche Cosmorrow écrit le PPFD en µmol/s/m² : même grandeur, on normalise. PAR est une bande (400–700 nm), pas un nombre. Le 660 nm du Full Spectrum est du rouge PAR, pas du far-red 730 nm.</p>
+        <p>Le flux de la barre (PPF), la densité au feuillage (PPFD) et la dose quotidienne (DLI). PAR, ce sont les photons 400–700 nm, pas un chiffre magique de boutique. Le 660 nm du Full Spectrum est du rouge photosynthétique, pas du rouge lointain (~730 nm). Cosmorrow n’émet pas de far-red.</p>
         <h2>Sources</h2>
         <ul>
           <li><a href="https://www.secretjardin.com/wp-content/uploads/2023/09/20230905-COP-BULBS-DATASHEET.pdf" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Fiche Cosmorrow COP BULBS 2023-09</a> (Secret Jardin)</li>

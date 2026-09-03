@@ -32,7 +32,7 @@ window.LG_SPECIES = [
     traps:
       "Un insecte vivant par piège, 1–2 pièges par mois. Congelé-décongelé : seulement si tu masses les poils sensitifs après la pose — une proie morte ne déclenche pas la fermeture étanche, le piège pourrit. Pas de viande hachée, fromage, œuf. Un piège ne s’ouvre qu’une poignée de fois : ne pas « jouer » avec. Après digestion, le piège noircit : on le laisse, on ne coupe pas à vif.",
     seedlingNotes:
-      "Graines noires minuscules, viables 1 an au frais/sec, plus faibles ensuite. Strat 4–6 semaines (frigo 4 °C, papier ou tourbe juste humide) utile sur lots sauvages ; beaucoup de F1 germent sans. Surface, jamais d’enfouissement. Mix ébouillanté, 14 h, 15–20 cm, 150–250 µmol/m²/s. Levée 2–6 semaines. Première vraie feuille en rosette, pas encore de piège.",
+      "Graines noires minuscules, viables 1 an au frais/sec, plus faibles ensuite. Strat 4–6 semaines (frigo 4 °C, papier ou tourbe juste humide) utile sur lots sauvages ; beaucoup de F1 germent sans. Surface, jamais d’enfouissement. Mix ébouillanté, 14 h, 15–20 cm, 150–250 µmol/m²/s. Levée 2–6 semaines. Cotylédons sans piège ; les premières vraies feuilles portent déjà de tout petits pièges — ce n’est pas une Sarracenia (phyllode d’abord).",
     cuttingNotes:
       "Leaf pulling : feuille entière avec un bout de rhizome blanc. À plat sur tourbe ou sphaigne, HR 80–95 %, 20–24 °C, lumière douce (COP2065 à 25–30 cm, ~80–120 µmol/m²/s). Plantules en 4–8 semaines. Ne pas trop mouiller : pourriture du pétiole = échec n°1.",
     redColorNotes:
@@ -53,7 +53,7 @@ window.LG_SPECIES = [
     climate: "temperate",
     dormancy: "required",
     dormancyNote:
-      "Obligatoire 3–4 mois. Les urnes de l’année se fanent ; le rhizome reste, souvent en phyllodes. 0–10 °C, 8–10 h, substrat humide sans bac. En FR/BE, bac extérieur / châssis hors gel est le geste de pépinière ; la tente chaude est le plan B. S. purpurea et les hybrides « easy » sont plus indulgents, pas oreophila / leucophylla de collection.",
+      "Obligatoire 3–4 mois. Les urnes de l’année se fanent ; le rhizome reste, souvent en phyllodes. 0–10 °C, 8–10 h, substrat humide sans bac. En FR/BE, bac extérieur / châssis hors gel est le geste de pépinière ; la tente chaude est le plan B. Flava / rubra du nord passent souvent l’hiver dehors. Alata, leucophylla, oreophila : golfe ou montagne sèche — châssis, pas le gel nu + pluie glacée.",
     ppfd: [200, 300, 500],
     dli: [8.6, 14.0, 25.2],
     photoperiodGrow: 14,
@@ -93,7 +93,7 @@ window.LG_SPECIES = [
     climate: "temperate",
     dormancy: "required",
     dormancyNote:
-      "Toujours une vraie dormance. Purpurea tient souvent dehors en FR/BE (châssis, bac, parfois hors-gel léger). En tente : 0–10 °C, 8–10 h, 3–4 mois — seulement si tu n’as pas d’extérieur.",
+      "Toujours une vraie dormance. Purpurea ssp. purpurea (nord) tient souvent dehors en FR/BE sans protection. Venosa, rosea et psittacina (golfe) : châssis / hors-gel — elles craignent moins le froid sec que l’humidité glacée. En tente : 0–10 °C, 8–10 h, 3–4 mois — seulement si tu n’as pas d’extérieur.",
     ppfd: [100, 200, 400],
     dli: [4.3, 9.4, 20.2],
     photoperiodGrow: 14,
@@ -277,21 +277,21 @@ window.LG_SPECIES = [
     climate: "tropical-highland",
     dormancy: "none",
     dormancyNote:
-      "Pas de dormance. Écart jour/nuit 8–12 °C. Sans nuits fraîches, hamata / lowii / rajah stagnent. Ventricosa, alata (souvent graciliflora en commerce) et la plupart des hybrides « easy » sont des intermédiaires : elles pardonnent une tente mixte, ce ne sont pas de vraies highland de crête, et ce ne sont pas des lowland.",
+      "Pas de dormance. Ventricosa, alata (souvent graciliflora en commerce) et les hybrides « easy » sont des intermédiaires : nuits 16–20 °C suffisent, elles pardonnent une tente mixte. Ce ne sont pas des lowland, et ce ne sont pas hamata / lowii / rajah — ceux-là veulent un drop 8–12 °C (nuits 10–14 °C) et stagnent au chaud.",
     ppfd: [50, 100, 200],
     dli: [2.2, 4.7, 10.1],
     photoperiodGrow: 13,
     photoperiodDorm: null,
     humidity: [60, 75, 90],
     tempDay: [20, 26],
-    tempNight: [10, 16],
+    tempNight: [12, 20],
     water: "moist",
-    waterNote: "Comme les lowland : humide, aéré, jamais marécage. Eau froide (RO) le soir aide le drop nocturne.",
+    waterNote: "Comme les lowland : humide, aéré, jamais marécage. Eau froide (RO) le soir aide le drop nocturne des vraies highland.",
     substrate: "Sphaigne LFS + écorce + perlite, éventuellement charbon horti. Pots aérés, rempotage dès que la sphaigne s’effondre.",
     fertilizer:
       "Plus prudentes que les lowland. Foliar 0,3 g/L 1×/mois. Osmocote : 1 bille dans une urne, rarement. Percolation très diluée seulement si le mix est lessivé.",
     tentTips:
-      "Étage médian-bas, 25–40 cm sous COP4065, ou COP20FS en appoint doux. Le drop nocturne se joue à l’extracteur + pièce fraîche, pas à la LED. Éviter le plafond chaud des Sarracenia.",
+      "Étage médian-bas, 25–40 cm sous COP4065, ou COP20FS en appoint doux. Intermédiaires : nuits 16–20 °C. Vraies highland : 10–14 °C, pièce fraîche, pas la tente Sarracenia. Le drop se joue à l’extracteur, pas à la LED.",
     traps: "Même logique que lowland. Urnes inférieures d’abord ; les supérieures viennent avec la maturité et une HR stable.",
     seedlingNotes: "Comme lowland, mais 18–22 °C la nuit dès les plantules chez les vraies highland. Lumière 50–100 µmol/m²/s.",
     cuttingNotes:
@@ -300,6 +300,7 @@ window.LG_SPECIES = [
       "Ventricosa colore facilement. Les espèces « dark » (hamata) demandent DLI + nuits fraîches + génotype. Pas un pic 660.",
     warnings: [
       "Tente lowland (30 °C nuit) = highland en sursis.",
+      "Ventricosa n’a pas besoin de 10 °C la nuit : 16–20 °C suffisent. Les 10–14 °C sont pour hamata / lowii / rajah.",
       "Ne pas chasser le PPFD des Sarracenia : au-delà de ~200 µmol/m²/s les feuilles durcissent et les urnes avortent si l’HR n’est pas là.",
     ],
     projects: ["cutting", "production", "mixed", "tropical"],
@@ -312,7 +313,7 @@ window.LG_SPECIES = [
     climate: "temperate",
     dormancy: "required",
     dormancyNote:
-      "Hibernacle obligatoire. Rosette d’hiver compacte, 5–10 °C, juste humide, 8–10 h. Lusitanica est plus douce, presque annuelle en culture.",
+      "Hibernacle obligatoire pour vulgaris / grandiflora : bourgeon d’hiver, 5–10 °C, juste humide, 8–10 h. Lusitanica n’en fait pas : petite rosette encore collante, souvent annuelle ou bisannuelle — ce n’est pas un hibernacle à laisser au sec.",
     ppfd: [80, 150, 250],
     dli: [3.5, 7.0, 12.6],
     photoperiodGrow: 14,
@@ -333,6 +334,7 @@ window.LG_SPECIES = [
     redColorNotes: "Grandiflora rougit au fort DLI et au froid. Vulgaris reste souvent vert-jaune : génotype.",
     warnings: [
       "Hibernacle pourri = trop d’eau en hiver.",
+      "Lusitanica n’est pas vulgaris : pas de bourgeon d’hiver à sécher.",
       "Fourchette Carnivero Pinguicula 30–200 : les tempérées tiennent le haut, pas le plancher 30.",
     ],
     projects: ["seedling", "cutting", "production", "mixed", "dormancy"],
@@ -422,11 +424,12 @@ window.LG_SPECIES = [
     tempDay: [18, 26],
     tempNight: [12, 20],
     water: "moist",
-    waterNote: "Sphaigne toujours humide, jamais desséchée. Vaporisations fréquentes à l’eau RO. Pas de bac d’eau stagnant au collet.",
-    substrate: "Sphaigne longue fibre, panier d’orchidée ou plaque. Parfois mix sphaigne + écorce.",
+    waterNote:
+      "Alpina / longifolia : sphaigne toujours humide, vaporisations RO, pas de lac au collet. HumboldtII / nelumbifolia : tepui — pieds dans l’eau pauvre (souvent compagnes d’Heliamphora), pas le même régime qu’alpina.",
+    substrate: "Sphaigne longue fibre, panier d’orchidée ou plaque. Parfois mix sphaigne + écorce. HumboldtII : plus d’eau, panier ou coupelle basse.",
     fertilizer: "Orchidée 0,3 g/L foliar 1×/mois. Très dilué. Les utricules sont dans le mix, pas en l’air.",
     tentTips:
-      "Étage bas tropical, à côté des Nepenthes, COP2065 à 30–40 cm. Humidificateur + extracteur. Longifolia tolère un peu plus de lumière qu’alpina.",
+      "Étage bas tropical, à côté des Nepenthes, COP2065 à 30–40 cm. Humidificateur + extracteur. Longifolia tolère un peu plus de lumière qu’alpina. HumboldtII / nelumbifolia : plutôt l’étage Heliamphora (nuits fraîches, eau dans le récipient).",
     traps: "Comme les terrestres : pas de piège aérien à nourrir.",
     seedlingNotes: "Semis délicat, sphaigne, HR 90 %, lumière 40–80 µmol/m²/s. Division plus réaliste.",
     cuttingNotes: "Division de rhizomes / stolons dans la sphaigne.",
@@ -434,6 +437,7 @@ window.LG_SPECIES = [
     warnings: [
       "Air sec de tente à Sarracenia = feuilles croquantes en une semaine.",
       "Ne pas les coller sous 300 µmol/m²/s.",
+      "Humboldtii / nelumbifolia ne se cultivent pas comme alpina : elles veulent de l’eau, pas seulement de la brume.",
     ],
     projects: ["cutting", "production", "mixed", "tropical"],
   },

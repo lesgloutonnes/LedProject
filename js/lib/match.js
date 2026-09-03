@@ -74,6 +74,19 @@
     if (projet === "rouge" && set.indexOf("sarracenia") < 0 && set.indexOf("dionaea") < 0) {
       notes.push("Le rouge, c’est surtout DLI + génotype, pas un spectre 660. Growing 6500 K suffit souvent.");
     }
+    if (projet === "dormance" && set.indexOf("drosera") >= 0) {
+      notes.push(
+        "Seules les droséras à hibernacle (rotundifolia, intermedia, filiformis) vont au froid. Capensis, binata et pygmées restent en croissance."
+      );
+    }
+    if (projet === "dormance" && set.indexOf("pinguicula") >= 0) {
+      notes.push(
+        "Les mexicaines n’ont pas d’hiver à 5 °C : saison sèche, pas hibernacle. Seules vulgaris / grandiflora dorment vraiment."
+      );
+    }
+    if (projet === "tropicale" && set.indexOf("cephalotus") >= 0) {
+      notes.push("Cephalotus n’est pas une lowland : étage frais, collet aéré, pas 30 °C / 90 % HR.");
+    }
     return notes;
   }
 
