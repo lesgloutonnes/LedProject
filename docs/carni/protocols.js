@@ -237,9 +237,9 @@ window.LG_PROTOCOLS = [
       },
       {
         title: "Été FR/BE : dehors si tu as le soleil",
-        body: "Sarracenia et Dionaea adultes : plein soleil, bac d’eau de pluie, mai–septembre — après 7–14 jours d’acclimatation. Une plante sortie de tente le 1er juin, c’est de la brûlure, pas de la générosité. Godets de 8 cm : le rhizome cuit en juillet, on plonge le pot ou on passe plus large. C’est le geste de pépinière — DLI, proies, puis dormance naturelle. La tente garde Nepenthes, Heliamphora, germoir, Cephalotus, et l’appartement sans extérieur. On ne « sort pas les tropicales pour leur donner de l’air » : un lowland au vent sec de juin grille.",
+        body: "Sarracenia et Dionaea adultes : plein soleil, bac d’eau de pluie, mai–septembre — après 7–14 jours d’acclimatation. Une tente Cosmorrow, c’est ~150–250 µmol/m²/s et ~8–13 mol/m²/j ; un juin clair en FR/BE, c’est ~1 500–2 000 µmol/m²/s au midi et ~30–45 mol/m²/j. Sortir le 1er juin sans palier, c’est de la brûlure, pas de la générosité. Godets de 8 cm : le rhizome cuit en juillet, on plonge le pot ou on passe plus large. C’est le geste de pépinière — DLI, proies, puis dormance naturelle. La tente garde Nepenthes, Heliamphora, germoir, Cephalotus, et l’appartement sans extérieur. On ne « sort pas les tropicales pour leur donner de l’air » : un lowland au vent sec de juin grille.",
         checklist: [
-          "Acclimatation 7–14 jours avant le plein soleil",
+          "Acclimatation 7–14 j (ombre / matin) : saut de PPFD ×5–10",
           "Adultes tempérés dehors dès que les gelées sont derrière",
           "Tropicales et semis restent sous Cosmorrow",
           "Rentrée progressive en septembre (protocole dormance)",
@@ -276,7 +276,7 @@ window.LG_PROTOCOLS = [
       sku: "Base : COP4065 Growing 6500 K. Appoint optionnel : COP20FS sur une zone, jamais à la place du Growing au germoir",
       height: "12–20 cm des têtes pour viser 250–350 µmol/m²/s sur les genres qui le supportent (dressées, dionées adultes, Drosera de soleil)",
       hours: "14–16 h pour monter le DLI sans forcément coller la barre. 16 h × 250 µmol/m²/s ≈ 14,4 mol/m²/j — déjà une fenêtre « rouge ».",
-      note: "Formule : DLI = PPFD × heures × 0,0036. Colorer = monter le DLI dans la fourchette du genre, pas saturér un pic rouge. Au-delà du max Carnivero, tu brûles avant de « plus rougir ».",
+      note: "Formule : DLI = PPFD × heures × 0,0036. Colorer = monter le DLI dans la fourchette du genre, pas saturer un pic rouge. Au-delà du max Carnivero, tu brûles avant de « plus rougir ».",
     },
     water: "Inchangé : eau pauvre. Un léger ressuyage (pas un séchage de cactus) peut intensifier les pigments chez Drosera et Sarracenia basses — on reste prudent.",
     substrate: "Le mix ne colore pas. Un pot trop gros et trop humide dilue la croissance : on reste dans des volumes justes.",
