@@ -19,7 +19,11 @@
   if (check && install.checklist) {
     check.innerHTML = install.checklist
       .map(function (c) {
-        return "<li>" + e(c.item) + "</li>";
+        return (
+          '<li><label class="check-item"><input type="checkbox" /> ' +
+          e(c.item) +
+          "</label></li>"
+        );
       })
       .join("");
   }

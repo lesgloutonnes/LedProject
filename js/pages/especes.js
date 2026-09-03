@@ -28,6 +28,28 @@
     return id;
   }
 
+  function notesBlock(s) {
+    var parts = [];
+    if (s.seedlingNotes) {
+      parts.push("<p><strong>Semis.</strong> " + e(s.seedlingNotes) + "</p>");
+    }
+    if (s.cuttingNotes) {
+      parts.push("<p><strong>Bouture.</strong> " + e(s.cuttingNotes) + "</p>");
+    }
+    if (s.redColorNotes) {
+      parts.push("<p><strong>Rouge.</strong> " + e(s.redColorNotes) + "</p>");
+    }
+    if (s.traps) {
+      parts.push("<p><strong>Pièges.</strong> " + e(s.traps) + "</p>");
+    }
+    if (!parts.length) return "";
+    return (
+      '<details class="species-notes"><summary>Semis, bouture et pièges</summary><div class="species-notes-body">' +
+      parts.join("") +
+      "</div></details>"
+    );
+  }
+
   function render() {
     var hash = (location.hash || "").replace("#", "");
     var filtered = species.filter(function (s) {
@@ -37,7 +59,7 @@
     list.innerHTML = filtered
       .map(function (s) {
         return (
-          '<article class="card stack" id="' +
+          '<article class="card stack species-card" id="' +
           e(s.id) +
           '"><div class="cluster"><span class="badge">' +
           e(CLIMATE_FR[s.climate] || s.climate) +
@@ -51,11 +73,13 @@
           e(s.latin) +
           "</em> · " +
           e(s.family) +
-          "</p><p class=\"meta-row\"><span>PPFD " +
-          e(fmt.ppfdRange(s.ppfd[0], s.ppfd[2])) +
-          " (cible " +
+          '</p><p class="species-ppfd"><span class="val">' +
+          e(fmt.n0(s.ppfd[0]) + "–" + fmt.n0(s.ppfd[2])) +
+          '</span> <span class="unit">' +
+          e(fmt.units.ppfd) +
+          "</span><span class=\"muted\"> cible " +
           e(fmt.ppfd(s.ppfd[1])) +
-          ")</span><span>DLI " +
+          "</span></p><p class=\"meta-row\"><span>DLI " +
           e(fmt.dliRange(s.dli[0], s.dli[2])) +
           "</span><span>" +
           e(s.photoperiodGrow) +
@@ -74,21 +98,15 @@
           "</p><p><strong>Engrais.</strong> " +
           e(s.fertilizer) +
           "</p>" +
-          "<p><strong>Semis.</strong> " +
-              e(s.seedlingNotes) +
-              "</p><p><strong>Bouture.</strong> " +
-              e(s.cuttingNotes) +
-              "</p><p><strong>Rouge.</strong> " +
-              e(s.redColorNotes) +
-              "</p><p><strong>Pièges.</strong> " +
-              e(s.traps) +
-              "</p><ul class=\"check-list\">" +
-              (s.warnings || [])
-                .map(function (w) {
-                  return "<li>" + e(w) + "</li>";
-                })
-                .join("") +
-              "</ul>" +
+          notesBlock(s) +
+          '<ul class="check-list">' +
+          (s.warnings || [])
+            .map(function (w) {
+              return "<li>" + e(w) + "</li>";
+            })
+            .join("") +
+          "</ul>" +
+          '<p><a href="diagnostic.html">Ça s’étire ou ça grille ?</a></p>' +
           '<p class="hint">Source PPFD : Carnivero / Florawave. Cible = bas-milieu de fourchette.</p></article>'
         );
       })

@@ -90,7 +90,7 @@ window.LG_KITS = [
     psu: "COM2X20",
     totalWatts: 40,
     totalPpf: 102,
-    why: "DS60 : 87 cm ne rentre pas. Deux Growing 47 cm, 15–20 cm au-dessus des godets, 6500 K pour internodes courts. 40 W = peu de chaleur → hygro de bouture tenable.",
+    why: "DS60 : 87 cm ne rentre pas. Deux Growing 47 cm, 15–20 cm au-dessus des godets, 6500 K pour des pousses compactes. 40 W = peu de chaleur → hygro de bouture tenable.",
     hangCm: 18,
     hours: 14,
     shopping: [

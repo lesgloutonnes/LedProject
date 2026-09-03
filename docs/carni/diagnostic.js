@@ -8,11 +8,11 @@ window.LG_DIAGNOSTIC = {
   trees: [
     {
       id: "etiolement",
-      title: "Étiolement (tiges / pièges filiformes, internodes longs)",
+      title: "Étiolement (tiges / pièges filiformes, entre-nœuds trop longs)",
       startId: "etio-1",
       nodes: {
         "etio-1": {
-          question: "Les nouvelles pousses sont-elles pâles et allongées vers la barre, avec des internodes nettement plus longs que le mois dernier ?",
+          question: "Les nouvelles pousses sont-elles pâles et allongées vers la barre, avec des entre-nœuds nettement plus longs que le mois dernier ?",
           answers: [
             { label: "Oui, ça s’étire vraiment", nextId: "etio-2" },
             { label: "Non, c’est surtout plus vert / plus mou", nextId: "etio-vert" },
