@@ -70,7 +70,7 @@ window.LG_NUTRIENTS = {
       recipe:
         "Volume à volume, tourbe blonde de sphaigne non amendée + perlite horticole. Lire l’étiquette : « enrichie », « amendée », « chaux », « engrais starter » = poubelle. Rincer à l’eau RO jusqu’à eau claire. Ne pas tasser comme une brique.",
       notes:
-        "La tourbe de jardinerie FR/BE est souvent chaulée (pH 5,5–6,5) : les carnivores veulent 3,5–4,5. Tourbe noire trop décomposée : asphyxie. Germoir : ébouillanter le mix (eau RO frémissante, laisser refroidir 24 h) pour casser algues et œufs de sciarides — geste de pépinière, pas de folklore. Sarracenia : pots larges (rhizome horizontal), pas des colonnes profondes. Sable siliceux peut remplacer une partie de perlite (pygmées, Drosophyllum).",
+        "La tourbe de jardinerie FR/BE est souvent chaulée (pH 5,5–6,5) : les carnivores veulent 3,5–4,5. Tourbe noire trop décomposée : asphyxie. Germoir : ébouillanter le mix (eau RO frémissante, laisser refroidir 24 h) pour casser algues et œufs de sciarides — geste de pépinière, pas de folklore. Sarracenia : pots larges (rhizome horizontal), pas des colonnes profondes. Sable siliceux peut remplacer une partie de perlite (pygmées, Drosophyllum). Fibre de coco : non (Na, K, EC, souvent tamponnée au calcium).",
     },
     {
       id: "lfs",
@@ -92,15 +92,15 @@ window.LG_NUTRIENTS = {
       id: "mexi",
       name: "Mix Pinguicula mexicaine (drainant)",
       uses: ["Pinguicula mexicaines", "parfois Cephalotus en version plus tourbeuse"],
-      recipe: "Perlite + vermiculite + un peu de tourbe ou sphaigne hachée (ex. 40/40/20), ou sable siliceux + pouzzolane + tourbe. Pots bas. Surface qui sèche entre deux arrosages.",
-      notes: "L’opposé du bac Sarracenia. Collet au sec relatif. Feuilles d’hiver = encore moins d’eau.",
+      recipe: "Perlite + vermiculite + un peu de tourbe ou sphaigne hachée (ex. 40/40/20) pour moranensis / esseriana / agnata / ‘Weser’. Gypsicola : sable + pouzzolane + gypse horti, quasi sans tourbe. Pots bas. Surface qui sèche entre deux arrosages.",
+      notes: "L’opposé du bac Sarracenia. Collet au sec relatif. Feuilles d’hiver = encore moins d’eau. Gypse (sulfate) ≠ chaux (carbonate) : on ne chaulait pas le mix.",
     },
     {
       id: "mineral-med",
       name: "Mix minéral méditerranéen",
       uses: ["Drosophyllum", "Drosera pygmées", "Byblis pérennes WA"],
-      recipe: "Sable siliceux 60–70 % + tourbe 30–40 %. Pots terre cuite possibles pour Drosophyllum. Semis en place (Drosophyllum).",
-      notes: "Jamais de bac d’eau permanent. Drainage franc. Pas de calcaire (sable de Loire / playa).",
+      recipe: "Sable siliceux 60–70 % + tourbe blonde non amendée 30–40 %. Pots terre cuite possibles pour Drosophyllum. Semis en place (Drosophyllum).",
+      notes: "Jamais de bac d’eau permanent. Drainage franc. Pas de calcaire (sable de Loire / playa). Pas de terre de bruyère de rayon (engrais + chaux, même « non fertilisée » sur l’étiquette). Pas de coco.",
     },
   ],
 
@@ -108,6 +108,8 @@ window.LG_NUTRIENTS = {
     never: [
       "Terreau horticole « plantes vertes » ou « carnivores » pré-fertilisé — le second existe en rayon et reste trop riche.",
       "Miracle-Gro, Engrais universel, billes d’azote jardin, or brun, marc de café, lait, eau de cuisson, cendre, marc, peau de banane.",
+      "Fibre de coco / coir « substitut tourbe » : Na, K, EC élevés, souvent tamponnée au calcium. Rincer ne suffit pas à en faire un mix de tourbière.",
+      "Terre de bruyère / terreau méditerranéen de jardinerie : presque toujours fertilisée et souvent chaulée. Pas un mix Drosophyllum.",
       "Arrosage racinaire concentré dans le bac d’eau (algues + sel au collet).",
       "« Engrais spécial carnivores » en dose étiquette, surtout s’il se verse au pied.",
     ],
@@ -116,8 +118,8 @@ window.LG_NUTRIENTS = {
         id: "eu-orchid",
         name: "Engrais orchidée ¼ — le réflexe FR/BE",
         protocol:
-          "Poudre ou liquide équilibré (type 20-20-20, 18-18-18, Orchid Focus Grow, Rain Mix) à 0,3 g/L, soit un quart de la dose étiquette si celle-ci vise 1,2 g/L. 1–2×/mois en saison, foliar sur feuillage sec, le matin. Diluant = eau RO uniquement. C’est la dose de travail du site : Maxsea n’est pas magique, c’est le même ordre de grandeur NPK + micros.",
-        why: "Maxsea 16-16-16 se trouve mal en Europe. Un orchidée propre, sans urée brute à gogo et sans calcaire, fait le même métier. Adamec 1997 : l’absorption foliaire est réelle. En tente fermée, les insectes manquent : 0,3 g/L remplace une partie des proies, ça ne « dénature » pas la plante.",
+          "Poudre ou liquide équilibré (type 20-20-20, 18-18-18, Orchid Focus Grow, Rain Mix) à 0,3 g/L, soit un quart de la dose étiquette si celle-ci vise 1,2 g/L. Préférer un azote nitrique / ammoniacal : l’urée brute est un mauvais foliar (conversion lente, brûlure facile). 1–2×/mois en saison, foliar sur feuillage sec, le matin. Diluant = eau RO uniquement. C’est la dose de travail du site : Maxsea n’est pas magique, c’est le même ordre de grandeur NPK + micros.",
+        why: "Maxsea 16-16-16 se trouve mal en Europe. Un orchidée propre, pauvre en urée et sans calcaire, fait le même métier. Adamec 1997 : l’absorption foliaire est réelle. En tente fermée, les insectes manquent : 0,3 g/L remplace une partie des proies, ça ne « dénature » pas la plante.",
         avoid: "Dose étiquette entière. Deux engrais + Osmocote la même semaine. Foliar sur hibernacle, feuilles d’hiver succulentes, ou plantules de moins de 4 feuilles.",
       },
       {
@@ -192,9 +194,9 @@ window.LG_NUTRIENTS = {
     title: "Proies : 1–2 fois par mois, pas un buffet",
     frequency: "1–2 repas par mois et par plante adulte en croissance. Les plantules et les dormantes : rien de forcé.",
     how: [
-      "Dionaea : 1 insecte vivant (ou congelé/décongelé) par piège, 1–2 pièges seulement. Le piège doit se fermer et étanchéifier ; trop gros = pourriture. Pas la peine de « tout nourrir » : 2 pièges / mois sur un adulte, c’est déjà de la production.",
+      "Dionaea : 1 insecte vivant par piège, 1–2 pièges seulement. Congelé-décongelé : masses les poils sensitifs après la pose — une proie morte ne ferme pas le piège, il pourrit. Trop gros = pourriture. 2 pièges / mois sur un adulte, c’est déjà de la production.",
       "Drosera / Byblis / Drosophyllum : drosophiles, sciarides, pucerons — elles collent. Un foliar léger remplace souvent ce geste.",
-      "Sarracenia / Heliamphora / Cephalotus : 1–2 petites proies par urne mature, ou rien si foliar. Un peu d’eau RO dans l’urne Heliamphora.",
+      "Sarracenia / Heliamphora / Cephalotus : 1–2 petites proies par urne mature, ou rien si foliar. Heliamphora : un peu d’eau RO dans l’urne en permanence (pas un suc, de l’eau). Pas d’Osmocote dans une Sarracenia (urne ouverte = algues).",
       "Nepenthes : mêmes proies, ou 1 bille Osmocote optionnelle, ou quelques ml d’engrais orchidée ¼ dans l’urne — un seul mode à la fois.",
       "Pinguicula : micro-proies, pas de pince lourde. Foliar 0,3 g/L plus sûr.",
       "Utricularia : on ne nourrit pas à la pince ; la microfaune du mix suffit.",
