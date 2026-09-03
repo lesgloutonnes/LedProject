@@ -654,6 +654,32 @@ tr.is-active {
   color: var(--muted);
 }
 
+.spectrum-bar {
+  display: flex;
+  height: 0.55rem;
+  border-radius: 999px;
+  overflow: hidden;
+  box-shadow: 0 0 0 1px oklch(0.42 0.024 158 / 0.45);
+}
+
+.spectrum-bar > span {
+  display: block;
+  height: 100%;
+}
+
+th .unit,
+caption .unit,
+.legend-unit {
+  text-transform: none;
+  letter-spacing: 0.02em;
+}
+
+.legend-unit {
+  font-size: 0.68rem;
+  color: var(--muted);
+  margin: 0.35rem 0 0;
+}
+
 .badge {
   display: inline-flex;
   align-items: center;

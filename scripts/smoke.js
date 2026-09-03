@@ -17,9 +17,31 @@ load("js/lib/match.js");
 load("js/data/species.js");
 load("js/data/protocols.js");
 load("js/data/diagnostic.js");
+load("js/lib/format.js");
 load("js/lib/optics.js");
 
 var assert = require("assert");
+assert.equal(ctx.TourbiereFmt.units.ppfd, "µmol/m²/s");
+assert.equal(ctx.TourbiereFmt.units.dli, "mol/m²/j");
+assert.ok(ctx.TourbiereFmt.ppfd(205).indexOf("µmol/m²/s") >= 0);
+assert.ok(ctx.TourbiereFmt.dli(10.08).indexOf("mol/m²/j") >= 0);
+assert.equal(Math.round(ctx.TOURBIERE_OPTICS.dli(200, 14) * 10) / 10, 10.1);
+
+var fs20 = ctx.TOURBIERE_FIXTURES.find(function (f) { return f.sku === "COP20FS"; });
+var fs40 = ctx.TOURBIERE_FIXTURES.find(function (f) { return f.sku === "COP40FS"; });
+var g40 = ctx.TOURBIERE_FIXTURES.find(function (f) { return f.sku === "COP4065"; });
+assert.equal(fs20.ppfdAvg, 238);
+assert.equal(fs40.ppfdAvg, 240);
+assert.equal(g40.ppfdAvg, 205);
+assert.equal(fs20.spectrum.kind, "full-spectrum");
+assert.equal(fs20.spectrum.channels.length, 4);
+assert.equal(g40.spectrum.channels[0].pct, 100);
+
+ctx.TOURBIERE_FIXTURES.forEach(function (f) {
+  assert.ok(f.ppf > 0 && f.ppe > 0, "photométrie " + f.sku);
+  assert.ok(f.parNm && f.parNm[0] === 400 && f.parNm[1] === 700, "PAR " + f.sku);
+  assert.ok(f.spectrum && f.spectrum.channels.length >= 1, "spectre " + f.sku);
+});
 assert.equal(ctx.TOURBIERE_FIXTURES.length, 4);
 assert.equal(ctx.TOURBIERE_PSUS.length, 8);
 assert.ok(ctx.TOURBIERE_KITS.length >= 12);
@@ -53,6 +75,17 @@ var tent = ctx.TOURBIERE_TENTS.find(function (t) { return t.id === "tent-120x60"
 var fx = ctx.TOURBIERE_FIXTURES.find(function (f) { return f.sku === "COP4065"; });
 var sim = ctx.TOURBIERE_OPTICS.simulatePpfd(fx, tent, 15, 100, { layout: "parallel-depth", count: 2, cols: 24, rows: 12 });
 assert.ok(sim.avg > 50 && sim.avg < 800, "PPFD moyen raisonnable: " + sim.avg);
+assert.equal(sim.ppfdUnit, "µmol/m²/s");
+
+var mixte = ctx.TOURBIERE_KITS.find(function (k) { return k.id === "kit-mixte-120x60"; });
+assert.ok(mixte);
+var topBar = mixte.bars[0];
+var lightsTop = ctx.TOURBIERE_OPTICS.placements(fx, tent, topBar.layout, topBar.qty, { shelf: topBar.shelf });
+assert.equal(lightsTop.length, 2, "étage haut = 2 barres, pas un split 1+1");
+assert.ok(lightsTop.every(function (l) { return l.zShelf === 1; }));
+var dualFour = ctx.TOURBIERE_OPTICS.placements(ctx.TOURBIERE_FIXTURES[0], tent, "dual-shelf", 4);
+var dualShelf1 = dualFour.filter(function (l) { return l.zShelf === 1; });
+assert.equal(dualShelf1.length, 2);
 
 var kitIds = {};
 ctx.TOURBIERE_KITS.forEach(function (k) {

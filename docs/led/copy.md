@@ -29,7 +29,7 @@ Secret Jardin est belge, prise 230 V, stock growshop FR/BE. On achète une barre
 | Hauteur fiche | 15 cm | 15 cm (20 W) / **20 cm (40 W)** |
 | Longueur 40 W | **87 cm** | **70 cm** — pas interchangeable |
 
-Le 660 nm n’est pas un sésame rouge. La pigmentation suit le **DLI** et le **génotype**. Un cultivar vert reste vert à 500 µmol. On ajoute une FS **en plus** des Growing, on ne remplace pas le germoir par un spectre floraison.
+Le 660 nm n’est pas un sésame rouge. La pigmentation suit le **DLI** et le **génotype**. Un cultivar vert reste vert à 500 µmol/m²/s. On ajoute une FS **en plus** des Growing, on ne remplace pas le germoir par un spectre floraison. Le 660 nm Cosmorrow est du **rouge PAR**, pas du far-red 730 nm.
 
 ---
 
@@ -63,10 +63,10 @@ Non. Poussière + jet. Connecteur 24 V hors d’eau. Alim hors extracteur qui as
 2. **Longueur réelle** — 47 / 87 / 70 cm, pas les surnoms marketing « L50 / L90 / L70 ».
 3. **PPF (µmol/s)** — flux total 400–700 nm. C’est le réservoir de photons de la barre.
 4. **PPE (µmol/J)** — PPF / watts. Growing 2,70 ; FS 2,40–2,85 selon millésime 20 W.
-5. **PPFD moyen + zone + distance** — 268 µmol/m²/s sur **60 × 40 à 15 cm** (COP2065) ; 205 sur **120 × 60 à 15 cm** (COP4065). Sans les trois, le PPFD ne veut rien dire.
+5. **PPFD moyen + zone + distance** — 268 µmol/m²/s sur **60 × 40 à 15 cm** (COP2065) ; 205 sur **120 × 60 à 15 cm** (COP4065) ; 238 sur **60 × 40 à 15 cm** (COP20FS) ; 240 sur **90 × 60 à 20 cm** (COP40FS). Fiche SJ : µmol/s/m² = µmol/m²/s. Sans les trois (valeur + zone + hauteur), le PPFD ne veut rien dire.
 6. **Courant / tension** — 24 V DC, 0,78 A (20 W) ou 1,56 A (40 W). Alim Cosmorrow du même wattage.
 7. **IP et T° surface** — IP65, 0–40 °C de fonctionnement. Surface basse → 15 cm possible.
-8. **Ce qui manque** — pas de dimmer, pas de LM-79 carnivore par genre. Les cibles PPFD (semis 150–250, etc.) viennent des tables pépiniéristes (Carnivero), pas de Secret Jardin.
+8. **Ce qui manque** — pas de dimmer, pas de LM-79 carnivore par genre, pas de far-red 730 nm. Les cibles PPFD (semis 150–250 µmol/m²/s, etc.) viennent des tables pépiniéristes (Carnivero), pas de Secret Jardin.
 
 Tu sors de la fiche avec un **kit** (barres + COM*) et une **hauteur**, pas avec un wattage « équivalent HPS ».
 
@@ -80,4 +80,4 @@ Tu sors de la fiche avec un **kit** (barres + COM*) et une **hauteur**, pas avec
 - *Le PAR 230 n’est pas un PPF.*
 - *COP40FS : 70 cm, 20 cm, pas un COP4065.*
 - *Nepenthes : moins de PPF, plus d’hygro.*
-- *Le rouge, c’est le DLI. Le 660 nm, c’est un appoint.*
+- *Le rouge, c’est le DLI. Le 660 nm, c’est un appoint PAR, pas du 730 nm.*

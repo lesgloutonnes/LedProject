@@ -333,8 +333,8 @@
       '<p class="meta-row"><span>' +
       e(kit.totalWatts) +
       " W</span><span>" +
-      e(kit.totalPpf) +
-      " µmol/s</span><span>" +
+      e(fmt.ppf(kit.totalPpf)) +
+      "</span><span>" +
       e(kit.hangCm) +
       " cm</span><span>" +
       e(kit.hours) +

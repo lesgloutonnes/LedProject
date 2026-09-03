@@ -26,14 +26,14 @@ Chargement type : `<script src="docs/led/fixtures.js"></script>` (ordre : fixtur
 - Tentes (cotes typiques) : fiches Secret Jardin Dark Street / Dark Propagator / Hydro Shoot.
 - Cibles PPFD par genre (hors fiche SJ) : tables Carnivero — [grow-light PPFD recommendations](https://www.carnivero.com/pages/grow-light-ppfd-recommendations). À citer comme fourchettes pépiniériste, pas comme mesure Cosmorrow.
 
-Valeurs retenues (fiche 2023-09 sauf mention) :
+Valeurs retenues (fiche 2023-09 sauf mention). PPFD constructeur noté µmol/s/m² sur la fiche = **µmol/m²/s**.
 
-| SKU | W | L | PPF | PPE | Zone |
-| --- | --- | --- | --- | --- | --- |
-| COP2065 | 20 | 47 cm | 51 | 2,70 | 60×40 @ 15 cm, PPFD moy. 268 |
-| COP4065 | 40 | 87 cm | 101 | 2,70 | 120×60 @ 15 cm, PPFD moy. 205 |
-| COP20FS | 20 | 47 cm | 48–53 | 2,40–2,85 | 60×40 @ 15 cm |
-| COP40FS | 40 | 70 cm | 107 | 2,85 | 90×60 @ 20 cm |
+| SKU | W | L | PPF (µmol/s) | PPE (µmol/J) | PPFD moy. (µmol/m²/s) | Zone |
+| --- | --- | --- | --- | --- | --- | --- |
+| COP2065 | 20 | 47 cm | 51 | 2,70 | 268 | 60×40 @ 15 cm |
+| COP4065 | 40 | 87 cm | 101 | 2,70 | 205 | 120×60 @ 15 cm |
+| COP20FS | 20 | 47 cm | 48–53 | 2,40–2,85 | 238 | 60×40 @ 15 cm |
+| COP40FS | 40 | 70 cm | 107 | 2,85 | 240 | 90×60 @ 20 cm |
 
 Électrique : 24 V DC, 0,78 A (20 W) / 1,56 A (40 W), IP65 barres, connecteur IEC 60130-10 5,5×2,1 mm. Largeur 3,2 cm (4,5 cm pour COP40FS), hauteur 1,6 cm.
 

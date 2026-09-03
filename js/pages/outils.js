@@ -56,12 +56,19 @@
 
   function simulateKitFull(kit, tent, height, intensity) {
     if (!optics || !kit || !kit.bars || !kit.bars.length) return null;
-    var groups = kit.bars;
+    var plane = 1;
+    var groups = kit.bars.filter(function (g) {
+      if (g.layout === "dual-shelf" && g.shelf != null) return g.shelf === plane;
+      return true;
+    });
+    if (!groups.length) groups = kit.bars.slice(0, 1);
     var first = match.fixtureBySku(groups[0].sku);
     if (!first) return null;
     var sim = optics.simulatePpfd(first, tent, height, intensity, {
       layout: groups[0].layout,
       count: groups[0].qty,
+      shelf: groups[0].shelf,
+      bounce: 0,
       cols: 32,
       rows: 16,
     });
@@ -72,6 +79,7 @@
       var extra = optics.simulatePpfd(fx, tent, height, intensity, {
         layout: groups[g].layout,
         count: groups[g].qty,
+        shelf: groups[g].shelf,
         bounce: 0,
         cols: sim.cols,
         rows: sim.rows,
@@ -80,19 +88,21 @@
       for (i = 0; i < sim.grid.length; i += 1) sim.grid[i] += extra.grid[i];
       sim.lights = sim.lights.concat(extra.lights);
     }
-    var sum = 0;
-    var min = Infinity;
-    var max = 0;
-    sim.grid.forEach(function (v) {
-      sum += v;
-      if (v < min) min = v;
-      if (v > max) max = v;
+    optics.applyUniformBounce(sim.grid, optics.BOUNCE_MYLAR);
+    var stats = optics.summarizePpfd(sim.grid, sim.cols, sim.rows, tent);
+    sim.min = stats.min;
+    sim.max = stats.max;
+    sim.avg = stats.avg;
+    sim.trayAvg = stats.trayAvg;
+    sim.trays = stats.trays;
+    sim.center = stats.center;
+    sim.corner = stats.corner;
+    sim.edge = stats.edge;
+    sim.uniformity = stats.uniformity;
+    sim.bounce = optics.BOUNCE_MYLAR;
+    sim.omittedShelves = kit.bars.some(function (b) {
+      return b.shelf != null && b.shelf !== plane;
     });
-    sim.min = min;
-    sim.max = max;
-    sim.avg = sum / sim.grid.length;
-    sim.center = sim.grid[Math.floor(sim.rows / 2) * sim.cols + Math.floor(sim.cols / 2)];
-    sim.corner = sim.grid[0];
     return sim;
   }
 
@@ -218,12 +228,12 @@
       if (statsEl) {
         statsEl.textContent =
           "PPFD moyen " +
-          fmt.n0(sim.avg) +
-          " µmol/m²/s · centre " +
-          fmt.n0(sim.center) +
+          fmt.ppfd(sim.avg) +
+          " · centre " +
+          fmt.ppfd(sim.center) +
           " · DLI " +
-          fmt.n1(dliVal) +
-          " mol/m²/j · " +
+          fmt.dli(dliVal) +
+          " · " +
           fmt.n1(kwh) +
           " kWh/an · " +
           fmt.euro2(optics.yearlyCost(kwh, tariff));
@@ -231,9 +241,9 @@
       var statsBox = document.getElementById("stats");
       if (statsBox) {
         statsBox.innerHTML = [
-          ["PPFD moyen", fmt.n0(sim.avg) + " µmol", "tente entière, modèle lambertien"],
-          ["Centre / coin", fmt.n0(sim.center) + " / " + fmt.n0(sim.corner), "hotspot vs bord"],
-          ["DLI", fmt.n1(dliVal) + " mol", state.hours + " h / jour"],
+          ["PPFD moyen", fmt.ppfd(sim.avg), "tente entière · " + fmt.units.ppfd],
+          ["Centre / coin", fmt.n0(sim.center) + " / " + fmt.n0(sim.corner), "hotspot vs bord, " + fmt.units.ppfd],
+          ["DLI", fmt.dli(dliVal), state.hours + " h/j · DLI = PPFD × h × 0,0036"],
           ["Facture an", fmt.euro2(optics.yearlyCost(kwh, tariff)), fmt.n1(kwh) + " kWh · " + fmt.n2(tariff) + " €/kWh"],
         ]
           .map(function (row) {
@@ -259,7 +269,15 @@
         e(kit.name) +
         "</strong> — " +
         e(kit.why) +
-        '</p><p class="hint">Ce n’est pas un PAR-mètre. Rebonds mylar forfaitaires. Cosmorrow n’est pas dimmable : on monte la barre.</p>';
+        '</p><p class="hint">Modèle lambertien 120° + mylar 0,25. PPFD en ' +
+        e(fmt.units.ppfd) +
+        ", DLI en " +
+        e(fmt.units.dli) +
+        ". Ce n’est pas un PAR-mètre. Cosmorrow n’est pas dimmable : on monte la barre." +
+        (sim && sim.omittedShelves
+          ? " Carte = étage haut uniquement : l’étage bas n’est pas additionné sur le même plan."
+          : "") +
+        "</p>";
     }
   }
 

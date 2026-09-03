@@ -2,6 +2,13 @@
  * Catalogue Cosmorrow (Secret Jardin, Belgique) — barres 24 V.
  * Source : fiche COP BULBS 2023-09 (et révision 2024-01 pour COP20FS).
  * Les barres se vendent SANS alimentation. Voir psus.js.
+ *
+ * Unités SI horti (ASABE S640) — on normalise la notation Secret Jardin :
+ *   PPF  = µmol/s          (fiche : µmol/s)
+ *   PPE  = µmol/J          (fiche : µmol/J ou µmol/s/W — identique)
+ *   PPFD = µmol/m²/s       (fiche : µmol/s/m² — même grandeur, ordre inversé)
+ *   PAR  = 400–700 nm      (bande, pas un nombre)
+ *   DLI  = mol/m²/j        (pas sur la fiche ; PPFD × h × 0,0036)
  */
 window.TOURBIERE_FIXTURES = [
   {
@@ -15,6 +22,12 @@ window.TOURBIERE_FIXTURES = [
     ppf: 51,
     ppe: 2.7,
     cct: 6500,
+    parNm: [400, 700],
+    spectrum: {
+      kind: "growing",
+      label: "100 % blanc 6500 K",
+      channels: [{ id: "w6500", label: "blanc 6500 K", pct: 100, cctK: 6500, peakNm: [450, 555] }],
+    },
     spectrumNote:
       "100 % blanc 6500 K (trois lignes). Végétatif, semis, boutures. Pas de 660 nm dédié — c’est voulu : le germoir carnivore a besoin de bleu/blanc froid, pas d’un spectre floraison.",
     ip: "IP65",
@@ -48,6 +61,12 @@ window.TOURBIERE_FIXTURES = [
     ppf: 101,
     ppe: 2.7,
     cct: 6500,
+    parNm: [400, 700],
+    spectrum: {
+      kind: "growing",
+      label: "100 % blanc 6500 K",
+      channels: [{ id: "w6500", label: "blanc 6500 K", pct: 100, cctK: 6500, peakNm: [450, 555] }],
+    },
     spectrumNote:
       "100 % blanc 6500 K. SKU signature Tourbière : zone constructeur 120×60 à 15 cm, pile deux bacs 60×40. Surface tiède → on peut coller à ~15 cm du canopée.",
     ip: "IP65",
@@ -81,8 +100,19 @@ window.TOURBIERE_FIXTURES = [
     ppf: 50.5,
     ppe: 2.62,
     cct: 3500,
+    parNm: [400, 700],
+    spectrum: {
+      kind: "full-spectrum",
+      label: "2700 / 4000 / 6500 K + 660 nm",
+      channels: [
+        { id: "w2700", label: "blanc 2700 K", pct: 23, cctK: 2700, peakNm: [610, 630] },
+        { id: "w4000", label: "blanc 4000 K", pct: 23, cctK: 4000, peakNm: [450, 580] },
+        { id: "w6500", label: "blanc 6500 K", pct: 23, cctK: 6500, peakNm: [450, 555] },
+        { id: "r660", label: "rouge 660 nm", pct: 31, peakNm: 660 },
+      ],
+    },
     spectrumNote:
-      "Mix 2700 K / 4000 K / 6500 K + 660 nm. Fiche 2023-09 (alors COP20BL) : PPF 48, PPE 2,40. Révision 2024-01 : PPF 53, PPE 2,85. On retient la fourchette 48–53 µmol/s et 2,40–2,85 µmol/J. CCT équivalente ~3500 K.",
+      "Mix 2700 K / 4000 K / 6500 K + 660 nm (rouge profond PAR, pas du far-red 730 nm). Fiche 2023-09 (alors COP20BL) : PPF 48, PPE 2,40. Révision 2024-01 : PPF 53, PPE 2,85. On retient la fourchette 48–53 µmol/s et 2,40–2,85 µmol/J. CCT équivalente ~3500 K. PPFD moy. constructeur 238 µmol/m²/s sur 60×40 à 15 cm.",
     ip: "IP65",
     voltage: 24,
     currentA: 0.78,
@@ -103,6 +133,7 @@ window.TOURBIERE_FIXTURES = [
     connector: "IEC 60130-10 DC 5,5×2,1 mm",
     ppfRange: [48, 53],
     ppeRange: [2.4, 2.85],
+    ppfdAvg: 238,
   },
   {
     id: "cop40fs",
@@ -115,8 +146,19 @@ window.TOURBIERE_FIXTURES = [
     ppf: 107,
     ppe: 2.85,
     cct: 3500,
+    parNm: [400, 700],
+    spectrum: {
+      kind: "full-spectrum",
+      label: "2700 / 4000 / 6500 K + 660 nm",
+      channels: [
+        { id: "w2700", label: "blanc 2700 K", pct: 23, cctK: 2700, peakNm: [610, 630] },
+        { id: "w4000", label: "blanc 4000 K", pct: 23, cctK: 4000, peakNm: [450, 580] },
+        { id: "w6500", label: "blanc 6500 K", pct: 23, cctK: 6500, peakNm: [450, 555] },
+        { id: "r660", label: "rouge 660 nm", pct: 31, peakNm: 660 },
+      ],
+    },
     spectrumNote:
-      "Mix 2700 K / 4000 K / 6500 K + 660 nm (23 / 23 / 23 / 31 %). CCT ~3500 K. Mesure constructeur à 20 cm — pas 15 cm. Plus large (4,5 cm) que les Growing.",
+      "Mix 2700 K / 4000 K / 6500 K + 660 nm (23 / 23 / 23 / 31 %). Rouge 660 nm = PAR, pas far-red 730 nm. CCT ~3500 K. Mesure constructeur à 20 cm — pas 15 cm. Plus large (4,5 cm) que les Growing. PPFD moy. 240 µmol/m²/s sur 90×60 à 20 cm.",
     ip: "IP65",
     voltage: 24,
     currentA: 1.56,
@@ -135,6 +177,7 @@ window.TOURBIERE_FIXTURES = [
     beamDeg: 120,
     diodes: "23 % 2700 K + 23 % 4000 K + 23 % 6500 K + 31 % 660 nm",
     connector: "IEC 60130-10 DC 5,5×2,1 mm",
+    ppfdAvg: 240,
     warning:
       "Longueur 70 cm ≠ 87 cm du COP4065. Même wattage, même connecteur 24 V, géométrie différente.",
   },

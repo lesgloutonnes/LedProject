@@ -41,13 +41,11 @@
           "</em> · " +
           e(s.family) +
           "</p><p class=\"meta-row\"><span>PPFD " +
-          e(fmt.range(s.ppfd[0], s.ppfd[2], "µmol")) +
+          e(fmt.ppfdRange(s.ppfd[0], s.ppfd[2])) +
           " (cible " +
-          e(s.ppfd[1]) +
+          e(fmt.ppfd(s.ppfd[1])) +
           ")</span><span>DLI " +
-          e(fmt.n1(s.dli[0])) +
-          "–" +
-          e(fmt.n1(s.dli[2])) +
+          e(fmt.dliRange(s.dli[0], s.dli[2])) +
           "</span><span>" +
           e(s.photoperiodGrow) +
           " h / " +

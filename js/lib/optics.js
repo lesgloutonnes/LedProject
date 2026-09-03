@@ -42,7 +42,7 @@ function tourbiereBarPpf(fixture) {
  * layout : "parallel-depth" | "split-per-tray" | "dual-shelf"
  * count  : nombre de barres (ignoré si dual-shelf déjà décrit par fixture.count)
  */
-function placements(fixture, tent, layout, count) {
+function placements(fixture, tent, layout, count, options) {
   var size = tourbiereTentSize(tent);
   var n = count == null ? fixture.count || 1 : count;
   var mode = layout || fixture.layout || "parallel-depth";
@@ -52,6 +52,8 @@ function placements(fixture, tent, layout, count) {
   var lights = [];
   var i;
   var halfN;
+  var opt = options || {};
+  var shelfOpt = opt.shelf != null ? opt.shelf : fixture.shelf;
 
   if (mode === "split-per-tray") {
     var trays = tent.trays && tent.trays.length ? tent.trays : null;
@@ -89,6 +91,24 @@ function placements(fixture, tent, layout, count) {
   }
 
   if (mode === "dual-shelf") {
+    // shelf explicite (kit mixte : 2 × COP4065 étage 1, 2 × COP2065 étage 2)
+    // → parallèle-profondeur sur CET étage, on n’additionne pas les deux plans.
+    if (shelfOpt) {
+      for (i = 0; i < n; i += 1) {
+        lights.push({
+          kind: "bar",
+          layout: mode,
+          sku: fixture.sku,
+          xCm: size.wCm / 2,
+          yCm: ((i + 0.5) * size.dCm) / n,
+          zShelf: shelfOpt,
+          lengthCm: lengthCm,
+          widthCm: widthCm,
+          ppf: ppf,
+        });
+      }
+      return lights;
+    }
     for (var shelf = 1; shelf <= 2; shelf += 1) {
       halfN = shelf === 1 ? Math.ceil(n / 2) : Math.floor(n / 2);
       if (halfN < 1 && n >= 2) halfN = 1;
@@ -204,12 +224,18 @@ function simulatePpfd(fixture, tent, heightCm, intensityPct) {
   var scale = (intensityPct == null ? 100 : intensityPct) / 100;
   var layout = options.layout || fixture.layout || "parallel-depth";
   var count = options.count == null ? fixture.count || 1 : options.count;
-  var lights = placements(fixture, tent, layout, count).map(function (l) {
-    var copy = {};
-    for (var k in l) if (Object.prototype.hasOwnProperty.call(l, k)) copy[k] = l[k];
-    copy.ppf = l.ppf * scale;
-    return copy;
-  });
+  var lights = placements(fixture, tent, layout, count, options)
+    .filter(function (l) {
+      if (options.allShelves) return true;
+      var plane = options.shelfPlane == null ? 1 : options.shelfPlane;
+      return (l.zShelf || 1) === plane;
+    })
+    .map(function (l) {
+      var copy = {};
+      for (var k in l) if (Object.prototype.hasOwnProperty.call(l, k)) copy[k] = l[k];
+      copy.ppf = l.ppf * scale;
+      return copy;
+    });
   var h = Math.max(8, heightCm);
   var cellW = size.wCm / cols;
   var cellD = size.dCm / rows;
@@ -287,11 +313,86 @@ function simulatePpfd(fixture, tent, heightCm, intensityPct) {
     edge: 0.5 * (tourbiereSample(grid, cols, rows, 0.5, 0.08) + tourbiereSample(grid, cols, rows, 0.5, 0.92)),
     corner: tourbiereSample(grid, cols, rows, 0.08, 0.08),
     uniformity: avg > 0 ? min / avg : 0,
-    lights: placements(fixture, tent, layout, count),
+    lights: placements(fixture, tent, layout, count, options).filter(function (l) {
+      if (options.allShelves) return true;
+      var plane = options.shelfPlane == null ? 1 : options.shelfPlane;
+      return (l.zShelf || 1) === plane;
+    }),
     bounce: bounce,
     heightCm: h,
     intensityPct: intensityPct == null ? 100 : intensityPct,
     model: "lambertien 120° + bounce mylar forfaitaire — pas un PAR-mètre",
+    ppfdUnit: "µmol/m²/s",
+    dliUnit: "mol/m²/j",
+  };
+}
+
+function applyUniformBounce(grid, bounce) {
+  if (!bounce || !grid || !grid.length) return grid;
+  var n = grid.length;
+  var sum = 0;
+  var i;
+  for (i = 0; i < n; i += 1) sum += grid[i];
+  var add = bounce * (sum / n);
+  if (add <= 0) return grid;
+  for (i = 0; i < n; i += 1) grid[i] += add;
+  return grid;
+}
+
+function summarizePpfd(grid, cols, rows, tent) {
+  var size = tent ? tourbiereTentSize(tent) : { wCm: 120, dCm: 60 };
+  var sum = 0;
+  var min = Infinity;
+  var max = 0;
+  var i;
+  var v;
+  for (i = 0; i < grid.length; i += 1) {
+    v = grid[i];
+    sum += v;
+    if (v < min) min = v;
+    if (v > max) max = v;
+  }
+  var avg = grid.length ? sum / grid.length : 0;
+  var trays = (tent && tent.trays) || [];
+  var trayAvgs = trays.map(function () {
+    return { sum: 0, n: 0 };
+  });
+  var trayAll = 0;
+  var trayN = 0;
+  var row;
+  var col;
+  var px;
+  var py;
+  var ti;
+  var cellW = size.wCm / cols;
+  var cellD = size.dCm / rows;
+  for (row = 0; row < rows; row += 1) {
+    for (col = 0; col < cols; col += 1) {
+      px = (col + 0.5) * cellW;
+      py = (row + 0.5) * cellD;
+      v = grid[row * cols + col];
+      for (ti = 0; ti < trays.length; ti += 1) {
+        if (tourbiereInTray(px, py, trays[ti])) {
+          trayAvgs[ti].sum += v;
+          trayAvgs[ti].n += 1;
+          trayAll += v;
+          trayN += 1;
+        }
+      }
+    }
+  }
+  return {
+    min: min,
+    max: max,
+    avg: avg,
+    trayAvg: trayN ? trayAll / trayN : avg,
+    trays: trayAvgs.map(function (t) {
+      return t.n ? t.sum / t.n : 0;
+    }),
+    center: tourbiereSample(grid, cols, rows, 0.5, 0.5),
+    edge: 0.5 * (tourbiereSample(grid, cols, rows, 0.5, 0.08) + tourbiereSample(grid, cols, rows, 0.5, 0.92)),
+    corner: tourbiereSample(grid, cols, rows, 0.08, 0.08),
+    uniformity: avg > 0 ? min / avg : 0,
   };
 }
 
@@ -319,8 +420,14 @@ window.TOURBIERE_OPTICS = {
   BOUNCE_MYLAR: TOURBIERE_BOUNCE_MYLAR,
   EUR_PER_KWH: TOURBIERE_EUR_PER_KWH,
   COS_CUTOFF: TOURBIERE_COS_CUTOFF,
+  PPFD_UNIT: "µmol/m²/s",
+  PPF_UNIT: "µmol/s",
+  PPE_UNIT: "µmol/J",
+  DLI_UNIT: "mol/m²/j",
   placements: placements,
   simulatePpfd: simulatePpfd,
+  applyUniformBounce: applyUniformBounce,
+  summarizePpfd: summarizePpfd,
   dli: dli,
   yearlyKwh: yearlyKwh,
   yearlyCost: yearlyCost,

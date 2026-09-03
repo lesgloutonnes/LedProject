@@ -2,13 +2,54 @@
   var e = escapeHtml;
   var fmt = window.TourbiereFmt;
   var host = document.getElementById("sku-table");
+
+  function channelColor(ch) {
+    if (ch.id === "r660" || (ch.peakNm && ch.peakNm === 660)) return "#c23b4a";
+    if (ch.cctK >= 6000) return "#d7e7ff";
+    if (ch.cctK >= 4500) return "#f3ead2";
+    if (ch.cctK >= 3500) return "#f0d7a0";
+    return "#e8b56a";
+  }
+
+  function spectrumBar(f) {
+    var channels = f.spectrum && f.spectrum.channels;
+    if (!channels || !channels.length) return "";
+    var segs = channels
+      .map(function (ch) {
+        return (
+          '<span style="width:' +
+          Number(ch.pct) +
+          "%;background:" +
+          channelColor(ch) +
+          '" title="' +
+          e(ch.label) +
+          " · " +
+          e(String(ch.pct)) +
+          '%"></span>'
+        );
+      })
+      .join("");
+    return '<div class="spectrum-bar" role="img" aria-label="' + e(f.spectrum.label) + '">' + segs + "</div>";
+  }
+
+  function ppfCell(f) {
+    return fmt.ppfOf(f);
+  }
+
   if (host) {
     var rows = (window.TOURBIERE_FIXTURES || [])
       .map(function (f) {
+        var zone =
+          (f.footprint && f.footprint.w) +
+          "×" +
+          (f.footprint && f.footprint.d) +
+          " @ " +
+          (f.footprint && f.footprint.hCm) +
+          " cm";
         return (
-          "<tr id=\"" +
+          '<tr id="' +
           e(f.id) +
-          "\"><th scope=\"row\">" +
+          '"><th scope="row">' +
           e(f.sku) +
           "</th><td>" +
           e(f.name) +
@@ -17,23 +58,29 @@
           " W</td><td>" +
           e(f.lengthCm) +
           " cm</td><td>" +
-          e(f.ppf) +
+          e(ppfCell(f)) +
           "</td><td>" +
-          e(fmt.n2(f.ppe)) +
+          e(fmt.ppeOf(f)) +
           "</td><td>" +
-          e(f.cct) +
-          " K</td><td>" +
-          e(f.footprint && f.footprint.w) +
-          "×" +
-          e(f.footprint && f.footprint.d) +
-          " @ " +
-          e(f.footprint && f.footprint.hCm) +
-          " cm</td></tr>"
+          e(f.ppfdAvg != null ? fmt.ppfd(f.ppfdAvg) : "—") +
+          "</td><td>" +
+          e(fmt.cct(f.cct)) +
+          "</td><td>" +
+          e(zone) +
+          "</td></tr>"
         );
       })
       .join("");
     host.innerHTML =
-      '<div class="table-wrap" tabindex="0"><table><caption>Barres Cosmorrow — fiche COP 2023-09 / 2024-01</caption><thead><tr><th scope="col">SKU</th><th scope="col">Nom</th><th scope="col">W</th><th scope="col">L</th><th scope="col">PPF</th><th scope="col">PPE</th><th scope="col">CCT</th><th scope="col">Zone</th></tr></thead><tbody>' +
+      '<div class="table-wrap" tabindex="0"><table><caption>Barres Cosmorrow — fiche COP 2023-09 / 2024-01. PPFD constructeur = moyenne sur la zone, en <span class="unit">' +
+      e(fmt.units.ppfd) +
+      '</span> (SJ écrit µmol/s/m², même grandeur).</caption><thead><tr><th scope="col">SKU</th><th scope="col">Nom</th><th scope="col">W</th><th scope="col">L</th><th scope="col">PPF (<span class="unit">' +
+      e(fmt.units.ppf) +
+      '</span>)</th><th scope="col">PPE (<span class="unit">' +
+      e(fmt.units.ppe) +
+      '</span>)</th><th scope="col">PPFD moy. (<span class="unit">' +
+      e(fmt.units.ppfd) +
+      '</span>)</th><th scope="col">CCT</th><th scope="col">Zone</th></tr></thead><tbody>' +
       rows +
       "</tbody></table></div>";
   }
@@ -51,15 +98,63 @@
           e(f.diodes) +
           "</p><h3>" +
           e(f.name) +
-          "</h3><p>" +
+          "</h3>" +
+          spectrumBar(f) +
+          "<p>" +
           e(f.spectrumNote) +
-          "</p><p class=\"muted\">" +
+          '</p><p class="meta-row"><span>' +
+          e(ppfCell(f)) +
+          "</span><span>" +
+          e(fmt.ppeOf(f)) +
+          "</span><span>" +
+          e(f.ppfdAvg != null ? fmt.ppfd(f.ppfdAvg) : "—") +
+          " moy.</span></p><p class=\"muted\">" +
           e(f.buyNote) +
           "</p><p><strong>" +
           e(f.priceHintEUR) +
           "</strong></p><p><a href=\"outils.html?sku=" +
           e(f.sku) +
           "&qty=1\">Simuler cette barre</a></p></article>"
+        );
+      })
+      .join("");
+  }
+
+  var glossary = document.getElementById("units-glossary");
+  if (glossary && fmt.glossary) {
+    glossary.innerHTML = fmt.glossary
+      .map(function (g) {
+        return (
+          '<article class="card"><h3>' +
+          e(g.term) +
+          ' <span class="muted">' +
+          e(g.unit) +
+          "</span></h3><p>" +
+          e(g.body) +
+          "</p></article>"
+        );
+      })
+      .join("");
+  }
+
+  var specHost = document.getElementById("spectrum-compare");
+  if (specHost) {
+    specHost.innerHTML = (window.TOURBIERE_FIXTURES || [])
+      .map(function (f) {
+        return (
+          '<article class="card stack"><h3>' +
+          e(f.sku) +
+          "</h3>" +
+          spectrumBar(f) +
+          '<p class="meta-row"><span>' +
+          e(f.spectrum && f.spectrum.label) +
+          "</span><span>PAR " +
+          e((f.parNm && f.parNm[0] + "–" + f.parNm[1] + " nm") || fmt.units.par) +
+          "</span></p><p class=\"hint\">" +
+          e(f.spectrum && f.spectrum.kind === "full-spectrum"
+            ? "660 nm = rouge PAR. Pas de far-red 730 nm sur Cosmorrow."
+            : "Blanc froid : internodes courts au germoir.") +
+          "</p></article>"
         );
       })
       .join("");
@@ -95,6 +190,7 @@
     kits.innerHTML = (window.TOURBIERE_KITS || [])
       .map(function (k) {
         var psusK = Array.isArray(k.psu) ? k.psu.join(" + ") : k.psu;
+        var ppeKit = k.totalWatts ? k.totalPpf / k.totalWatts : 0;
         return (
           '<article class="card stack" id="' +
           e(k.id) +
@@ -109,8 +205,10 @@
           "</p><p class=\"meta-row\"><span>" +
           e(k.totalWatts) +
           " W</span><span>" +
-          e(k.totalPpf) +
-          " µmol/s</span><span>" +
+          e(fmt.ppf(k.totalPpf)) +
+          "</span><span>" +
+          e(fmt.ppe(ppeKit)) +
+          "</span><span>" +
           e(k.hangCm) +
           " cm</span><span>" +
           e(k.hours) +

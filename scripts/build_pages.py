@@ -238,6 +238,16 @@ page(
         </div>
       </section>
       <section class="section">
+        <h2>Unités lumineuses</h2>
+        <p class="hint">On dimensionne en PPF, PPFD et DLI. Les lumens, le « PAR 230 » et les watts marketing restent au vestiaire.</p>
+        <div class="card-grid" id="units-glossary"></div>
+      </section>
+      <section class="section">
+        <h2>Spectres Growing vs Full Spectrum</h2>
+        <p class="hint">660 nm = rouge PAR. Cosmorrow n’émet pas de far-red 730 nm. Le germoir reste en 6500 K.</p>
+        <div class="card-grid dense" id="spectrum-compare"></div>
+      </section>
+      <section class="section">
         <h2>Barres</h2>
         <div id="sku-table"></div>
         <div class="card-grid dense" id="fixture-cards" style="margin-top:1.5rem"></div>
@@ -266,7 +276,7 @@ page(
       <header class="page-hero stack">
         <p class="kicker">Carnivero / Florawave · fourchettes</p>
         <h1>Chaque genre a sa fenêtre de photons.</h1>
-        <p class="lede">On vise d’abord le bas-milieu de fourchette, puis on monte selon la plante — pas selon un listing 660 nm. Growing 6500 K est la barre de travail.</p>
+        <p class="lede">On vise d’abord le bas-milieu de fourchette (PPFD en µmol/m²/s, DLI en mol/m²/j), puis on monte selon la plante — pas selon un listing 660 nm. Growing 6500 K est la barre de travail.</p>
       </header>
       <div class="chips" id="species-filter" style="margin:1.5rem 0"></div>
       <div class="stack" id="species-list" style="--stack-space:1.25rem"></div>
@@ -412,6 +422,7 @@ page(
             <p id="heatmap-stats"></p>
             <div class="legend-bar" aria-hidden="true"></div>
             <div class="legend-ticks"><span>0</span><span>150</span><span>250</span><span>400</span><span>550</span></div>
+            <p class="legend-unit">PPFD · µmol/m²/s</p>
           </div>
         </article>
         <div class="stack">
@@ -479,6 +490,8 @@ page(
       <section class="section prose">
         <h2>Pourquoi Cosmorrow</h2>
         <p>Secret Jardin (Belgique) publie un PPF en µmol/s, un PPE en µmol/J, une zone, un IP65, du 24 V et du 230 V livrable en FR/BE. Growing 6500 K est le spectre de germoir. Le Full Spectrum est un appoint. On ne tient plus de palmarès multi-marques : le site est un compagnon de pose, pas un comparateur.</p>
+        <h2>Unités</h2>
+        <p>PPF en µmol/s, PPFD en µmol/m²/s, PPE en µmol/J, DLI en mol/m²/j. La fiche Cosmorrow écrit le PPFD en µmol/s/m² : même grandeur, on normalise. PAR est une bande (400–700 nm), pas un nombre. Le 660 nm du Full Spectrum est du rouge PAR, pas du far-red 730 nm.</p>
         <h2>Sources</h2>
         <ul>
           <li><a href="https://www.secretjardin.com/wp-content/uploads/2023/09/20230905-COP-BULBS-DATASHEET.pdf" rel="noopener noreferrer" target="_blank">Fiche Cosmorrow COP BULBS 2023-09</a> (Secret Jardin)</li>

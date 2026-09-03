@@ -61,10 +61,10 @@ Public : smartphone en rayon growshop autant que bureau. FR d’abord, unités m
 
 | SKU | Usage | L | W | PPF | PPE | Zone constructeur |
 | --- | --- | --- | --- | --- | --- | --- |
-| COP2065 | Grow 6500 K | 47 cm | 20 W | 51 µmol/s | 2,70 | 60×40 @ 15 cm |
-| COP4065 | Grow 6500 K | 87 cm | 40 W | 101 µmol/s | 2,70 | 120×60 @ 15 cm |
-| COP20FS | Full Spectrum | 47 cm | 20 W | 48–53 µmol/s | 2,40–2,85 | 60×40 @ 15 cm |
-| COP40FS | Full Spectrum | 70 cm | 40 W | 107 µmol/s | 2,85 | 90×60 @ 20 cm |
+| COP2065 | Grow 6500 K | 47 cm | 20 W | 51 µmol/s | 2,70 µmol/J | 268 µmol/m²/s · 60×40 @ 15 cm |
+| COP4065 | Grow 6500 K | 87 cm | 40 W | 101 µmol/s | 2,70 µmol/J | 205 µmol/m²/s · 120×60 @ 15 cm |
+| COP20FS | Full Spectrum | 47 cm | 20 W | 48–53 µmol/s | 2,40–2,85 µmol/J | 238 µmol/m²/s · 60×40 @ 15 cm |
+| COP40FS | Full Spectrum | 70 cm | 40 W | 107 µmol/s | 2,85 µmol/J | 240 µmol/m²/s · 90×60 @ 20 cm |
 
 Alims : COM20, COM40, COM2X20, COM2X40, COM3X20, COM3X40, COM5X20, COM5X40. 24 V DC. **Ne pas mélanger 20 W et 40 W sur la même alim.** COP40FS n’est pas interchangeable en longueur avec COP4065.
 
