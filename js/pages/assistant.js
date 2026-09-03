@@ -78,10 +78,16 @@
   function renderStepper() {
     var n = state.step === "result" ? 5 : Number(state.step);
     var labelN = n > 4 ? 4 : n;
+    var names = ["Projet", "Genres", "Surface", "Contraintes"];
     var html =
       '<div class="stepper"><ol aria-label="Étapes de l’assistant">';
     for (var i = 1; i <= 4; i += 1) {
-      html += "<li" + (i === labelN ? ' aria-current="step"' : "") + "></li>";
+      html +=
+        "<li" +
+        (i === labelN ? ' aria-current="step"' : "") +
+        '><span class="step-dot" aria-hidden="true"></span><span class="stepper-name">' +
+        e(names[i - 1]) +
+        "</span></li>";
     }
     html +=
       '</ol><p class="step-label">Étape ' +

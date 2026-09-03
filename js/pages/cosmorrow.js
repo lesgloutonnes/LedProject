@@ -83,7 +83,7 @@
       e(fmt.units.ppfd) +
       '</span>)</th><th scope="col">CCT</th><th scope="col">Zone</th></tr></thead><tbody>' +
       rows +
-      "</tbody></table></div>";
+      '</tbody></table></div><p class="table-hint">→ glisser les colonnes</p>';
   }
 
   var cards = document.getElementById("fixture-cards");
@@ -154,7 +154,7 @@
           "</span></p><p class=\"hint\">" +
           e(f.spectrum && f.spectrum.kind === "full-spectrum"
             ? "Parts de diodes (fiche), pas une courbe spectrale mesurée. 660 nm = rouge PAR, pas du rouge lointain 730 nm. Blanc 2700 K = pompe 450 nm + luminophore ~610 nm."
-            : "100 % diodes 6500 K (parts de diodes, pas une courbe spectrale mesurée). Blanc froid : internodes courts au germoir.") +
+            : "100 % diodes 6500 K (parts de diodes, pas une courbe spectrale mesurée). Blanc froid : pousses plus compactes au germoir.") +
           "</p></article>"
         );
       })

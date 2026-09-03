@@ -6,17 +6,20 @@
     if (page === "" || page === "index") page = "index";
   }
 
-  document.querySelectorAll(".nav-primary a[href], .bottom-nav a[href]").forEach(function (a) {
+  var dialog = document.getElementById("plus-sheet");
+  var openBtn = document.getElementById("plus-open");
+  var closeBtn = document.getElementById("plus-close");
+
+  var currentInSheet = false;
+  document.querySelectorAll(".nav-primary a[href], .bottom-nav a[href], #plus-sheet a[href]").forEach(function (a) {
     var href = (a.getAttribute("href") || "").split("#")[0];
     var isHome = (page === "index" || page === "") && (href === "index.html" || href === "./" || href === "/");
     var isCurrent = isHome || href === file || href === page + ".html";
     if (isCurrent) a.setAttribute("aria-current", "page");
     else a.removeAttribute("aria-current");
+    if (isCurrent && a.closest("#plus-sheet")) currentInSheet = true;
   });
-
-  var dialog = document.getElementById("plus-sheet");
-  var openBtn = document.getElementById("plus-open");
-  var closeBtn = document.getElementById("plus-close");
+  if (openBtn) openBtn.classList.toggle("is-current", currentInSheet);
   if (dialog && openBtn) {
     openBtn.addEventListener("click", function () {
       openBtn.setAttribute("aria-expanded", "true");
@@ -70,6 +73,12 @@
 
   function hardenExternal(a) {
     var href = a.getAttribute("href") || "";
+    if (/^\s*(javascript:|data:|vbscript:)/i.test(href)) {
+      a.removeAttribute("href");
+      a.setAttribute("role", "link");
+      a.setAttribute("aria-disabled", "true");
+      return;
+    }
     if (!/^https?:\/\//i.test(href)) return;
     a.setAttribute("target", "_blank");
     var rel = (a.getAttribute("rel") || "").toLowerCase();

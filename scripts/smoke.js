@@ -354,6 +354,8 @@ htmlPages.forEach(function (file) {
   var html = fs.readFileSync(file, "utf8");
   assert.ok(/id="contenu"[^>]*tabindex="-1"/.test(html) || /tabindex="-1"[^>]*id="contenu"/.test(html), file + " skip target");
   assert.ok(/media-src 'none'/.test(html), file + " CSP media-src");
+  assert.ok(/manifest-src 'none'/.test(html), file + " CSP manifest-src");
+  assert.ok(/closedby="any"/.test(html), file + " dialog closedby");
   assert.ok(!/\bpar job\b/i.test(html), file + " jargon job");
   assert.ok(!/far-?red/i.test(html), file + " pas de far-red anglais");
   var re = /<a\s[^>]*href="https?:\/\/[^"]+"[^>]*>/gi;
@@ -368,6 +370,13 @@ htmlPages.forEach(function (file) {
 assert.ok(fs.readFileSync("js/pages/outils.js", "utf8").indexOf("lambertien") < 0, "lambertien visiteur");
 assert.ok(fs.readFileSync("js/pages/assistant.js", "utf8").indexOf("comme favorite") < 0, "favorite visiteur");
 assert.ok(fs.readFileSync("js/pages/assistant.js", "utf8").indexOf("métier à la fois") < 0, "métier visiteur assistant");
+assert.ok(fs.readFileSync("js/pages/cosmorrow.js", "utf8").indexOf("internodes") < 0, "internodes visiteur cosmorrow");
+assert.ok(fs.readFileSync("js/data/kits.js", "utf8").indexOf("internodes") < 0, "internodes visiteur kits");
+assert.ok(fs.readFileSync("js/data/diagnostic.js", "utf8").indexOf("internodes") < 0, "internodes visiteur diagnostic");
+assert.ok(fs.readFileSync("js/pages/especes.js", "utf8").indexOf("species-notes") >= 0, "fiches espèces : details");
+assert.ok(fs.readFileSync("js/pages/cosmorrow.js", "utf8").indexOf("table-hint") >= 0, "hint glisser hors overflow");
+assert.ok(fs.readFileSync("js/pages/assistant.js", "utf8").indexOf("stepper-name") >= 0, "stepper desktop labels");
+assert.ok(/javascript:|data:|vbscript:/.test(fs.readFileSync("js/nav.js", "utf8")), "nav bloque javascript:");
 assert.ok(/margin-inline:\s*auto/.test(fs.readFileSync("css/tokens.css", "utf8")), "wrap centré");
 
 var storeSandbox = {
