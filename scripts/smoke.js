@@ -28,6 +28,11 @@ assert.equal(ctx.LgFmt.units.dli, "mol/m²/j");
 assert.ok(ctx.LgFmt.ppfd(205).indexOf("µmol/m²/s") >= 0);
 assert.ok(ctx.LgFmt.dli(10.08).indexOf("mol/m²/j") >= 0);
 assert.equal(Math.round(ctx.LG_OPTICS.dli(200, 14) * 10) / 10, 10.1);
+var ppfdG = ctx.LgFmt.glossary.find(function (g) { return g.id === "ppfd"; });
+assert.ok(/à la canopée/.test(ppfdG.body), "PPFD : densité à la canopée");
+var cctG = ctx.LgFmt.glossary.find(function (g) { return g.id === "cct"; });
+assert.ok(/rouge lointain/.test(cctG.body), "660 nm ≠ rouge lointain 730 nm");
+assert.ok(!/infra-?rouge lointain/i.test(cctG.body));
 
 var fs20 = ctx.LG_FIXTURES.find(function (f) { return f.sku === "COP20FS"; });
 var fs40 = ctx.LG_FIXTURES.find(function (f) { return f.sku === "COP40FS"; });
@@ -238,6 +243,21 @@ assert.ok(
   }),
   "warning dormance + tropicale"
 );
+
+var apropos = fs.readFileSync("a-propos.html", "utf8");
+assert.ok(apropos.indexOf("µmol/m²/s") >= 0, "à-propos : PPFD avec unité");
+assert.ok(apropos.indexOf("µmol/s") >= 0, "à-propos : PPF avec unité");
+assert.ok(apropos.indexOf("µmol/J") >= 0, "à-propos : PPE avec unité");
+assert.ok(apropos.indexOf("mol/m²/j") >= 0, "à-propos : DLI avec unité");
+assert.ok(/rouge lointain/.test(apropos), "à-propos : 660 nm ≠ rouge lointain");
+assert.ok(!/infra-?rouge lointain/i.test(apropos), "à-propos : pas d’infra-rouge lointain");
+
+var home = fs.readFileSync("index.html", "utf8");
+assert.ok(/>PPF</.test(home) && home.indexOf("202 µmol/s") >= 0, "accueil : PPF 202 µmol/s, pas « flux »");
+assert.ok(home.indexOf("µmol/J") >= 0, "accueil : PPE en µmol/J");
+
+var especes = fs.readFileSync("especes.html", "utf8");
+assert.ok(especes.indexOf("µmol/m²/s") >= 0 && especes.indexOf("mol/m²/j") >= 0, "espèces : unités PPFD et DLI");
 
 console.log("SMOKE OK", r.kit.name, "PPFD moy", Math.round(sim.avg));
 

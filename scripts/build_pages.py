@@ -233,7 +233,7 @@ page(
           <p>Deux bacs 60 × 40, deux Cosmorrow Growing 90 cm (COP4065) et une alimentation COM2X40. C’est le kit Les Gloutonnes.</p>
           <div class="stats kit-stats mt-s4">
             <div class="stat"><div class="lbl">Puissance</div><div class="val">80 W</div></div>
-            <div class="stat"><div class="lbl">Flux</div><div class="val">202 µmol/s</div></div>
+            <div class="stat"><div class="lbl">PPF</div><div class="val">202 µmol/s</div></div>
             <div class="stat"><div class="lbl">Blanc</div><div class="val">6500 K</div></div>
             <div class="stat"><div class="lbl">Fourchette</div><div class="val">~140 €</div></div>
           </div>
@@ -247,8 +247,8 @@ page(
       <section class="section">
         <h2>À éviter</h2>
         <div class="card-grid">
-          <article class="card"><h3>Les barres « blurple » sans fiche</h3><p>Sans flux publié, ce n’est pas une référence, c’est une annonce. Cosmorrow publie le PPF et le rendement.</p></article>
-          <article class="card"><h3>Le rouge 660 nm magique</h3><p>Le rouge des Sarracenia vient de la dose de lumière et du génotype. Growing 6500 K compacte mieux un germoir qu’un spectre floraison.</p></article>
+          <article class="card"><h3>Les barres « blurple » sans fiche</h3><p>Sans PPF publié, ce n’est pas une référence, c’est une annonce. Cosmorrow publie le PPF (µmol/s) et le PPE (µmol/J).</p></article>
+          <article class="card"><h3>Le rouge 660 nm magique</h3><p>Le rouge des Sarracenia vient du DLI — la dose quotidienne — et du génotype. Growing 6500 K compacte mieux un germoir qu’un spectre floraison.</p></article>
           <article class="card"><h3>L’engrais « plantes vertes »</h3><p>Terreau fertilisé et Miracle-Gro tuent les racines. Foliar 0,3 g/L d’un orchidée propre, eau osmose, tourbe blonde non amendée.</p></article>
           <article class="card"><h3>La tente chaude toute l’année pour une dionée</h3><p>Dormance 3–4 mois, 0–10 °C. En Belgique et en France, le dehors ou le garage gagne. La LED ne fait pas le froid.</p></article>
         </div>
@@ -280,7 +280,7 @@ page(
       <header class="page-hero stack">
         <p class="kicker">Secret Jardin · 24 V · IP65</p>
         <h1>Cosmorrow, et seulement Cosmorrow.</h1>
-        <p class="lede">Blanc 6500 K pour germer, Full Spectrum en appoint, alimentations calibrées 20 W ou 40 W. Flux publié, zone constructeur — pas un « PAR 230 » de boutique.</p>
+        <p class="lede">Blanc 6500 K pour germer, Full Spectrum en appoint, alimentations calibrées 20 W ou 40 W. PPF publié, zone constructeur — pas un « PAR 230 » de boutique.</p>
       </header>
       <noscript class="callout is-warn"><p>Active JavaScript pour le tableau SKU et les kits. Les règles d’or restent lisibles ci-dessus.</p></noscript>
       <section class="section">
@@ -294,12 +294,12 @@ page(
       </section>
       <section class="section">
         <h2>Unités lumineuses</h2>
-        <p class="hint">On dimensionne en PPF, PPFD et DLI. Les lumens, le « PAR 230 » et les watts marketing restent au vestiaire.</p>
+        <p class="hint">On dimensionne en PPF (µmol/s), PPFD (µmol/m²/s) et DLI (mol/m²/j). Les lumens, le « PAR 230 » et les watts marketing restent au vestiaire.</p>
         <div class="card-grid" id="units-glossary"></div>
       </section>
       <section class="section">
         <h2>Spectres Growing vs Full Spectrum</h2>
-        <p class="hint">660 nm = rouge PAR. Cosmorrow n’émet pas de far-red 730 nm. Le germoir reste en 6500 K.</p>
+        <p class="hint">660 nm = rouge PAR. Cosmorrow n’émet pas de rouge lointain 730 nm. Le germoir reste en 6500 K.</p>
         <div class="card-grid dense" id="spectrum-compare"></div>
       </section>
       <section class="section">
@@ -326,12 +326,12 @@ page(
 page(
     "especes.html",
     "PPFD par genre carnivore | Les Gloutonnes",
-    "Cibles PPFD, DLI, eau et tente pour Dionaea, Sarracenia, Drosera, Nepenthes et les autres carnivores sous Cosmorrow.",
+    "Cibles PPFD, DLI, eau et tente pour Dionaea, Sarracenia, Drosera, Nepenthes sous LED Cosmorrow.",
     """
       <header class="page-hero stack">
         <p class="kicker">Par genre</p>
         <h1>Chaque plante a sa dose de lumière.</h1>
-        <p class="lede">On vise d’abord le bas-milieu de fourchette, puis on monte selon la plante — pas selon un listing rouge. Growing 6500 K est la barre de travail.</p>
+        <p class="lede">On vise d’abord le bas-milieu de fourchette (PPFD en µmol/m²/s, DLI en mol/m²/j), puis on monte selon la plante — pas selon un listing 660 nm. Growing 6500 K est la barre de travail.</p>
       </header>
       <div class="chips mt-s5" id="species-filter"></div>
       <noscript class="callout is-warn"><p>Active JavaScript pour les fiches genres. Cibles PPFD : voir Carnivero.</p></noscript>
@@ -464,7 +464,7 @@ page(
 page(
     "outils.html",
     "PPFD, DLI, électricité | Les Gloutonnes",
-    "Simulateur PPFD Cosmorrow, DLI et coût électrique pour tente de carnivores. Modèle optique prudent, pas un PAR-mètre.",
+    "Simulateur PPFD Cosmorrow, DLI et coût électrique pour tente de carnivores.",
     """
       <header class="page-hero stack">
         <p class="kicker">Carte de lumière</p>
@@ -548,7 +548,7 @@ page(
 page(
     "a-propos.html",
     "Sources et confidentialité | Les Gloutonnes",
-    "Méthode Les Gloutonnes : Cosmorrow only, PPFD Carnivero, fiche Secret Jardin 2023-09, foliar 0,3 g/L. Pas de tracking.",
+    "Guide de culture en tente : Cosmorrow, PPFD Carnivero, fiche Secret Jardin 2023-09. Une application Les Gloutonnes.",
     """
       <header class="page-hero stack">
         <p class="kicker">Les Gloutonnes</p>
@@ -561,9 +561,9 @@ page(
       </header>
       <section class="section prose">
         <h2>Pourquoi Cosmorrow</h2>
-        <p>Secret Jardin, en Belgique, publie le flux lumineux, le rendement, la zone d’éclairage, un indice d’étanchéité IP65, du 24 V et du 230 V livrable ici. Growing 6500 K est le spectre de germoir. Le Full Spectrum est un appoint. On ne compare plus les marques : l’application t’aide à poser un kit, pas à classer des listings.</p>
+        <p>Secret Jardin, en Belgique, publie un PPF (µmol/s), un PPE (µmol/J), une zone d’éclairage, un indice d’étanchéité IP65, du 24 V et du 230 V livrable ici. Growing 6500 K est le spectre de germoir. Le Full Spectrum est un appoint. On ne compare plus les marques : l’application t’aide à poser un kit, pas à classer des listings.</p>
         <h2>Comment on parle de lumière</h2>
-        <p>Le flux de la barre (PPF), la densité au canopée (PPFD) et la dose quotidienne (DLI). PAR est une bande de couleurs utiles à la photosynthèse, pas un chiffre magique. Le 660 nm du Full Spectrum est du rouge visible, pas de l’infra-rouge lointain.</p>
+        <p>PPF : flux de la barre, en µmol/s. PPFD : densité à la canopée, en µmol/m²/s (la fiche Secret Jardin écrit µmol/s/m² : même grandeur). PPE : rendement, en µmol/J. DLI : dose quotidienne, en mol/m²/j (PPFD × heures × 0,0036). PAR est une bande de longueurs d’onde (400–700 nm), pas un chiffre. Le 660 nm du Full Spectrum est du rouge PAR, pas du rouge lointain 730 nm.</p>
         <h2>Sources</h2>
         <ul>
           <li><a href="https://www.secretjardin.com/wp-content/uploads/2023/09/20230905-COP-BULBS-DATASHEET.pdf" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Fiche Cosmorrow COP BULBS 2023-09</a> (Secret Jardin)</li>
