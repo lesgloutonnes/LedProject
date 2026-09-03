@@ -10,7 +10,7 @@ Une tente de carnivores n’est pas un paludarium Instagram ni un clone de grow 
 
 Les Gloutonnes · Tourbière classe les plantes par **ce qu’elles demandent sous Cosmorrow**, pas par la beauté des catalogues.
 
-**Les tempérées à dormance obligatoire** — *Dionaea muscipula*, les *Sarracenia*, les *Drosera* d’hémisphère nord, les *Pinguicula* tempérées, *Darlingtonia* — poussent fort 7–8 mois, puis elles ont besoin de **3–4 mois à 5–10 °C**, 8–10 h de lumière faible, substrat juste humide. Sans ça, elles « marchent » encore une saison et s’épuisent. Ce n’est pas du folklore de forum : c’est leur phénologie.
+**Les tempérées à dormance obligatoire** — *Dionaea muscipula*, les *Sarracenia*, les *Drosera* d’hémisphère nord, les *Pinguicula* tempérées, *Darlingtonia* — poussent fort 7–8 mois, puis elles ont besoin de **3–4 mois à 0–10 °C**, 8–10 h de lumière faible, substrat juste humide. En FR/BE, un châssis ou un garage hors gel fait mieux qu’une tente à 20 °C. Sans ça, elles « marchent » encore une saison et s’épuisent. Ce n’est pas du folklore de forum : c’est leur phénologie.
 
 **Les tropicales** — *Nepenthes*, *Heliamphora*, *Drosera capensis* et alliées, *Byblis* annuelles, *Utricularia* épiphytes — **n’ont pas d’hiver**. Tu leur dois 12–14 h toute l’année, une HR 60–80 % avec de l’air qui bouge, et un PPFD souvent **plus bas** que celui d’une dionée. Les coller sous le plafond des Sarracenia, c’est la brûlure, pas la générosité.
 
@@ -38,7 +38,7 @@ C’est le mythe inverse du terreau Miracle-Gro, tout aussi faux.
 
 En tourbière naturelle, les racines trouvent **très peu** d’azote et de phosphore ; les pièges compensent. Adamec (1997, *Botanical Review* 63) montre que l’absorption **foliaire** est réelle, qu’elle peut couvrir une part importante du N et du P, et qu’elle **stimule** aussi la prise racinaire. En tente, les insectes manquent : un foliar propre est un outil, pas une trahison.
 
-La pratique retenue ici — **California Carnivores / Maxsea 16-16-16, ¼ cuillère à café par gallon US**, 1–2×/mois sur le feuillage — est une dilution horticole connue, très en dessous d’un engrais « plantes vertes ». On n’arrose **pas** le bac avec. On n’utilise **pas** Miracle-Gro, pas de terreau fertilisé, pas de marc de café.
+La pratique retenue ici — **0,3 g/L foliar** d’un orchidée équilibré (ou Maxsea 16-16-16 à la même force : ¼ c. à café US / gallon) 1–2×/mois sur le feuillage — est une dilution horticole, très en dessous d’un engrais « plantes vertes ». On n’arrose **pas** le bac avec. On n’utilise **pas** Miracle-Gro, pas de terreau fertilisé, pas de marc de café. Maxsea se trouve mal en FR/BE : ce n’est pas un sésame, c’est une recette US.
 
 Traduction : **engrais interdit à 100 %** = faux. **Engrais de jardinerie à dose étiquette dans le bac** = vrai problème (sel, algues, collet brûlé).
 
@@ -114,4 +114,4 @@ La photopériode naturelle en FR/BE passe sous 9 h en décembre : une tente de d
 
 On tutoie, on reste précis, on ne dramatise pas. Une plante qui dort n’est pas en train de mourir. Une LED « trop faible » est souvent une barre trop haute. Un échec de semis est souvent une graine trop vieille ou une strat oubliée.
 
-On ne donne pas de conseils médicaux, pas de recettes chimiques dangereuses, pas d’insecticides ménagers. Engrais = **dilutions horti nommées**. Eau = **RO / pluie / distillée / ZeroWater**, TDS **< 50 ppm**. Marque LED = **Cosmorrow**.
+On ne donne pas de conseils médicaux, pas de recettes chimiques dangereuses, pas d’insecticides ménagers. Engrais = **0,3 g/L foliar nommé**. Eau = **RO / pluie / distillée / ZeroWater**, TDS **< 50 ppm**. Marque LED = **Cosmorrow**. Dormance tempérée = **froid réel**, pas un programmateur à 8 h dans le salon.

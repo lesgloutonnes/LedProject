@@ -22,10 +22,10 @@ window.TOURBIERE_PROJECTS = [
   {
     id: "collection",
     label: "Collection / adultes",
-    blurb: "Production en tente : nappe homogène, 16 h en saison, pots assez grands.",
+    blurb: "Production en tente : nappe homogène, 14 h en saison (16 h seulement pour colorer), pots larges pour les rhizomes.",
     kitProject: "production",
     protocolId: "production",
-    hours: 16,
+    hours: 14,
   },
   {
     id: "rouge",
@@ -46,7 +46,7 @@ window.TOURBIERE_PROJECTS = [
   {
     id: "tropicale",
     label: "Chambre tropicale",
-    blurb: "Nepenthes, Heliamphora, Cephalotus : moins de PPF, 70–85 % HR, pas de dormance.",
+    blurb: "Nepenthes et Heliamphora : moins de PPF, 70–85 % HR, pas de dormance. Cephalotus : étage frais, pas la jungle lowland.",
     kitProject: "tropical",
     protocolId: "tropical",
     hours: 13,
@@ -54,7 +54,7 @@ window.TOURBIERE_PROJECTS = [
   {
     id: "dormance",
     label: "Dormance tempérée",
-    blurb: "3–4 mois, 5–10 °C, 8–10 h, intensité réduite. La LED ne fait pas le froid.",
+    blurb: "3–4 mois, 0–10 °C. En FR/BE le dehors / garage gagne ; la LED ne fait pas le froid.",
     kitProject: "dormance",
     protocolId: "dormancy",
     hours: 9,

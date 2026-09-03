@@ -13,7 +13,7 @@ window.TOURBIERE_SPECIES = [
     climate: "temperate",
     dormancy: "required",
     dormancyNote:
-      "Obligatoire 3–4 mois, 5–10 °C, photopériode 8–10 h, intensité réduite. Sans dormance, la plante s’épuise en 1–3 saisons. Les pièges noircissent en hiver : c’est normal, pas une maladie.",
+      "Obligatoire 3–4 mois, 0–10 °C, photopériode 8–10 h, intensité réduite. En FR/BE, un châssis / un rebord hors gel vaut mieux qu’une tente à 20 °C. Sans dormance, la plante s’épuise en 1–3 saisons. Les pièges noircissent en hiver : c’est normal, pas une maladie.",
     ppfd: [100, 200, 400],
     dli: [4.3, 9.4, 20.2],
     photoperiodGrow: 14,
@@ -26,13 +26,13 @@ window.TOURBIERE_SPECIES = [
       "Bac d’eau 1–2 cm en saison de croissance, eau RO / pluie / osmosée uniquement (TDS < 50 ppm). En dormance : substrat juste humide, plus de bac permanent.",
     substrate: "Tourbe blonde + perlite 50/50, pots 8–12 cm. Éviter la sphaigne pure (trop spongieuse au long cours).",
     fertilizer:
-      "Foliar Maxsea 16-16-16 ¼ c. à café / gallon US (≈ 0,3 g/L) 1–2×/mois en saison, sur le feuillage sec, le matin. Jamais Miracle-Gro, jamais terreau fertilisé. Proies 1–2×/mois suffisent souvent.",
+      "Foliar 0,3 g/L (orchidée ¼ ou Maxsea 16-16-16) 1–2×/mois en saison, feuillage sec, matin. Proies 1–2 pièges / mois suffisent souvent. Jamais Miracle-Gro, jamais terreau fertilisé, jamais d’engrais dans le bac.",
     tentTips:
-      "Étage haut, 15–20 cm sous COP4065 Growing 6500 K (ou COP2065 sur une étagère 60×40). La dionée veut du photon, pas de l’humidité de jungle. Extraire l’air pour rester ~50–60 % HR. Ne pas coller les pots sous un hotspot : viser 200 µmol, pas 400 d’emblée.",
+      "Étage haut, 15–20 cm sous COP4065 Growing 6500 K (ou COP2065 sur une étagère 60×40). La dionée veut du photon et de l’air, pas une jungle à 90 % HR. Extraire pour rester ~50–60 %. Viser 200 µmol, pas 400 d’emblée. Pot 8–10 cm, légèrement à l’étroit : un 3 L n’accélère pas un rhizome de 2 cm.",
     traps:
       "Un insecte vivant (ou congelé puis décongelé) par piège, 1–2 pièges par mois. Pas de viande hachée, fromage, œuf. Un piège ne s’ouvre qu’une poignée de fois : ne pas « jouer » avec. Après digestion, le piège noircit : on le laisse, on ne coupe pas à vif.",
     seedlingNotes:
-      "Graines noires minuscules. Stratification froide 4–6 semaines (frigo, 4 °C, papier humide) souvent utile sur lots sauvages ; les F1 de culture germent parfois sans. Surface, pas d’enfouissement. 14 h, 15–20 cm, 150–250 µmol. Germination 2–6 semaines. Première vraie feuille en rosette, pas encore de piège.",
+      "Graines noires minuscules, viables 1 an au frais/sec, plus faibles ensuite. Strat 4–6 semaines (frigo 4 °C, papier ou tourbe juste humide) utile sur lots sauvages ; beaucoup de F1 germent sans. Surface, jamais d’enfouissement. Mix ébouillanté, 14 h, 15–20 cm, 150–250 µmol. Levée 2–6 semaines. Première vraie feuille en rosette, pas encore de piège.",
     cuttingNotes:
       "Leaf pulling : feuille entière avec un bout de rhizome blanc. À plat sur tourbe ou sphaigne, HR 80–95 %, 20–24 °C, lumière douce (COP2065 à 25–30 cm, ~80–120 µmol). Plantules en 4–8 semaines. Ne pas trop mouiller : pourriture du pétiole = échec n°1.",
     redColorNotes:
@@ -52,7 +52,7 @@ window.TOURBIERE_SPECIES = [
     climate: "temperate",
     dormancy: "required",
     dormancyNote:
-      "Obligatoire 3–4 mois. Les urnes de l’année se fanent ; le rhizome reste. 5–10 °C, 8–10 h, substrat humide sans bac d’eau. S. purpurea et les hybrides « easy » restent plus indulgents, pas les dressées de collection.",
+      "Obligatoire 3–4 mois. Les urnes de l’année se fanent ; le rhizome reste, souvent en phyllodes. 0–10 °C, 8–10 h, substrat humide sans bac. En FR/BE, bac extérieur / châssis hors gel est le geste de pépinière ; la tente chaude est le plan B. S. purpurea et les hybrides « easy » sont plus indulgents, pas oreophila / leucophylla de collection.",
     ppfd: [200, 300, 500],
     dli: [8.6, 14.0, 25.2],
     photoperiodGrow: 14,
@@ -63,22 +63,22 @@ window.TOURBIERE_SPECIES = [
     water: "tray",
     waterNote:
       "Bac 2–3 cm en croissance. Laisser le bac sécher presque à blanc 1 jour de temps en temps pour oxygéner, sans jamais laisser le pain de tourbe croûter.",
-    substrate: "Tourbe blonde + perlite 50/50, pots profonds 15–20 cm (rhizome horizontal). Un peu de sable siliceux possible, jamais de calcaire.",
+    substrate: "Tourbe blonde non amendée + perlite 50/50. Pots larges (15–20 cm de diamètre) : le rhizome pousse à l’horizontale, une colonne profonde ne sert à rien (ça, c’est Darlingtonia). Sable siliceux possible, jamais de calcaire.",
     fertilizer:
-      "Foliar Maxsea ¼ 1–2×/mois sur les urnes et le feuillage, dilution horticole uniquement. Quelques Osmocote dans l’urne : option discutée, pas un réflexe. Racinaire : à éviter (algues + sel).",
+      "Foliar 0,3 g/L 1–2×/mois sur urnes et feuillage. Osmocote dans l’urne : on s’en passe (urne ouverte = sel + algues). Racinaire : non.",
     tentTips:
       "Toujours l’étage le plus haut, au plus près des COP4065 (15–20 cm du sommet des urnes, pas du pot). Deux COP4065 sur 120×60 tiennent des adultes si tu les espaces sur la profondeur. Les urnes qui touchent la barre grillent : laisse 10 cm de marge quand elles poussent.",
     traps:
-      "Les urnes chassent seules si tu ouvres la tente de temps en temps. Sinon : 1–2 mouches / petits grillons par urne mature et par mois, ou un soupçon de Maxsea foliar. Ne pas remplir les urnes de bouillon.",
+      "Les urnes chassent seules si tu ouvres la tente. Sinon : 1–2 mouches par urne mature et par mois, ou un foliar 0,3 g/L. Ne pas remplir les urnes de bouillon ni d’Osmocote.",
     seedlingNotes:
-      "Graines à stratification froide 4–8 semaines. Semis de surface, 14 h, 15–20 cm, 150–250 µmol (bas de fourchette adulte). Première feuille = phyllode, pas encore d’urne. 2–4 ans avant un adulte. Repiquer quand les plantules se gênent, pas avant 4–6 vraies feuilles.",
+      "Graines à stratification froide 4–8 semaines. Viables surtout l’année de récolte (frigo sec). Semis de surface, mix ébouillanté, 14 h, 15–20 cm, 150–250 µmol. Première feuille = phyllode, pas encore d’urne. 2–4 ans avant un adulte. Repiquer par motte à 4–6 feuilles, pas racine nue.",
     cuttingNotes:
       "Division de rhizome au débourrement (mars–avril) : un morceau avec au moins un point de croissance. Bouture de rhizome sans feuille possible mais plus lente. Pas de bouture de feuille utile.",
     redColorNotes:
       "Leucophylla, flava var. atropurpurea, hybrides ‘Adrian Slack’ : le DLI fait plus que le spectre. 16–20 mol (300 µmol × 14–16 h) colore ; 8 mol reste vert. Growing 6500 K suffit. FS en appoint si tu veux pousser le rouge sans monter le PPFD. Génotype d’abord : une flava verte ne devient pas cramoisie.",
     warnings: [
       "Dormance obligatoire. Une Sarracenia « toujours en pousse » s’affaiblit.",
-      "Pots trop petits = urnes chétives. Viser 2–3 L dès l’ado.",
+      "Pots trop étroits = urnes chétives. Viser 2–3 L larges dès l’ado, pas un tube profond.",
       "Carnivero n’a testé que des semis de dressées sous LED (**) : les adultes demandent plus de hauteur utile.",
     ],
     projects: ["seedling", "production", "coloring", "mixed", "dormancy"],
@@ -91,7 +91,7 @@ window.TOURBIERE_SPECIES = [
     climate: "temperate",
     dormancy: "required",
     dormancyNote:
-      "Toujours une vraie dormance, mais plus indulgente que les dressées. S. purpurea tient souvent en serre froide non hors-gel léger. En tente : 5–10 °C, 8–10 h, 3–4 mois.",
+      "Toujours une vraie dormance. Purpurea tient souvent dehors en FR/BE (châssis, bac, parfois hors-gel léger). En tente : 0–10 °C, 8–10 h, 3–4 mois — seulement si tu n’as pas d’extérieur.",
     ppfd: [100, 200, 400],
     dli: [4.3, 9.4, 20.2],
     photoperiodGrow: 14,
@@ -102,15 +102,15 @@ window.TOURBIERE_SPECIES = [
     water: "wet",
     waterNote:
       "Purpurea et rosea aiment les pieds dans l’eau. Psittacina : humide à très humide, sans noyer le collet en hiver. Eau pauvre uniquement.",
-    substrate: "Tourbe blonde + perlite 50/50 ; purpurea accepte un peu plus de tourbe (60/40). Pots larges plutôt que profonds.",
+    substrate: "Tourbe blonde non amendée + perlite 50/50 ; purpurea accepte un peu plus de tourbe (60/40). Pots larges et bas, pas profonds.",
     fertilizer:
-      "Même foliar Maxsea ¼ 1–2×/mois. Les urnes basses se remplissent d’eau de pluie en nature : en tente, un rinçage occasionnel à l’eau RO évite le concentré d’algues.",
+      "Foliar 0,3 g/L 1–2×/mois. Les urnes basses se remplissent d’eau en nature : en tente, un rinçage RO occasionnel évite le concentré d’algues. Pas d’Osmocote dans l’urne.",
     tentTips:
       "Étage médian ou bord de tente, 20–30 cm sous COP4065 — elles n’ont pas besoin du plafond des dressées. Idéales pour « remplir » un étage mixte sous les Sarracenia hautes.",
     traps:
       "Urnes ouvertes vers le haut (purpurea) : quelques drosophiles suffisent. Pas de viande. L’eau stagnante dans l’urne n’est pas un problème tant qu’elle reste pauvre.",
     seedlingNotes:
-      "Comme les dressées : cold strat 4–8 semaines, surface, 150–250 µmol, 14 h. Plantules plus compactes, plus rapides à faire une mini-urne.",
+      "Comme les dressées : cold strat 4–8 semaines, surface, mix ébouillanté, 150–250 µmol, 14 h. Graines de l’année. Plantules plus compactes, plus rapides à faire une mini-urne.",
     cuttingNotes: "Division de rhizome au printemps. Les rosettes se séparent facilement.",
     redColorNotes:
       "Purpurea venosa et rosea colorent bien dès 200–250 µmol en 6500 K, surtout avec nuits fraîches. Le rouge est aussi un signal de « assez de lumière + un peu de stress hydrique contrôlé », pas un pic 660.",
@@ -128,7 +128,7 @@ window.TOURBIERE_SPECIES = [
     climate: "temperate",
     dormancy: "required",
     dormancyNote:
-      "Hibernacle (rotundifolia, intermedia, filiformis) ou simple arrêt (binata plus souple). 3–4 mois, 5–10 °C, 8–10 h. Binata : dormance optionnelle en culture, mais un repos hivernal lumineux aide.",
+      "Hibernacle (rotundifolia, intermedia, filiformis) ou simple ralentissement (binata : australienne, repos optionnel). 3–4 mois, 0–10 °C, 8–10 h. Filiformis : ne jamais laisser sécher le hibernacle. Binata : un hiver lumineux et frais aide, ce n’est pas une dionée.",
     ppfd: [100, 200, 400],
     dli: [4.3, 9.4, 20.2],
     photoperiodGrow: 14,
@@ -140,13 +140,13 @@ window.TOURBIERE_SPECIES = [
     waterNote: "Bac 1–2 cm en croissance. En dormance, juste humide. Filiformis : ne jamais laisser sécher le hibernacle.",
     substrate: "Tourbe blonde + perlite ou sable siliceux 50/50. Filiformis apprécie un mix un peu plus minéral.",
     fertilizer:
-      "Foliar Maxsea ¼ 1×/mois suffit : le mucilage capte déjà. Trop d’engrais = mucilage qui « fond » et algues sur le terreau.",
+      "Foliar 0,3 g/L 1×/mois suffit : le mucilage capte déjà. Trop d’engrais = mucilage qui « fond » et algues sur le terreau.",
     tentTips:
       "Étage haut ou médian, 15–25 cm sous COP4065. Les rotundifolia restent basses : tu peux les glisser au pied des Sarracenia si le PPFD y reste ≥ 150. Binata monte : laisse de la hauteur.",
     traps:
       "Le mucilage fait le travail. Sciarides de la tente = buffet. Complément : drosophiles 1×/mois, ou foliar. Pas de viande.",
     seedlingNotes:
-      "Graines très fines, souvent stratifiées (rotundifolia, intermedia : 4–6 semaines). Surface, vaporisation, jamais d’enfouissement. 14 h, 150–250 µmol. Filiformis : parfois GA-3 500–1000 ppm chez les lots difficiles — option, pas un réflexe.",
+      "Graines très fines, viables plusieurs années au sec/frais (mieux que Sarracenia). Strat 4–6 semaines (rotundifolia, intermedia). Surface, vaporisation, jamais d’enfouissement. Mix ébouillanté : les algues gagnent sinon. 14 h, 150–250 µmol. Filiformis récalcitrant : GA-3 500–1000 ppm 24 h — option de lot difficile, pas un réflexe.",
     cuttingNotes:
       "Leaf pulling très fiable : feuille à plat sur sphaigne, HR haute, lumière douce. Plantules au pétiole en 3–6 semaines. Root cuttings chez filiformis.",
     redColorNotes:
@@ -176,12 +176,12 @@ window.TOURBIERE_SPECIES = [
     water: "tray",
     waterNote: "Bac 1–2 cm toute l’année. Capensis pardonne un oubli, pas l’eau calcaire.",
     substrate: "Tourbe blonde + perlite 50/50. Se ressème partout : un bac dédié évite l’invasion.",
-    fertilizer: "Foliar Maxsea ¼ 1×/mois, ou rien si les sciarides circulent. C’est la plante la plus autonome de la tente.",
+    fertilizer: "Foliar 0,3 g/L 1×/mois, ou rien si les sciarides circulent. C’est la plante la plus autonome de la tente.",
     tentTips:
       "Étage médian, 20–30 cm sous COP4065, ou COP2065 dédiée. Parfaite plante « comble-trou » d’une tente mixte. Spatulata et aliciae restent en rosette : elles tiennent au premier plan, 15–20 cm.",
     traps: "Mucilage = indicateur de santé. Si les gouttes disparaissent : air trop sec, lumière trop faible, ou eau trop riche.",
     seedlingNotes:
-      "Pas de cold strat. Surface, 20–24 °C, 14 h, 150–250 µmol. Levée en 7–21 jours. Éclaircir tôt : capensis étouffe ses voisines.",
+      "Pas de cold strat. Surface, 20–24 °C, 14 h, 150–250 µmol. Levée 7–21 jours. Graines fraîches germent en tapis : éclaircir tôt, capensis étouffe ses voisines et les Sarracenia.",
     cuttingNotes:
       "Leaf pulling facile. Tige de capensis : bouture de hampe florale ou de feuille. Racines en 2–4 semaines.",
     redColorNotes:
@@ -212,12 +212,12 @@ window.TOURBIERE_SPECIES = [
     waterNote:
       "Humide en saison de croissance, jamais un marais stagnant en été chaud. Gemmae : surface juste humide, pas de bac profond.",
     substrate: "Tourbe + sable siliceux 30/70 ou 40/60, pots bas. Un peu de perlite. Drainage franc.",
-    fertilizer: "Foliar Maxsea ¼ très dilué, 1×/mois max. Les gemmae n’aiment pas le sel.",
+    fertilizer: "Foliar 0,3 g/L très dilué, 1×/mois max. Les gemmae n’aiment pas le sel. Rien pendant la saison chaude sèche.",
     tentTips:
       "Premier plan, 15–20 cm sous COP2065 ou COP4065. Elles tiennent dans 3 cm de hauteur : une tablette basse dédiée évite qu’on les oublie sous les urnes. Air sec-modéré, pas de brumisation lourde.",
     traps: "Mucilage fin. Micro-proies (collemboles, sciarides). Rien de plus.",
     seedlingNotes:
-      "On sème rarement : on sème les gemmae (mars–juin hémisphère nord indoor, selon cycle). Gemmae en surface, lumière, 15–22 °C. Levée en 1–3 semaines. Graines : parfois fumée / GA-3 — hors protocole débutant.",
+      "On sème rarement des graines : on sème les gemmae (fin d’hiver–printemps indoor, selon cycle). Gemmae en surface, mix minéral juste humide, 15–22 °C, 12 h. Levée 1–3 semaines. Graines dures : fumée de prairie ou GA-3 1000 ppm 24 h — lot dédié, pas le germoir Sarracenia.",
     cuttingNotes: "Gemmae = bouture naturelle. Pas de leaf pulling classique.",
     redColorNotes: "PPFD élevé + nuits fraîches = rosettes compactes et rouges. Trop d’HR et trop peu de lumière = étiolement vert, gemmae molles.",
     warnings: [
@@ -246,13 +246,13 @@ window.TOURBIERE_SPECIES = [
       "Substrat humide, jamais détrempé en continu. Vaporiser l’eau RO sur le mix, pas un bac d’eau type Sarracenia. Ampullaria tolère plus d’eau que bicalcarata.",
     substrate: "Sphaigne longue fibre + écorce d’orchidée + perlite (≈ 40/40/20), panier aéré. Jamais tourbe compacte seule.",
     fertilizer:
-      "Foliar / mix Maxsea ¼ 1×/mois, ou engrais orchidée ¼ de dose sur le substrat 1×/mois. Option : 1 bille d’Osmocote dans une urne mature, pas dans chaque urne. Jamais de terreau horticole.",
+      "Foliar / mix 0,3 g/L 1×/mois (orchidée ou Rain Mix), ou 1 bille d’Osmocote dans une urne mature — un seul mode. Jamais de terreau horticole, jamais de bac type Sarracenia.",
     tentTips:
       "Étage bas : la lumière y tombe à 60–120 µmol sous des COP4065 tendues en haut — c’est la fenêtre lowland. Sinon COP2065 à 30–40 cm. Extraire + hygro 60–80 %. Nuits chaudes (pas de drop 12 °C).",
     traps:
       "1–2 proies par urne et par mois, ou 1 bille Osmocote, ou un soupçon d’engrais orchidée dilué dans l’urne (quelques ml, jamais plein). Urnes vides trop longtemps + fort PPFD = plante qui « photosynthétise » au détriment du piégeage (Carnivero).",
     seedlingNotes:
-      "Graines récalcitrantes, semer fraîches sur sphaigne, 26–30 °C, HR 90 %, lumière douce 40–80 µmol. In-vitro souvent plus réaliste que le semis amateur.",
+      "Graines récalcitrantes : semer dans la semaine, sphaigne, 26–30 °C, HR 90 %, 40–80 µmol. Après 1–2 mois au tiède, le taux s’effondre. In-vitro reste plus réaliste qu’un semis amateur sur un lot de voyage.",
     cuttingNotes:
       "Bouture de tige 1–2 nœuds, sphaigne pure, HR 90–100 % (sac ou dôme), 24–28 °C, lumière douce 40–80 µmol (COP2065 à 30–40 cm ou COP4065 à 40–50 cm). Racines en 4–10 semaines. Ne pas coller la barre : brûlure + pourriture.",
     redColorNotes:
@@ -266,13 +266,13 @@ window.TOURBIERE_SPECIES = [
   },
   {
     id: "nepenthes-highland",
-    latin: "Nepenthes (ventricosa, alata, rajah, hamata, lowii… et hybrides highland)",
+    latin: "Nepenthes (ventricosa, alata, rajah, hamata, lowii… et hybrides highland / intermédiaires)",
     common: "Nepenthes de haute altitude",
     family: "Nepenthaceae",
     climate: "tropical-highland",
     dormancy: "none",
     dormancyNote:
-      "Pas de dormance. Elles veulent un écart jour/nuit : 8–12 °C de drop. Sans nuits fraîches, les hamata / lowii / rajah stagnent ; ventricosa et les hybrides « easy » pardonnent.",
+      "Pas de dormance. Écart jour/nuit 8–12 °C. Sans nuits fraîches, hamata / lowii / rajah stagnent. Ventricosa, alata et la plupart des hybrides « easy » sont des intermédiaires : elles pardonnent une tente mixte, ce ne sont pas de vraies highland de crête.",
     ppfd: [50, 100, 200],
     dli: [2.2, 4.7, 10.1],
     photoperiodGrow: 13,
@@ -284,7 +284,7 @@ window.TOURBIERE_SPECIES = [
     waterNote: "Comme les lowland : humide, aéré, jamais marécage. Eau froide (RO) le soir aide le drop nocturne.",
     substrate: "Sphaigne LFS + écorce + perlite, éventuellement charbon horti. Pots aérés, rempotage dès que la sphaigne s’effondre.",
     fertilizer:
-      "Plus prudentes que les lowland. Foliar Maxsea ¼ 1×/mois, ou orchidée ¼. Osmocote : 1 bille dans une urne, rarement. Racinaire très dilué seulement si le mix est lessivé.",
+      "Plus prudentes que les lowland. Foliar 0,3 g/L 1×/mois. Osmocote : 1 bille dans une urne, rarement. Percolation très diluée seulement si le mix est lessivé.",
     tentTips:
       "Étage médian-bas, 25–40 cm sous COP4065, ou COP20FS en appoint doux. Le drop nocturne se joue à l’extracteur + pièce fraîche, pas à la LED. Éviter le plafond chaud des Sarracenia.",
     traps: "Même logique que lowland. Urnes inférieures d’abord ; les supérieures viennent avec la maturité et une HR stable.",
@@ -318,7 +318,7 @@ window.TOURBIERE_SPECIES = [
     water: "moist",
     waterNote: "Humide en croissance, jamais un lac. En hibernacle : à peine humide. Eau très pauvre.",
     substrate: "Tourbe + sable siliceux 50/50, pots bas. Un peu de perlite. Éviter la sphaigne trop riche qui noie le collet.",
-    fertilizer: "Foliar Maxsea ¼ 1×/mois en feuilles d’été. Rien en hibernacle. Les feuilles collantes pêchent seules.",
+    fertilizer: "Foliar 0,3 g/L 1×/mois en feuilles d’été. Rien en hibernacle. Les feuilles collantes pêchent seules.",
     tentTips:
       "Étage médian, 20–30 cm sous COP2065. Elles n’aiment ni le four des dressées ni la jungle des Nepenthes. Bonne candidate d’étage mixte « frais ».",
     traps: "Feuilles gluantes : sciarides, collemboles. Pas de viande. Ne pas vaporiser d’engrais concentré qui « lave » le mucilage.",
@@ -352,8 +352,8 @@ window.TOURBIERE_SPECIES = [
     waterNote:
       "Arrosage par le bas, laisser sécher la surface entre deux. En feuilles d’hiver : encore plus sec. L’eau stagnante = pourriture du collet, cause n°1.",
     substrate:
-      "Mix minéral : perlite + vermiculite + un peu de tourbe ou sphaigne hachée (ex. 40/40/20), ou mix « mexi » sable + pouzzolane + tourbe. Pots bas, très drainants.",
-    fertilizer: "Foliar Maxsea ¼ 1×/mois sur feuilles carnivores seulement. Rien sur les feuilles d’hiver.",
+      "Mix minéral : perlite + vermiculite + un peu de tourbe ou sphaigne hachée (ex. 40/40/20), ou sable + pouzzolane + tourbe. Gypsicola / gypsophiles : encore plus minéral (gypse horti possible, jamais de calcaire). Pots bas, très drainants.",
+    fertilizer: "Foliar 0,3 g/L 1×/mois sur feuilles carnivores seulement. Rien sur les feuilles d’hiver succulentes.",
     tentTips:
       "Étage bas-médian, 25–40 cm sous COP4065, ou COP2065 à 25 cm. Elles grillent et se recroquevillent au-delà de ~180–200 µmol. Air plutôt sec, bon extracteur.",
     traps: "Mucilage : micro-proies. Un foliar léger remplace les proies. Pas de « nourrissage » à la pince sur ces feuilles fragiles.",
@@ -387,7 +387,7 @@ window.TOURBIERE_SPECIES = [
     water: "wet",
     waterNote: "Aiment le gorgé d’eau. Bac 1–2 cm. Eau pauvre, sinon algues sur le tapis.",
     substrate: "Tourbe blonde + sable 50/50, couche fine. Se mélangent aux Drosera : bac commun possible.",
-    fertilizer: "Très peu. Foliar Maxsea ¼ 1×/6 semaines max. Les utricules du substrat pêchent les infusoires.",
+    fertilizer: "Très peu. Foliar 0,3 g/L 1×/6 semaines max. Les utricules du substrat pêchent les infusoires.",
     tentTips:
       "Premier plan, 20–30 cm sous Cosmorrow. Sandersonii fleurit bien à 150–200 µmol. Trop fort = tapis jaunissant.",
     traps: "Utricules souterrains : pas de nourrissage à la pince. Un substrat vivant (microfaune) suffit.",
@@ -418,7 +418,7 @@ window.TOURBIERE_SPECIES = [
     water: "moist",
     waterNote: "Sphaigne toujours humide, jamais desséchée. Vaporisations fréquentes à l’eau RO. Pas de bac d’eau stagnant au collet.",
     substrate: "Sphaigne longue fibre, panier d’orchidée ou plaque. Parfois mix sphaigne + écorce.",
-    fertilizer: "Orchidée ¼ ou Maxsea ¼ foliar 1×/mois. Très dilué. Les utricules sont dans le mix, pas en l’air.",
+    fertilizer: "Orchidée 0,3 g/L foliar 1×/mois. Très dilué. Les utricules sont dans le mix, pas en l’air.",
     tentTips:
       "Étage bas tropical, à côté des Nepenthes, COP2065 à 30–40 cm. Humidificateur + extracteur. Longifolia tolère un peu plus de lumière qu’alpina.",
     traps: "Comme les terrestres : pas de piège aérien à nourrir.",
@@ -439,7 +439,7 @@ window.TOURBIERE_SPECIES = [
     climate: "mediterranean",
     dormancy: "optional",
     dormancyNote:
-      "Pas de dormance froide obligatoire. Un été australien chaud et un hiver doux : en tente, croissance continue avec un palier plus frais (12–16 °C) en « hiver » aide. La chaleur lourde (> 28–30 °C au collet) est plus dangereuse que le manque de froid.",
+      "Pas de dormance froide obligatoire. Méditerranéen australien : hiver doux, été chaud mais collet aéré. En tente, palier 12–16 °C l’« hiver » aide. La chaleur lourde (> 28 °C au collet) + mix saturé tue plus vite que le manque de froid. Ce n’est pas une Nepenthes lowland.",
     ppfd: [45, 120, 300],
     dli: [1.9, 5.6, 15.1],
     photoperiodGrow: 13,
@@ -452,9 +452,9 @@ window.TOURBIERE_SPECIES = [
       "Humide, jamais détrempé. Bac d’eau occasionnel par forte chaleur, pas en continu. Laisser légèrement ressuyer. Eau pauvre.",
     substrate: "Tourbe + perlite + sable siliceux 40/40/20, ou sphaigne + perlite. Pots profonds, collet aéré. Déteste le compactage.",
     fertilizer:
-      "Foliar Maxsea ¼ 1×/mois, ou 1 petite proie par urne. Très sensible à l’excès racinaire. Pas d’Osmocote dans toutes les urnes.",
+      "Foliar 0,3 g/L 1×/mois, ou 1 petite proie par urne. Très sensible à l’excès racinaire. Pas d’Osmocote. Pas de régime lowland (30 °C / 90 % HR).",
     tentTips:
-      "Étage médian, 20–30 cm sous COP4065, viser 120 µmol. Extracteur indispensable : Cephalotus pourrit dans une jungle saturée et chaude. Nuits fraîches bienvenues.",
+      "Étage médian-frais, 20–30 cm sous COP4065, viser 120 µmol. Extracteur : Cephalotus pourrit dans une jungle saturée et chaude. Nuits 12–16 °C. Ne pas la coller aux true lowland (bicalcarata, ampullaria) dans 1 m³ à 28 °C.",
     traps:
       "Urnes à opercule : 1 petite proie / mois dans 1–2 urnes. Les feuilles plates (phyllodes) apparaissent si lumière insuffisante ou après stress — ce n’est pas grave, on corrige le DLI.",
     seedlingNotes:
@@ -465,7 +465,7 @@ window.TOURBIERE_SPECIES = [
       "Urnes bordeaux = DLI + nuits fraîches + génotype. Growing 6500 K à 150–200 µmol colore. Au-delà, brûlure de l’opercule.",
     warnings: [
       "Pourriture du collet : ennemi n°1 (chaleur + eau + nulle aération).",
-      "Ne pas la cultiver en lowland Nepenthes.",
+      "Ne pas la cultiver en lowland Nepenthes : régime highland-cool, pas jungle 30 °C.",
     ],
     projects: ["production", "coloring", "mixed", "tropical"],
   },
@@ -489,7 +489,7 @@ window.TOURBIERE_SPECIES = [
       "Sphaigne toujours humide, eau RO. Un peu d’eau dans l’urne (comme en nature) : eau pauvre uniquement. Pas de bac type Sarracenia si le mix étouffe.",
     substrate: "Sphaigne longue fibre vivante de préférence, panier aéré. Parfois perlite. Rempoter dès que la sphaigne s’affaisse.",
     fertilizer:
-      "Foliar Maxsea ¼ 1×/mois, ou très peu d’engrais orchidée. 1 petite proie par urne de temps en temps. Racinaire : prudence, algues dans la sphaigne.",
+      "Foliar 0,3 g/L 1×/mois, ou très peu d’engrais orchidée. 1 petite proie par urne de temps en temps. Racinaire : prudence, algues dans la sphaigne.",
     tentTips:
       "Tente tropicale highland dédiée, ou étage frais. COP4065 à 20–30 cm pour viser 200 µmol (Carnivero bas-milieu ; leurs photos P85 montent à 500–600 sur des adultes — on n’y va pas d’emblée). Extracteur + hygro. Minor est la plus simple en tente.",
     traps:
@@ -523,8 +523,8 @@ window.TOURBIERE_SPECIES = [
     water: "wet",
     waterNote:
       "Eau froide, courante si possible (réservoir + petite pompe, ou arrosages fréquents à l’eau RO fraîche). Bac d’eau, mais le pot ne doit pas cuire. TDS < 50 ppm, non négociable.",
-    substrate: "Sphaigne longue fibre + perlite, pots profonds / tubes. Racines longues, hates la compaction et la chaleur de fond.",
-    fertilizer: "Plutôt proies et foliar très dilué. Racinaire déconseillé. Plante exigeante : on nourrit peu, on soigne l’eau et le froid racinaire.",
+    substrate: "Sphaigne longue fibre + perlite, pots profonds / tubes (racines longues qui veulent du froid). L’inverse des Sarracenia : ici la profondeur sert.",
+    fertilizer: "Proies et foliar 0,3 g/L, rarement. Racinaire déconseillé. Plante exigeante : on soigne l’eau froide et le fond de pot, on ne « booste » pas.",
     tentTips:
       "Mal adaptée à une tente chaude Cosmorrow sans gestion du fond de pot. Si tu tentes : étage avec extracteur fort, pots sur clayette, eau froide, COP4065 à 20–25 cm (cible 180 µmol, pas 400). Une cave fraîche + LED bat une tente 28 °C.",
     traps: "Urnes à opercule recourbé : quelques proies par saison. Ne pas verser d’engrais dans l’urne.",
@@ -559,12 +559,12 @@ window.TOURBIERE_SPECIES = [
     waterNote:
       "Jamais de bac d’eau. Arrosage par le bas, laisser sécher nettement entre deux. L’excès d’eau est l’échec n°1. Eau RO uniquement.",
     substrate: "Sable siliceux + un peu de tourbe (70/30) ou terre de bruyère non fertilisée + sable. Pots terre cuite profonds. On sème en place : déteste le rempotage.",
-    fertilizer: "Foliar Maxsea ¼ 1×/mois. Proies volantes. Pas de racinaire.",
+    fertilizer: "Foliar 0,3 g/L 1×/mois. Proies volantes. Pas de racinaire, pas de rempotage « pour voir ».",
     tentTips:
       "Tente sèche, extracteur fort, COP4065 à 15–20 cm (cible 250 µmol). Incompatible avec l’étage Nepenthes. Plutôt une étagère dédiée, HR 40–50 %.",
     traps: "Feuilles gluantes type Drosera géante. Mouches, mites. Mucilage abondant = plante à l’aise.",
     seedlingNotes:
-      "Semer en place dans le pot définitif. Graines dures : scarification ou 24 h d’eau. 20 °C, lumière forte d’emblée (200 µmol). Pas de transplant.",
+      "Semer en place dans le pot définitif. Graines dures : scarification au papier ou 24–48 h d’eau tiède. 20 °C, lumière forte d’emblée (200 µmol). Pas de transplant. Lots de l’année.",
     cuttingNotes: "Pas de bouture utile. Semis uniquement.",
     redColorNotes: "Peu de rouge anthocyanique spectaculaire. Le spectacle c’est le mucilage au soleil / LED froide.",
     warnings: [
@@ -594,12 +594,12 @@ window.TOURBIERE_SPECIES = [
     waterNote:
       "Annuelles : humide à très humide en croissance, comme un Drosera tropical. Pérennes : plus sec en « été ». Eau pauvre.",
     substrate: "Tourbe + sable siliceux 40/60, pots profonds. Liniflora se contente d’un 50/50 tourbe-perlite.",
-    fertilizer: "Foliar Maxsea ¼ 1–2×/mois : Byblis répond très bien au foliar (croissance rapide). Proies collées au mucilage.",
+    fertilizer: "Foliar 0,3 g/L 1–2×/mois : Byblis liniflora répond très bien (croissance annuelle rapide). Proies collées au mucilage.",
     tentTips:
       "Étage médian-haut, 15–25 cm sous COP4065. Liniflora est une excellente plante de tente mixte / tropicale. Tiges grêles : tuteur ou densité pour qu’elles se tiennent.",
     traps: "Mucilage dense. Sciarides et drosophiles. Foliar en appoint. Pas de viande.",
     seedlingNotes:
-      "Liniflora : surface, 24–28 °C, 14 h, 150–250 µmol, levée rapide (1–3 semaines). Gigantea / lamellata : fumée de prairie ou GA-3 souvent nécessaires — protocole à part, pas le germoir Sarracenia.",
+      "Liniflora : surface, 24–28 °C, 14 h, 150–250 µmol, levée 1–3 semaines, graines de l’année. Gigantea / lamellata : fumée de prairie (smoke water) ou GA-3 1000 ppm 24 h, mix minéral, pas le germoir Sarracenia — lot dédié, confinement.",
     cuttingNotes: "Bouture de tige possible chez liniflora, moins classique que le semis. Pérennes : délicat.",
     redColorNotes: "Le « rainbow » est la diffraction du mucilage, pas un pigment rouge. PPFD haut = tiges courtes et gluantes.",
     warnings: [

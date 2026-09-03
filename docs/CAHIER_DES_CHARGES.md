@@ -20,7 +20,7 @@ Public : smartphone en rayon growshop autant que bureau. FR d’abord, unités m
 | « Quelle barre, combien, quelle alim ? » | Catalogue Cosmorrow + kits par tente et par projet |
 | « Mes plantes étirent / grillent / ne colorent pas » | Diagnostic + cibles PPFD par genre |
 | « Semis, boutures, adultes, dormance » | Protocoles dédiés, pas un seul curseur |
-| « Quelle eau, quel terreau, quel engrais ? » | Fiches nutriments (RO, tourbe, Maxsea ¼) |
+| « Quelle eau, quel terreau, quel engrais ? » | Fiches nutriments (RO, tourbe non amendée, foliar 0,3 g/L) |
 | « Combien ça coûte en électricité ? » | Calculateur kWh / an (tarif FR paramétrable) |
 | « Comment accrocher sans se tromper ? » | Plan de pose + checklist montage |
 | « Je suis dans le métro, j’ai 3 minutes » | Mobile-first, cartes, checklists, mémorisation locale |
@@ -55,7 +55,7 @@ Public : smartphone en rayon growshop autant que bureau. FR d’abord, unités m
 7. Nutriments — eau, substrats, engrais, alimentation
 8. Outils — PPFD/DLI, électricité, hauteur
 9. Diagnostic — arbre de décisions
-10. À propos / sources — Carnivero PPFD, fiche COP 2023-09, Maxsea/California Carnivores
+10. À propos / sources — Carnivero PPFD, fiche COP 2023-09, foliar 0,3 g/L (orchidée FR/BE, Maxsea US)
 
 ## 6. Données Cosmorrow (source constructeur 2023-09)
 

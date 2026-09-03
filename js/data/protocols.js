@@ -8,7 +8,7 @@ window.TOURBIERE_PROTOCOLS = [
     title: "Germoir — semis Sarracenia, Drosera, Dionaea",
     kicker: "14 h · 15–20 cm · 150–250 µmol",
     summary:
-      "Un étage plat, deux bacs 60×40, barres Cosmorrow Growing 6500 K à 15–20 cm du terreau. On vise le bas de fourchette adulte : assez pour des plantules trapues, pas assez pour griller un cotylédon. Cold strat pour les tempérées, surface, eau pauvre, patience.",
+      "Un étage plat, deux bacs 60×40, barres Cosmorrow Growing 6500 K à 15–20 cm du terreau. On vise le bas de fourchette adulte : assez pour des plantules trapues, pas assez pour griller un cotylédon. Mix ébouillanté, cold strat pour les tempérées, surface, eau pauvre, graines de l’année.",
     duration: "8–16 semaines jusqu’au premier repiquage ; 2–4 ans jusqu’à un adulte Sarracenia",
     difficulty: 2,
     climate: "20–24 °C jour, 16–20 °C nuit. HR 60–80 % sous dôme les 2 premières semaines, puis aérer. Pas de 30 °C au terreau.",
@@ -21,33 +21,35 @@ window.TOURBIERE_PROTOCOLS = [
     water:
       "Eau RO / pluie / distillée / ZeroWater, TDS < 50 ppm. Brita insuffisant. Bac 0,5–1 cm ou vaporisation pour ne pas déplacer les graines. Jamais d’eau du robinet « pour voir ».",
     substrate:
-      "Tourbe blonde + perlite 50/50, tamisée, nivelée, jamais compressée à mort. Pas de terreau horticole, pas de « special semis » fertilisé. Option : fine couche de sphaigne hachée en surface pour Drosera.",
+      "Tourbe blonde de sphaigne non amendée + perlite 50/50, tamisée, ébouillantée à l’eau RO, refroidie 24 h, nivelée, jamais compressée. Pas de terreau « special semis » fertilisé, pas de sphaigne vivante en tapis (elle étouffe les cotylédons). Option : fine couche de sphaigne hachée morte pour Drosera.",
     fertilizer:
-      "Rien jusqu’aux 4–6 vraies feuilles. Ensuite foliar Maxsea 16-16-16 ¼ c. à café / gallon (≈ 0,3 g/L) 1×/mois, brumisation légère. Jamais Miracle-Gro.",
+      "Rien jusqu’aux 4–6 vraies feuilles. Ensuite foliar 0,3 g/L (orchidée ¼ ou Maxsea) 1×/mois, brumisation légère. Jamais Miracle-Gro, jamais d’engrais dans le bac.",
     steps: [
       {
         title: "Trier les lots et la cold strat",
-        body: "Sarracenia, Dionaea, Drosera tempérées (rotundifolia, intermedia, filiformis) : 4–8 semaines au frigo (4 °C) dans un sachet de papier ou de tourbe juste humide. Capensis, spatulata, aliciae, Byblis liniflora : pas de froid, semis direct. Note le nom et la date au crayon : dans 6 semaines tu ne sauras plus.",
+        body: "Sarracenia, Dionaea, Drosera tempérées (rotundifolia, intermedia, filiformis) : 4–8 semaines au frigo (4 °C) dans un sachet de papier ou de tourbe juste humide — pas un Tupperware étanche qui moisit. Capensis, spatulata, aliciae, Byblis liniflora : pas de froid, semis direct. Graines de Sarracenia / Dionaea : l’année de récolte. Note le nom et la date au crayon.",
         checklist: [
-          "Lots tempérés au frigo, datés",
+          "Lots tempérés au frigo, datés, pas hermétiques",
           "Lots tropicaux à température, prêts à semer",
+          "Sarracenia / Dionaea : lot de l’année (viabilité)",
           "Pas de congélateur (sauf protocole graine très spécifique, hors germoir standard)",
         ],
       },
       {
         title: "Préparer les bacs",
-        body: "Bacs 60×40 transparents ou noirs, trous de drainage, soucoupe. Mix tourbe/perlite rincé à l’eau RO jusqu’à ce que l’eau qui sort soit claire. Niveau : 4–6 cm. Surface lissée, pas damée. Étiquettes crayon (l’encre coule).",
+        body: "Bacs 60×40 transparents ou noirs, trous de drainage, soucoupe. Mix tourbe/perlite rincé à l’eau RO, puis ébouillanté (eau RO frémissante, laisser 24 h). Niveau : 4–6 cm. Surface lissée, pas damée. Étiquettes crayon (l’encre coule).",
         checklist: [
-          "Mix rincé, TDS de l’eau de rinçage < 50 ppm",
-          "Étiquettes latin + date",
+          "Mix rincé + ébouillanté, TDS < 50 ppm",
+          "Étiquettes latin + date + origine du lot",
           "Dôme ou sac pour la levée, déjà à portée",
         ],
       },
       {
         title: "Semer en surface",
-        body: "Les graines de carnivores sont photoblastiques ou trop fines pour l’enfouissement. On sème à la surface, on plaque d’un geste, on vaporise. Sarracenia : graines un peu plus grosses, on peut les enfoncer de l’épaisseur de la graine, pas plus. Densité : mieux vaut clair que un tapis qui fonte.",
+        body: "Les graines de carnivores sont photoblastiques ou trop fines pour l’enfouissement. Surface, on plaque, on vaporise. Sarracenia : à peine l’épaisseur de la graine, pas 5 mm. Densité : 1 graine / cm² max, mieux trop clair qu’un tapis qui fonte. Pas de sphaigne vivante par-dessus.",
         checklist: [
           "Aucune graine enterrée sous 5 mm",
+          "Densité claire, pas un tapis",
           "Vaporisation RO, pas un jet",
           "Dôme posé 10–14 jours, aéré 5 min / jour",
         ],
@@ -68,6 +70,7 @@ window.TOURBIERE_PROTOCOLS = [
           "Dôme retiré progressivement",
           "Plantules trapues, pas filiformes",
           "Pas de foliar avant 4–6 feuilles",
+          "Sciarides : surface qui ressuye, pièges jaunes — voir diagnostic",
         ],
       },
       {
@@ -84,7 +87,7 @@ window.TOURBIERE_PROTOCOLS = [
       "Hypocotyles > 1 cm filiformes : PPFD trop bas ou dôme trop longtemps — descendre la barre.",
       "Terreau vert fluo + plantules translucides : trop d’eau / trop de lumière / trop peu d’air.",
       "Fonte des semis (tiges cernées) : trop chaud + trop humide — aérer, jeter les foyers, ne pas « sauver » au fongicide maison.",
-      "Aucune levée à 8 semaines sur lot stratifié : tester un témoin à 20 °C hors frigo, vérifier la date du lot.",
+      "Aucune levée à 8 semaines sur lot stratifié : tester un témoin à 20 °C hors frigo, vérifier la date du lot (Sarracenia > 12 mois = souvent mort).",
     ],
     next: ["cutting", "production", "dormancy"],
   },
@@ -107,7 +110,7 @@ window.TOURBIERE_PROTOCOLS = [
       "Sphaigne essorée, pas dégouttante. Eau RO uniquement. Le dôme condense : si les parois ruissellent en continu, on ouvre plus longtemps.",
     substrate:
       "Nepenthes : sphaigne longue fibre pure, ou LFS + perlite. Dionaea / Drosera : tourbe/perlite ou sphaigne hachée. Pinguicula mexicaine : mix minéral à peine humide, jamais sphaigne gorgée.",
-    fertilizer: "Rien tant qu’il n’y a pas de racines. Puis Maxsea ¼ ½ dose (⅛ c. à café / gallon) 1×, ensuite protocole adulte.",
+    fertilizer: "Rien tant qu’il n’y a pas de racines. Puis foliar 0,15 g/L une fois (moitié de 0,3), ensuite protocole adulte.",
     steps: [
       {
         title: "Bouture Nepenthes — le bois",
@@ -175,7 +178,7 @@ window.TOURBIERE_PROTOCOLS = [
   {
     id: "production",
     title: "Production d’adultes",
-    kicker: "Photons stables · pots justes · Foliar ¼",
+    kicker: "Photons stables · pots larges · 0,3 g/L",
     summary:
       "La tente n’est plus un germoir : on donne de la hauteur aux urnes, de la place aux rhizomes, un PPFD dans le bas-milieu Carnivero, et un rythme de nourriture / foliar. Cosmorrow Growing en plafond, FS seulement si tu manques de DLI sans vouloir descendre les barres.",
     duration: "Saison de croissance 7–8 mois (tempérées) ou continu (tropicales)",
@@ -191,9 +194,9 @@ window.TOURBIERE_PROTOCOLS = [
     water:
       "Tempérées : bac 1–3 cm, eau RO, on laisse parfois le bac presque à sec 24 h. Tropicales : mix humide, pas de lac. Toujours TDS < 50 ppm.",
     substrate:
-      "Tourbe/perlite 50/50 pour le groupe tourbière. LFS + écorce + perlite pour Nepenthes. Pots : 8–12 cm Dionaea, 2–3 L Sarracenia adulte, paniers aérés Nepenthes.",
+      "Tourbe/perlite 50/50 non amendée pour le groupe tourbière. LFS + écorce + perlite pour Nepenthes. Pots : 8–10 cm Dionaea (un peu à l’étroit), 2–3 L larges Sarracenia adulte (rhizome horizontal), paniers aérés Nepenthes. Darlingtonia seule a besoin d’un tube profond.",
     fertilizer:
-      "Maxsea 16-16-16 ¼ c. à café / gallon, foliar, 1–2×/mois, feuillage sec, matin. Proies 1–2×/mois. Jamais de terreau fertilisé, jamais Miracle-Gro. Racinaire = algues, on s’en passe.",
+      "Foliar 0,3 g/L (orchidée ¼ ou Maxsea), 1–2×/mois, feuillage sec, matin. Proies 1–2×/mois. Un seul NPK. Jamais de terreau fertilisé, jamais Miracle-Gro, jamais d’engrais dans le bac. Racinaire = algues.",
     steps: [
       {
         title: "Installer le plafond Cosmorrow",
@@ -209,7 +212,7 @@ window.TOURBIERE_PROTOCOLS = [
         body: "Fin d’hiver / débourrement pour les tempérées ; n’importe quand hors canicule pour les tropicales. Rhizome Sarracenia à fleur de mix, point de croissance libre. Dionaea : ne pas enterrer le collet. Nepenthes : collet au niveau, mix aéré, pas de tourbe brique.",
         checklist: [
           "Mix non fertilisé, rincé",
-          "Pots à la taille des racines, pas « pour plus tard » de 10 L",
+          "Pots à la taille des racines : larges pour Sarracenia, pas « 10 L pour plus tard »",
           "Eau RO dès le premier arrosage",
         ],
       },
@@ -224,9 +227,9 @@ window.TOURBIERE_PROTOCOLS = [
       },
       {
         title: "Nourrir sans gaver",
-        body: "Adamec 1997 : le foliar et les proies stimulent aussi l’absorption racinaire. 1–2 repas / mois ou un foliar Maxsea ¼, pas les deux tous les 3 jours. Pièges Dionaea : 1 insecte, 1–2 pièges. Urnes : 1–2 proies ou 1 bille Osmocote optionnelle (Nepenthes).",
+        body: "Adamec 1997 : le foliar et les proies stimulent aussi l’absorption racinaire. 1–2 repas / mois ou un foliar 0,3 g/L, pas les deux tous les 3 jours. Pièges Dionaea : 1 insecte, 1–2 pièges. Urnes Nepenthes : 1–2 proies ou 1 bille Osmocote — pas les Sarracenia.",
         checklist: [
-          "Calendrier foliar 1–2×/mois",
+          "Calendrier foliar 1–2×/mois, 0,3 g/L pesé",
           "Pas de viande hachée",
           "Pas d’engrais dans le bac d’eau",
         ],
@@ -266,7 +269,7 @@ window.TOURBIERE_PROTOCOLS = [
     water: "Inchangé : eau pauvre. Un léger ressuyage (pas un séchage de cactus) peut intensifier les pigments chez Drosera et Sarracenia basses — on reste prudent.",
     substrate: "Le mix ne colore pas. Un pot trop gros et trop humide dilue la croissance : on reste dans des volumes justes.",
     fertilizer:
-      "Un foliar régulier ¼ aide le métabolisme (Carnivero : plus de lumière = plus de besoin de nutriments via pièges). Une carence affadit. Un excès fait du vert mou. On ne « stresse à l’azote zéro ».",
+      "Un foliar régulier 0,3 g/L aide le métabolisme (Carnivero : plus de lumière = plus de besoin via les pièges). Une carence affadit. Un excès fait du vert mou. On ne « stresse à l’azote zéro ».",
     steps: [
       {
         title: "Trier le génotype",
@@ -296,7 +299,7 @@ window.TOURBIERE_PROTOCOLS = [
       },
       {
         title: "Nourrir le métabolisme",
-        body: "À 300 µmol, une Sarracenia qui ne mange jamais jaunit mal, elle ne « rougit pas mieux ». Foliar Maxsea ¼ 2×/mois ou proies. Observer mucilage, nectar, fermeté des urnes : la couleur sans vigueur n’est pas un succès.",
+        body: "À 300 µmol, une Sarracenia qui ne mange jamais jaunit mal, elle ne « rougit pas mieux ». Foliar 0,3 g/L 2×/mois ou proies. Observer mucilage, nectar, fermeté des urnes : la couleur sans vigueur n’est pas un succès.",
         checklist: [
           "Foliar ou proies tenus",
           "Pas d’engrais racinaire « pour rougir »",
@@ -337,7 +340,7 @@ window.TOURBIERE_PROTOCOLS = [
     water:
       "Deux régimes. Haut : soucoupes / bac. Bas : arrosage à la pompe, jamais le trop-plein des Sarracenia qui ruisselle dans les Nepenthes (sel, tourbe, algues).",
     substrate: "Chaque genre son mix. Pas de « terreau universel carnivore » du commerce fertilisé. Étiqueter les pots : à 23 h sous LED, tout se ressemble.",
-    fertilizer: "Foliar par étage, Maxsea ¼. On ne vaporise pas les Pinguicula mexicaines le même jour à la même dose que les Sarracenia si elles sont en feuilles d’hiver.",
+    fertilizer: "Foliar par étage, 0,3 g/L. On ne vaporise pas les Pinguicula mexicaines le même jour à la même dose que les Sarracenia si elles sont en feuilles d’hiver.",
     steps: [
       {
         title: "Poser la tablette",
@@ -394,11 +397,11 @@ window.TOURBIERE_PROTOCOLS = [
     title: "Chambre tropicale",
     kicker: "Extracteur · HR 60–80 % · pas de dormance",
     summary:
-      "Nepenthes, Heliamphora, Cephalotus, Drosera capensis, Byblis liniflora, Utricularia épiphytes : croissance continue, 12–14 h, jamais 5 °C. L’extracteur n’est pas un luxe : c’est ce qui empêche botrytis et collet mou. Cosmorrow Growing en doux, PPFD bas-milieu Carnivero (80–200 selon genre), sphaigne aérée.",
+      "Nepenthes, Heliamphora, Drosera capensis, Byblis liniflora, Utricularia épiphytes : croissance continue, 12–14 h, jamais 5 °C. Cephalotus n’est pas une lowland : étage frais, collet aéré, pas 30 °C / 90 % HR. L’extracteur empêche botrytis et collet mou. Cosmorrow Growing en doux, PPFD bas-milieu Carnivero.",
     duration: "Année complète ; palier d’acclimatation 2–3 semaines pour les nouvelles",
     difficulty: 2,
     climate:
-      "Lowland : 26–32 °C jour, 20–25 °C nuit, HR 70–85 %. Highland / Heliamphora / Cephalotus : 20–26 °C jour, 10–16 °C nuit, HR 65–85 %. On choisit UN régime par tente. HR 60–80 % est le corridor utile ; 100 % fermé sans air est un piège.",
+      "Lowland : 26–32 °C jour, 20–25 °C nuit, HR 70–85 %. Highland / Heliamphora : 20–26 °C jour, 10–16 °C nuit, HR 65–85 %. Cephalotus : plutôt le second, jamais le premier. On choisit UN régime par tente. HR 60–80 % utile ; 100 % fermé sans air est un piège.",
     light: {
       sku: "2 × COP4065 en plafond pour une tente haute, ou 2–4 × COP2065 sur étagères. COP20FS possible en appoint highland",
       height: "25–40 cm des têtes Nepenthes / Heliamphora ; 20–30 cm Cephalotus / capensis",
@@ -410,7 +413,7 @@ window.TOURBIERE_PROTOCOLS = [
     substrate:
       "Nepenthes / Heliamphora / Utric épiphytes : LFS + écorce + perlite. Cephalotus : tourbe/perlite/sable aéré. Capensis / Byblis : tourbe/perlite 50/50. Sphaigne vivante : on la change quand elle brunit en anaérobie.",
     fertilizer:
-      "Maxsea ¼ foliar 1×/mois, ou orchidée ¼ sur Nepenthes. 1 bille Osmocote dans une urne mature (option). Proies 1–2×/mois. Racinaire rare, algues dans la sphaigne sinon.",
+      "Foliar 0,3 g/L 1×/mois (orchidée ou Rain Mix sur Nepenthes). 1 bille Osmocote dans une urne mature (option Nepenthes). Proies 1–2×/mois. Racinaire rare.",
     steps: [
       {
         title: "Choisir lowland ou highland",
@@ -468,17 +471,18 @@ window.TOURBIERE_PROTOCOLS = [
   {
     id: "dormancy",
     title: "Dormance tempérée",
-    kicker: "3–4 mois · 5–10 °C · 8–10 h · mix juste humide",
+    kicker: "3–4 mois · froid réel · 8–10 h · mix juste humide",
     summary:
-      "Dionaea, Sarracenia, Drosera tempérées, Pinguicula tempérées, Darlingtonia : sans cet hiver, la plante pousse encore un an puis s’épuise. On baisse photopériode, intensité et température ensemble, on cesse le foliar, on retire le bac d’eau. Cosmorrow reste la LED : on l’éloigne ou on passe sur une seule COP2065, 8–10 h. Ce n’est pas une mort, c’est le protocole.",
+      "Dionaea, Sarracenia, Drosera tempérées, Pinguicula tempérées, Darlingtonia : sans cet hiver, la plante pousse un an puis s’épuise. En FR/BE, le geste de pépinière c’est le dehors (châssis, bac, garage hors gel) — pas une tente Cosmorrow à 20 °C avec un programmateur à 9 h. La tente n’est que le plan B si tu n’as pas de froid. On baisse photopériode, intensité et température ensemble, on cesse le foliar, on retire le bac. Ce n’est pas une mort.",
     duration: "3–4 mois (typiquement novembre–février en FR/BE)",
     difficulty: 2,
-    climate: "5–10 °C, hors gel de préférence (un léger −2 °C sur Sarracenia outdoor va ; en tente on vise 5–10). HR 40–60 %. Air qui bouge un peu pour éviter le mildiou sur hibernacles.",
+    climate:
+      "Cible 0–10 °C. Sarracenia et dionées adultent supportent le gel léger dehors (châssis, vent moins desséchant qu’un balcon nu). En tente / garage : 5–10 °C, hors gel de préférence. HR 40–60 %. Air qui bouge. Un salon à 19 °C n’est pas une dormance, même à 8 h de LED.",
     light: {
       sku: "1 × COP2065 ou 1 × COP4065 relevée très haut ; éventuellement la même rampe qu’en saison, simple minuterie plus courte",
       height: "30–50 cm, ou intensité perçue ~30–50 % de la saison (on n’a pas de dimmer : on éloigne)",
       hours: "8–10 h. On descend progressivement en octobre (14 → 12 → 10 → 8–9 h) sur 3–4 semaines.",
-      note: "Pas de Full Spectrum « pour les réveiller ». Pas de 16 h en janvier « elles sont tristes ». Les pièges noirs et les urnes molles sont attendus.",
+      note: "Dehors : la photopériode naturelle FR/BE suffit, pas besoin de Cosmorrow. Tente / garage : 8–10 h, Growing loin. Pas de Full Spectrum « pour les réveiller ». Pas de 16 h en janvier « elles sont tristes ». Pièges noirs et urnes molles : attendus.",
     },
     water:
       "Substrat juste humide, plus de bac permanent. Un glaçage du pot n’est pas un arrosage. Eau RO, rare. Le dessèchement complet du rhizome, en revanche, tue : on pèse le pot une fois par semaine.",
@@ -486,25 +490,34 @@ window.TOURBIERE_PROTOCOLS = [
     fertilizer: "Zéro foliar, zéro proie forcée. Les pièges restants ne se nourrissent plus.",
     steps: [
       {
+        title: "Choisir le lieu : dehors d’abord",
+        body: "FR/BE : Sarracenia et Dionaea adultes hivernent mieux dans un châssis, un bac contre un mur nord, ou un garage hors gel que dans une tente chauffée. La LED ne fait pas le froid. On réserve Cosmorrow 8–10 h au plan B (appartement sans extérieur) et aux quelques pots de frigo (dionées en godet, jamais un sac zip hermétique). Les tropicales ne vont nulle part ici.",
+        checklist: [
+          "Lieu noté : dehors / garage / tente froide / frigo (quelques dionées)",
+          "Tropicales déjà dans une autre tente à 13–14 h",
+          "Châssis : pots rentrés si dessiccation de foehn, pas si « il gèle un peu »",
+        ],
+      },
+      {
         title: "Préparer dès septembre",
-        body: "On arrête le foliar. On laisse les dernières urnes / pièges travailler. On ne force plus la colorisation. Photopériode 14 h encore, mais on sait que c’est la fin de saison. Les plantes d’intérieur « au chaud » doivent déjà viser une pièce plus fraîche.",
+        body: "On arrête le foliar. On laisse les dernières urnes / pièges travailler. On ne force plus la colorisation. Photopériode 14 h encore. Les plantes d’intérieur « au chaud » doivent déjà viser une pièce plus fraîche ou la sortie.",
         checklist: [
           "Foliar stoppé",
-          "Inventaire : qui DOIT dormir (dionée, sarracène, drosera tempérée) vs qui reste en tropical",
+          "Inventaire : qui DOIT dormir vs qui reste en tropical",
         ],
       },
       {
         title: "Rampe de descente",
-        body: "Octobre : 12 h, barre +10 cm. Novembre : 8–10 h, 5–10 °C (garage hors gel, véranda froide, frigo à légumes pour quelques dionées, tente non chauffée). On ne plonge pas de 26 °C à 5 °C en une nuit.",
+        body: "Octobre : 12 h, barre +10 cm, ou sortie progressive dehors. Novembre : 8–10 h et 0–10 °C. On ne plonge pas de 26 °C à 5 °C en une nuit. Frigo : godet dans un bac aéré, un peu de lumière (COP2065 loin ou lumière du bac), jamais un Tupperware fermé.",
         checklist: [
-          "Palier 12 h puis 8–10 h",
+          "Palier 12 h puis 8–10 h (tente) ou alignement au jour naturel (dehors)",
           "T° suivie min/max",
-          "Tropicales sorties de cette tente",
+          "Tropicales sorties de cette zone",
         ],
       },
       {
         title: "Hiverer proprement",
-        body: "Couper le tissu vraiment mort, laisser les bases. Bac retiré. Contrôle pourriture mensuel (odeur, rhizome mou). Sciarides se calment au froid. Lumière 8–10 h, Cosmorrow loin : assez pour ne pas étioler un réveil précoce, pas assez pour pousser.",
+        body: "Couper le tissu vraiment mort, laisser les bases et les phyllodes. Bac retiré. Contrôle pourriture (odeur, rhizome mou). Dehors : vent desséchant = un arrosage RO de temps en temps, pas un lac. Tente : Cosmorrow loin, 8–10 h. Frigo : aérer 1×/semaine.",
         checklist: [
           "Pots pesés / humidité contrôlée 1×/semaine",
           "Pas de dôme hermétique (mildiou)",
@@ -523,7 +536,7 @@ window.TOURBIERE_PROTOCOLS = [
     ],
     stopSignals: [
       "Rhizome mou, noir, odeur : pourriture — on coupe au dur, soufre horti optionnel, on sèche, on ne noie pas.",
-      "Pousses filiformes en janvier à 20 °C : ce n’est pas une dormance, c’est un salon trop chaud — on refroidit ou on assume une plante affaiblie.",
+      "Pousses filiformes en janvier à 20 °C : ce n’est pas une dormance, c’est un salon trop chaud — dehors, garage, ou plante que tu assumes affaiblie.",
       "Pot poids plume, mix clair : trop sec, un arrosage RO, on surveille.",
     ],
     next: ["production", "seedling", "coloring"],

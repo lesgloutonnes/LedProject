@@ -50,9 +50,9 @@
           e(fmt.n1(s.dli[2])) +
           "</span><span>" +
           e(s.photoperiodGrow) +
-          " h / " +
-          e(s.photoperiodDorm) +
-          " h</span><span>HR " +
+          " h croissance" +
+          (s.photoperiodDorm == null ? " · pas d’hiver" : " / " + e(s.photoperiodDorm) + " h dormance") +
+          "</span><span>HR " +
           e(s.humidity[0]) +
           "–" +
           e(s.humidity[2]) +
@@ -103,6 +103,9 @@
       ["cephalotus", "Cephalotus"],
       ["pinguicula", "Pinguicula"],
       ["utricularia", "Utricularia"],
+      ["darlingtonia", "Darlingtonia"],
+      ["drosophyllum", "Drosophyllum"],
+      ["byblis", "Byblis"],
     ];
     chips.innerHTML = families
       .map(function (f) {
