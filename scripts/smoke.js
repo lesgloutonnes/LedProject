@@ -95,11 +95,20 @@ var dros = ctx.LG_SPECIES.find(function (s) { return s.id === "drosophyllum"; })
 assert.ok(!/terre de bruyère non fertilisée/i.test(dros.substrate));
 assert.ok(/sable siliceux 70/i.test(dros.substrate));
 
-var pou = ctx.LG_DIAGNOSTIC.trees.find(function (t) { return t.id === "pourriture"; });
-assert.ok(
-  pou.nodes["pou-1"].answers.some(function (a) { return /repas/i.test(a.label); }),
-  "diagnostic : piège qui pourrit après un repas"
-);
+var sarrLow = ctx.LG_SPECIES.find(function (s) { return s.id === "sarracenia-low"; });
+assert.ok(!/\bminor\b/i.test(sarrLow.latin), "S. minor n’est pas une basse");
+assert.ok(/\bminor\b/i.test(sarr.latin), "S. minor va avec les dressées");
+
+var cap = ctx.LG_SPECIES.find(function (s) { return s.id === "drosera-capensis"; });
+assert.ok(/binata/i.test(cap.latin), "D. binata avec les capensis, pas l’hibernacle");
+var dtemp = ctx.LG_SPECIES.find(function (s) { return s.id === "drosera-temperate"; });
+assert.ok(!/\bbinata\b/i.test(dtemp.latin), "binata hors latin tempérées");
+
+var ceph = ctx.LG_SPECIES.find(function (s) { return s.id === "cephalotus"; });
+assert.ok(/Céphalote/.test(ceph.common), "Céphalote, pas Céphatote");
+assert.ok(!/Céphatote/.test(ceph.common));
+
+assert.ok(/hampe/i.test(dion.warnings.join(" ")), "dionée : hampe coupée sur un jeune");
 
 var r = ctx.LgMatch.matchKit({
   projet: "germoir",

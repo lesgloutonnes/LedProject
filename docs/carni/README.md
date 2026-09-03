@@ -20,8 +20,8 @@ Tous les `.js` sont du vanilla (IIFE-free, assignation `window.*`) pour un `<scr
 ## Genres couverts (`species.js`)
 
 - *Dionaea*
-- *Sarracenia* dressées / basses
-- *Drosera* tempérée / capensis-tropicale / pygmée
+- *Sarracenia* dressées (dont *minor*) / basses (*purpurea*, *rosea*, *psittacina*)
+- *Drosera* tempérée (hibernacle) / capensis-tropicale (dont *binata*) / pygmée
 - *Nepenthes* lowland / highland
 - *Pinguicula* tempérée / mexicaine
 - *Utricularia* terrestre / épiphyte

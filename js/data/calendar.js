@@ -38,6 +38,7 @@ window.LG_CALENDAR = {
       photoperiod: "Débourrement : 12 h puis 14 h sur 2–3 semaines. Tropicales : 13–14 h.",
       gestures: [
         "Rempotage des tempérées au débourrement (Sarracenia, Dionaea, Drosera).",
+        "Hampes de dionée / Sarracenia : on coupe sauf adulte dont on veut les graines. Une hampe épuise un rhizome de 2 cm ; la hampe de dionée se bouture si tu multiplies.",
         "Division de rhizomes, boutures de tige Nepenthes (printemps = bon taux).",
         "Bac d’eau qui revient progressivement pour les tourbières.",
         "Premier foliar seulement après 3–4 semaines de vraie pousse, 0,3 g/L.",

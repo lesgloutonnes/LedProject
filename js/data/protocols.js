@@ -246,9 +246,10 @@ window.LG_PROTOCOLS = [
       },
       {
         title: "Entretenir le rythme",
-        body: "Couper le sec (urnes vides, pièges noirs) au tissu mort, pas au vert. Surveiller TDS si tu stockes l’eau de pluie (gouttières = pollen + poussière). Prévoir la dormance dès septembre pour les tempérées : on ne « pousse » pas jusqu’à Noël.",
+        body: "Couper le sec (urnes vides, pièges noirs) au tissu mort, pas au vert. Hampes de dionée / Sarracenia : on coupe sur un jeune, on laisse seulement un adulte dont on veut les graines — une floraison n’« accélère » pas un rhizome de 2 cm. Surveiller TDS si tu stockes l’eau de pluie (gouttières = pollen + poussière). Prévoir la dormance dès septembre pour les tempérées : on ne « pousse » pas jusqu’à Noël.",
         checklist: [
           "Nettoyage mensuel des feuilles mortes",
+          "Hampes des jeunes coupées, sauf lot de graines",
           "TDS vérifié",
           "Photo mensuelle : le meilleur capteur de DLI",
         ],
@@ -362,7 +363,7 @@ window.LG_PROTOCOLS = [
       },
       {
         title: "Plafond Growing pour les gourmandes",
-        body: "Sarracenia dressées, Dionaea, Drosera de soleil, Byblis : étage haut, 15–20 cm sous COP4065, 200–300 µmol/m²/s. Les basses (purpurea, pygmées) au bord, un peu plus loin du hotspot.",
+        body: "Sarracenia dressées (y compris minor), Dionaea, Drosera de soleil, Byblis : étage haut, 15–20 cm sous COP4065, 200–300 µmol/m²/s. Les basses (purpurea, psittacina, pygmées) au bord, un peu plus loin du hotspot. Minor n’est pas une « petite » : urne dressée à opercule.",
         checklist: [
           "Dressées au centre-haut",
           "Basses en périphérie",
@@ -487,7 +488,7 @@ window.LG_PROTOCOLS = [
     duration: "3–4 mois (typiquement novembre–février en FR/BE)",
     difficulty: 2,
     climate:
-      "Cible 0–10 °C. Sarracenia et dionées adultent supportent le gel léger dehors (châssis, vent moins desséchant qu’un balcon nu). En tente / garage : 5–10 °C, hors gel de préférence. HR 40–60 %. Air qui bouge. Un salon à 19 °C n’est pas une dormance, même à 8 h de LED.",
+      "Cible 0–10 °C. Sarracenia et dionées adultes supportent le gel léger dehors (châssis, vent moins desséchant qu’un balcon nu). En tente / garage : 5–10 °C, hors gel de préférence. HR 40–60 %. Air qui bouge. Un salon à 19 °C n’est pas une dormance, même à 8 h de LED.",
     light: {
       sku: "1 × COP2065 ou 1 × COP4065 relevée très haut ; éventuellement la même rampe qu’en saison, simple minuterie plus courte",
       height: "30–50 cm, ou intensité perçue ~30–50 % de la saison (on n’a pas de dimmer : on éloigne)",

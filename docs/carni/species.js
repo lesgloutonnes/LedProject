@@ -41,12 +41,13 @@ window.LG_SPECIES = [
       "Dormance obligatoire : une tente chaude toute l’année n’est pas un cadeau.",
       "Eau du robinet = brûlures marginales et mort lente du rhizome.",
       "Ne pas remplir les pièges d’eau ni d’engrais liquide concentré.",
+      "Hampe florale : on coupe sur un jeune / un rhizome < 3 cm, sauf si tu veux des graines. Une floraison épuise plus qu’elle ne « fortifie ». La hampe se bouture, si tu tiens à multiplier.",
     ],
     projects: ["seedling", "cutting", "production", "coloring", "mixed", "dormancy"],
   },
   {
     id: "sarracenia-upright",
-    latin: "Sarracenia (flava, leucophylla, oreophila, alata, rubra…)",
+    latin: "Sarracenia (flava, leucophylla, oreophila, alata, rubra, minor…)",
     common: "Sarracènes dressées",
     family: "Sarraceniaceae",
     climate: "temperate",
@@ -79,13 +80,14 @@ window.LG_SPECIES = [
     warnings: [
       "Dormance obligatoire. Une Sarracenia « toujours en pousse » s’affaiblit.",
       "Pots trop étroits = urnes chétives. Viser 2–3 L larges dès l’ado, pas un tube profond.",
+      "Hampe : on coupe sur un ado. On laisse seulement un adulte dont on veut les graines — la hampe sort avant les urnes, ce n’est pas un bonus gratuit.",
       "Carnivero n’a testé que des semis de dressées sous LED (**) : les adultes demandent plus de hauteur utile.",
     ],
     projects: ["seedling", "production", "coloring", "mixed", "dormancy"],
   },
   {
     id: "sarracenia-low",
-    latin: "Sarracenia (purpurea, rosea, psittacina, minor)",
+    latin: "Sarracenia (purpurea, rosea, psittacina)",
     common: "Sarracènes basses",
     family: "Sarraceniaceae",
     climate: "temperate",
@@ -117,6 +119,7 @@ window.LG_SPECIES = [
     warnings: [
       "Psittacina pourrit si le collet cuit dans une HR saturée sans air.",
       "Ne pas confondre « basse » et « ombre » : 100 µmol/m²/s est un plancher, pas une cible de confort.",
+      "S. minor n’est pas une basse : urne dressée à opercule (Okee Giant monte comme une flava). Elle va avec les dressées.",
     ],
     projects: ["seedling", "production", "coloring", "mixed", "dormancy"],
   },
@@ -159,13 +162,13 @@ window.LG_SPECIES = [
   },
   {
     id: "drosera-capensis",
-    latin: "Drosera capensis (et spatulata, aliciae, nidiformis…)",
+    latin: "Drosera capensis (et spatulata, aliciae, nidiformis, binata…)",
     common: "Droséras capensis / tropicales",
     family: "Droseraceae",
     climate: "tropical-lowland",
     dormancy: "none",
     dormancyNote:
-      "Pas de dormance. Capensis est cap-méditerranéenne en nature mais, en tente, on la cultive en croissance continue 12–14 h. Un léger ralentissement hivernal (18 °C) n’est pas un protocole de froid.",
+      "Pas de dormance. Capensis est cap-méditerranéenne en nature mais, en tente, on la cultive en croissance continue 12–14 h. D. binata (Australie) : pas d’hibernacle, même régime — un repos frais et lumineux est optionnel, ce n’est pas 5 °C. Un léger ralentissement hivernal (18 °C) n’est pas un protocole de froid.",
     ppfd: [100, 180, 400],
     dli: [4.3, 8.4, 20.2],
     photoperiodGrow: 13,
@@ -178,7 +181,7 @@ window.LG_SPECIES = [
     substrate: "Tourbe blonde + perlite 50/50. Se ressème partout : un bac dédié évite l’invasion.",
     fertilizer: "Foliar 0,3 g/L 1×/mois, ou rien si les sciarides circulent. C’est la plante la plus autonome de la tente.",
     tentTips:
-      "Étage médian, 20–30 cm sous COP4065, ou COP2065 dédiée. Parfaite plante « comble-trou » d’une tente mixte. Spatulata et aliciae restent en rosette : elles tiennent au premier plan, 15–20 cm.",
+      "Étage médian, 20–30 cm sous COP4065, ou COP2065 dédiée. Parfaite plante « comble-trou » d’une tente mixte. Spatulata et aliciae restent en rosette : elles tiennent au premier plan, 15–20 cm. Binata monte : laisse de la hauteur, gants pour les grosses touffes.",
     traps: "Mucilage = indicateur de santé. Si les gouttes disparaissent : air trop sec, lumière trop faible, ou eau trop riche.",
     seedlingNotes:
       "Pas de cold strat. Surface, 20–24 °C, 14 h, 150–250 µmol/m²/s. Levée 7–21 jours. Graines fraîches germent en tapis : éclaircir tôt, capensis étouffe ses voisines et les Sarracenia.",
@@ -189,6 +192,7 @@ window.LG_SPECIES = [
     warnings: [
       "Envahissante par graines : coupe les hampes si tu ne veux pas un tapis.",
       "Ne pas la coller contre des Nepenthes basses : elle vole la lumière du collet.",
+      "D. binata n’est pas une tempérée d’hémisphère nord : pas de protocole hibernacle 5 °C.",
     ],
     projects: ["seedling", "cutting", "production", "coloring", "mixed", "tropical"],
   },
@@ -436,7 +440,7 @@ window.LG_SPECIES = [
   {
     id: "cephalotus",
     latin: "Cephalotus follicularis",
-    common: "Céphatote / plante-cruche d’Albany",
+    common: "Céphalote / plante-cruche d’Albany",
     family: "Cephalotaceae",
     climate: "mediterranean",
     dormancy: "optional",
